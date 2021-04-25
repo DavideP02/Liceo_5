@@ -1,0 +1,688 @@
+<!DOCTYPE html><html><head>
+      <title>Riepilogo Verifica</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header undefined" id="verifica-19-marzo-2021">Verifica 19 marzo 2021</h1>
+
+<h2 class="mume-header undefined" id="indice">Indice</h2>
+
+<div class="code-chunk" data-id="code-chunk-id-0" data-cmd="toc"><div class="input-div"><div class="btn-group"><div class="run-btn btn"><span>▶︎</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><ul>
+<li><a href="#aestheticism">Aestheticism</a>
+<ul>
+<li><a href="#main-features">Main Features</a></li>
+<li><a href="#decadence">Decadence</a></li>
+</ul>
+</li>
+<li><a href="#oscard-wilde">Oscard Wilde</a>
+<ul>
+<li><a href="#life">Life</a></li>
+<li><a href="#art-for-arts-sake">Art for Art's sake</a></li>
+<li><a href="#the-rebel-and-dandy">The rebel and dandy</a></li>
+<li><a href="#the-picture-of-dorian-gray"><em>The Picture of Dorian Gray</em></a>
+<ul>
+<li><a href="#t-the-preface">T: The Preface</a></li>
+<li><a href="#plot">Plot</a></li>
+<li><a href="#t-the-painters-studio">T: The Painter’s Studio</a></li>
+<li><a href="#t-dorian-death">T: Dorian Death</a></li>
+</ul>
+</li>
+<li><a href="#victorian-drama">Victorian Drama</a>
+<ul>
+<li><a href="#chekhov">Chekhov</a></li>
+<li><a href="#strindberg">Strindberg</a></li>
+<li><a href="#ibsen">Ibsen</a></li>
+</ul>
+</li>
+<li><a href="#wildes-plays">Wilde's plays</a>
+<ul>
+<li><a href="#the-importance-of-being-ernest">The importance of being Ernest</a>
+<ul>
+<li><a href="#plot-1">Plot</a></li>
+<li><a href="#t-the-interview">T: The Interview</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p style="page-break-after: always;">&nbsp;</p>
+<h1 class="mume-header" id="aestheticism">Aestheticism</h1>
+
+<ul>
+<li><mark>p. 29-30</mark></li>
+</ul>
+<p>Aestheticism was a late 19th century European movement, which centered on the doctrine that art exist for the sake of its own beauty. Aestethicism was based on the doctrine according to which art is not supposed to have any sort of social, moral, political, didactic purpose.</p>
+<p>It rejected the Victorian idea for which art and literature could have an important ethical role.<br>
+Many Victorians believed that they could provide a correct model of behavior which people could identify with.</p>
+<p>Literature according to many Victorian could provide example of good action that were rewarded and for this reason literature was seen as a mean of self improvement.</p>
+<p>The supporters of the aesthetic movement totally disagreed, arguing that art has nothing to do with morality, So, the aesthetic movement was against those Victorian utilitarian and also materialistic philosophies and it embraced beauty as the chief pursue of both art and life.</p>
+<p>Aestheticism began in France with <strong>Gaudier</strong>: he was the first to Adopt the Slogan <em>L'art pour l'art</em>, meaning that art has no hidden messages but beauty.</p>
+<p>According to some critics however, in Britain the seed of the Aesthetic movement can be traced back to the romantic poet <strong>John Keats</strong>, and the pre-Raphaelite <strong>Dante Gabriel Rossetti</strong>.</p>
+<ul>
+<li><strong>John Keats</strong> was a romantic poet of the second generation. He was interested in the sensual qualities of poetry and in its capacity to create an autonomous world. In this, sense conceiving art as a separate reality, his verse somehow anticipated the art fo art's sake tendency of the 19th century.</li>
+<li><strong>Dante Gabriel Rossetti</strong> was a poet and a painter. He belongs to the pre-Raphaelite brotherhood, actually he found it in 1848. The artists of this brotherhood reacted against the dull and unimaginative artistic production of the period by returning to the aesthetic value of the italian painters of the 13th anr the 14th century, who lived before Raffaello.</li>
+</ul>
+<p>There are two main important figures who belong to the English Aesthetic movement:</p>
+<ul>
+<li><strong>John Ruskin</strong> was a leading art critic of the 2nd half of the 19th century; he was highly influential because in his search of beauty in art and life he paved the way fo the work of Walter Peter</li>
+<li><strong>Walter Peter</strong> is considered the main theorist of the Aesthetic movement. He found in art the only certainty and for this reason he believed that life should be lived as a work of art. He insisted on the concept of <strong>artistic autonomy</strong>; he felt that art should be independent from worldly issues such as politics or morality, because art should be appreciated for its own intrinsic beauty</li>
+</ul>
+<h2 class="mume-header" id="main-features">Main Features</h2>
+
+<p>Stylistically the works of the aesthetic writers were highly refined, and they appealed to the senses; they showed an intense connotation of sensuality and hedonism, which is the philosophy according to which pleasure is the main aim in human life.</p>
+<p>Their work showed a fierce individualism, in opposition to anything mainstream.</p>
+<p>Their work also showed a franc disenchantment with contemporary society; the supporters of the aesthetic movement in literature wanted to shock the middle classes with their art, often creating sexually suggestive pieces of work, that opposed to the Victorian sense of Morality.</p>
+<p>Considering the subject matter, they felt free to break the boundaries; they were interested in the exploration of sexuality and of course one of the main themes is the insistence on the close relationship between art and life.</p>
+<p>This artist commitment to their theories and belief was so strong that eventually Aestheticism pretended the boundaries of art to became a life style. This mean that component of aesthetic ideology can be seen in the way of living itself.</p>
+<p>Supporters of the aesthetic movement lived their life in their approach to fashion, sexuality, but also in the approach to Alcohol and drugs. They were generally seen as heavy alcohol consumers and they were fascinated with the use of drugs.</p>
+<p>Considering this close relationship whit art and life there is another key concept that is <strong>dandyism</strong>. A Dandy is a person who pays particular attention to his personal appearance. Usually a Dandy wear eccentric and very elegant clothes, and he is a person who aim at upholding a high level of sophistication in his lifestyle.</p>
+<h2 class="mume-header" id="decadence">Decadence</h2>
+
+<p>The term <strong>Decadence</strong> is often associated with aestheticism.</p>
+<p>This word was initially to descrive some French writers of the mid 19th century; in particular decadence is associated to the poetry of</p>
+<ul>
+<li>Verlaine</li>
+<li>Mallarmé</li>
+<li>Rimbaud</li>
+<li>Baudelaire</li>
+<li>Huysmans</li>
+</ul>
+<p>The term decadence is also associated to the novel "À Rebours" by Huysmans. The protagonist is Des Esseintes, and he is a decadent aristocrat; he has an obsession with sensual experiments and the novel is based on his taste for luxury and excess.</p>
+<p>Aestheticism and decadence share a set of interlinked qualities such as</p>
+<ul>
+<li>the notion of intense refinement</li>
+<li>the perversity in subject matter</li>
+<li>the use of paradoxes</li>
+<li>the progressive attitude towards sexuality.</li>
+</ul>
+<p>Decadence was an European movement which did not only developed in France.<br>
+In Italy, for instance, the main representatives of the Decadent movement were D'Annunzio (with his novel <em>Il Piacere</em>), Pascoli and Gozzano</p>
+<p style="page-break-after: always;">&nbsp;</p>
+<h1 class="mume-header" id="oscard-wilde">Oscard Wilde</h1>
+
+<ul>
+<li><mark>p. 124-125</mark></li>
+</ul>
+<p>He was probably the main representative of the aesthetic movement in Britain.</p>
+<p>As it happens with all those writers who are strongly influenced by aesthetic ideologies, his life and his art are closely linked.</p>
+<h2 class="mume-header" id="life">Life</h2>
+
+<p>He was <mark>born in Dublin</mark>, and he was quite well off, because his father was an eye and ear surgeon. His mother was an eccentric woman. She expected Oscar to be a female, so she used to dress him in girl's clothes.</p>
+<p>He is educated at Trinity College and here he reveals his <mark>unconventional personality</mark>, since unlike his fellow students he hates sports and games, he loaths drinking and whoring and he likes fishing and solitude. He was not very popular, both with his teacher, who thought he was lazy, and with his fellow students, because he dislikes their coarse humor and their virile actions.</p>
+<p>He reads a lot, and he eventually wins a gold medal for Greek. Thanks to this medal, he wins a scholarship at <mark>Oxford University</mark>. Here he spends happy years soon establishing a reputation as a brilliant talker, an anti conformist and a wonderful entertainer.</p>
+<p>While he was at Oxford he met two intellectual: <mark>John Ruskin and Walter Pater</mark>. They both influence his life very deeply. <strong>Ruskin</strong> attracted him by his socialist ideals, and <strong>Pater</strong> taught him a new conception of art, devoid of any moral responsibility.</p>
+<p>When he finish university he inherited money from his father, and so he settled in <mark>London</mark>. Here he attracted attention to himself wearing eccentric clothes. He was occasionally seen with a sunflower in his hand, or with exotic flowers in his button hole.</p>
+<p>Once in London, he charmed everybody with his brilliant conversation and people enjoyed his company for his witty remarks. He became very popular and in 1882 he was invited to give a lecture tour on aestheticism in America, and when he arrived there, he famously said</p>
+<blockquote>
+<p>I have nothing to declare but my genius.</p>
+</blockquote>
+<p>His tour was a success, and when he came back he got married and he had two children.</p>
+<p>In 1891 he published his first and only novel <em>The picture of Dorian Gray</em>; Wilde wasn’t appreciated as a novelist, and his novel was considered immoral, mainly for his insistence on hedonism, but also for his common sexual connotations.</p>
+<p>Anyway Wilde managed to increase his literary prestige by turning to the theatre. He reached the climax of his success with his witty comedies. In the years 1892-1895. During those years his comedies were performed at the same time on different stages in London.<br>
+His masterpiece in theatre is <em>The Importance of Being Ernest</em>, published in 1895.</p>
+<p>When he was at the height of his career his reputation rapidly declined, because he was accused of homosexuality by his lover’s father. The accusation proved correct; he was sentenced to two years of hard labour.<br>
+He was in prison from 1895 to 1897, and while he was in prison he wrote a poem: <em>The Ballad of Reading Gaol</em>, and it was his last published (in 1898) work during his life.</p>
+<p>This poem deals with death penalty, because it is about the hanging of a man, for the brutal murder of his wife: Wilde discuss on themes such as injustice, betrayal and the need for forgiveness. The idea he developed is that the greater the crime, the more charity is needed.</p>
+<p>While he was in prison he also wrote a long and touching letter to his beloved, entitled <em>De Profundis</em>; it was published after Wilde death, in 1905.<br>
+When he was released, he was a broken man, and he could bear the scandal of his situation, his wife obviously refused him, so he went into exile in France, where he lived the last years of his life, in poverty and under and under an assumed name.</p>
+<p>He died in 1900 of meningitis, and he was buried in Paris in the same cimitero of Baudelaire, who strongly influenced Wilde’s life and art.</p>
+<h2 class="mume-header" id="art-for-arts-sake">Art for Art's sake</h2>
+
+<ul>
+<li><mark>p. 125</mark></li>
+</ul>
+<p>The concept of Art for Art's Sake' was not merely an aesthetic one. Wilde believed that only art as the cult of beauty could prevent the murder of the soul. He perceived the artist as an alien in a materialistic world, he wrote only to please himself and was not concerned about communicating his theories to his fellow-beings. His pursuit of beauty and fulfilment was the tragic act of a superior being inevitably rejected as an outcast.</p>
+<h2 class="mume-header" id="the-rebel-and-dandy">The rebel and dandy</h2>
+
+<ul>
+<li><mark>p. 125</mark></li>
+</ul>
+<p>Wilde adopted the 'aesthetic ideal', as he affirmed in one of his famous conversations:</p>
+<blockquote>
+<p>My life is like a work of art!</p>
+</blockquote>
+<p>He lived the double role of rebel and dandy. Wilde's dandy is an aristocrat whose elegance is a symbol of the superiority of his spirit; he uses his wit to shock and he is an individualist who demands absolute freedom. Since life was meant for pleasure, and pleasure was an indulgence in the beautiful, Wilde's interest in beauty - clothes, words or physical beauty – had no moral stance. In the <em>Preface</em> to his novel he affirmed:</p>
+<blockquote>
+<p>There is no such thing as a moral or an immoral book. Books are well written, or badly written. That is all?</p>
+</blockquote>
+<p>In this way he rejected the didacticism that had characterised the Victorian novel in the first half of the century.</p>
+<p>In his life Wilde embodied the figure of the rebel and of the dandy.<br>
+He was a <strong>rebel</strong> for his rebellious attitude towards those false conventions and Prejudices of Victorian Society, which, according to him, represented a form of restraint, on the process of artistic creation<br>
+He was also a <strong>dandy</strong> since he paid a lot of attention to his outward appearance, and he was an eccentric and extravagant person, with a strong sense of elegance and sophistication.</p>
+<h2 class="mume-header" id="the-picture-of-dorian-gray"><em>The Picture of Dorian Gray</em></h2>
+
+<ul>
+<li><mark>p. 126</mark></li>
+</ul>
+<h3 class="mume-header" id="t-the-preface">T: The Preface</h3>
+
+<ul>
+<li><mark>p. 127</mark></li>
+</ul>
+<p>This text is really important. He published this novel in 1891 in its final edition. He had previously published it, but it was not appreciated by the literary society, so he decided to include this preface, which had yet been published as an essay for a magazine.<br>
+This text is really important since it is considered as the English Manifesto of aestheticism, because it picks out the subject of art and the figure of the artist.</p>
+<p><img src="../../assets/Schermata%202021-03-18%20alle%2017.52.40.jpg" alt="Schermata 2021-03-18 alle 17.52.40"></p>
+<ul>
+<li><strong>line 1</strong>: this mean that artist aim is not to communicate a beautiful message, but to offer an example of beauty</li>
+<li><strong>line 2</strong>: there is an inversion to put attention on the complement</li>
+<li><strong>line 4</strong>: the criticism reveals more about the person who is judging than about the object of judgment</li>
+<li><strong>line 9</strong>: art should never express anything but itself; reader shouldn't find other messages in art</li>
+<li><strong>lines 11-12</strong>: art is not meant to instruct the reader. He rejected the didacticism, typical of the Victorian Novel; he rejected the idea that art could be used as a took for social education: he wanted to free art from this responsibility</li>
+<li><strong>lines 14-17</strong>: these sentences are meant to contrast to each other. They both introduce the element of the glass, which, according to some critics, is an anticipation of Dorian's use of the mirror</li>
+<li><strong>line 23</strong>: Wilde us emphasising the same concept</li>
+<li><strong>line 25</strong>: he makes no judgment of what's right and what's wrong; artist is the creator of beautiful things, and he is not interested in communicating its own idea to mankind, he wrote only to please himself: all the artists should do so</li>
+<li><strong>line 39</strong>: art exist for its own sake, and not for any moral purpose; the purpose of art is to have no purpose.</li>
+</ul>
+<p>This text is rich in repetitions, which emphasizes the author theme.</p>
+<p>This preface is important since it is considered the English manifest of Aestheticism. He explains his a philosophy of Art for Art’s sake.</p>
+<p>The word art and artist are repeated 11 times each, while the adjective beautiful is repeated 6 times.</p>
+<p>This preface is a list of aphorisms, which is a clever saying expressing a truth; the style is epigrammatic, since these general truths are expressed in a short and amusing way, and the language is abstract and witty.</p>
+<h3 class="mume-header" id="plot">Plot</h3>
+
+<p>The protagonist of this novel is Dorian Gray: he is a handsome young man, whose beauty fascinates the painter Basil Hallward. This painter is so fascinated by Dorian’s beauty that he decides to fix his beauty forever in a portrait.</p>
+<p>When Dorian sees his portrait he becomes aware of his beauty, because until this moment he wasn’t fully aware of its own beauty.</p>
+<p>Another key character is Lord Henry Watson, who is a cynical aristocrat, he is an aesthete, who believes in nothing but beauty and youth. He initiates Dorian into the cult of Aestheticism.</p>
+<p>Dorian is so enchanted by his beauty that he makes a wish: he wishes that his beauty and his youth can remain forever intact while the portrait ages in his place. By some strange magic this is exactly what happens. With the passing of time, while Dorian’s beauty and youth are preserved intact, the portrait starts to show not only his marks of age, but also the marks and the signs of the immoral life that Dorian is living under the influence of Lord Henry Watson.</p>
+<p>In the novel Lord Henry Watson provides Dorian with an unnamed book, that was probably <em>A rebour</em>, written by the Belgian writer Huysmans in 1887; it describes the strange sensual experiences of its protagonist, Des Esseintes, who becomes the stereotype of the aesthete of <em>fin de siecle</em> literature.</p>
+<p>Under the influence of Lord Henry Watson, Dorian Gray embarks on a life of vice and sensual reputation: he becomes more and more involved in ambiguous adventures and he also provokes the suicide of Sybil Vane, the girl who passionately love him.</p>
+<p>Then Dorian becomes aware of the immorality of his actions, and he realises that the only way to put an end to his bad behaviour is destroying the portrait, which he feels responsible for his actions. By stabbing the portrait he also kills himself (and this is the end of the novel).</p>
+<p>The character of Dorian Gray embodies a typical Dandy, and so we can trace a parallelism between this characters and two others literary figures: Andrea Sperelli (from <em>Il piacere</em>) and Des Esseint (from <em>A rebour</em>). They are three dandies who live their life looking for beauty and elegance. Their immoral experiences are described by these authors using a refined language.</p>
+<h3 class="mume-header" id="t-the-painters-studio">T: The Painter’s Studio</h3>
+
+<ul>
+<li><mark>p. 129</mark></li>
+</ul>
+<p>This extract is from the first novel chapter. The narrator is a third person narrator, who is unobtrusive, since he never interveins in the narration, and he never addresses the readers directly. This extracts introduces two of the main characters of the novel: one is Basile Hallward, who is the painter and an intellectual who tends to isolate himself from the rest of the world; the other is Lord Henry Watson, who is a brilliant talker, his way of speaking is humorous and satirical: he is only apparently superficial, and in fact in the novel he is able to develop a strong criticism for some Victorian institutions, such as marriage, religion and morality.</p>
+<p>The characters are introduced by what they say or what they do, or by what other people say about them, and not by the narrator.<br>
+The technic adopted by Wilde is more typical of drama.</p>
+<p><img src="../../assets/Schermata%202021-03-18%20alle%2017.57.21.jpg" alt="Schermata 2021-03-18 alle 17.57.21"><img src="../../assets/Schermata%202021-03-18%20alle%2017.57.35.png" alt="Schermata 2021-03-18 alle 17.57.35"></p>
+<p>This abstract can be divided into three section</p>
+<p>The first section deals with the <strong>description of Basil's studio</strong>. The atmosphere is sensual and decadent, while the setting is vividly described with words appealing to all the senses:</p>
+<ul>
+<li>orang epart: smell</li>
+<li>green part: hearing</li>
+<li>gray part: sight</li>
+<li>blue part: touch</li>
+</ul>
+<p>There is a possible influence to the sense of taste (at <strong>line 6</strong>) with the words referred to <em>honey</em>.</p>
+<p>The second section is the <strong>portrait of a young man</strong>.<br>
+The reader is introduced to this portrait, which is so important that we can consider it as a character of the novel.</p>
+<p>The portrait is located at the center of the room, which is a metaphor of the centrality of the portrait in the novel's pot.</p>
+<p>We don't know the identity if the man who is portrayed, but we only know that he is beautiful; the readers come to know about this <strong>directly</strong>, at <strong>line 16-17</strong> (<em>young man of [...]</em>) and <strong>indirectly</strong>, at <strong>line 21</strong> (<em>a smile of pleasure</em>).</p>
+<p>The third section is <strong>Basil and Henry dialogue</strong><br>
+The dialogue is about the portrait; it's almost a prologue to the story itself.</p>
+<p>It opens with Henry's opinion about the portrait: he says that this is Basil's best work (in yellow there is the conversation; in light blue the actions).</p>
+<p>According to Henry the portrait should be shown in an Art Gallery (a proper one): this is an example of <strong>disapplied logic</strong> (<strong>line 25-26</strong>);<br>
+he says something which seems to be logic, but actually it isn't.</p>
+<p>Henry speaks through paradoxes and irony, just as Oscar Wilde did. Many critics see behind Henry Wotton the author himself.</p>
+<p>According to Henry you must show art.<br>
+In this case the painter doesn't agree with him, since he doesn't want to show the portrait, since he finds that he has put too much of himself in it.</p>
+<p>Basil doesn't want to disclose the identity of the man who is portrayed, because he is afraid that this portrait might reveal his secret artistic idolatry for Dorian Gray.<br>
+This idolatry doesn't seem to be purely professional. It also has personal implications (homosexual connotation)</p>
+<p style="page-break-after: always;">&nbsp;</p>
+<h3 class="mume-header" id="t-dorian-death">T: Dorian Death</h3>
+
+<ul>
+<li><mark>p. 131</mark></li>
+</ul>
+<p>This extract is from the end of the novel. It begins with a positive note: it is a lovely warm evening, and Dorian Gray is walking home, in a leasurly way: than he starts thinking about his bad behaviour, and at this point of the novel, Dorian would like to clean his conscience.</p>
+<p>In order to do so, he decides that he won't never tempt innocence again: there is a girl who has fallen in love with him, and he tries to convince her that he is a wicked man. This girl refuses to believe him, because he's not old and ugly, as all wicked people were, according to her.</p>
+<p>Dorian Gray wants to change, and so he decides not to tempt this girl. He hopes that some improvements might appear on the portrait.</p>
+<ol>
+<li>He blames his own pride and passion for this situation.</li>
+<li>He blames the fact that he has received no punishment to purify him.</li>
+<li>Finally he blames his own beauty and youth</li>
+</ol>
+<p>When analyzing his situation, Dorian doesn't consider himself guilty for the death of Basil Hallward and Alan Campbell.<br>
+At a certain point of the novel Basil decides to confront Dorian, because terrible things are been said about him. Rumors say that he has a bad and destructive influence on people, that Basil refuses to believe that this rumors are true: he asks Dorian to show him is real soul. Dorian shows him his portrait, because he feels that the portrait is the reflection of his soul.<br>
+Then Dorian is forced to kill Basil, in order to prevent him from telling other people how his portrait has become.</p>
+<p>He considers that the murder of Basil is just a moment of madness.</p>
+<p>Alan Campbell was a talented Chemist, and Dorian blackmails him because he wants to use his skills as chemist to get rid of Basil's body.<br>
+Alan accomplish this task unhappily, and then he committed suicide. Since he committed suicide, Dorian doesn't feel responsible for Alan own actions.</p>
+<p>He decides he won't tempt innocence, which is the only good thing he did. He look at picture and sees no improvement in the picture.<br>
+The reasons of this is that apparently good act is actually a pure act of vanity, and it might be an other expression of his desire to investigate all possibilities offered by life. Dorian feel entitled to experience everything that life could offer to him: he becomes more and more involved in sophisticated adventures, but also in bad experiences.<br>
+This decision not to tempt innocence might also be a consequence of his passion to act apart.</p>
+<p>When he looks at the portrait, he sees no sign of improvement, his reaction is not of remorse, but of pain and indignation.</p>
+<p>For a moment he considers the possibility of confessing his crimes, but then he immediately rejects this idea, because he thinks that nobody will believe him, since he has been so careful of getting rid of evidence.</p>
+<p><img src="../../assets/Schermata%202021-03-18%20alle%2018.00.21.jpg" alt="Schermata 2021-03-18 alle 18.00.21"><br>
+<img src="../../assets/Schermata%202021-03-18%20alle%2018.00.38.png" alt="Schermata 2021-03-18 alle 18.00.38"><br>
+<img src="../../assets/Schermata%202021-03-18%20alle%2018.00.51.jpg" alt="Schermata 2021-03-18 alle 18.00.51"></p>
+<p>Before reaching the decision to destroy the portrait, his mind goes through a series of steps.</p>
+<ul>
+<li><strong>line 15-16</strong>: nostalgia for his pure boyhood</li>
+<li><strong>line 16-20</strong>: awareness of his corruption</li>
+<li><strong>line 21-23</strong>: Dorian recollects his pact to keep eternal youth</li>
+<li><strong>line 23-25</strong>: his wish for repentance and purification</li>
+<li><strong>line 34-38</strong>: he reaches the awareness that beauty and youth have caused his ruin</li>
+<li><strong>line 39-40</strong>: Dorian expresses his wish to free himself from the past (which is also evidente in <strong>line 50</strong>)</li>
+<li><strong>line 50-56</strong>: Dorian doubts about his salvation</li>
+<li><strong>line 62-76</strong>: Dorian understands that repentance was just a pure illusion</li>
+<li><strong>line 96-99</strong>: Dorian finally comes to the decision to destroy the picture: he stabs the portrait, but in doing so he also kills himself, because the portrait is the reflection of his own soul. In fact one of the main themes of the novel (along with beauty and art) is also <strong>duplicity</strong></li>
+</ul>
+<p><mark><strong>Duplicity</strong></mark>: This story is a novel about a split identity; we can read this novel as an allegorical representation of the legend of Faust (by Marlow): he was a man who sells his soul to the Devil in order to all his desires satisfied. There are some differences:</p>
+<ol>
+<li>Dorian makes a pact with an absent devil</li>
+<li>Dorian gets eternal beauty and youth</li>
+</ol>
+<p>In the end Dorian dies, and the portrait recovers all its past perfection: in this novel it is art that wins in the end.<br>
+Dorian turns into a disgusting old man, and when the servants find his body, they are able to recognize him only by his rings.</p>
+<p>Wilde's intention was not to write a moral novel, even if the main character actually seems to be punished in the end. For Oscar Wilde art shouldn't deal with morality: the artist may consider the moral and immoral life of people as materials for his art, but there is no judgment. Art is not supposed to teach anything: those who try to go beneath the surface of a work, do so at their own risk.</p>
+<h2 class="mume-header" id="victorian-drama">Victorian Drama</h2>
+
+<ul>
+<li><mark>p. 31</mark></li>
+</ul>
+<p>Very little drama or not was produced in the Victorian period: the decline in the production of dramatic words is caused by:</p>
+<ol>
+<li>predominance of the novel</li>
+<li>the power acquired by the theatrical managers, who preferred to stage well known traditional plays, rather than try out new ones; many companies mainly performed Shakespeare, although with many of the text cut or even changed, in order to better suit the victorian tastes</li>
+<li>many victorians did not appreciate drama as a form of art, since they still consider actor and actresses as people of little respectability and doubtful morality</li>
+</ol>
+<p>There is one great innovation, related to the Victorian playhouse: the new theaters became smaller but more pretentious; they could be afforded only by the well off.</p>
+<p>The typical features of the Victorian playhouse:</p>
+<ul>
+<li>semicircular</li>
+<li>lighted by gas light and later on by electricity, while the audience was left in darkness</li>
+<li>the stage was separated from the audience by a curtain, and this allowed the scenery to be changed</li>
+</ul>
+<p>The new playhouses tended towards a more realistic staging, which made more use of actions and movement, and of setting. The keyword was to <strong>reach the illusion of reality</strong>.<br>
+The stage directions became longer and much more detailed.</p>
+<p>On the one hand, through the use of this theatrical machinery, the staging was more spectacular but on the other hand there were also some negative consequences:</p>
+<ul>
+<li>this type of staging was more expensive: for the theatrical manager it became unprofitable to stage different plays during the same theatrical season</li>
+<li>the victorian age was a period of great performers, so actors and actresses demanded a higher salary for their job.</li>
+</ul>
+<p>This finally leads to a lost of flexibility, who brought managers to stage traditions well know tragedies instead of new ones.</p>
+<p>The <strong>audience</strong> at the time went to the theatre just to be amused, and not to meditate on problems.The type of theatre that the victorians demanded was farce spectacol and above all Melodrama.</p>
+<p>This latter kind of theatre, <strong>melodrama</strong> was probably the most appreciated: they are highly schematic plays with stereotypical characters, absurd plots. The common features of all melodrama, is that good must triumph over evil. The victorian appreciated the morality on which melodrama was based, because the spectator could easily identify themself with the hero.<br>
+For certain aspects we can say that melodrama returned to the morality plays of the Middle Ages.</p>
+<p>There is a more innovating and subversive type of theatre that was emerging at the time, of the form of <strong>music hall</strong>. They are a type of theatrical entertainment, characterized by a mixture of comedy and popular song. Music hall was considered a low form of theatre, also because it dealt with taboo subjects, such as sex. It dealt with these taboo subjects using the tecnique of the <em>double meaning</em>.<br>
+It was mainly appreciated by the working classes, and even though it was considered a low form of theatre, it was to be of great influence in the 20th century, both on early cinema, especially in the films of <em>Charlie Chaplin</em>, and on the work of Samuel Beckett.</p>
+<p>After this period of stagnation, in which we have almost a gap in the production of new plays worth of note, with the last quarter of the 19th century, British Drama begins to show the first signs of revival. In fact the 1890s marked a reinessance in English dramatic art.</p>
+<p>This period of renaissance in theatre wasn't limited to the British context. Drama was changing and improving all of the Europe, and we can now outline the influences coming from abroad, which had an impact on British drama.</p>
+<h3 class="mume-header" id="chekhov">Chekhov</h3>
+
+<p>He was Russian. He replaced the lack of action with a constant inquiring into the psychology of his characters</p>
+<h3 class="mume-header" id="strindberg">Strindberg</h3>
+
+<p>He is a Swedish playwright who mixed naturalism with psychology, providing a deeper insight into life, together with penetrating studies of women.</p>
+<h3 class="mume-header" id="ibsen">Ibsen</h3>
+
+<p>He is from Norway. He modified the structure of the play by the <em>retrospective method</em>: disregarding the traditional method of construction based on 3 phases (<em>antecedent</em>, <em>climax</em>, <em>conclusion</em>), he skipped the antecedent and started just before the climax.<br>
+He used the stage as an instrument for social criticism and for attacks on bourgeois hypocrisy.<br>
+He confronted his audience with real life problems, without indulging in humour or any other form of relief<br>
+Features of Ibsen’s plays:</p>
+<ul>
+<li>introduction of problem drama</li>
+<li>realism in characters and language</li>
+<li>psychological exploration</li>
+<li>rejection of sentimentalism</li>
+<li>rejection of conventional moral ending</li>
+<li>defence of women’s independence</li>
+<li>focus on middle class people</li>
+<li>social commitment</li>
+</ul>
+<p>His influence was particularly evidente on the works of <strong>George Bernard Shaw</strong>, who was one of the main British playwright of the period. It is almost ironical to note that Wilde and Shaw had two opposite careers:</p>
+<ul>
+<li>during his life time Oscar Wilde's commedies were highly appreciated; he satires the values of the Victorian upper classes, but he did so in a very subtle way, which did not offend the people he was satirising; it was more Wilde's life and his homosexuality that made people turn the vindictively against him</li>
+<li>Shaw was an highly respected people, he was the model of decency, but his plays were not appreciated at the time, because they criticize to harshly the society of the time. He saw the theatre as an instrument for social and political change.<br>
+On the contrary Wilde denied the moral significant of art.</li>
+</ul>
+<h2 class="mume-header" id="wildes-plays">Wilde's plays</h2>
+
+<h3 class="mume-header" id="the-importance-of-being-ernest">The importance of being Ernest</h3>
+
+<ul>
+<li><mark>p. 136-137</mark></li>
+</ul>
+<p>It was published in 1895, but before this commedy Wilde also wrote other very succesful comedies, such as</p>
+<ul>
+<li>Lady Windermere's Fan (1892)</li>
+<li>A Woman of No Importance (1893)</li>
+<li>An Ideal Husband (1895)</li>
+</ul>
+<p>All these comedies revived the atmosphere of the comedy of manners. They contain witty epigrams, which give a vivid picture of the contemporary upper classes.<br>
+The society plays are different: the first three are more sentimental and melodramatic.</p>
+<p><em>The Importance of Being Earnest</em> is more brilliant and unconventional. The theatrical elements are better balanced</p>
+<p>In <em>The importance of Being Earnest</em> sentimentalism and melodrama are replaced by frivolous situations. The characters are sketched, the language is sparkling and it is rich in paradoxes and nonsense. No moral judgment ever intrudes, we only have a gentle satire on the Victorian upper classes.</p>
+<p>The main and secondary plots interweave in perfect unity and the characters are vividly sketched.<br>
+The language is sparkling and rich in witticism, epigrams, paradoxes and nonsense.</p>
+<p>Considering the title of the comedy, it contains a pun. Earnest means honest, but it is pronounced as the proper name Ernest.</p>
+<p>The 4 characters are all well-off and members of aristocracy;</p>
+<ul>
+<li>Gwendolen is resolute and helpful</li>
+<li>Cecily is hurt and surprised</li>
+<li>Jack is hesitant, nervous and indifferent with Algernon</li>
+<li>Algernon is disconcerted and detached; indifferent to external problems, he is frivolous and superficial</li>
+</ul>
+<p>The two girls join forces against the two men. The two pairs react to the discussion of serious problems by doing trivial things</p>
+<p>The serious problems are:</p>
+<ul>
+<li>identity</li>
+<li>marriage</li>
+<li>social status</li>
+<li>property</li>
+<li>baptism</li>
+</ul>
+<p>The stage directions provide comments on the characters’ reactions. The wish of the two men of being baptized may be the symbol of their turning their backs on their old life and facing their new-married-life in an appropriate state of earnestness.</p>
+<p>Wilde’s two main targets of this play are social hipocrisy and the mercenary marriage market of the high society of his age. His satire is good-humoured, the plot makes fun of the conventions of the day, the education, the relations between romantic love and the simplicity of the country.</p>
+<h4 class="mume-header" id="plot-1">Plot</h4>
+
+<p>All the characters present themselves as polite and sincere but actually they are manipulative<br>
+and calculating. This comedy is centred on two main characters, Jack Worthing and Algernon Moncrief, they<br>
+both live double lives. Jack lives in the country but he often go to London to visit his fictitious brother Ernest. Algernon lives in London but he often goes to the country to visita fictitious old friend, the<br>
+Bunbury.</p>
+<p>On one of his visits to London, Jack falls in love with a giri, Gwendolen. Algernon during a visit in the country, falls in love with Cecily, Jack's ward (a person who is looked after a person which his not her parent) and she thinks that Algernon is actually Jack's<br>
+brother Ernest. At a certain point of the story both Gwendolen and Cecily believe they are engaged to Ernest, there are many comic complications but in the end it transpires that Jack as a baby was left in a handbag in the station, Algernon is his brother and also Jack's name is indeed Ernest. In the end he can assume his name Ernest and he becomes earnest.<br>
+The two couples are reconciled and they can finally start a new life in a state of earnestness.<br>
+This comedy can be read in different levels:</p>
+<ul>
+<li>As a farse which plays on mistaken identities and misunderstandings</li>
+<li>Parody of romantic love, it mocks the idea of love at first sight, the two women seem to be<br>
+more in love with the name Ernest rather than with the boy they are in love with. The structure<br>
+of social relations is reduced to a question of names.</li>
+<li>At a deeper level this comedy is a social satire on the Victorian moral values placed on<br>
+appearances, apparently the comedy is a hard less amusing work but at a deeper level Wilde<br>
+actually dealt with serious themes such as identity, marriage, social status, property and<br>
+baptism. In the end the two men want to be baptised as Ernest, they want to turn their back<br>
+on their old lives and they want to start a new life.</li>
+</ul>
+<h4 class="mume-header" id="t-the-interview">T: The Interview</h4>
+
+<ul>
+<li><mark>p. 137</mark></li>
+</ul>
+<p>Gwendolen's mother is testing him trough a series of persona! questions to test Jack. The first part deals with Lady Bracknell's most important topics, smoking and money, the second section deals with Lady Bracknell's least important topic, family</p>
+<p><img src="../../assets/Schermata%202021-03-18%20alle%2018.07.05.jpg" alt="Schermata 2021-03-18 alle 18.07.05"><img src="../../assets/Schermata%202021-03-18%20alle%2018.07.19.jpg" alt="Schermata 2021-03-18 alle 18.07.19"></p>
+<ul>
+<li>In yellow we have the topics of conversation, they talk about education, age, smoking, incarne, possession and family,</li>
+<li>in pink we have the social cliches connected to the fact that the characters belong to the upper classes</li>
+<li>green dots refers to the woman's point of view on Jack's origins,</li>
+<li>words underlined in blue contains Lady Bracknell's remarks which reveals that she is bossy and frivolous and arrogant;</li>
+<li>light blue contains the paradoxes used by Lady Bracknell,</li>
+<li>in green we have Jack's concern for upper class' values,</li>
+<li>the red dots refers to what Jack has to do if he wants to marry Gwendolen.</li>
+</ul>
+<p>On <strong>Line 39/40</strong> we have a comic effect which is createci by the confusion of the common meaning of the verb "to lose" and its idiomatic sense in the expression of "to lose one's parents" (orphan).</p>
+<p>The language is sophisticated and artificial, perfect for the characters of the upper classes.<br>
+Marriage as a tool to achieve social status.</p>
+<p>The <strong>most important themes</strong> are:</p>
+<ul>
+<li>the institution of marriage</li>
+<li>criticism about Victorian prudery and exaggerated seriousness, hypocrisy and absurdity</li>
+<li>appearance is another important feature of the play</li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

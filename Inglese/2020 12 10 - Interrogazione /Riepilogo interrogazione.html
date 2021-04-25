@@ -1,0 +1,1049 @@
+<!DOCTYPE html><html><head>
+      <title>Riepilogo interrogazione</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header undefined" id="interrogazione-15-dicembre-2020">Interrogazione 15 dicembre 2020</h1>
+
+<div class="code-chunk" data-id="code-chunk-id-0" data-cmd="toc"><div class="input-div"><div class="btn-group"><div class="run-btn btn"><span>▶︎</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><ul>
+<li><a href="#the-victorian-age">The Victorian Age</a>
+<ul>
+<li><a href="#social-area">Social area</a>
+<ul>
+<li><a href="#evangelicalism">Evangelicalism</a></li>
+<li><a href="#benthams-utilitarianism">Bentham’s Utilitarianism</a></li>
+<li><a href="#fabian-society">Fabian Society</a></li>
+<li><a href="#respectability">Respectability</a></li>
+</ul>
+</li>
+<li><a href="#challenges-from-the-scientific-field">Challenges from the scientific field</a>
+<ul>
+<li><a href="#the-oxford-movement">The Oxford Movement</a></li>
+</ul>
+</li>
+<li><a href="#queen-victoria">Queen Victoria</a></li>
+<li><a href="#reforms">Reforms</a>
+<ul>
+<li><a href="#chartist-movement">Chartist Movement</a></li>
+<li><a href="#parties-and-politics">Parties and politics</a></li>
+<li><a href="#economical-reforms">Economical reforms</a></li>
+<li><a href="#other-reforms">Other reforms</a></li>
+</ul>
+</li>
+<li><a href="#foreign-policy">Foreign Policy</a>
+<ul>
+<li><a href="#ireland">Ireland</a></li>
+<li><a href="#british-colonial-empire">British Colonial Empire</a></li>
+</ul>
+</li>
+<li><a href="#victorian-poetry">Victorian Poetry</a></li>
+</ul>
+</li>
+<li><a href="#robert-browning">Robert Browning</a>
+<ul>
+<li><a href="#life">Life</a></li>
+<li><a href="#dramatic-monologue">Dramatic monologue</a></li>
+<li><a href="#poetry">Poetry</a></li>
+<li><a href="#t-porphyrias-lovers">T: Porphyria’s Lovers</a>
+<ul>
+<li><a href="#part-1">Part 1</a></li>
+<li><a href="#part-2">Part 2</a></li>
+<li><a href="#part-3">Part 3</a></li>
+</ul>
+</li>
+<li><a href="#t-my-last-duchess">T: My Last Duchess</a></li>
+</ul>
+</li>
+<li><a href="#alfred-tennyson">Alfred Tennyson</a>
+<ul>
+<li><a href="#features-of-his-works">Features of his works</a></li>
+<li><a href="#t-ulysses">T: Ulysses</a></li>
+</ul>
+</li>
+<li><a href="#the-bront%C3%AB-sisters">The Brontë sisters</a>
+<ul>
+<li><a href="#life-and-works">Life and works</a></li>
+<li><a href="#wuthering-heights">Wuthering Heights</a>
+<ul>
+<li><a href="#plot">Plot</a></li>
+<li><a href="#themes">Themes</a></li>
+<li><a href="#structure-and-style">Structure and style</a></li>
+<li><a href="#t-i-am-heathcliff">T: I am Heathcliff</a></li>
+<li><a href="#about-heathcliff">About Heathcliff</a></li>
+<li><a href="#t-heathcliffs-despair">T: Heathcliff's despair</a></li>
+<li><a href="#settings">Settings</a></li>
+<li><a href="#the-byronic-hero">The Byronic hero</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 class="mume-header" id="the-victorian-age">The Victorian Age</h1>
+
+<p>==p. 405 - IV==</p>
+<blockquote>
+<p>It was the best of time, it was the worst of times. It was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity. It was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair</p>
+<p>— Charles Dickens, The Tale of Two Cities</p>
+</blockquote>
+<p>It was an age of contradiction and opposites: age of progress, but also of problems in justice.</p>
+<p>The Victorian Age usually is meant from 1837 - 1901, during the reign of Queen Victoria. Actually the Victorian Age started in 1832, with the <em>Great Reform Bill</em>, a law, which is usually taken as the watershed between the romantic age and the victorian age.<br>
+This Reform Bill shifted political power from the hands of the landowners to the hands of manufacturer. It implied cultural changes as well.</p>
+<h2 class="mume-header" id="social-area">Social area</h2>
+
+<p>The new ruling classes were as ruthless as those that had governed Britain during the first phase of industrial revolution, but they began to be gradually aware of the inhuman levels of exploitation of the workers: they were more careful on the workers:</p>
+<ul>
+<li>at a political level this awareness gave rise to a serious of reforms that in the end improved the conditions of life and work of the proletarians, avoiding at the same time that social revolution that, according to Marx’s analysis, should have taken place in Britain first;</li>
+<li>among the common affluent people this awareness took the form of humanitarianism, philanthropy and sentimentalism;</li>
+<li>the Victorian novelist, mostly belonging to the middle classes, shared the same values and models of life of their reading public, and approached with this attitude to the main problems of their times; they felt a sense of guilt, and they find a solution in philanthropy, and they acted according to philanthropy granted from a position of social and economic privilege; at the same time they thought that their only responsibility was to expose their problems</li>
+<li>there were some <em>good points</em>:
+<ol>
+<li>more general <strong>prosperity</strong> that was spreading in Britain;</li>
+<li>medical, mechanical and scientific <strong>progress</strong>;</li>
+<li>improvement of <strong>literacy</strong></li>
+<li>the reform of a <strong>middle class parliament</strong>, conceded to the working classes, created a widespread belief that social peace was possible and that progress was limitless</li>
+</ol>
+<ul>
+<li>these good points account for the optimism which characterized the whole period, and for the self-confidence and self-complacency of the middle classes which were alse able to impose their values on the working class; the most important value was <em>respectability</em></li>
+</ul>
+</li>
+<li>the <em>negative points</em> are:
+<ol>
+<li><strong>poverty</strong></li>
+<li><strong>prostitution</strong></li>
+<li><strong>exploitation of labour</strong></li>
+<li><strong>cruelty to children</strong></li>
+</ol>
+<ul>
+<li>these evils were removed from the conscience of people by being concealed under the veil of hypocrisy;</li>
+<li>it was a characteristic tendency of the victorian society to deceive itself in relation to its responsibilities and faults; some political writers exposed this attitude, attacking the fundamental insensitivity of their times</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>The Victorian Age was a very complex age, marked by religious, social and political unrest and confusion.</p>
+<p>The country underwent a gradual but continuous process of democratisation, and greater freedom was given to catholics</p>
+<p>The class that benefited most from the changes of the time was the middle class, which was made up of manufactures, merchants and bankers.<br>
+This class increased in power, and took the control of the Government. This class was also favoured by progress in industrial and technological field.</p>
+<p>This situation led to widespread optimism, due to colonial expansion, scientific and technical results, and improvement in transports.<br>
+Middle class people believe that <em>happines</em> could be reached <strong>through technical progress</strong>.</p>
+<p>The Victorians were proud of their <strong>welfare</strong>, of their good manners, of their middle class values, and tended to ignore the social problems that still afflicted most of the population.<br>
+The working class lived in misery and distress. The new hurbans conditions, and the growth of slums have created a lot of health problems.<br>
+Whole families were often crowded in a single room, where lack of hygiene, occasionally led to cholera.</p>
+<p>The government create the <strong>work houses</strong>, in order to solve these problems.<br>
+They were institutions built by government and run by parishes, where families who couldn’t support themselves were confined. Here sexes were segregated and people were barely fed. People were always hungry and dirty and miserable.</p>
+<p>The reason why the work houses were built was the poverty, whether it was the result of bad behaviour or bad luck, was virtually regarded as a crime, and it was penalised as such. This was the mentality for which workhouses were created.<br>
+Also debtors were held in work houses, or at least in jail.</p>
+<p>Also education had his problems, because teachers were often incompetent, but they controlled the students through corporal punishment.</p>
+<p>This particular situation which saw prosperity and progress on the one hand, and poverty, ugliness and injustice on the other, which opposed conformism to corruption, moralism and philanthropy to money and capitalistic greediness, and which separated private life from public behaviour, was called <strong>Victorian Compromise</strong>.</p>
+<p>The situation nevertheless aroused the concern of many and many reformers and theorists, who, for social or humanitarian reasons, tried to improve living conditions of the poor, at all levels, including hospitals, schools and prisons.<br>
+It is thanks to their care and actions that parliament passed so many acts regulating work, sanitation, the condition of children, the exploitation of teenagers.</p>
+<h3 class="mume-header" id="evangelicalism">Evangelicalism</h3>
+
+<p>A religious movement that acted in this period was <strong>Evangelicalism</strong>; it was inspired by the teachings of John Wesley, the founder of <strong>Methodism</strong>.<br>
+The evangelicals were deeply concerned with <em>human problems</em> and <em>social reforms</em>. They contributed to the <em>abolition of slavery</em> and the <em>First Reform Bill</em>.<br>
+They had a puritanical view of life, so they advocate</p>
+<ul>
+<li>the abolition of certain public entertainments,</li>
+<li>a strict observance of Sunday</li>
+<li>very strict code of behavior.</li>
+</ul>
+<h3 class="mume-header" id="benthams-utilitarianism">Bentham’s Utilitarianism</h3>
+
+<p>==p. 12 - V==</p>
+<p>According to Utilitarianism, an action is morally right if it has consequences that lead to happiness, and wrong if it brings about the reverse. Therefore all institutions should be tested in the light of reason and common sense to determine whether they are useful, measuring the extent to which they provide for the material happiness of the greatest number of people.<br>
+Utilitarianism suited the interests of the middle class and contributed to the Victorian conviction that any problem could be overcome through reason.</p>
+<h3 class="mume-header" id="fabian-society">Fabian Society</h3>
+
+<p>It was in this particular atmosphere that the <strong>Fabian Society</strong> was founded in 1884, by Sidney and Beatrice Webbs. It was inspired by Marxist doctrines, and it consists in <strong>socialists</strong> who advocated gradual reforms instead of drastic revolutionary measures.<br>
+Its name derived from <em>Quintus Fabius Maximus</em>, which was a general called “the delayer”, because in his campagne against Annibale avoided direct engagement.</p>
+<h3 class="mume-header" id="respectability">Respectability</h3>
+
+<p>Manners underwent a deep change in this period; under the influence of Queen Victoria herself the age became excessively <strong>puritan</strong>; sex became a taboo subject, and all the words with sexual connotation were replaced by synonyms.</p>
+<p>The key word in this period was ==<strong>respectability</strong>==</p>
+<h4 class="mume-header" id="victorian-family">Victorian Family</h4>
+
+<p>The conventional morality of the time found its best expression within the family, where the father was the <em>authority</em> and the mother was to be <em>submissive</em> and <em>fruitful</em>. In fact Victorian Families were usually very large, also because Queen Victoria herself had 9 children.</p>
+<p>Middle class women were expected to be <em>frail</em>, <em>innocent</em> and <em>pure</em>. They were confined within the family. They were devoted to <em>respectable jobs</em> like teaching.</p>
+<p>But restrictions involved men too; they were forbidden to gamble, swear and drink hard.</p>
+<p>Clothes were very formal because appearance was very important.</p>
+<h4 class="mume-header" id="the-victorian-house">The Victorian House</h4>
+
+<p>Victorian people were busy with making money and social climbing, so they had little time for art, and this indifference led to bad taste in buildings and furnishings.<br>
+These needed to be a status symbols, and so houses became pretentious, but <em>not beautiful</em>.  The interiors were overcrowded with <em>ornaments</em>, <em>decorations</em> and <em>furniture</em>.</p>
+<h2 class="mume-header" id="challenges-from-the-scientific-field">Challenges from the scientific field</h2>
+
+<p>==p. 13 - V==</p>
+<p>In his work <em>On the Origin of Species by Means of Natural Selection</em> Charle Darwin presented his theory of evolution and natural selection. He later developed it in his work <em>The Descent of Man and Selection in Relation to Sex</em>.<br>
+According to Darwin’s theory:</p>
+<ul>
+<li>all living creatures in existence have developed their forms through a slow process of change and adaptation in a struggle for survival;</li>
+<li>favorable physical conditions determine the survival of a species, unfavorable ones its extinction ;</li>
+<li>man evolved, like any other animal, from a less highly organized form, namely a monkey.</li>
+</ul>
+<p>On the one hand, Darwin’s theory discarded the version of creation given by the Bible; on the other hand, it seemed to show that the universe was not static but perpetually developing, that the strongest survived and the weakest deserved to be defeated.</p>
+<h3 class="mume-header" id="the-oxford-movement">The Oxford Movement</h3>
+
+<p>==p. 13 - V==</p>
+<p>British Catholics replied to the challenges of science by returning to the ancient doctrines and rituals. The religious revival found its expression in the movement headed by the English cardinal John Henry Newman, which went under the name of “Oxford Movement” because it began at Oxford University.</p>
+<h2 class="mume-header" id="queen-victoria">Queen Victoria</h2>
+
+<p>She belongs to the Hanoverians (George I, George II, William IV). She was the niece of William IV, and she took the throne when she was only <strong>18 yo</strong>, and she would reign for 64 years and she would became a symbol of the entire age.</p>
+<h2 class="mume-header" id="reforms">Reforms</h2>
+
+<p>When Victoria got to the throne she found a Country in difficult conditions, because there was discontent among the working classes, due to a period of <em>economical crisis</em>.</p>
+<h3 class="mume-header" id="chartist-movement">Chartist Movement</h3>
+
+<p>A direct consequence of this economical crisis was the birth of the <strong>Chartist Movement</strong>: their name went from their proposal of a charter of reforms, made up of 6 points:</p>
+<ol>
+<li><em>universal suffrage</em></li>
+<li><em>annual parliament</em></li>
+<li><em>payment for parliament member</em>; so far the member of parliament were not paid, so only rich people could afford to stay there</li>
+<li>the <em>right for a man without proprieties to be elected</em></li>
+<li><em>secret ballot</em></li>
+<li><em>equal electoral districts</em>; until that moment the electoral districts were of the same area and dimensions, without taking care of the density of population; in this way it was very easy for affluent people to control districts with a small number of people (called <em>rotten boroughs</em>)</li>
+</ol>
+<p>This petition was not accepted in parliament, and so Chartist disappeared from policy in 1848, since they were considered politically immature, and their projects were doomed to failure, but with the passing of time all their reforms had been actuated, but for the <em>annual parliament</em>.</p>
+<h3 class="mume-header" id="parties-and-politics">Parties and politics</h3>
+
+<p>In 1825 the ==<strong>Trade Unions</strong>== [sindacati] were legalized, and they became stronger and stronger. In 1868 there was the first Trade Union Congress, and a status was given to the movement.</p>
+<p>The long reign of queen Victoria saw a succession of great Prime Ministers, some belonging to the Tories (now conservatives), and some belonging to the Wigs (now liberals; in the modern parliament is the Labour to oppose to Conservative, born in 1906).<br>
+The two parties, that were ==<strong>Tories and Wigs</strong>==, had different opinions, but they agreed for a second and a third <em>Reform Bill</em>.</p>
+<ul>
+<li>The <strong>Second Reform Bill</strong> was passed in 1867, and it extended the right of vote to Town Labourers, while peasants and miners couldn’t vote.</li>
+<li>Only with the <strong>Third Reform Bill</strong>, in 1884, that the latter were given a right to vote. In this way the number of electors doubled, since suffrage had been extended to all male workers</li>
+</ul>
+<p>It only refers, obviously, to men. <em>Women couldn’t vote</em></p>
+<p>Many representatives of the working class may now be elected, entering the <em>house of commons</em>.</p>
+<p>In 1897 the <strong>independent Labour party</strong> was formed (born as a movement), and finally the working class may compete widely for politically power. They were transformed into a real party in 1900, and had a great political success in 1906.</p>
+<h3 class="mume-header" id="economical-reforms">Economical reforms</h3>
+
+<p>An other social question was the ==price of <strong>corn</strong>==; it was kept artificially high by the government, through protective tariffs there were called the <em>Corn laws</em>, which restricted the importation of foreign corn.<br>
+An association was formed against the Corn laws, and it obtained the repeal [cancellazione] of these laws in 1846, with the support of a conservative Prime Minister, Peel.<br>
+The repeal caused much discontent in the <em>Conservative Party</em>, since it wanted to protect the interests of the <em>landed gentry</em>, by which it was largely supported.</p>
+<p>The upper class and the industrial class both believed in a policy of ==<strong>Free Trade</strong>==, that is an uncontrolled flow of commercial transactions with foreign nations. It was a free exchange of good, without protective tariffs, and it brought great wealth to England.</p>
+<h3 class="mume-header" id="other-reforms">Other reforms</h3>
+
+<p>The Victorian Age was marked by a great number of social achievements and reforms;</p>
+<ul>
+<li><strong>The Factory Act</strong>, which regulated and improved the conditions of workers in factory</li>
+<li><strong>Ten Hours’ Act</strong>, which limited the working hours to ten a day, for both men and women.</li>
+<li><strong>The Mines Act</strong>, which prohibited the working of women and children in mines</li>
+<li><strong>The Public Health Act</strong>, which improved health condition</li>
+<li><strong>The Education Act</strong>, which reorganized elementary education</li>
+<li><strong>Adoption of the English week</strong>, by which Saturday Afternoon was devoted to pleasure and entertainment</li>
+</ul>
+<h2 class="mume-header" id="foreign-policy">Foreign Policy</h2>
+
+<h3 class="mume-header" id="ireland">Ireland</h3>
+
+<p>The population of Ireland consisted mainly of Catholics, and they were very poor and they became even poorer by recurrent famines; with only potato crops to feed on.<br>
+In the 1840’s there was a potato famine, and so potato crops failed several times; this caused mass starvation and emigration.<br>
+In order to stop a mass emigration and starvation, Charles Parnell, which was an irish leader, demanded Home Rule (an independent constitution), but these reforms were rejected twice by the conservatives, and Ireland obtained Home Rule only after WWI.</p>
+<h3 class="mume-header" id="british-colonial-empire">British Colonial Empire</h3>
+
+<p>The Victorian Age was above all the period in which the great British Colonial Empire took its final form.</p>
+<p>There was an enlargement of the indian territories, as a consequence of the indian mutiny [ammutinamento indiano] in 1857, and after this mutiny England acquired the control of India. In 1876, Queen Victoria became Empress of India, that was India, Bangladesh and Pakistan.</p>
+<p>The English Empire had enormous proportions, involving Canada, Australia, New Zealand, India, Ceylon, Singapore, Hong Kong, Gibraltar, Malta and Cyprus.</p>
+<p>This period is characterized by two wars:</p>
+<ul>
+<li>from 1899 to 1902 England was at war against two south-african areas, called Orange and Transvaal; these two areas were interesting because there were diamonds and gold; these two regions were ruled by dutch colonists, called Boers; it gave England the supremacy over the two dutch reasons</li>
+<li><strong>The Crimean War</strong>: it was the only international’s war during Victoria’s Reign; it was originated by a dispute between Turkey and Russia, over the boundaries of the Turkish empire.; England and France, declared war on Russia, together with Turkey, because they were afraid of the growing power of Russia in the balkans; the war broke out in 1854 and 1857; Russia was defeated, but the conflict exposed the disorganization of the English Army particularly in the field of sanitation; public opinion was horrified at the news to the terrible conditions in which sick and wounded soldiers were kept; a young lady of noble origins, <strong>Florence Nightingale</strong> went to Crimea organized hospitals, obtained nurses medicines and bandages from England, laid the foundations of Medical Services for soldiers; she inspired the creation of the Women’s Corps in the international <em>Red Cross</em>.</li>
+</ul>
+<h2 class="mume-header" id="victorian-poetry">Victorian Poetry</h2>
+
+<p>==p. 22 - V==</p>
+<p>During Victoria’s Reign poetry became more concerned with social reality.<br>
+This led on the one hand to the creation of majestic poetry linked to the myth and the belief of the greatness of England; on the other hand to the creation of poetry more inclined towards anti-myth and disbelief which had to solve the ethical problems raised by science and progress</p>
+<p>Now the poet was seen as a “prophet” and a “philosopher”. People expected that he could reconcile faith and progress, as well as sprinkle a little romance over the unromantic materialism of modern life.</p>
+<p>The major poets of the age were <strong>Alfred Tennyson</strong> and <strong>Robert Browning</strong>.</p>
+<p>Victorian Poetry started as a revival of Romanticism but soon mirrored the sense of uneasiness that characterized the Victorian Age.<br>
+The most important poets were <strong>Alfred Tennyson</strong> and <strong>Robert Browning</strong> and they felt a moral responsibility through their poems towards their public.</p>
+<h1 class="mume-header" id="robert-browning">Robert Browning</h1>
+
+<h2 class="mume-header" id="life">Life</h2>
+
+<p>He was born in 1820, and he died in 1889, in London.<br>
+He had a happy childhood, and his mother was very religious and a good musician.</p>
+<p>It was his father who really educated him. He had little formal education, since he never attended school, and he only attended London University for short time.<br>
+He started writing poems when he was very young, still a boy, and he loved Italy, and he would spend all his youth and middle years in Italy.</p>
+<p>The only memorable event of his life was his marriage with <strong>Elizabeth Barrett</strong>; she was 6 years older than him; they had to marry secretly because her father didn’t want her to marry him.<br>
+She died in 1861, and after he died he went back to England from Italy.</p>
+<p>At the end of his life, he settled in Venice, and he died there.</p>
+<p>After his death his corpse was claimed by England, and he was buried in <strong>Poet’s corner</strong> in <em>Westminster Abbey</em>.</p>
+<h2 class="mume-header" id="dramatic-monologue">Dramatic monologue</h2>
+
+<p>He is outstanding because he created a new kind of poem, called <strong>Dramatic Monologue</strong>.</p>
+<p>The Dramatic Monologue was not invented by Browning, but he actually inherited it from past writers, especially from <em>Shakespeare</em>; he wrote, especially in <em>Hamlet</em> and <em>Macbeth</em> long soliloquies, that are extended passages recited by one person; they are addressed to no-one in particular, but to the audience at large.<br>
+Through the soliloquy the character reveals his faults, his thoughts to the audience, while giving the impression that he is speaking to himself.</p>
+<p>Browning chooses this poetic form because it gives him the possibility of <strong>psychological exploration</strong>; but he transformed the soliloquy into a <strong>monologue</strong> by means of the following devices:</p>
+<ol>
+<li>he turned the soliloquy into a complete lyrical poem with a precise metrical structure;</li>
+<li>he avoided any autobiographical reference, by introducing a third person, a speaker, who speaks about himself or about someone else;</li>
+<li>he replaced the audience with one or more silent listeners, to whom the speaker addresses;</li>
+<li>he called his monologues <strong>dramatic</strong>, in the sense of <em>theatrical</em> (in fact they are dramas with characters) and <em>crucial</em> (because the speaker is caught in a moment of crisis);</li>
+<li>Browning preserves the <strong>dramatic irony</strong>, present in Elizabethan Soliloquies, since the speaker does not realize that what he is revealing to the listeners is excessive and dangerous;</li>
+<li>he made his characters not only individuals not only individuals but stereotypes (symbols of a category or of an age);</li>
+<li>he decided to use blank verse, which is <em>unrhymed iambic pentameter</em>, but the punctuation respected the line of thought, and this gave the impression of spoken language;</li>
+<li>he set his monologues in a distant historical period, because he didn’t want to be involved.</li>
+</ol>
+<h2 class="mume-header" id="poetry">Poetry</h2>
+
+<p>He appreciated the arts and intelligent tourism, and he believed in progress: he was absolutely Victorian (optimistic).<br>
+He believed that everything offered to our experience, be it good or evil, is useful: evil is the necessary challenge for man to achieve good; in that way life becomes a battlefield, on which human beings must use all their energy, will and activity.</p>
+<p>Browning started writing under Shelly’s influence, and he found his own style in the dramatic monologue, because he wanted to be objective and dramatic.</p>
+<p>He wrote 3 types of dramatic monologues:</p>
+<ol>
+<li><strong>Ironic self portraits</strong> which continued the tradition of Chaucer’s <em>Canterbury Tales</em>; the irony which is used in these monologues is involuntary, because the protagonist doesn’t seem to realize that what he is saying will be imputed to him as guilt. <em>My Last Duchess</em> belongs to this group.</li>
+<li>In the second group Browning sets out to explore a <strong>human problem</strong>, and the monologue is usually a speech of defense made by the protagonist himself. <em>Frà Lippo Lippi</em> and <em>Andrea del Sarto</em> belongs to this group.</li>
+<li>The last group are <strong>love lyrics</strong>; here the poet offers his tender invitations and his reflections to a woman; the themes are <em>love</em>, <em>music</em>, <em>religion</em>, <em>painting</em>.</li>
+</ol>
+<p>Browning was a very prolific author; he wrote a lot of poems, plays and books, but most of his works are <strong>obscure</strong>,  and the most remarkable are his collection of poems, such as <em>Dramatic Lyrics</em>, and <em>Men and Women</em>.<br>
+In these <em>Dramatic Lyrics</em> there is a subgroup titled <em>Madhouse Cells</em>, where he analyses the personality of mad people, the psychology of crazy people.<br>
+The two most famous poems are <em>My Last Duchess</em> and <em>Porphyria’s Lover</em>.</p>
+<h2 class="mume-header" id="t-porphyrias-lovers">T: Porphyria’s Lovers</h2>
+
+<p>==p. 23 - V==</p>
+<p>He talks about a murder: a man kills his lover because she is not ready to leave her husband and go with her lover.</p>
+<p>It belongs to <em>Madhouse Cells</em>, because here Browning studies abnormal psychologies. The soliloquy consists in twelve five lines stanzas.</p>
+<p>What makes P.L. particularly interesting is the detailed confession of the murderer, who obsessively reports every particular of the crime.</p>
+<p>It can be divided into three parts</p>
+<h3 class="mume-header" id="part-1">Part 1</h3>
+
+<p>==<strong>Line 1 to 5</strong>==</p>
+<blockquote>
+<p>The rain set early in to-night,</p>
+<p>The sullen wind was soon awake,</p>
+<p>It tore the elm-tops down for spite,</p>
+<p>And did its worst to vex the lake:</p>
+<p>I listened with heart fit to break.</p>
+</blockquote>
+<p>It’s a sort of prologue, with the description of the time of the day (late afternoon, merging into night) and the weather conditions, which are bad: it’s raining hard, and the wind is tearing the elm-tops.; the wind is also rising little waves on the lake.</p>
+<p>The <strong>gloomy weather</strong> mirrors the psychological lability of the speaker, who listens to the noises of the external storm with a similar tempest in his heart.</p>
+<p>The lover is in the cottage, waiting for Porphyria, the woman he passionately love, but of whose love is not sure.</p>
+<h3 class="mume-header" id="part-2">Part 2</h3>
+
+<p>==<strong>Line 6 to 30</strong>==</p>
+<blockquote>
+<p>When glided in Porphyria; straight</p>
+<p>She shut the cold out and the storm,</p>
+<p>And kneeled and made the cheerless grate</p>
+<p>Blaze up, and all the cottage warm;</p>
+<p>Which done, she rose, and from her form</p>
+<p>Withdrew the dripping cloak and shawl,</p>
+<p>And laid her soiled gloves by, untied</p>
+<p>Her hat and let the damp hair fall,</p>
+<p>And, last, she sat down by my side</p>
+<p>And called me. When no voice replied,</p>
+<p>She put my arm about her waist,</p>
+<p>And made her smooth white shoulder bare,</p>
+<p>And all her yellow hair displaced,</p>
+<p>And, stooping, made my cheek lie there,</p>
+<p>And spread, o’er all, her yellow hair,</p>
+<p>Murmuring how she loved me — she</p>
+<p>Too weak, for all her heart’s endeavour,</p>
+<p>To set its struggling passion free</p>
+<p>From pride, and vainer ties dissever,</p>
+<p>And give herself to me for ever.</p>
+<p>But passion sometimes would prevail,</p>
+<p>Nor could to-night’s gay feast restrain</p>
+<p>A sudden thought of one so pale</p>
+<p>For love of her, and all in vain:</p>
+<p>So, she was come through wind and rain.</p>
+</blockquote>
+<p>We see the lady who arrives at the cottage, she glide in;<br>
+she is a lady, she is aristocratic, she is very rich, and her lover instead is of a lower class; even through she is a lady, she kneels in front of the fireplace, and she pokes the fire, which is dying out.</p>
+<p>She takes off her wet cloak, her shawl and her gloves, and she let her damp hair fall.</p>
+<p>She calls her lover, but he doesn’t reply, because he is angry and aggressive. She coaxes him, and she murmurs she loves him.</p>
+<p><em>Why is he so angry?</em><br>
+Because he knows she is too proud and too weak to exchange the glittering world she belongs to for a humble life with him forever. In this moment her passion prevails, and she is happy and belongs to him.</p>
+<h3 class="mume-header" id="part-3">Part 3</h3>
+
+<p>==<strong>Line 31-60</strong>==</p>
+<blockquote>
+<p>Be sure I looked up at her eyes</p>
+<p>Happy and proud; at last I knew</p>
+<p>Porphyria worshipped me; surprise</p>
+<p>Made my heart swell, and still it grew</p>
+<p>While I debated what to do.</p>
+<p>That moment she was mine, mine, fair,</p>
+<p>Perfectly pure and good: I found</p>
+<p>A thing to do, and all her hair</p>
+<p>In one long yellow string I wound</p>
+<p>Three times her little throat around,</p>
+<p>And strangled her. ==No pain felt she==;</p>
+<p>I am quite sure she felt no pain.</p>
+<p>As a shut bud that holds a bee,</p>
+<p>I warily oped her lids: again</p>
+<p>Laughed the blue eyes without a stain.</p>
+<p>And I untightened next the tress</p>
+<p>About her neck; her cheek once more</p>
+<p>Blushed bright beneath my burning kiss:</p>
+<p>I propped her head up as before,</p>
+<p>Only, this time my shoulder bore</p>
+<p>Her head, which droops upon it still:</p>
+<p>The smiling rosy little head,</p>
+<p>So glad it has its utmost will,</p>
+<p>That all it scorned at once is fled,</p>
+<p>And I, its love, am gained instead!</p>
+<p>Porphyria’s love: she guessed not how</p>
+<p>Her darling one wish would be heard.</p>
+<p>And thus we sit together now,</p>
+<p>And all night long we have not stirred,</p>
+<p>And yet God has not said a word!</p>
+</blockquote>
+<p>Here the crime occurs, and it is devoted to the lover, and to his joyful surprise when he realizes that Porphyria does love him.</p>
+<p><em>What can he do to detain this perfect moment?</em><br>
+The answer of his deranged mind is that in order not to loose his possession <strong>he must kill her</strong>; by killing her she will be his forever.<br>
+He winds her hair around her slender neck three times and strangles her.</p>
+<p>But madness is evident when he says “no pain felt she”, that reminds us of Othello’s words: “I would have thee linger in thy pain”.</p>
+<p>When a person murders another person, especially in this condition, he thinks he is similar to God, because he has the power of life and death; Othello’s mind is deranged by jealousy, Lover’s one by madness: they both assume they are similar to God because they think they have a right to allot [assegnare, distribuire] death.</p>
+<p>Now Porphyria is dead, she is in his arms, he opens her lids, he loosens her hair, and he kisses her repeatedly. He sicks all night long, without stirring, with her corps in his arms; the conclusion he draws is that <strong>as God has said nothing, he has made a good action</strong>.</p>
+<p>Browning closes the poem with the line whose meaning is obscure. <em>Does he mean that madness is beyond God’s judgement?</em> <em>Who can condemn a man who doesn’t know the boundaries between good and evil?</em></p>
+<p>After murdering the woman, the speaker feels he has complete power on her. The speaker is mentally alienated, he is cool and murderous, pitiless. It is a case of lucid insanity; the tone is cold and reflective.</p>
+<h2 class="mume-header" id="t-my-last-duchess">T: My Last Duchess</h2>
+
+<p>The poem is settled in Ferrara, when Alfonso II d’Este was the duke. It is set in the period of Italian Renaissance.</p>
+<p>The speaker is the duke himself, but the real protagonist is her late wife; the silent listener is the ambassador of the Count of Tyrol.<br>
+<em>Why is he there?</em> He has to define together with the duke the amount of the dowry that the Count of Tyrol’s daughter, who is promised to the Duke.</p>
+<p>The Duke has had his previous wife killed, because she didn’t behave as well as he expected. Now he is going to marry an other lady, the Count of Tyrol’s Daughter, and he is defining the dowry that she will have to give him in order to became a duchess, since countess is lower than duchess.</p>
+<p>The Duke is taking the Ambassador through his castle, to visit it, because he wants to impress him, in order to get a larger dowry: they are in front of a Canvas, which represents the Duchess, in all her youth and beauty.<br>
+There is this painting, hanging on a wall, representing the duchess. The Duke attitude while describing the paining is detached, cold, indifferent.</p>
+<p>On <em>line 16</em>, in order to make the situation more realistic, the Duke quotes an imaginary monastic painter, in order to make the painting more precious in his listener’s eyes. The painter looks like the prototype of the Renaissance artist, working at the service of a patron.</p>
+<p>The poem start abruptly, and there are colloquial elements: similar to an everyday speech.</p>
+<blockquote>
+<p><em>FERRARA</em></p>
+<p>That’s my last Duchess painted on the wall,</p>
+<p>Looking as if she were alive. I call</p>
+<p>That piece a wonder, now; Fra Pandolf’s hands</p>
+<p>Worked busily a day, and there she stands.</p>
+<p>Will’t please you sit and look at her? I said</p>
+<p>“Fra Pandolf” by design, for never read</p>
+<p>Strangers like you that pictured countenance,</p>
+<p>The depth and passion of its earnest glance,</p>
+<p>But to myself they turned (since none puts by</p>
+<p>The curtain I have drawn for you, but I)</p>
+<p>And seemed as they would ask me, if they durst,</p>
+<p>How such a glance came there; so, not the first</p>
+<p>Are you to turn and ask thus. Sir, ’twas not</p>
+<p>Her husband’s presence only, called that spot</p>
+<p>Of joy into the Duchess’ cheek; perhaps</p>
+<p>Fra Pandolf chanced to say, “Her mantle laps</p>
+<p>Over my lady’s wrist too much,” or “Paint</p>
+<p>Must never hope to reproduce the faint</p>
+<p>Half-flush that dies along her throat.” Such stuff</p>
+<p>Was courtesy, she thought, and cause enough</p>
+<p>For calling up that spot of joy. She had</p>
+<p>A heart—how shall I say?— too soon made glad,</p>
+<p>Too easily impressed; she liked whate’er</p>
+<p>She looked on, and her looks went everywhere.</p>
+<p>Sir, ’twas all one! My favour at her breast,</p>
+<p>The dropping of the daylight in the West,</p>
+<p>The bough of cherries some officious fool</p>
+<p>Broke in the orchard for her, the white mule</p>
+<p>She rode with round the terrace—all and each</p>
+<p>Would draw from her alike the approving speech,</p>
+<p>Or blush, at least. She thanked men—good! but thanked</p>
+<p>Somehow—I know not how—as if she ranked</p>
+<p>My gift of a nine-hundred-years-old name</p>
+<p>With anybody’s gift. Who’d stoop to blame</p>
+<p>This sort of trifling? Even had you skill</p>
+<p>In speech—which I have not—to make your will</p>
+<p>Quite clear to such an one, and say, “Just this</p>
+<p>Or that in you disgusts me; here you miss,</p>
+<p>Or there exceed the mark”—and if she let</p>
+<p>Herself be lessoned so, nor plainly set</p>
+<p>Her wits to yours, forsooth, and made excuse—</p>
+<p>E’en then would be some stooping; and I choose</p>
+<p>Never to stoop. Oh, sir, she smiled, no doubt,</p>
+<p>Whene’er I passed her; but who passed without</p>
+<p>Much the same smile? This grew; I gave commands;</p>
+<p>Then all smiles stopped together. There she stands</p>
+<p>As if alive. Will’t please you rise? We’ll meet</p>
+<p>The company below, then. I repeat,</p>
+<p>The Count your master’s known munificence</p>
+<p>Is ample warrant that no just pretense</p>
+<p>Of mine for dowry will be disallowed;</p>
+<p>Though his fair daughter’s self, as I avowed</p>
+<p>At starting, is my object. Nay, we’ll go</p>
+<p>Together down, sir. Notice Neptune, though,</p>
+<p>Taming a sea-horse, thought a rarity,</p>
+<p>Which Claus of Innsbruck cast in bronze for me!</p>
+</blockquote>
+<p>This Duke is quite unusual.<br>
+The Duke is aware that Fra Pandolf’s works are motivated by flattery, and the Duke attitude toward flattery is sneering; but Fra Pandolf is also a pretest for the duke to introduce the duchess. In fact al the central part of the poem talks about her,</p>
+<p>She ranked everything on the same level.</p>
+<p>The Duke strongly disapproves on her behavior, but in spite of his disapproving words the Duke unconsciously reveals the duchess’s genuine outstanding  traits: she is good; in fact she was</p>
+<ul>
+<li>young</li>
+<li>naive</li>
+<li>full of life</li>
+<li>generous</li>
+<li>smiling</li>
+<li>wellcoming</li>
+<li>democratic, in the sense that she considerate all people on the same level</li>
+<li>openhearted and</li>
+<li>warm,</li>
+<li>spontaneous</li>
+<li>delicate</li>
+<li>extrovert</li>
+<li>delightful</li>
+</ul>
+<p>On the other hand the dukes opinion on her is that she was frivolous, superficial, gullible (too ready to believe); she was unaware of the honor imparted to her</p>
+<p>The image that comes out is the one of a very young girl married to a much older man, which was a situation not so infrequent in renaissance courts.</p>
+<p>At <em>line 34 to 43</em> the attention is shifted from the Duchess to the Duke, who reveals his proud temper, by refusing to stoop</p>
+<p>The poem now comes to his climx, on line 45-46, when he says “I gave commands; Then all smiles stopped together”; the duchess finally leaves the scene and disappear;<br>
+the Duke in fact dismiss her in a a few more word: “There she stands As if alive.” which repeats the line at the beginning: this enclose the tragic event in an imaginary framework.</p>
+<p>The duchess has been killed, because her husband disliked her, but the way the duke produces this piece of information is indifferent, laconic, dry, cynical, casual and cold.</p>
+<p>If the poem ended here, it would simply sound like the skillful narration of a dramatic episode, but it would be incomplete and unconvincing. It is in fact only the last 10 lines that provide a series of shocking revelations, essential to the understanding of the poem</p>
+<p>We get to know that “the count your master” is the Count of Tyrol, “the company below” is a group of friends, so we infer the identity of the auditor, that is the ambassador of the Count of Tyrol, and the reasons for the marriage, that are the countess of Tyrol needs to improve in the social ladder, and the duke wants a new wife and money.</p>
+<p>We also can infer the reason why the Duke told the auditor the tragic story of his last duchess; the reason is to warn the Countess of Tyrol not to behave as his former wife.</p>
+<p>Considering that the poem is set in Renaissance Ferrara, and that it is possibly based on a real historical event, the Duke <strong>might</strong> be Alfonso d’Este, who had his first wife Lucrece to be killed after only three years of marriage.</p>
+<p>After defining the personality of the duchess, we are able to point out the duke’s positive and negative connotations.</p>
+<p><strong>Positive</strong>:</p>
+<ul>
+<li>lover of the art, he loves beautiful things</li>
+<li>he is aristocratic</li>
+<li>he is a patron of the artist</li>
+<li>he’s a refined speaker</li>
+</ul>
+<p><strong>Negative</strong>:</p>
+<ul>
+<li>he is cruel</li>
+<li>possessive</li>
+<li>cynical</li>
+<li>ready to kill</li>
+<li>greedy (avid for power and money)</li>
+<li>self centered</li>
+<li>amoral</li>
+<li>feels entitled to allot death on his properties, which is something that only god is allowed to</li>
+<li>the duke’s true love is himself, and he considers his wife as a rightful pieces of property</li>
+</ul>
+<h1 class="mume-header" id="alfred-tennyson">Alfred Tennyson</h1>
+
+<p>==p. 32-33 - V==</p>
+<p>He was the fourth of ten children, and he was born in 1809. His father was the priest in a small village, and he is also a scholar and a man of great artistic taste; he had a well stocked library.<br>
+He was subject of depression and heavy drinking, but he took charge of the education of his children. Alfred boyhood was quite happy.</p>
+<p>When he was 19 Alfred went to study at Trinity College, where he made friend with a brilliant young poet, Arthur Henry Hallam. But 4 years later financial problems compelled him to leave Cambridge, and he went back to his house, but his father died shortly afterwards; the family was allowed to stay into the rectory [casa del prete] for six more years.</p>
+<p>In 1832, he traveled on the continent , with Hallam, and Hallam for that time had became engaged with one of Tennyson’s sisters; but in 1833 Hallam suddenly dies in Vienna, and his death proved a terrible blow for Terryson. For 17 years he continued to brood [portare il lutto] over it, and he eventually publish an elegy, dedicated to his friend, entitled <em>In memoriam HHH</em>, where he express his sorrow for his lost friend.</p>
+<p>In 1850 it was a turning point in his life.</p>
+<ul>
+<li>He married his sweetheart; he had fallen in love with her four years before, but the marriage had always be forbidden by Emily’s father, because of the poet financial insecurity.</li>
+<li>He publish <em>In memoriam</em>, which set on him a seal of fame</li>
+<li>He is appointed Poet Laureate (the first after Worthwords).</li>
+</ul>
+<p>Since 1850 his life was characterized by fame, money and success. In 1884 he was elevated to the peerage [members of the House of Lords in parliament]</p>
+<p>He died in 1892, and was buried in the Poets’ Corner, in the Westminster abbey.</p>
+<h2 class="mume-header" id="features-of-his-works">Features of his works</h2>
+
+<p>Unlike Browning Tennyson was a real victorian writer; he was born on the same year as Darwin, and in a way he anticipated Darwin’s theories of evolution, although he was more concerned with the spiritual evolution of mankind than with the biological one.</p>
+<ul>
+<li>He was very much interested by science, and he was able to work out a compromise between science and religion, suggesting the progressive development of the human race, both through the succession of generations on Earth, and through the belief in a life after death</li>
+<li>He was interested in political and historical events, that changed the face of Europe, and he often found subjects for his poems among them.</li>
+<li>He was influenced by the grace and musicality of the romantics, in fact he was called a romantic of the third generation, but he was a true victorian when he emphasizes the importance of balance and discipline in form</li>
+<li>He was concerned with the social values of his time, and tried to face the great questions of his age, like family, patriotism, love and religion.</li>
+<li>He borrowed most of his themes from the Middle Ages, from classical antiquity and from old legends; he always added a personal note into them. This note was often melancholic.</li>
+</ul>
+<h2 class="mume-header" id="t-ulysses">T: Ulysses</h2>
+
+<p>It is a celebration of the ancient hero, but Tennyson’s Ulysses is an old and tired king, who rules over an island inhabited by people who are only concerned with material life.<br>
+He has fought the long war of Troy; he has met dangers and adventures of any sorts and he has became famous all over the world for the idea of the horse.</p>
+<p>Although he is old, and he guesses that little remains for him to live, he wants to set sails for the extreme adventure before death closes everything.</p>
+<p>His adventure is spurred by his intention</p>
+<blockquote>
+<p>to follow knowledge like a sinking star;</p>
+</blockquote>
+<p>this make him similar to Dante’s Ulysses, the hero that induced his companion to leave Ithaca, their families and their certainties</p>
+<blockquote>
+<p>per seguir virtute e canoscenza</p>
+</blockquote>
+<p>Although he is old, he is ready to challenge the world, death and the unknown.<br>
+Unlike Dante’s Ulysses, he is not going to break a divine law, because the 19th century faith in science and in progress had long cancelled men’s fears of going beyond the limits imposed to men by God; Dante put Ulysses in hell because he had trespassed the limits imposed to men by God: the pillar of Hercules.</p>
+<p>Ulysses becomes the expression of the dynamic man of Tennyson’s time, who believes he has the right and the duty to exploit all the possibilities of human intelligence.<br>
+From this point of view, he is contrasted to his own son Telemachus, who represents the balancing force of stability and conservation. Paradoxically Ulysses, who is the father, is more active of Telemachus who is the son and much younger.</p>
+<p>Ulysses represents an active, adventurous life, rich in imagination and enthusiasm, though sometimes it seems like a sort of escape.</p>
+<p>Telemachus represents a more sedentary life, full of responsibilities and social duties, though sometimes lacking in enthusiasm, with a more materialistic view.</p>
+<p>The relationship between father and son is anyway healthy and strong, and based on mutual respect.</p>
+<p>We can also say that Ulysses is the poet’s alter ego, because he gives expression to his torturing doubts about men’s destiny and men’s end role, and about life after death.</p>
+<p>In general Ulysses became a metaphor for human existence, in which even the most optimistic vision of life - the one which interprets life as material and intellectual progress - is never separated from the melancholic awareness of the destiny of decline and death, reserved to us all.</p>
+<p>The persona who is speaking is the king Ulysses, who is addressing his speech to his companions. Their presence is essential but passive, they are never interlocutors.<br>
+The character of Ulysses is rich and poignantly human; he is aware he has lived the best part of his life; he knows he has lost the integrity of his body and his energies, and he knows that death will soon put an end to everything. This gives a note of melancholy to the poem, and throws an ambiguous light on its immediate optimism.</p>
+<p>The main sources of the monologue are Homer’s <em>Odyssey</em> and Dante’s <em>Inferno</em>;</p>
+<ul>
+<li>Homer represents the perfect hero in the odyssey, who conquers troy, roams the whole world, came back to Ithaca and defeats all his enemies;</li>
+<li>Ulysses by Dante represents the tragic hero, who is punished for trying to learn to much, and goes beyond the limits of human knowledge; actually Dante puts Ulysses in hell for the sin of <strong>fraud</strong>, because of the deceit with the Trojan horse; moreover his passion for exploration has overcame his affection for his family. He is a multifarious character.</li>
+</ul>
+<p>Ulysses by Tennyson represents the old hero who still wishes to travel and to learn, with a free heart and a free mind.</p>
+<p>The first five lines are devoted to the description of Ulysses situation on Ithaca. He reveals dissatisfaction and contempt for his present life, which is boring and meaningless.; he expresses a deep nostalgia, a deep craving for his past adventures; there he is bored to death.</p>
+<blockquote>
+<p>It little profits that an idle king,</p>
+<p>By this still hearth, among these barren crags,</p>
+<p>Matched with an aged wife, I mete and dole</p>
+<p>Unequal laws unto a savage race,</p>
+<p>That hoard, and sleep, and feed, and know not me.</p>
+<p>I cannot rest from travel: I will drink</p>
+<p>Life to the lees: All times I have enjoy’d</p>
+<p>Greatly, have suffered greatly, both with those</p>
+<p>That loved me, and alone, on shore, and when</p>
+<p>Through scudding drifts the rainy Hyades</p>
+<p>Vexed the dim sea: I am become a name;</p>
+<p>For always roaming with a hungry heart</p>
+<p>Much have I seen and known, - cities of men</p>
+<p>And manners, climates, councils, governments,</p>
+<p>Myself not least, but honour’d of them all -</p>
+<p>And drunk delight of battle with my peers,</p>
+<p>Far on the ringing plains of windy Troy.</p>
+<p>I am a part of all that I have met;</p>
+<p>Yet all experience is an arch where-through</p>
+<p>Gleams that untravell’d world whose margin fades</p>
+<p>For ever and forever when I move.</p>
+<p>How dull it is to pause, to make an end,</p>
+<p>To rust unburnished, not to shine in use!</p>
+<p>As tho’ to breathe were life! Life piled on life</p>
+<p>Were all too little, and of one to me</p>
+<p>Little remains: but every hour is saved</p>
+<p>From that eternal silence, something more,</p>
+<p>A bringer of new things; and vile it were</p>
+<p>For some three suns to store and hoard myself,</p>
+<p>And this gray spirit yearning in desire</p>
+<p>To follow knowledge like a sinking star,</p>
+<p>Beyond the utmost bound of human thought.</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>This is my son, mine own Telemachus,</p>
+<p>To whom I leave the sceptre and the isle,—</p>
+<p>Well-loved of me, discerning to fulfil</p>
+<p>This labour, by slow prudence to make mild</p>
+<p>A rugged people, and through soft degrees</p>
+<p>Subdue them to the useful and the good.</p>
+<p>Most blameless is he, centred in the sphere</p>
+<p>Of common duties, decent not to fail</p>
+<p>In offices of tenderness, and pay</p>
+<p>Meet adoration to my household gods,</p>
+<p>When I am gone. <strong>He works his work, I mine.</strong></p>
+<p>There lies the port; the vessel puffs her sail:</p>
+<p>There gloom the dark, broad seas. My mariners,</p>
+<p>Souls that have toil’d, and wrought, and thought with me-</p>
+<p>That ever with a frolic welcome took</p>
+<p>The thunder and the sunshine, and opposed</p>
+<p>Free hearts, free foreheads—you and I are old;</p>
+<p>Old age hath yet his honour and his toil;</p>
+<p>Death closes all: but something ere the end,</p>
+<p>Some work of noble note, may yet be done,</p>
+<p>Not unbecoming men that strove with Gods.</p>
+<p>The lights begin to twinkle from the rocks:</p>
+<p>The long day wanes: the slow moon climbs: the deep</p>
+<p>Moans round with many voices. Come, my friends,</p>
+<p>’T is not too late to seek a newer world’.</p>
+<p>Push off, and sitting well in order smite</p>
+<p>The sounding furrows; for my purpose holds</p>
+<p>To sail beyond the sunset, and the baths</p>
+<p>Of all the western stars, until I die.</p>
+<p>It may be that the gulfs will wash us down:</p>
+<p>It may be we shall touch the Happy Isles,</p>
+<p>And see the great Achilles, whom we knew.</p>
+<p>Tho’ much is taken, much abides; and tho’</p>
+<p>We are not now that strength which in old days</p>
+<p>Moved earth and heaven, that which we are, we are;</p>
+<p>One equal temper of heroic hearts,</p>
+<p>Made weak by time and fate, but strong in will</p>
+<p>To strive, to seek, to find, and not to yield.</p>
+</blockquote>
+<p>This last line was the motto of the Olympic game in London 2012.</p>
+<h1 class="mume-header" id="the-bront%C3%AB-sisters">The Brontë sisters</h1>
+
+<p>==p. 54 - V==</p>
+<p>They are Charlotte, Emily and Anne, and they were the daughter of a priest, and their father have married a woman of delicate constitution who gave him 6 children before dying.</p>
+<p>When he remained a widow, he asked his sister-in-law to come and help him; she was a very severe and austere woman, very cold and detached, and she came to look after the children, but in fact they were left much to themself.<br>
+They were usually alone, because mister Brontë was really egocentric and spent most of his days alone.</p>
+<p>Four of the five girls were sent to a school for clergymen’s daughters, were the fees were very low, but the food was very bad and discipline was hard.<br>
+Here  the two eldest, Maria and Elizabeth, died, probably of tubercolosi, and after that Charlotte and Emily were brought back home.</p>
+<p>There were 4 children left, and they were extremely precocious and clever; they spent their time in unmethodical study: they used to read and paint.</p>
+<p>They went to Brussels, to study French and then come back.</p>
+<p>Charlotte and Emily tried to open a school in their village, but they found no people.</p>
+<p>In 1846 the three sisters jointly published at their expense, a collection of poems, but it attracted no attention. After that the three sisters devoted themself to the novel writing.</p>
+<p>All of the Brontë brothers had a dramatic destiny; Anne died in 1849 at the age of 29; Emily died at 30,  on 1848; Patrick, who was a talented painter, died in 1848 after a dissolute life and charlotte died in 1855 at 39.</p>
+<h2 class="mume-header" id="life-and-works">Life and works</h2>
+
+<p>Charlotte (1816-55), Emily (1818-48) and Anne (1820-49) were the daughters of an Anglican clergyman of Irish origin, who had an important influence on their artistic inclinations. The Brontë sisters spent most of their life in isolation in a remote part of Yorkshire, in northern England. They did not receive a formal education. Apart from brief periods at school, they were mainly self educated, reading widely from their father’s library and drawing inspiration from the local public library or from periodicals. To express their intellectual creativity and their emotions, they began to write chronicles of imaginary countries and, in 1846, they published a volume of poetry, <em>Poems by Currer, Ellis and Acton</em> Bell. Like many female writers of the period, they decided to use pseudonyms. It was under these pen names that each of the sisters published their novels the following year: Charlotte (Currer) published <em>Jane Eyre</em>, Emily (Ellis) <em>Wuthering Heights</em>, and Anne (Acton) <em>Agnes Grey</em>. Only Jane Eyre was immediately successful, and was followed by other two novels by Charlotte: <em>Shirley</em> (1849) and <em>Villette</em> (1853). The other two sisters soon died of consumption: Emily in 1848 and Anne in 1849. Charlotte married Reverend Arthur Bell Nicholls in 1854 and died the following year, probably of an illness due to pregnancy.</p>
+<h2 class="mume-header" id="wuthering-heights">Wuthering Heights</h2>
+
+<p>The novel start at the end of the story and then it is narrated in flashbacks.<br>
+This makes it a complex novel.<br>
+The atmosphere is gothic, nightmarish and unreal. The story goes backwards and forwards; the novel covers two generations of families, and it is linked by the character of Heathcliff.</p>
+<p>There are two storytellers, Mr Lockwood and Nelly Dean, and there are three literary influences that acted on the novel:</p>
+<ul>
+<li><strong>romanticism</strong>, because of the great role played by nature, that is nearly a co-protagonist; it is also romantic because Heathcliff is a <em>byronic hero</em>, that has a dark secret that chases and ruined his life;</li>
+<li><strong>realism</strong>: it is mirrored in the social aspect of the novel; the features that are realistic are <em>the description of the settings</em>, <em>the conflict between two cultures</em> and also <em>the complexity of the characters personality</em>;</li>
+<li><strong>gothic</strong>: there is more of a touch of gothicism: nightmarish dream, the ghosts, superstition, prophecies</li>
+</ul>
+<p>The novel closes with the reconciliation of the two spheres of the fantastic and the real.</p>
+<p>The most important theme is the analysis of passion, that transcends the romantic conception of love, which here is strong and uncontrollable; it is similar to a natural force. It is both creative and destructive, nor sexual nor intellectual, but just an impulse, which binds together Catherine and Heathcliff: in fact they totally identify with each other.</p>
+<p>Heathcliff is a romantic hero because of his aspiration toward a pure and complete identification with her. He represents the dynamic principle of the search of perfection against the static principle of acceptance of reality as it is</p>
+<h3 class="mume-header" id="plot">Plot</h3>
+
+<p>The novel revolves around two houses, Wuthering Heights and Thrushcross Grange, respectively inhabited by the Earnshaws and the Lintons. At the beginning of the story Mr Lockwood, the new tenant of Thrushcross Grange, visits his landlord, Mr Heathcliff, at Wuthering Heights. Forced to stay the night because of a snowstorm, Mr Lockwood has a strange dream about a girl, Catherine, who is tapping on the window, asking to be let in after 20 years of wandering on the moors. The next day Mr Lockwood returns to Thrushcross Grange and the housekeeper, Nelly Dean, tells him the whole story of the family from the Heights. Mr Earnshaw, the father of Hindley and Catherine, one day came back from Liverpool with a foundling, whom he called Heathcliff. Hindley ill-treated Heathcliff whereas Catherine got on very well with him. They roamed the moors together and promised they would stay together forever. One day Catherine was bitten by one of the Lintons’ dogs and was forced to spend five weeks at Thrushcross Grange to recover, which gave her the opportunity to get to know Edgar and Isabella, as well as their quiet and refined way of life. So when a few years later Edgar proposed to her, she accepted. She told Nelly Dean she would not marry Heathcliff because he was socially inferior. Heathcliff overheard part of the conversation and disappeared to return only three years later, handsome, rich and determined to take his revenge. He won the possession of Wuthering Heights gambling with Hindley, now a drunkard; then he eloped with Edgar’s sister, Isabella, married her and treated her like a servant. Catherine fell ill and died giving birth to a daughter, Cathy. Years later, Heathcliff kidnapped Cathy and obliged her to marry his weakly, spoilt son, Linton. His revenge was thus complete since he became the owner of Thrushcross Grange, too. Nelly’s narrative ends here. Mr Lockwood leaves Yorkshire and comes back after a year to find out that both Linton and Heathcliff are dead and Cathy and Hareton, Hindley’s son, are going to get married, to live in peace and happiness. Nelly tells Lockwood that there are rumours in the neighbourhood that the figures of a young man and woman have been seen wandering together in the moors.</p>
+<h3 class="mume-header" id="themes">Themes</h3>
+
+<p>In the novel basic human emotions, such as love and hatred, are presented in a state of purity and concentration. The spirit of Romanticism and its concern with the human soul are still present in the correspondence between the violent passions of the characters and the wild natural landscape. Death is an important theme. Unlike other Victorian novels, where death is either a moment of forgiveness or the moment when all the conflicts are settled, in Wuthering Heights death is not an end, but a liberation of the spirit. The novel closes with the vision of the graveyard where Catherine and Heathcliff are buried, but the author is careful to say that they are sleeping, not dead. The Gothic elements in the novel, such as the sinister atmosphere of Wuthering Heights – surrounded by the wilderness –, Catherine’s ghost, and the dreams and superstitions often mentioned, are used not to frighten the reader, but to convey the struggle between the two opposed principles of love and hate, of order and chaos.</p>
+<h3 class="mume-header" id="structure-and-style">Structure and style</h3>
+
+<p>The narrative mode is a system of Chinese boxes, a ‘concentric’ system of narratives. There are two major narrators, male and female, outsider and insider. Mr Lockwood, the polite visitor from the city, is the outsider; apart from a few occasions when he narrates what he sees, he simply writes down, in the form of a journal, what Nelly tells him. Nelly Dean is the second narrator, closely involved in the story and entirely reliable. Other characters occasionally narrate to Nelly. The narration does not proceed according to chronological time; it starts almost at the end of the story and develops a narrative within the narrative, including the use of flashbacks. This complex structure creates a sense of verisimilitude and, at the same time, a feeling of suspense. The continuous flowing of human life into the natural world creates moments of intense poetry and mysticism that are balanced by the concreteness and common sense of Nelly’s language. Wuthering Heights represents a unique achievement in Victorian literature. Often compared to a Shakespearean tragedy for its rendering of turbulent passions, unnatural crimes and cruelty, the novel marked a departure from the observation of society towards the description of the individual personality, and anticipated the novelists of the early 20th century in narrative technique.</p>
+<h3 class="mume-header" id="t-i-am-heathcliff">T: I am Heathcliff</h3>
+
+<p>==p. 65 - V==</p>
+<p>In this part the narrator is Nelly Dean.<br>
+This passage is a sort of climax and a turning point in the story, for many reasons:</p>
+<ol>
+<li>it strips out the kind of love that binds Catherine and Heathcliff, which is an uncontrollable love, that is beyond the limits of human understanding</li>
+<li>it is based on a misunderstanding: Nelly Dean and Catherine are talking, and Catherine is opening her heart to the servant, and paradoxically and while she is listing the reasons why she is going to marry Edgar Lington, she fully reveals her love for Heathcliff. Heathcliff is eavesdropping the conversation but he doesn’t listen to the whole conversation, but only to the part in which she say why she couldn’t marry Heathcliff, and than he leaves on a misunderstanding</li>
+<li>this is a turning point, since from now on Catherine falls ill for a long time, she nearly dies for heartbreak and she recovers and marries Edgar</li>
+</ol>
+<p>==The first section, from line 1 to 55==</p>
+<p>Catherine explains the reasons why she has decided to marry Edgar Linton: the reasons are underlined in pink; the words and phrases related to Catherine’s behavior are highlighted in pink. They denote an highly sensitive and emotional nature.</p>
+<p>The reasons for marrying Edgar are the classical reasons for marrying a man; as Catherine goes on speaking, we realize her real motivations she is concerned with Heathcliff’s present condition of servitude due to her brother’s treatment of him. The real reason underneath the decision of marrying Edgar is to protect Heathcliff from her brother’s violence. Acquiring a higher social status, Catherine might help Heathcliff to improve his present conditions.</p>
+<p>The words highlighted in light blue describes Nelly’s attitude: they are very rational and pragmatic; she encourages Catherine to reflects on the reasons and consequences of her choice .</p>
+<p>==The second section, from line 56 to 93==</p>
+<ul>
+<li>There is Catherine dream: she tells a dream to Nelly Dean.</li>
+<li>Nelly is aware and conscious of Heathcliff presence outside the door, but Catherine is not. The confession starts.</li>
+<li>Catherine says that she loves Heathcliff’s and she compares the two men, with words related to heat and cold. The words referred to Edgar are cold, while Heathcliff lightning and fire.</li>
+</ul>
+<p>==The third section, from line 94 to the end==</p>
+<p>Here it’s dealt Catherine’s love for Heathcliff.</p>
+<ul>
+<li>At line 119 there is why she marries Edgar: “If I marry Linton,, I can aid Heathcliff to rise, and place him out of my brother’s power”</li>
+</ul>
+<p>Catherine says she is a part of Heathcliff, she feels his pains, if he didn’t exist she wouldn’t have a reason to live. Their love seems to have nothing to do with sexual attraction or physical desire.<br>
+Their relationship is one of the soul, it is eternal and unchangeable, their love is concerned with the metaphysical and the impersonal.<br>
+The love’s nature is religious, not only in its mystiques but in the awareness of the incompleteness of all the elements that makes up human nature.<br>
+It’s absolute, romantic, intense and passionate.</p>
+<h4 class="mume-header" id="plot-1">Plot</h4>
+
+<p>Catherine speaks to Nelly in the kitchen. Neither of them is aware at first that Heathcliff is listening to their conversation. Catherine tells Nelly about Edgar’s marriage proposal and that she accepted. Nelly asks her if and why she loves Edgar, and she replies she does for a variety fo material reasons: he is rich, handsome and respectable. Nelly disapproves, and Catherine admits that she is doing the wrong thing. Then she tells Nelly that she had a dream in which she went to heaven and was unhappy there because she missed Wuthering Heights. She compares her marriage to Linton to being in heaven. She explains that, although she loves Heathcliff very much, she cannot marry him because Hindley has degraded him too much and she would be degraded too. Heathcliff leaves the room full of shame, humiliation and despair, and so he is not present to hear Catherine say that she loves him more deeply than anything else in the world.<br>
+Nelly emphasizes that Heathcliff would be deserted if she marries Linton, and Catherine indignantly replies that she is not going to desert Heathcliff, but will use her influence to raise him up in society She adds that they are such kindred spirits that they are the same person.</p>
+<h3 class="mume-header" id="about-heathcliff">About Heathcliff</h3>
+
+<p>Some details about the name "Heathcliff": it's formed by <strong>heath</strong>, <em>brughiera</em>, and <strong>cliff</strong>, which is <em>roccia scoscesa</em>;</p>
+<ul>
+<li>the denotation of the word <strong>heath</strong> is an area of open land where rough grass and heder grow, with few trees and bushes; the connotation of the word is wild character and love for freedom</li>
+<li>the denotation of <strong>cliff</strong> is a high area of rock with a steapside, and the connotation is strenght, loneliness and danger.</li>
+</ul>
+<p>So Heathcliff is a particular character, we know that he is the outsider of the novel, and that his arrival triggers a series of dramatic events. We also get to know that he is a man uncontaminated by society, living in fusion with the world of nature.<br>
+Heathcliff is fears determined and wild.</p>
+<p>He will have to disappear: at the end of the novel, he will die and also his son will not survive, because his name must disappear, for the future of the two families.<br>
+At the end of the novel the descendent of the two families will re-establish order and give life to <strong>Thrushcross Grange</strong>. This will happen after the death of Heathcliff and his son: harmony will be re-establish.</p>
+<h3 class="mume-header" id="t-heathcliffs-despair">T: Heathcliff's despair</h3>
+
+<p>==p. 70==</p>
+<p>It's the moment in which Heathcliff get to know that Catherine has died by giving birth to her daughter Cathy, who was born from the marriage between Catherine and Linton.</p>
+<p>Here Nelly Dean informs Heathcliff about the death of Catherine: the reaction is violente and terrible: he is destroyed and he cannot survive this by keeping his balance. At the beginning she is worried because she doesn't know what his reaction will be like.</p>
+<p>He says</p>
+<blockquote>
+<p>‘She’s dead!’ he said; ‘I’ve not waited for you to learn that. Put your handkerchief away – don’t  snivel before me. Damn you all! she wants none of your tears!’</p>
+</blockquote>
+<p>Nelly Dean is sensitive, and she whips and she says</p>
+<blockquote>
+<p>we do sometimes pity creatures that have none of the feeling either for themselves or others</p>
+</blockquote>
+<p>Heathcliff wants to know how she died, but moreover he wants to know if she has pronounced his name before she died; he is so disperate that when Nelly Dean says that she didn't mention him, Heathcliff curses Nelly Dean.</p>
+<p>Catherine was his <strong>life</strong> and his <strong>soul</strong>: we get to know that Heathcliff feels exactly what Catherine declared before.</p>
+<p>Nelly Dean is desperate, because she cannot help him, neither confort him, so she leaves.<br>
+Heathcliff acts like a wounded animal</p>
+<blockquote>
+<p>He dashed his head against the knotted trunk; and, lifting up his eyes, howled, not like a man, but like a savage beast being goaded to death with knives and spears.</p>
+</blockquote>
+<p>From now on he will live in <em>torment</em>.</p>
+<p>Also here we see that one of the most important themes of the novel is the theme of <strong>opposing forces</strong>: here there is the principle of storms and energy opposed to the principle of calm and settled assurance.<br>
+They are opposed but they are complementary: they ideally tend to unity.</p>
+<p>Also in getting the news of Catherine death, Heathcliff reveals his character and the violence passion that live in him.</p>
+<h3 class="mume-header" id="settings">Settings</h3>
+
+<p>The setting of Wuthering High is one of the protagonist's of the novel. We know that there are two places that are opposed to each other: Wuthering Heights and Thrushcross Grange.<br>
+The fact that the novel takes the title from the first, means that that is the setting, and the other is its opposition.</p>
+<p><em>Wuthering Heights</em> is described as a solitary, gloomy strong building: it is a place of the mind; it is the place Heathcliff and Catherine belongs to; which they try to leave and where they always return. <em>Thrushcross Grange</em> is a place of order and normality; into <em>Wuthering Heights</em> everything has a dramatic violence; they are Heaven and hell.</p>
+<p><em>Wuthering Heights</em> is a metaphore of childhood, a place peopled with creatures of imagination, while <em>Thrushcross Grange</em> is the place of adulthood.</p>
+<p>We know that the characters of the novel belong to two generation of two different families: the Earnshaws, from Wuthering Heights, and the Lintons, that live in Thrushcross Grange. Heathcliff is a sort of link between the two families.</p>
+<hr>
+<p>The novel is built around the contrast between the two houses on the Yorkshire moors: Wuthering Heights and Thrushcross Grange. Wuthering Heights is severe and gloomy, firmly rooted in local tradition and custom; it is the appropriate background for the life of unrestrained and primitive passion led by its owner, Heathcliff. Thrushcross Grange, the home of the bourgeois Lintons, reflects their conception of life, based on stability, kindness and respectability. So the two mansions stand for two opposing forces: the principle of storm and energy on the one hand, and the principle of calm and settled assurance on the other. Though opposed, they are complementary and ideally tend to unity. With the marriage between Hareton and Cathy, they will finally compose a harmony at the end of the novel, after the consummation of Heathcliff’s revenge and his death.</p>
+<h3 class="mume-header" id="the-byronic-hero">The Byronic hero</h3>
+
+<p>The hero, Heathcliff, is described as a sort of ‘Byronic hero’, moved by irresistible passion, doomed to the despair of a solitary life and finally tending to a total identity with his love, Catherine. Yet, Heathcliff also appears as a Gothic villain in his inhuman treatment of his wife and even his son. Catherine is driven partly by her social ambitions, which finally lead her to marry Edgar, but she is also prompted to violate social conventions. She embodies a wild and Romantic nature.</p>
+<hr>
+<p>Heathcliff is a Byronic hero.</p>
+<p>The Byronic Hero is a moody, passionate, restless and misterious man, who hides some horrible sin or secret in his past. He is characterized by proud individualism, and rejects the conventional moral rules of society.</p>
+<p>He is an outsider, isolated and attractive at the same time. He is of noble birth, but wild in his manners.</p>
+<p>His looks are hard but handsome, and he has a great sensibility to nature and beauty.</p>
+<p>Women cannot resist him, but he refuses his love. Men either admire him or envy him.</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
