@@ -1,0 +1,22 @@
+# 26 nov 2020 - Critica del giudizio
+Nella _Critica della ragion pura_ Kant affronta il tema della conoscenza, attraverso il tema della filosofia del limite. 
+
+Nella _Critica del giudizio_ Kant introduce il tema del **sentimento**; è abbastanza difficile da chiudere in un sistema di regole e di forme a priori, in quanto sfugge ad ogni possibile catalogazione.
+
+Kant introduce la distinzione tra **giudizio determinante** e **giudizio riflettenti**; i primi sono i giudizi scientifici, attraverso cui l’uomo determina la realtà esterna; i secondi invece, da cui scaturisce il sentimento, è dato dall’insieme delle nostre aspettative e la realtà esterna, e dal modo in cui queste si incontrano: “oggi c’è il sole e _sono felice_”; la seconda parte della frase non è conoscitiva, ma indica solo uno stato d’animo: le mie aspettative rispetto alla giornata odierna sono state soddisfatte.
+
+Il giudizio riflettente nasce da questa sorta di riflessione che il soggetto ha tra aspettative e realtà esterna, e lo stato d’animo che ne consegue.
+
+::p. 262 - 263::
+
+Per Kant i giudizi sentimentali costituiscono il campo dei giudizi “riflettenti”, in contrapposizione al campo dei giudizi “determinanti”:
+* i **giudizi determinanti** sono i giudizi conoscitivi e scientifici studiati nella Critica della ragion pura, cioè i giudizi che “determinano” gli oggetti fenomenici mediante forme a priori universali (spazio, tempo e le 12 categorie);
+* i **giudizi riflettenti**, invece, si limitano a “riflettere” su di una natura già costituita mediante i giudizi determinanti e ad apprenderla (o ad interpretarla) attraverso le nostre esigenze universali di finalità e di armonia.
+Nel suo linguaggio tecnico, Kant afferma che, se nei giudizi determinanti l’universale, o il concetto, è «già dato» dalle forme a priori, che infatti incapsulano immediatamente il particolare, nei giudizi riflettenti l’universale – che in questo caso si identifica con il principio della finalità della natura – va «cercato» partendo dal particolare. Tuttavia, mentre i giudizi determinanti sono oggettivi e scientificamente validi, almeno per quanto concerne il fenomeno, i giudizi riflettenti esprimono più che altro un «bisogno», che è tipico di quell’essere finito che è l’uomo (v. sentimento e finitudine).
+
+I due tipi fondamentali di giudizio riflettente sono quello “estetico”, che verte sulla bellezza, e quello “teleologico”, che riguarda il discorso sui fini della natura. Entrambi sono giudizi sentimentali puri, cioè derivanti a priori dalla nostra mente (e solo in quanto tali suscettibili di analisi critico-trascendentale), anche se si distinguono tra loro per il diverso rimando al finalismo:
+* nel **giudizio estetico** noi viviamo immediatamente o intuitivamente la finalità della natura (ad esempio, di fronte a un bel paesaggio, lo avvertiamo in sintonia con le nostre esigenze spirituali);
+* nel **giudizio teleologico** noi pensiamo concettualmente tale finalità mediante la nozione di fine (ad esempio, riflettendo sullo scheletro, diciamo che esso è stato prodotto al fine di reggere il corpo dell’animale).
+
+Nel primo caso, la finalità esprime quindi un “venir incontro” dell’oggetto alle aspettative estetiche del soggetto, quasi che la natura fosse bella “apposta” per noi, mentre nel secondo caso essa esprime un carattere proprio dell’oggetto. In altri termini, il giudizio riflettente risulta estetico o teleologico a seconda del modo in cui viene articolato il principio di finalità.
+Se quest’ultimo riguarda il rapporto di armonia che si instaura tra il soggetto e la rappresentazione dell’oggetto, si ha il giudizio estetico. Se riguarda invece un (presunto) ordine finalistico interno alla natura stessa, si ha il giudizio teleologico. Per sottolineare tale diversità Kant parla, nel primo caso, di finalità «soggettiva» o «formale» e, nel secondo caso, di finalità «oggettiva» o «reale». La terminologia del filosofo non deve però trarre in inganno: infatti anche il giudizio teleologico (che non è una categoria determinante, ma un concetto riflettente) esprime semplicemente, come si è già detto, un’esigenza umana, ossia un bisogno soggettivo della nostra mente di rappresentarsi in modo finalistico l’ordine delle cose. Tutto ciò, come avremo modo di rilevare, non esclude che i giudizi riflettenti possano avere non solo una proficua funzione euristico-regolativa (v. par. 5), ma anche una basilare funzione epistemologica (v. par. 6)

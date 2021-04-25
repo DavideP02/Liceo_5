@@ -1,0 +1,66 @@
+# Kant
+
+TODO aggiungere appunti iniziali fino a 30 nov 2020
+
+## Bello
+
+**Bello** è ciò che piace nel _giudizio estetico_ o nel _giudizio di gusto_. Bello non è ciò che piace
+- il bello è l'oggetto di un piacere senza alcun interesse;
+- il bello è ciò che piace universalmente senza concetto: le cose che diciamo belle sono; tali perché vissute spontaneamente come belle e non perché giudicate tali attraverso un ragionamento o una serie di concetti;
+- bello è la forma di un oggetto in quanto questa vi è percepita senza la rappresentazione di uno scopo, ovvero indipendentemente dall'uso che devo fare dell'oggetto;
+- il bello è ciò che senza concetto è riconosciuto come oggetto di un piacere necessario, cioè il bello lo percepisco anche se non riesco a spiegare perché sia bello.
+
+Contrariamente a quello che si può pensare per Kant il bello non è ciò che piace soggettivamente, ma è qualcosa che per essere definito bello deve avere delle caratteristiche tali che tutti lo vedano come bello, anche se quasi non sanno spiegare perché.
+
+Il **piacevole**, invece, è ciò che mette in moto la mia sensibilità _individuale_. La piacevolezza non è condivisibile.
+
+È molto più facile vedere la bellezza nella natura piuttosto che nell'arte. Infatti dice che
+
+      l'arte è bella quando assomiglia alla natura, e la natura è bella
+      quando assomiglia all'arte.
+
+Dicendo che la _bellezza è oggettiva_, Kant lo intende in termini di **condivisione** e di **comunicabilità**.
+
+La bellezza **libera** è la bellezza percepita senza bisogno di aderire a dei modelli estetici, mentre quella **aderente** aderisce appunto a modelli estetici. Esempio classico di bellezza aderente è quella estetica (fisica).
+
+Per Kant il giudizio estetico è necessario. Kant dice che percepire il bello è immediato, ma bisogna essere educati alla sua percezione: se fin da piccoli siamo abituati a stare a contatto col bello, impariamo ad apprezzare la bellezza. Kant non si contraddice, ma semplicemente sottolinea che se l'educazione si oppone alla percezione del bello, allora difficilmente il bello viene percepito.
+
+![IMG_322A50C6C62C-1](/assets/IMG_322A50C6C62C-1.jpeg)
+
+## Sublime
+
+Ciò che è **sublime** per Kant mette in moto una dinamica di attrazione, repulsione, paura e senso di piccolezza, che poi viene in qualche modo superato.
+
+        Sentimento di dilettoso orrore che l'uomo nella sua piccolezza
+        prova e di fronte a ciò che non può controllare ma che
+        può contemplare senza correre pericolo
+
+Il sublime viene diviso in due categorie
+- **sublime matematico**, che nasce in presenza di qualcosa di smisuratamente grande, che provoca in noi uno stato d'animo ambivalente: da un lato proviamo dispiacere, perché la nostra immaginazione non riesce ad abbracciarne le incommensurabili grandezze;  dall’altro proviamo piacere,  perché la nostra ragione è portata da tali spettacoli a elevarsi all’idea dell’infinito,  in rapporto a cui le stesse immensità del creato appaiono piccole;
+- **sublime dinamico**, che nasce in presenza di poderose forze naturali; avvertiamo la nostra  piccolezza  materiale  e la nostra  impotenza nei confronti della  natura; in seguito, proviamo un vivo sentimento di piacere per la nostra  grandezza spirituale,  dovuta alla nostra realtà di esseri umani pensanti.
+
+In entrambe le forme di sublime è necessaria la consapevolezza della nostra grandezza spirituale, perché senza di questa si riduce semplicemente a **terrore**. Viene visto solo da chi è in grado di vederlo.
+Il bello è un equilibrio tra intelletto ed immaginazione, questo ci porta calma e serenità.
+Il sublime invece fa leva sull’informe.
+
+## Il bello nell'arte
+Il bello estetico ed il bello di natura possono essere affini.
+- La natura è bella quando ha l’apparenza dell’arte
+- L’arte è bella quando ha l’apparenza e la spontaneità della natura
+
+### Arte estetica
+Si divide in
+- **Arte piacevole**: indirizzata ad uno scopo secondario come rallegrare ed intrattenere.
+- **Arte bella**: fatta per essere contemplata, non ha uno scopo esterno, non è fatta per procurare piacere, sarà lo spettatore che vedendola proverà un piacere disinteressato.
+Nasce dal genio, intermediario tra arte e natura, l’arte vera e propria nasce solo dalla spontaneità del genio.
+
+Per essere compreso non serve il geno, basta solo avere buon gusto.
+
+Il ==genio== è una capacità donata senza alcuno schema dalla natura ad alcuni esseri umani, con capacità superiori agli altri. Nato per non essere sprecato, per esprimere a pieno l’essenza dell’uomo. È il talento che dà la regola all’arte. È una predisposizione dell’anima che lo rende intermediario tra arte e natura. Fa arte dalla natura e fa della natura arte. È impossibile dimostrare scientificamente questa capacità. Se nella scienza operano degli ingegni, nell’arte operano dei geni.
+
+## Giudizio teleologico
+
+Davanti alla vista della natura, si tende a pensare che ci sia stata una forza che abbia creato tutto senza alcun altro fine che per darlo come è. L’uomo tende a pensare che il modo sia stato creato su misura per lui.
+Questo giudizio non è scientifico ma è appunto teleologico perché si basa su uno scopo primo che si trova oltre alle nostre conoscenze. Mi spinge comunque verso la ricerca, nonostante non sia scientifico.
+### Antinomia del giudizio teleologico
+Deriva dal considerare i principi del giudizio riflettente, come principi costituivi degli oggetti. Giudizio scientifico e teleologico non sono in concorrenza tra di loro, e non creano antinomia se considerate nei loro giusti limiti ed ambiti.
