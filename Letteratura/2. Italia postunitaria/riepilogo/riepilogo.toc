@@ -1,0 +1,151 @@
+\babel@toc {italian}{}
+\babel@toc {italian}{}
+\contentsline {chapter}{Introduzione}{7}{chapter*.2}% 
+\contentsline {section}{Politica e societ\IeC {\`a}}{7}{section*.3}% 
+\contentsline {paragraph}{ex.}{8}{section*.4}% 
+\contentsline {section}{Invenzioni}{8}{section*.5}% 
+\contentsline {subsection}{Illuminazione}{8}{section*.6}% 
+\contentsline {section}{Positivismo}{9}{section*.7}% 
+\contentsline {section}{Darwinismo}{9}{section*.8}% 
+\contentsline {section}{Determinismo sociale}{9}{section*.9}% 
+\contentsline {section}{Letteratura e cultura}{10}{section*.10}% 
+\contentsline {section}{Il problema della lingua}{10}{section*.11}% 
+\contentsline {section}{Obbligo scolastico}{11}{section*.12}% 
+\contentsline {section}{Intellettuale e societ\IeC {\`a}}{11}{section*.13}% 
+\contentsline {section}{Letteratura per l'infanzia}{11}{section*.14}% 
+\contentsline {subsection}{Libro Cuore}{12}{section*.15}% 
+\contentsline {subsection}{Pinocchio}{12}{section*.16}% 
+\contentsline {chapter}{La scapigliatura}{13}{chapter*.17}% 
+\contentsline {section}{T: \scshape {Preludio}}{14}{section*.18}% 
+\contentsline {paragraph}{La perdita dei valori}{16}{section*.19}% 
+\contentsline {paragraph}{Una dichiarazione di poetica}{17}{section*.20}% 
+\contentsline {section}{T: \textsc {Dualismo}}{17}{section*.21}% 
+\contentsline {paragraph}{Dualismo e vita moderna}{17}{section*.22}% 
+\contentsline {paragraph}{Il linguaggio poetico}{17}{section*.23}% 
+\contentsline {section}{T: \textsc {L'attrazione della morte}}{18}{section*.24}% 
+\contentsline {paragraph}{Trama}{18}{section*.25}% 
+\contentsline {paragraph}{Tra studio naturalistico e simbolismo ``nero''}{19}{section*.26}% 
+\contentsline {chapter}{Carducci}{21}{chapter*.27}% 
+\contentsline {section}{T: \textsc {Pianto antico}}{22}{section*.28}% 
+\contentsline {section}{T: \textsc {Alla stazione una mattina di autunno}}{23}{section*.29}% 
+\contentsline {paragraph}{Realt\IeC {\`a} e simbolo nella rappresentazione del paesaggio urbano}{27}{section*.30}% 
+\contentsline {paragraph}{Il treno e la realt\IeC {\`a} moderna}{27}{section*.31}% 
+\contentsline {paragraph}{Il sogno e lo \textit {spleen} come reazione alla modernit\IeC {\`a}}{28}{section*.32}% 
+\contentsline {chapter}{Naturalismo francese}{29}{chapter*.33}% 
+\contentsline {section}{T: \textsc {Un manifesto del Naturalismo}}{30}{section*.34}% 
+\contentsline {paragraph}{La poetica del naturalismo}{31}{section*.35}% 
+\contentsline {paragraph}{L'attrazione morbosa per il patologico}{31}{section*.36}% 
+\contentsline {chapter}{Emile Zola}{33}{chapter*.37}% 
+\contentsline {paragraph}{Riassunto \textsc {L'Assommoir}}{34}{section*.38}% 
+\contentsline {chapter}{Letteratura russa}{35}{chapter*.39}% 
+\contentsline {section}{Delitto e castigo}{35}{section*.40}% 
+\contentsline {paragraph}{Trama}{35}{section*.41}% 
+\contentsline {subsection}{T: \textsc {I labirinti della coscienza: la confessione di Raskolnikov}}{35}{section*.42}% 
+\contentsline {paragraph}{Le giustificazioni del delitto}{40}{section*.43}% 
+\contentsline {paragraph}{La presa di coscienza}{40}{section*.44}% 
+\contentsline {chapter}{Verismo}{43}{chapter*.45}% 
+\contentsline {chapter}{Giovanni Verga}{45}{chapter*.46}% 
+\contentsline {section}{Vita}{45}{section*.47}% 
+\contentsline {subsection}{Passione per la fotografia}{46}{section*.48}% 
+\contentsline {section}{Darwinismo sociale}{46}{section*.49}% 
+\contentsline {section}{Poetica e tematiche}{46}{section*.50}% 
+\contentsline {subsection}{Regressione del narratore}{46}{section*.51}% 
+\contentsline {subsection}{T: \textsc {Impersonalit\IeC {\`a} e regressione}}{46}{section*.52}% 
+\contentsline {paragraph}{La consapevolezza teorica di Verga}{47}{section*.53}% 
+\contentsline {paragraph}{I punti chiave della poetica Verghiana}{48}{section*.54}% 
+\contentsline {subsection}{T: \textsc {``Sanit\IeC {\`a}'' rusticana e ``malattia'' cittadina}}{49}{section*.55}% 
+\contentsline {paragraph}{Una visione ancora romantica della campagna}{49}{section*.56}% 
+\contentsline {paragraph}{Il filtro intellettuale e la posizione straniata}{50}{section*.57}% 
+\contentsline {subsection}{T: \textsc {L'\IeC {\guillemotleft }eclissi\IeC {\guillemotright } dell'autore e la regressione nel mondo rappresentato}}{50}{section*.58}% 
+\contentsline {subsubsection}{Passo A}{50}{section*.59}% 
+\contentsline {subsubsection}{Passo B}{51}{section*.60}% 
+\contentsline {subsubsection}{Passo D}{51}{section*.61}% 
+\contentsline {subsubsection}{Passo E}{52}{section*.62}% 
+\contentsline {paragraph}{Eclisse dell'autore e regressione}{52}{section*.63}% 
+\contentsline {paragraph}{La narrazione si avvicina al dramma}{53}{section*.64}% 
+\contentsline {section}{T: \textsc {Rosso Malpelo}}{53}{section*.65}% 
+\contentsline {paragraph}{L'impostazione narrativa rivoluzionaria}{65}{section*.66}% 
+\contentsline {paragraph}{La funzione delle soluzioni narrative}{66}{section*.67}% 
+\contentsline {paragraph}{Il punto di vista di Malpelo}{66}{section*.68}% 
+\contentsline {section}{I Malavoglia}{67}{section*.69}% 
+\contentsline {subsection}{Costruzione bipolare del romanzo}{68}{section*.70}% 
+\contentsline {subsection}{Microsaggio: Lotte per la vita e ``darwinismo sociale''}{68}{section*.71}% 
+\contentsline {paragraph}{La ripresa delle teorie di Darwin}{68}{section*.72}% 
+\contentsline {paragraph}{L'antagonismo sociale}{69}{section*.73}% 
+\contentsline {subsection}{Microsaggio: Lo straniamento}{70}{section*.74}% 
+\contentsline {paragraph}{Una definizione}{70}{section*.75}% 
+\contentsline {paragraph}{Lo straniamento nell'opera verghiana}{70}{section*.76}% 
+\contentsline {subsection}{Trama}{71}{section*.77}% 
+\contentsline {subsection}{T: \textsc {Il mondo arcaico e l'irruzione della storia}}{71}{section*.78}% 
+\contentsline {paragraph}{Le tecniche narrative}{73}{section*.79}% 
+\contentsline {paragraph}{Le tematiche}{74}{section*.80}% 
+\contentsline {subsection}{T: \textsc {I Malavoglia e la comunit\IeC {\`a} del villaggio: valori ideali e interesse economico}}{75}{section*.81}% 
+\contentsline {paragraph}{L'osmosi tra narratore e personaggio}{81}{section*.82}% 
+\contentsline {paragraph}{Il coro del paese}{82}{section*.83}% 
+\contentsline {paragraph}{Il punto di vista dei Malavoglia}{82}{section*.84}% 
+\contentsline {subsection}{T: \textsc {I ``vinti'' e la ``fiumana del progresso''}}{82}{section*.85}% 
+\contentsline {paragraph}{Il tema di fondo del ciclo}{83}{section*.86}% 
+\contentsline {paragraph}{Il problema formale}{84}{section*.87}% 
+\contentsline {paragraph}{Le posizioni ideologiche}{84}{section*.88}% 
+\contentsline {subsection}{T: \textsc {La conclusione del romanzo}}{85}{section*.89}% 
+\contentsline {paragraph}{Le interpretazioni di Russo e B\IeC {\`a}rberi Squarotti}{85}{section*.90}% 
+\contentsline {paragraph}{L'interpretazione di Luperini}{85}{section*.91}% 
+\contentsline {section}{Le Novelle Rusticane}{85}{section*.92}% 
+\contentsline {subsection}{T: \textsc {La roba}}{86}{section*.93}% 
+\contentsline {paragraph}{La nuova direzione della ricerca verghiana}{90}{section*.94}% 
+\contentsline {paragraph}{I temi ricorrenti della novella}{91}{section*.95}% 
+\contentsline {paragraph}{Lo straniamento rovesciato}{91}{section*.96}% 
+\contentsline {paragraph}{La problematicit\IeC {\`a} della visione verghiana}{91}{section*.97}% 
+\contentsline {section}{Mastro Don Gesualdo}{92}{section*.98}% 
+\contentsline {subsection}{Trama}{92}{section*.99}% 
+\contentsline {subsection}{Il protagonista}{93}{section*.100}% 
+\contentsline {subsection}{Narratore}{93}{section*.101}% 
+\contentsline {subsubsection}{Microsaggio: il discorso indiretto libero}{94}{section*.102}% 
+\contentsline {subsection}{T: \textsc {La morte di mastro-don Gesualdo}}{95}{section*.103}% 
+\contentsline {paragraph}{Gli ultimi giorni di mastro-don Gesualdo}{101}{section*.104}% 
+\contentsline {paragraph}{L'ottica straniante di Gesualdo}{101}{section*.105}% 
+\contentsline {paragraph}{Valori borghesi e sperpero aristocratico}{102}{section*.106}% 
+\contentsline {paragraph}{Il disprezzo per il ceto parassitario dei servi}{102}{section*.107}% 
+\contentsline {paragraph}{L'inautenticit\IeC {\`a} della vita del palazzo}{102}{section*.108}% 
+\contentsline {paragraph}{L'incomunicabilit\IeC {\`a} fra padre e figlia}{102}{section*.109}% 
+\contentsline {paragraph}{Gesualdo morente visto dall'esterno}{102}{section*.110}% 
+\contentsline {paragraph}{Gesualdo \IeC {\guillemotleft }vinto\IeC {\guillemotright }}{103}{section*.111}% 
+\contentsline {chapter}{Decadentismo}{105}{chapter*.112}% 
+\contentsline {section}{Introduzione}{105}{section*.113}% 
+\contentsline {section}{Decadentismo e Romanticismo}{105}{section*.114}% 
+\contentsline {section}{T: \textsc {Languore}}{106}{section*.115}% 
+\contentsline {paragraph}{Il motivo della \IeC {\guillemotleft }decadenza\IeC {\guillemotright }}{107}{section*.116}% 
+\contentsline {paragraph}{Il senso della fine}{107}{section*.117}% 
+\contentsline {section}{T: \textsc {L'albatro}}{107}{section*.118}% 
+\contentsline {paragraph}{Il conflitto fra l'intellettuale e la societ\IeC {\`a}}{108}{section*.119}% 
+\contentsline {paragraph}{Lo stile}{109}{section*.120}% 
+\contentsline {section}{T: \textsc {Perdita d'aureola}}{109}{section*.121}% 
+\contentsline {section}{Tra borghesia e proletariato}{110}{section*.122}% 
+\contentsline {section}{Tematiche e motivi del decadentismo}{110}{section*.123}% 
+\contentsline {chapter}{Gabriele D\IeC {\textquoteright }Annunzio}{113}{chapter*.124}% 
+\contentsline {section}{Vita}{113}{section*.125}% 
+\contentsline {section}{Esteta}{114}{section*.126}% 
+\contentsline {section}{Bont\IeC {\`a}}{114}{section*.127}% 
+\contentsline {section}{Superuomo}{115}{section*.128}% 
+\contentsline {section}{Opere}{115}{section*.129}% 
+\contentsline {section}{T: \textsc {Un ritratto allo specchio}}{116}{section*.130}% 
+\contentsline {paragraph}{I procedimenti narrativi}{118}{section*.131}% 
+\contentsline {paragraph}{La critica all'estetismo}{118}{section*.132}% 
+\contentsline {section}{T: \textsc {Il parricidio di Aligi}}{119}{section*.133}% 
+\contentsline {paragraph}{Una societ\IeC {\`a} patriarcale}{123}{section*.134}% 
+\contentsline {paragraph}{I "diversi"}{123}{section*.135}% 
+\contentsline {section}{Le Laudi}{124}{section*.136}% 
+\contentsline {subsection}{T: \textsc {La sera Fiesolana}}{125}{section*.137}% 
+\contentsline {subsubsection}{Prima parte}{125}{section*.138}% 
+\contentsline {subsubsection}{Seconda parte}{126}{section*.139}% 
+\contentsline {subsubsection}{Terza parte}{126}{section*.140}% 
+\contentsline {paragraph}{La prima strofa: l'apparizione della luna}{127}{section*.141}% 
+\contentsline {paragraph}{La personificazione della sera}{128}{section*.142}% 
+\contentsline {paragraph}{La seconda strofa: partitura musicale e linguaggio analogico }{128}{section*.143}% 
+\contentsline {paragraph}{La terza strofa: una sensualit\IeC {\`a} panica}{129}{section*.144}% 
+\contentsline {subsection}{T: \textsc {La pioggia nel pineto}}{129}{section*.145}% 
+\contentsline {paragraph}{La struttura musicale}{133}{section*.146}% 
+\contentsline {paragraph}{Il tema panico}{133}{section*.147}% 
+\contentsline {paragraph}{Gli strumenti formali}{134}{section*.148}% 
+\contentsline {section}{Il periodo notturno}{135}{section*.149}% 
+\contentsline {subsection}{T: \textsc {La prosa ``notturna''}}{135}{section*.150}% 
