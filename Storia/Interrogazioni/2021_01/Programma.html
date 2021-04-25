@@ -1,0 +1,561 @@
+<!DOCTYPE html><html><head>
+      <title>Programma</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="interrogazione-storia">Interrogazione storia</h1>
+
+<h2 class="mume-header" id="volume-ii">Volume II</h2>
+
+<ul>
+<li>paragrafi 4,5,6 del capitolo 21
+<ul>
+<li><a href="../../Slides/Governare_l%E2%80%99Italia_Unita.pptx">PowerPoint</a> | <a href="https://drive.google.com/open?id=1u6QpiLZz9Wr784LEAK-wuxEfEFE-6tN_">PowerPoint (online)</a> - Slides 1-14</li>
+</ul>
+</li>
+<li>tutto il capitolo 22
+<ul>
+<li><a href="../../Slides/Governare_l%E2%80%99Italia_Unita.pptx">PowerPoint</a> | <a href="https://drive.google.com/open?id=1u6QpiLZz9Wr784LEAK-wuxEfEFE-6tN_">PowerPoint (online)</a> - Slides 22-27</li>
+</ul>
+</li>
+</ul>
+<h2 class="mume-header" id="volume-iii">Volume III</h2>
+
+<ul>
+<li>tutto il capitolo 1</li>
+<li>paragrafi 1 e 2 del capitolo 2</li>
+<li>tutto il capitolo 3
+<ul>
+<li><a href="../../Slides/Governare_l%E2%80%99Italia_Unita.pptx">PowerPoint</a> | <a href="https://drive.google.com/open?id=1u6QpiLZz9Wr784LEAK-wuxEfEFE-6tN_">PowerPoint (online)</a> - Slides 31-39</li>
+</ul>
+</li>
+<li>Giolitti: Conversione della rendita finanziaria</li>
+</ul>
+<hr>
+<h2 class="mume-header" id="214-la-nascita-della-nazione">21.4: La nascita della nazione</h2>
+
+<ul>
+<li><a href="../../Slides/Il_risorgimento_italiano.pptx">PowerPoint</a> | <a href="https://drive.google.com/open?id=1zBONfxLSXShUPXgHtGGNoQYcOPpmHBNF">PowerPoint (online)</a> - slide 25</li>
+<li><a href="../../Slides/Governare_l%E2%80%99Italia_Unita.pptx">PowerPoint</a> | <a href="https://drive.google.com/open?id=1u6QpiLZz9Wr784LEAK-wuxEfEFE-6tN_">PowerPoint (online)</a> - slide 1-14</li>
+<li><a href="https://youtu.be/wZMq9r0pKec">Video NovaLectio</a></li>
+</ul>
+<p>IL 27 gennaio 1861  si svolsero le prime elezioni politiche del nuovo Stato.<br>
+Gli iscritti alle liste elettorali  erano l’1,9% della popolazione, dunque il nuovo stato nasceva su una base molto ristretta.<br>
+Il 17 marzo 1861 il primo parlamento dell’Italia unita proclamò la fondazione del Regno d'Italia, conferendo la corona a Vittorio Emanuele II.</p>
+<h3 class="mume-header" id="popolazione-e-alfabetizzazione">Popolazione e alfabetizzazione</h3>
+
+<p>Al momento dell’unità d’Italia gli italiani erano circa 22 milioni, arrivavano a 25 calcolando anche Veneto e Lazio (oggi siamo 60,6 milioni)</p>
+<p>La percentuale degli analfabeti era circa il 75% ed era più alta nelle donne (nei decenni successivi diminuì costantemente sino al 48,7% del 1901).</p>
+<p>Solo il 10% della popolazione era italofono, tutti gli altri comunicavano attraverso i dialetti. Nelle scuole elementari i dialetti affiancavano la lingua italiana (che comunque si usava in chiesa nella predicazione).</p>
+<p>Nell'insieme la maggioranza degli italiani non possedeva ancora una lingua comune.</p>
+<p>Nello stesso periodo in  Prussia la percentuale degli alfabetizzati era del 70% ed in Francia del 50%.</p>
+<h3 class="mume-header" id="citt%C3%A0-e-campagne">Città e campagne</h3>
+
+<p>L’Italia era uno dei paesi con il maggior numero di città (una decina i centri con più di 100000 abitanti, Napoli, il maggiore, superava i 450.000, poi Torino, Milano, Roma con circa 200.000).</p>
+<p>La popolazione urbana era circa il 20% del totale.</p>
+<p>L’agricoltura occupava il 70% circa della popolazione attiva, mentre il 18% si dedicava ad industria ed artigianato ed il 12%  il settore terziario (commercio e servizi).</p>
+<p>L’agricoltura forniva inoltre i prodotti di esportazione  (seta grezza dal nord e agrumi , frutta secca, vino ed olio dal sud).</p>
+<p>Contrariamente a quanto tradizionalmente si pensa il territorio italiano non favoriva l’agricoltura perché solo il 20% era pianeggiante, il resto era collinare o montagnoso; inoltre il 20% del territorio era  occupato da terre incolte o paludi.</p>
+<h3 class="mume-header" id="agricoltura">Agricoltura</h3>
+
+<p>Quella italiana era  prevalentemente un’agricoltura povera, caratterizzata da una grande varietà di colture e di tipologie di proprietà fondiarie.</p>
+<p>Solo nella <strong>Pianura Padana</strong> si erano sviluppate aziende agricole moderne che univano agricoltura  ed allevamento bovino.</p>
+<p>Nell’<strong>Italia Centrale</strong> dominava invece la mezzadria che permetteva a malapena il  sostentamento delle famiglie e non favoriva gli investimenti e le innovazioni tecniche.</p>
+<p>Nell’<strong>Italia  meridionale</strong> prevaleva il latifondo: grandi distese  per lo più seminate a grano o lasciate alla pastorizia, con la popolazione concentrata in pochi borghi rurali. In queste realtà  le tracce dell’ordinamento feudale si facevano sentire  nei contratti agrari e nei rapporti tra proprietari e contadini caratterizzati da forme di dipendenza personale e da irrisolti problemi derivanti  dai contrasti per le terre soggette agli usi civici. Tuttavia nel sud non mancavano zone  fertili dove si erano diffuse le colture destinate all’esportazione.</p>
+<p>Una parte molto estesa dell’Italia praticava un’agricoltura di sussistenza incentrata sull’autoconsumo.</p>
+<h3 class="mume-header" id="condizioni-di-vita">Condizioni di vita</h3>
+
+<p>Il livello di vita della popolazione era dunque bassissimo. I contadini si nutrivano quasi esclusivamente di pane  generalmente di cereali inferiori (non frumento ma granturco, avena e segale) ed erano soggetti alla pellagra (carenza di vitamina PP), pochi i legumi.</p>
+<p>Vivevano, soprattutto al Sud, in abitazioni malsane, capanne, caverne, spesso insieme al bestiame.</p>
+<p>Le precarie condizioni economiche del meridione erano quasi sconosciute alla classe politica settentrionale (lo stesso Cavour non si era mai spinto a sud di Firenze).</p>
+<p>Il divario tra Nord e Sud, quando i primi politici si spinsero a visitare le regioni meridionali, alimentò pregiudizi ed incomprensioni  destinati a durare nel tempo.</p>
+<p>Questo divario si manifestava anche sul piano culturale e si misurava sulla disponibilità di infrastrutture ( al Nord le ferrovie erano più  sviluppate), della  produttività agricola e  dell’istruzione di base (l’analfabetismo era più diffuso al Sud).</p>
+<p>Il <strong>divario tra Nord e Sud</strong> segnalava già l'emergere di un problema nazionale che sarebbe poi stato definito <strong>questione meridionale</strong>. Tuttavia al confronto con l'Europa le differenze tra le due Italie risultavano appiattite ed accomunate da una <em>generale arretratezza</em> rispetto ai paesi più sviluppati del continente europeo.</p>
+<h3 class="mume-header" id="classe-politica">Classe politica</h3>
+
+<p>L’improvvisa e precoce morte di Cavour lasciava la classe dirigente moderata  priva di una guida politica. I successori si mantennero comunque sulla linea politica da lui impostata:  una politica rispettosa delle libertà costituzionali, e insieme accentratrice, liberista e laica.</p>
+<p>Il gruppo dirigente che guidò il paese nel primo quindicennio non era diverso da quello che si era formato in Piemonte dopo il 1849. Il gruppo centrale era dunque costituito dai moderati piemontesi. Ad essi si erano aggiunti moderati lombardi, toscani ed emiliani. Pochi i rappresentanti meridionali.<br>
+Nonostante le differenze di provenienza geografica essi formavano un gruppo omogeneo in quanto a provenienza sociale, mediamente alta.</p>
+<p>Nei primi parlamenti essi si collocavano a <strong>destra</strong>, ma in realtà costituivano un gruppo di centro moderato. La vera destra, quella dei clericali e dei nostalgici dei vecchi regimi si era auto esclusa dal governo perché non riconosceva la legittimità del nuovo stato.</p>
+<p>La <strong>sinistra</strong> era invece formata da vecchi esponenti della sinistra piemontese, da mazziniani e garibaldini che avevano deciso di accettare di inserirsi  nelle istituzioni monarchiche, sia pure per cambiarle. Rispetto alla destra essa poggiava su una base sociale più ampia e composita (borghesi, tra cui professionisti ed intellettuali, ma anche operai del nord ed artigiani).</p>
+<p>La classe dirigente italiana era comunque assai poco rappresentativa del paese reale.</p>
+<p>La legge elettorale piemontese, estesa a tutto il regno,  concedeva il diritto di voto solo a 400.000 cittadini circa, meno del 2% della popolazione totale e del 7% dei maschi adulti. Si trattava di maschi  che avessero compiuto i 25 anni, sapessero leggere e scrivere e pagassero almeno  40 lire di imposte annue. Tra gli aventi diritto molti non si recavano alle urne sfiorando il 50% di astensionismo.</p>
+<p>A causa del sistema del collegio uninominale dunque  erano talvolta sufficienti poche centinaia di voti per essere eletti (il  sistema era a doppio turno con ballottaggio)</p>
+<p>La vita politica assumeva dunque un carattere un carattere oligarchico e personalistico dove la lotta politica si imperniava su singole personalità più che su  programmi. Essa era dominata da pochi notabili in grado di sfruttare la propria influenza e pesantemente condizionata dall’esecutivo, in grado di indirizzare il voto dell’esercito e dei pubblici amministratori.</p>
+<h3 class="mume-header" id="accentramento">Accentramento</h3>
+
+<p>Nonostante i leader della destra ammirassero il sistema britannico e fossero disposti in teoria a riconoscere la validità di un sistema decentrato, basato sull’autogoverno (<em>self-government</em>) furono portati dalle situazioni ad optare per un modello di stato <strong>accentrato</strong>, cioè che  stabilisse un controllo il più possibile stretto e capillare su tutto il paese. Esso era basato su  ordinamenti  uniformi per tutto il regno e una rigida gerarchia di funzionari dipendenti dal centro.</p>
+<p>L’accentramento era anche il risultato inevitabile di una unificazione ottenuta annettendo varie province al regno di Sardegna e la conseguente adesione di queste all’impianto istituzionale ed alle leggi piemontesi.</p>
+<p>Nel periodo 1859/60 furono inoltre emanate nuove leggi che andavano proprio nella direzione dell’accentramento:</p>
+<ul>
+<li>la legge Casati, che prevedeva l’istruzione obbligatoria</li>
+<li>la legge Rattazzi, che  affidava il governo dei comuni ad un consiglio eletto a suffragio ristretto e ad un sindaco si nomina regia.</li>
+</ul>
+<p>Il territorio nazionale era diviso in province (circoscrizioni amministrative importanti), poste sotto i <strong>prefetti</strong>, rappresentanti del potere esecutivo  centrale su tutto il paese.</p>
+<p>Per tutto il XIX Secolo la scena politica fu dominata dallo scontro tra conservatori, liberal-moderati e democratici. Tale scontro riguardava i modi della partecipazione al potere e l’organizzazione del potere, ovvero la forma delle istituzioni statali, <strong>accentrata o decentrata</strong>.</p>
+<p>La linea di divisione tra i due modelli non coincideva con quella tra conservatori e progressisti</p>
+<p>Nell’800 furono soprattutto i  democratici a sostenere l’accentramento e l’unità amministrativa, vista come strumento di  uguaglianza, mentre  conservatori e moderati difendevano le autonomie e le diversità locali come contesto favorevole a far valere i privilegi delle classi alte.</p>
+<p>In Italia al contrario esisteva tra democratici  una forte corrente autonomista e federalista, mentre i moderati realizzarono un ordinamento accentrato.</p>
+<p>Accentramento e decentramento presi in sé non sono né di destra né di sinistra in quanto dipende dagli scopi per cui vengono usati.</p>
+<p>Generalmente la propensione all’accentramento è tipica di chi detiene il potere mentre il decentramento è rivendicato dalle forze che dal potere si sentono escluse.</p>
+<h3 class="mume-header" id="sistema-economico-e-trasporti">Sistema economico e trasporti</h3>
+
+<p>Il problema dell'unificazione economica è complesso. Vennero uniformati i doversi sistemi  monetari con l’adozione della <strong>lira</strong>.</p>
+<p>La legislazione doganale liberista vigente nel Regno Sardo (dazi di entrata molto bassi) venne estesa e penalizzò il mezzogiorno (fino ad allora inserito in un sistema protezionistico).</p>
+<p>Lo sviluppo delle <strong>vie di comunicazione</strong> fu rapito (le ferrovie passarono da 2000km a 6000km), ma si continuò a preferire il trasporto via mare.</p>
+<h3 class="mume-header" id="industria-e-agricoltura">Industria e Agricoltura</h3>
+
+<p>L’agricoltura conobbe un significativo incremento (soprattutto le colture specializzate, ad es. seta greggia)</p>
+<p>Il settore industriale invece fu penalizzato dalla politica liberista che determinò la concorrenza internazionale.</p>
+<p>Declinarono sia la produzione laniera che i settori siderurgico e meccanico che ancora non potevano avvalersi dell’aiuto delle ferrovie come accadeva all’estero.</p>
+<p>Soprattutto il meridione (pochi i nuclei industriali) fu penalizzato dalla scelta liberista.</p>
+<p>La classe politica era fondamentalmente convinta che lo sviluppo futuro risiedesse nell’agricoltura. Questo consentì un accumulo che permise il potenziamento delle infrastruttura, ma nel complesso il paese rimase arretrato sul piano industriale.</p>
+<h3 class="mume-header" id="fiscalit%C3%A0">Fiscalità</h3>
+
+<p>La politica fiscale, legata ai costi dell'unificazione, fu molto dura, e i governi dovettero ricorre a misure fiscali basate sia sui consumi (come sali, tabacchi e generi alimentari) che sui redditi.</p>
+<p>La situazione si aggravò dopo la <strong>Terza guerra d'Indipendenza</strong>. Venne infatti introdotta la <strong>tassa sul macinato</strong>, che colpiva le classi più povere toccando il consumo popolare per eccellenza. All'inizio del 1869 scoppiarono infatti le prime agitazioni sociali.</p>
+<p>Grazie alla severa politica fiscale, nel 1875 venne raggiunto il pareggio di bilancio.</p>
+<p>Ormai erano in molti a chiedere una politica  meno rigida che permettesse  la formazione di una ricchezza privata.</p>
+<p>Ad aprire la strada alla sinistra furono comunque le divisioni interne alla destra.</p>
+<p>Nel 1876 il governo <strong>Minghetti</strong> venne messo in minoranza sul progetto di passaggio  alla  gestione statale delle ferrovie (fino ad allora gestite da privati). Egli presentò le dimissioni.</p>
+<p>Il governo venne allora  affidato dal re a <strong>Agostino Depretis</strong>, leader della sinistra di opposizione che costituì un governo interamente composto da uomini della sinistra.</p>
+<p>Nel novembre alle elezioni il successo della sinistra fu nettissimo e confermò il declino della destra.</p>
+<h1 class="mume-header" id="ripasso">Ripasso</h1>
+
+<h2 class="mume-header" id="23-litalia-della-sinistra-storica">23: L'italia della sinistra storica</h2>
+
+<ul>
+<li><a href="../../Slides/Governare_l%E2%80%99Italia_Unita.pptx">PowerPoint</a> | <a href="https://drive.google.com/open?id=1u6QpiLZz9Wr784LEAK-wuxEfEFE-6tN_">PowerPoint (online)</a> - slide 15-34</li>
+</ul>
+<p>La caduta della destra storica avvenne a causa della questione delle concessioni ferroviarie. Allo scadere delle concessioni che avevano permesso a compagnie private di gestire il sistema ferroviario, lo stato stesso voleva prenderne le redini. Questo causò malcontento nelle classi di banchieri e finanzieri rappresentati dalla sinistra.</p>
+<p>La maggioranza della Sinistra era molto eterogenea, comprendeva anche precedenti esponenti di destra:</p>
+<ul>
+<li>
+<p><strong>Destra</strong>:<br>
+Uomini di governo, amministratori, diplomatici, aristocratici, proprietari terrieri.</p>
+</li>
+<li>
+<p><strong>Sinistra</strong>:<br>
+Uomini con passato di garibaldini, mazziniani, con esperienza risorgimentale e cospirativa</p>
+<ol>
+<li><strong>Sinistra storica piemontese</strong>, liberal-progressista (Agostino Depretis)</li>
+<li><strong>Sinistra di derivazione mazziniana</strong> avevano accettato la monarchia parlamentare</li>
+<li><strong>Sinistra meridionale</strong> portavoce delle necessità del meridione in governo</li>
+</ol>
+</li>
+</ul>
+<h3 class="mume-header" id="base-sociale-della-destra">Base sociale della destra</h3>
+
+<p>Tende a rappresentare gli interessi di</p>
+<ul>
+<li>Commercianti agiati</li>
+<li>Proprietari fondiari</li>
+<li>Imprenditori agricoli centro-settentrionali<br>
+La politica liberista aveva portato cospicui guadagni esportando i prodotti tipici delle singole terre, lasciando quindi spazio anche ai prodotti del meridione (nel video della questione meridionale dice cose diverse, controlla, io ti scrivo cosa dice il libro)</li>
+</ul>
+<h3 class="mume-header" id="base-sociale-della-sinistra">Base sociale della sinistra</h3>
+
+<p>L’avventura ferroviaria aveva creato ed arricchito una nuova aristocrazia finanziaria. Si formano istituti bancari moderni che puntarono sull’investimento.<br>
+Si crea una nuova cultura finanziaria basata non più sul pareggio del debito, ma sullo sviluppo industriale.<br>
+Va quindi a coinvolgere le classi sociali più dinamiche, compresa la piccola e media borghesia.</p>
+<h3 class="mume-header" id="progetto-di-depretis">Progetto di Depretis</h3>
+
+<p>Era stato un fervente mazziniano e partecipò all’avventura garibaldina in Aspromonte. Nel 1873 assunse la guida della Sinistra.</p>
+<h4 class="mume-header" id="politica-protezionistica">Politica protezionistica</h4>
+
+<p>Nel 1878 venne attuata una politica doganale e protezionista. Lo stato iniziò a stanziare fondi per promuovere l’industrializzazione.<br>
+Ne rimane colpita l’agricoltura.<br>
+Il prezzo del grano si ridusse di un terzo in 5 anni. Rimasero minacciati dalla concorrenza estera, portandoli a desiderare una politica protezionista.</p>
+<h4 class="mume-header" id="riforme-sociali">Riforme sociali</h4>
+
+<p>Cerca di ottenere consenso tra gli <strong>operai e gli artigiani</strong> delle città e tra le èlite contadine.</p>
+<ul>
+<li>Abolizione <strong>tassa sul macinato</strong> (1880)</li>
+<li>Riforma scolastica (<strong>legge Coppino</strong> 1877). Prevedeva 5 anni di scuola elementare e ne rese obbligatori 3.</li>
+</ul>
+<h4 class="mume-header" id="legge-elettorale">Legge elettorale</h4>
+
+<p>Abbassa la soglia di censo e di età.<br>
+Anche la piccola borghesia partecipa alle elezioni, avendo così la possibilità di avere una propria rappresentanza.</p>
+<h4 class="mume-header" id="mobilitazione-mondo-del-lavoro">Mobilitazione mondo del lavoro</h4>
+
+<p>Nelle campagne padane nascono movimenti di ribellione di braccianti e contadini che chiedevano</p>
+<ul>
+<li>Salari più alti</li>
+<li>Occupazione meno precaria</li>
+</ul>
+<p>Si creano leghe sindacali, circoli e cooperative.<br>
+Avviene una cosa smile anche tra gli operai di fabbrica.<br>
+Nel 1882 nasce il <strong>Partito operaio italiano</strong> a Milano, seguito da numerosi circoli socialisti. Nel 1892 a Genova nasce il Partito socialista.</p>
+<h4 class="mume-header" id="inchieste-sociali">Inchieste sociali</h4>
+
+<p>Vengono fatte varie inchieste che però incisero davvero poco nel concreto</p>
+<ul>
+<li>Condizioni dei contadini meridionali</li>
+<li>Patrimonio industriale</li>
+<li>Agricoltura e classi rurali italiane</li>
+<li>Inchiesta sanitaria</li>
+</ul>
+<h4 class="mume-header" id="trasformismo">Trasformismo</h4>
+
+<p>Molti deputati della Destra confluirono nel partito vincitore. La sinistra contò su un’ampia maggioranza parlamentare che contavano numerosissimi ex esponenti della Destra più conservatrice. Questo peggiorò l’inquinamento clientelare, infatti, lo spostamento di molti politici veniva ottenuto tramite corruzione.</p>
+<h4 class="mume-header" id="colonialismo">Colonialismo</h4>
+
+<p>Seguendo l’esempio delle altre grandi potenze europee, crebbe la volontà, anche sotto spinta dell’opinione pubblica, di guadagnare un dominio coloniale.</p>
+<p>Questo rovinò i rapporti con la Francia e migliorerà quelli con la Germania. Nel 1881 infatti, i francesi occuparono la Tunisia, interesse dell’Italia.</p>
+<p>Nel 1882 venne stipulata la Triplice alleanza con Germania e Austria.</p>
+<p>Nel 1882 acquistarono una compagnia di navigazione che gestiva i commerci con l’Oriente.</p>
+<p>L’occupazione di Massaua causò la risposta dell’Etiopia, portando nel 1887 al massacro di Dogali (sconfitta degli italiani).</p>
+<p>Questo massacro segnò la fine delle aspirazioni coloniali e del governo di Depretis.</p>
+<p>Inizia così il governo di Francesco Crispi.</p>
+<p>Come ultima cosa il governo di Depretis mise un dazio sul grano (1887) che coronò la politica protezionista.</p>
+<p>La crisi agraria aveva colpito l’agricoltura del grano (verso il protezionismo), mentre ne giovarono le culture specializzate (liberoscambisti) che ricavarono grandi profitti dall’esportazione, vedendo la crisi come un’opportunità per l’Italia per abbandonare le vecchie coltivazioni ed arretratezze.</p>
+<h4 class="mume-header" id="industrializzazione">Industrializzazione</h4>
+
+<p>La politica protezionista si impunta sulla formazione di una società industriale. Le esportazioni agrarie cedono il posto quindi ad una competitività dell’industria.<br>
+La produzione industriale aumento fino al quadruplo in dieci anni. Ne è una prova la diffusione del carbone, nonostante gli alti prezzi.<br>
+Importante fu l’azione attiva dello stato in questa industrializzazione. Vennero infatti stanziati finanziamenti pubblici.</p>
+<h4 class="mume-header" id="sviluppo-ferroviario">Sviluppo ferroviario</h4>
+
+<p>Aumentarono gli impegni di spesa in questo ambito, fino alla nazionalizzazione delle strade ferrate con cui lo stato si accollava la costruzione di nuovi tronchi.</p>
+<h4 class="mume-header" id="marina-da-guerra">Marina da guerra</h4>
+
+<p>Si puntò sulla creazione di una marina di stato, stanziando più fondi si andò a favorire le imprese siderurgiche e meccaniche. Aumentò esponenzialmente anche la produzione di acciaio.</p>
+<h4 class="mume-header" id="capitalismo-di-stato">Capitalismo di stato</h4>
+
+<p>Lo stato si collocò quindi al centro di una rete di interessi industriali e finanziari, che si configurò rapidamente come la cabina di comando dell’economia nazionale.</p>
+<p>Questo modello di “capitalismo di stato”, infatti, agì in mote direzioni in quanto legava strettamente il destino dell’impresa al potere politico e di conseguenza politicizzava il ruolo dell’imprenditoria.</p>
+<p>Per questo blocco industriale lo sviluppo dell’impresa non rispondeva tanto a criteri di efficienza, ma piuttosto alla creazione di condizioni favorevoli per negoziare aiuti e commesse con il potere politico.</p>
+<h3 class="mume-header" id="modelli-di-crispi">Modelli di Crispi</h3>
+
+<p>Era un siciliano ed ex Mazziniano. Con lui avviene l’accentramento del potere nella persona del primo ministro, assumendo ruolo di ministro degli interni ed esteri.</p>
+<p>Reprime con violenza tutte le azioni di decentramento ed autonomia.</p>
+<p>Si scontra con:</p>
+<ul>
+<li>Mobilitazione contadini</li>
+<li>Cattolici</li>
+</ul>
+<p>Poiché c’era un vieto papale che impediva ai fedeli a partecipare alla vita politica, i cattolici non si erano mai affacciai alla vita politica.</p>
+<p>Per il primo periodo si limitano ad un’azione in campo sociale. Vi è una crescita organizzativa ed un’analisi sociale che porta ad una presa di coscienza. Questo porta alla creazione di un vero e proprio pensiero sociale, come di un partito politico.</p>
+<p>Papa Leone XIII pubblicò il Rerum novarum che spiegava il nuovo atteggiamento della chiesa nei confronti delle classi povere e svantaggiate.</p>
+<ul>
+<li>Distribuzione più equa della ricchezza</li>
+<li>Diritto ai lavoratori di organizzarsi a tutela di giuste rivendicazioni</li>
+</ul>
+<p>Nasce così il dubbio sulla fondazione di un proprio partito.</p>
+<p>La sua politica era talmente repressiva che attuò un riformismo <strong>guidato dallo stato</strong></p>
+<p>Con l’emanazione del <strong>codice penale Zanardelli</strong>: (alcuni esempi)</p>
+<ul>
+<li>Abolizione pena di morte</li>
+<li>Libertà di sciopero pacifico</li>
+</ul>
+<p>Importante anche la legge sull’ordinamento comunale e provinciale:</p>
+<ul>
+<li>Elezione sindaco</li>
+<li>Elezione consiglio provinciale</li>
+<li>Estensione suffragio: alfabetizzati con un reddito modesto</li>
+</ul>
+<p>Così da avere controllo a livello locale, per reprimere autonomie fin dal piccolo.</p>
+<p>Attuò una <strong>politica sociale</strong> a tutela di salute ed assistenza pubblica. Ebbero poco successo e non attuarono l’integrazione delle classi inferiori.</p>
+<p>Ci fu una <strong>crisi bancaria</strong> causata dal vecchio governo che aveva camuffato un gravoso debito. Legato ad una crisi edilizia, del sistema creditizio e ad una depressione dell’economia mondiale.</p>
+<p>Questo costrinse Crispi a dimettersi, sale al governo Giolitti. È costretto a dare le dimissioni dopo lo scandalo della Banca romana, dopo il suo fallimento infatti, si vengono a scoprire finanziamenti “segreti” da parte dello stato.</p>
+<p>Fonda anche la Banca d’Italia, cercando di riorganizzare l’economia pubblica.<br>
+Ritorna in carica Crispi, riprende la politica colonialista.<br>
+Riprende rapporti con la Germania, si espande in Abissinia e ottiene protettorato in Somalia. Prova ad ottenerlo anche in Etiopia ma vengono battuti diverse volte. Dopo la sconfitta definitiva ad Adua (1896), si dimette definitivamente Crispi e si richiude la parentesi coloniale.</p>
+<hr>
+<h1 class="mume-header" id="la-conversione-della-rendita-e-gli-enti-ecclesiastici-opera-omnia-luigi-einaudi">La conversione della rendita e gli enti ecclesiastici - Opera Omnia Luigi Einaudi</h1>
+
+<blockquote>
+<p>La conversione della rendita e gli enti ecclesiastici «Corriere della Sera», 9 dicembre 1906 Cronache economiche e politiche di un trentennio (1893-1925), vol. II, Einaudi, Torino, 1959, pp. 443-449 &nbsp; &nbsp; La conversione della rendita ha lasciato dietro di sé uno strascico di controversie che dal luglio in qua non sono state risolute, né accennano …</p>
+</blockquote>
+<p><strong><em>La conversione della rendita e gli enti ecclesiastici</em></strong></p>
+<p>«Corriere della Sera», 9 dicembre 1906</p>
+<p><em>Cronache economiche e politiche di un trentennio (1893-1925)</em>, vol. II, Einaudi, Torino, 1959, pp. 443-449</p>
+<p>La conversione della rendita ha lasciato dietro di sé uno strascico di controversie che dal luglio in qua non sono state risolute, né accennano ancora a trovare una via di soluzione definitiva. Gli ufficiali si lagnano che non si sia presentato il promesso disegno di legge per rimediare agli inconvenienti non piccoli che dalla conversione nascono rispetto alla dote militare. Le opere pie invocano un aiuto che valga a trarle dal disagio in cui la riduzione del reddito le mette. Noi riteniamo che presto o tardi queste domande dovranno essere soddisfatte, quelle degli ufficiali, in quanto non importano alcun onere al tesoro e intendono solo a fissare per le doti una cifra minore dell’attuale, e quelle delle opere pie perché lo stato troverà il modo di venire in aiuto di quelle opere pie che dalla conversione fossero poste nella impossibilità di provvedere ai loro fini di beneficenza.</p>
+<p>La controversia più delicata e difficile, rimane pur sempre quella degli enti ecclesiastici. Altra volta (21 luglio) abbiamo già esaminato gli argomenti che erano addotti per esimere questi enti dalla conversione ed abbiamo concluso contro la loro tesi. In seguito gli enti ecclesiastici hanno intensificato – ad opera sovratutto di monsignor Teodoro Valfré di Bonzo, arcivescovo di Vercelli – una agitazione intesa a dimostrare la illegalità del provvedimento che ora diminuisce le loro rendite; e di questa iniziativa partita da Vercelli è frutto un libro del teologo Luigi Sincero, membro del capitolo metropolitano di quella città. La tesi va esaminata con quella oggettività, di cui fanno professione aperta i patroni della causa degli enti ecclesiastici. Poiché tanto monsignor Valfré nel suo memoriale, quanto il teologo Sincero nel suo libro fanno omaggio caloroso ai progressi economici e sociali della patria e solo sostengono che un fatto tanto benefico, come la conversione, non deve ledere diritti pure sanciti dal legislatore italiano, è dover nostro metterci al medesimo punto di vista giuridico per riesaminare serenamente la tesi degli enti ecclesiastici.</p>
+<p>Lasciando da parte le minori argomentazioni sussidiarie, ecco come potrebbe quella tesi essere posta. La conversione del debito pubblico consiste nell’alternativa, offerta dallo stato ai suoi creditori, di rimborsare alla pari il capitale ricevuto in prestito (100 lire), ovvero di pagare un interesse minore (3,75% netto, invece del 5% lordo) a quelli che preferiscano continuare nel mutuo. Perché vi sia conversione vera e propria, occorre che il creditore abbia libertà di richiedere il rimborso del capitale, quando a lui non piaccia di accettare il minore interesse offerto dallo stato. Se non vi è libertà di chiedere il rimborso, non vi è più conversione; siamo invece di fronte ad una riduzione coattiva di interessi, equivalente né più né meno ad una confisca, ad una imposta sui redditi dei creditori.</p>
+<p>Tutto ciò è pacifico o incontroverso; e di ciò mirabilmente si giovano gli enti ecclesiastici. I quali, soli fra tutti i privati e gli enti morali, sono dalla legge costretti ad un’unica forma d’impiego dei loro patrimoni: la rendita 5% del debito pubblico. Tutti gli altri creditori dello stato hanno avuto facoltà di chiedere il rimborso del loro capitale; e quelli che di questa facoltà non hanno, per la brevità del tempo, potuto usufruire, hanno almeno, con certe formalità, il diritto di vendere i loro titoli di rendita e di impiegare altrimenti i loro capitali. Gli enti ecclesiastici no. Essi sono piedi e mani legati alla rendita pubblica, perché l’articolo 11 della legge 7 luglio 1866 stabilì che «i beni immobili di qualsiasi ente morale ecclesiastico conservato, eccettuati quelli appartenenti ai benefizi parrocchiali e alle chiese ricettizie, saranno convertiti per opera dello stato, mediante iscrizione in favore degli enti morali, cui i beni appartengono, in una rendita 5% eguale alla rendita accertata e sottoposta al pagamento della tassa di manomorta». Dunque, si conclude, se gli enti ecclesiastici non possono chiedere il rimborso, perché la legge li vincola all’impiego in rendita, la conversione rispetto ad essi non è una vera conversione, ma è una imposta od una confisca, che non fu apertamente dichiarata dal legislatore, che dunque non fu da esso voluta. Ancora: lo stato, quando nel 1866, allo scopo di togliere la manomorta ecclesiastica, si impadronì dei beni immobili dei vescovadi, arcivescovadi, capitoli, seminari, ecc., disse di voler conservare intatto il reddito di questi enti, dando per ogni 5 lire di reddito immobiliare altrettanto reddito iscritto sul debito pubblico. Se adesso, con una conversione forzata, si riduce il reddito a lire 3,75 e poi a lire 3,50, l’uguaglianza primitiva è distrutta; e corre obbligo allo stato di ripristinarla, risarcendo gli enti ecclesiastici della perdita, coll’iscrizione di tanta rendita in più.</p>
+<p>Questi gli argomenti degli enti ecclesiastici. Diremo più innanzi su qual punto essi abbiano ragione. Intanto dobbiamo notare che il legislatore volle bensì nel 1866 conservare intatto il reddito degli enti ecclesiastici; ma intese adempire a questo suo obbligo solenne col dare tanta rendita 5% che fosse eguale al reddito dei beni immobili convertiti. Dopo ciò, cessava per lo stato ogni obbligo derivante dalla legge del 1866 per quanto ha tratto all’uguaglianza dei redditi. Lo stato cioè non si obbligò a garantire in perpetuo agli enti ecclesiastici una rendita uguale a quella che prima avevano. Se avesse voluto far questo, avrebbe dovuto iscrivere nel gran libro o fuori del gran libro una rendita speciale ecclesiastica fissa in perpetuo e inconvertibile, come fece colla legge delle guarentigie per la dotazione della Santa sede. Invece lo stato non fece nulla di tutto questo; ed intese sdebitarsi consegnando tanti titoli nominativi di rendita 5% iscritta sul gran libro. E badisi: lo stato, mentre diede in tal modo una certa quantità di rendita 5%, consegnò anche il capitale equivalente; poiché, secondo le leggi fondamentali del debito pubblico, consegnare un titolo di lire di rendita 5% vuol dire anche consegnare un titolo del valore nominale di 100 lire. Dunque, in virtù della legge del 1866, gli enti ecclesiastici furono privati della loro vecchia proprietà immobiliare e divennero proprietari di una ricchezza diversa, mobiliare e precisamente di titoli nominativi di rendita 5% inscritti nel gran libro. Come tali andarono soggetti a tutte le vicende, prospere ed avverse, dei portatori di titoli di debito pubblico. Fra le vicende prospere notiamo l’aumento di valore dei titoli stessi, che da 50 lire in media nel 1866 giunsero a superare la pari e risarcirono in parte le perdite che – per ragioni non spiegabili in breve spazio – gli enti avevano subito in quell’anno nel passaggio dalla proprietà di beni immobili a quella di rendita 5%. Fra le vicende avverse, comuni a tutti i portatori di rendita, son da notare prima i replicati aumenti dell’imposta di ricchezza mobile dall’8 al 20% ed ora la conversione dal 5 al 3,75 ed al 3,50%. A questa conversione gli enti ecclesiastici non possono sfuggire:</p>
+<ul>
+<li>perché essi posseggono titoli di debito pubblico ai quali non è stata apposta nessuna clausola di inconvertibilità, e non fu posta perché sarebbe colpa gravissima di un governo l’obbligare le generazioni venture a pagare in perpetuo un interesse fisso;</li>
+<li>perché, colla conversione, lo stato non viola la legge del 1866, in quanto quella legge si limitava a dare agli enti ecclesiastici un patrimonio nuovo (titoli di debito pubblico) uguale in reddito ed in capitale nominali al reddito ed al capitale legale (agli effetti della tassa manomorta), ossia al nominale che essi prima possedevano.</li>
+</ul>
+<p>Ciò fu fatto; né lo stato poteva garantire agli enti ecclesiastici la immunità da tutte le vicende future toccate in sorte, per motivi superiori e indeclinabili di pubblica utilità, ai portatori di rendita 5%, così come non avrebbe prima potuto garantire l’immunità dai decimi di guerra, dai centesimi addizionali delle province dei comuni, dalle inondazioni, dalla fillossera e da tutti quegli altri accidenti che fossero venuti a scemare il reddito dei loro terreni.</p>
+<p>Che cosa rimane dunque della tesi degli enti ecclesiastici? Un punto solo, che però non esitiamo a dichiarare siffatto da richiedere, in quanti abbiano senso di giustizia, attenta considerazione.</p>
+<p>Nessun dubbio per noi che la conversione debba colpire gli enti ecclesiastici; e che non debbano tollerarsi eccezioni che in futuro potrebbero anche da altri essere sfruttate contro gli interessi economici del paese. Nessun dubbio altresì che la conversione fu nel 1906 imposta agli enti ecclesiastici mentre fu liberamente consentita o poté supporsi fosse liberamente consentita da tutti gli altri creditori dello stato. I portatori privati malcontenti poterono chiedere il rimborso o vendere i loro titoli. Anche gli ufficiali, gli appaltatori, i contabili, con rendite vincolate: gli enti morali poterono e possono, con qualche lentezza e adempiendo a certe formalità, che andrebbero semplificate, alienare la rendita e fare altri investimenti. Soli gli enti ecclesiastici non possono, perché la legge li vincola all’investimento di rendita: ed essi soli hanno quindi ragione di dire che la conversione del 1906 non fu vera conversione, ma confisca, non consentita, di parte dei loro redditi. Vi sono qui due leggi che sono contradditorie; perché son contradditori i due principî da cui presero le mosse. La legge del 1866 volle abolire la manomorta ecclesiastica e dare agli enti una nuova proprietà che non prestasse il fianco alle ragionevoli critiche che erano fatte alla proprietà fondiaria ecclesiastica. Fu scelta la rendita pubblica perché nel 1866 non vi erano altri titoli mobiliari egualmente apprezzati, ed anche perché lo stato italiano aveva necessità di tener alto il credito pubblico favorendo e quasi rendendo obbligatori gli investimenti in rendita. La legge del 1906 volle attuare il dovere strettissimo che lo stato ha di ridurre l’interesse sui titoli di debito pubblico, appena ciò sia consentito dalle mutate condizioni economiche.</p>
+<p>Come si esce dal conflitto tra il diritto pubblico finanziario, il quale proclama il principio della universalità e della necessità della conversione ed il diritto pubblico ecclesiastico il quale, per abolire la manomorta, impone l’investimento obbligatorio in titoli di rendita? Finché le due leggi rimangono, il conflitto è inevitabile ed, osiamo dire, insolubile. Per toglierlo è d’uopo modificare una delle due leggi e precisamente quella che oggi ha minore importanza. Sembra a noi certissimo che dei due principî, uno abbia valore maggiore ed è quello che proclama la necessità della conversione <em>adversus omnnes</em>. Rinunciare alla universalità non significa solo una rilevante perdita finanziaria attuale, ma una maggiore nel futuro quando altre conversioni saranno possibili. Significa imporre ai contribuenti avvenire l’obbligo di pagare un canone perpetuo immutabile, obbligo che un legislatore non può ordinare se non in circostanze eccezionali, che interessano l’esistenza medesima dello stato. Il che non essendo nel caso nostro, non rimane che modificare la legge che ordina l’investimento obbligatorio del patrimonio ecclesiastico in rendita 5, ora 3,75%. Nessun danno pubblico nascerebbe dal concedere agli enti ecclesiastici quella libertà moderata di impieghi che hanno, ad esempio, le opere pie, consentendo l’impiego in altri titoli a debito dello stato o garantiti dallo stato, o in titoli di credito comunale e provinciali, in titoli di credito fondiario, ecc.</p>
+<p>Oramai lo stato italiano vede posto il suo credito così in alto che non ha più bisogno di costringere nessuno a comprar rendita; ed il dar libertà agli enti ecclesiastici gioverebbe anzi ad accrescere il suo prestigio finanziario. Scegliendo accuratamente pochi titoli di stato o garantiti o in altro modo sicuri, si dovrebbe far obbligo agli enti ecclesiastici di renderli nominativi, in guisa che lo stato possa sempre conservare l’alta sorveglianza sul patrimonio del clero. Nessun investimento potrebbe farsi senza il consenso del fondo per il culto; e non essendo permesso l’investimento in terreni, case, azioni, ecc., non vi sarebbe pericolo di veder risorgere la manomorta ecclesiastica.</p>
+<p>Gli enti, che ora si lagnano, e non a torto, della conversione come d’una confisca, non avrebbero più ragione di lagnanza; poiché anche ad essi si potrà rispondere come si rispose agli ufficiali ed alle opere pie: «se non volete subire la conversione, vendete la vostra rendita ed acquistate altri titoli non convertiti». Probabilmente in grandissima maggioranza gli enti ecclesiastici agiranno come fecero i privati, e, nel proprio interesse conserveranno la rendita 3,75%, come il più conveniente fra tutti gli impieghi loro consentiti. Lo stato, senza nulla perdere, eviterà così che una classe di cittadini possa a ragione lagnarsi di essere stata ingiustamente colpita da confisca.</p>
+<p>Gli enti ecclesiastici hanno bensì l’abitudine di essere soggetti ad uno speciale diritto tributario; ma vi è un limite a tutto. Il teologo Sincero ha compilato la storia tributaria dei redditi di alcuni enti ecclesiastici tipici: ed è una storia veramente lacrimevole. Un arcivescovo che avesse 60.000 lire di reddito nel 1866, vide a poco a poco diminuire i suoi redditi per le seguenti cause: imposta fondiaria, lire 11.000 ; tassa straordinaria del 30%, lire 13.200; tassa del 30% sulle decime sacramentali, lire 1.500; imposta di ricchezza mobile e successivi aumenti, lire 2.578,40 + lire 3.867,60 + lire 5.860; tassa di manomorta lire 1.125,12; quota di concorso lire 4.493,33; tassa di passaggio di usufrutto lire 439,50; perdita netta per la conversione nel 1912 lire 1.976,51. Fatte tutte queste deduzioni, si trova che il reddito netto dell’arcivescovo nel 1906 è ridotto da lire 60.000 a lire 17.382,05, e discenderà nel 1912 – quando la conversione avrà intiero effetto – a lire 15.905,54. Non c’è che dire: gli italiani, schivi dal fare tutto quel gran baccano che in Francia si fa attorno alla legge di separazione, hanno raggiunto un effetto consimile con sapienti giri di torchio del meccanismo tributario! L’esempio citato lascia l’arcivescovo con un discreto reddito; ma nel libro del Sincero vi sono i calcoli per un vescovo che aveva lire 20.000 di reddito nel 1866 e che nel 1906 ne ha lire 7.291,94 e ne avrà nel 1912 lire 6.362,25; per un canonico che da lire 3.000 nel 1866 passerà a lire 953,58 nel 1912, e per altri canonici che avevano lire 2.000 e 1.200 ed avranno lire 635,78 e lire 537,96. È una fitta granuola d’imposte che si è abbattuta sul reddito degli enti ecclesiastici; una gragnuola tanto devastatrice che gli investiti affermano che talune di queste imposte siano manifestamente un duplicato di altre. Sul qual punto non possiamo soffermarci, benché non possa negarsi il fondamento della lagnanza. Basti aver messo in chiaro questo: che se il legislatore ha voluto che i redditi degli enti ecclesiastici diminuissero, non ha voluto però che essi potessero lamentarsi della diminuzione come di cosa contraria alle leggi. Poiché oggi la conversione per essi è una confisca, data l’obbligatorietà dell’impiego in rendita, togliamo questa obbligatorietà nei limiti del possibile. Ciò non farà crescere il reddito di quegli enti; ma, almeno, se sarà scarso, nessuno potrà dire ché sia scarso contrariamente alla volontà del legislatore.</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
