@@ -1,1 +1,0 @@
-TODO Copiare bene appunti
