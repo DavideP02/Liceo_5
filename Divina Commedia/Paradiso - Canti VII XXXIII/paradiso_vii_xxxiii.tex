@@ -1,0 +1,816 @@
+\documentclass[a4paper, twoside, titlepage]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage[T1]{fontenc}
+
+\usepackage{microtype}
+\usepackage{mparhack}
+\usepackage{xcolor}
+\usepackage{multicol}
+
+\usepackage{quoting}
+\quotingsetup{font=small}
+
+\usepackage{verse}
+\usepackage{framed}
+
+\usepackage[nouppercase]{frontespizio}
+\newcommand{\omissis}{[\textellipsis\unkern]}
+
+\newcommand{\straniero}[1]{\textit{#1}}
+\newcommand{\titolo}[1]{\textsc{#1}}
+\newcommand{\evid}[1]{\textbf{\textcolor{blue}{#1}}}
+
+%creazione del comando per le note a margine
+\newcounter{mar}
+\newcommand{\mar}[2]{
+\addtocounter{mar}{1}
+\hspace{-0.73em}\textsuperscript{\hyperref[\thechapter.\themar]{\themar}}\marginpar{\textbf{\themar}\label{\thechapter.\themar}. #2}\hspace{-0.4em}
+}
+\newcommand{\mat}[1]{\mar{gg}{#1}}
+
+\usepackage{chngcntr} %pacchetto per la numerazione delle note che partono ogni capitolo
+\counterwithin*{mar}{chapter}
+%fine comando per le note a margine
+
+%comando per la creazione dei puntini di sospensione tra quadre
+\newcommand{\salt}{\hspace{1em}[...]}
+
+\usepackage{ulem}
+\usepackage{verse}
+
+\usepackage[colorlinks]{hyperref}
+\definecolor{RoyalBlue}{rgb}{0.0, 0.14, 0.4}
+
+\newlength\sidebar
+\newlength\envrule
+\newlength\envborder
+\setlength\sidebar{1.5mm}
+\setlength\envrule{0.4pt}
+\setlength\envborder{2.5mm}
+
+\hypersetup{
+     colorlinks=true,
+     linkcolor=blue,
+     filecolor=blue,
+     citecolor = black,
+     urlcolor=cyan,}
+
+\makeatletter
+\long\def\fboxs#1{%
+  \leavevmode
+  \setbox\@tempboxa\hbox{%
+    \color@begingroup
+      \kern\fboxsep{#1}\kern\fboxsep
+    \color@endgroup}%
+  \@frames@x\relax}
+\def\frameboxs{%
+  \@ifnextchar(%)
+    \@framepicbox{\@ifnextchar[\@frameboxs\fboxs}}
+\def\@frameboxs[#1]{%
+  \@ifnextchar[%]
+    {\@iframeboxs[#1]}%
+    {\@iframeboxs[#1][c]}}
+\long\def\@iframeboxs[#1][#2]#3{%
+  \leavevmode
+  \@begin@tempboxa\hbox{#3}%
+    \setlength\@tempdima{#1}%
+    \setbox\@tempboxa\hb@xt@\@tempdima
+         {\kern\fboxsep\csname bm@#2\endcsname\kern\fboxsep}%
+    \@frames@x{\kern-\fboxrule}%
+  \@end@tempboxa}
+\def\@frames@x#1{%
+  \@tempdima\fboxrule
+  \advance\@tempdima\fboxsep
+  \advance\@tempdima\dp\@tempboxa
+  \hbox{%
+    \lower\@tempdima\hbox{%
+      \vbox{%
+        %\hrule\@height\fboxrule
+        \hbox{%
+         \vrule\@width\fboxrule
+          #1%
+          \vbox{%
+            \vskip\fboxsep
+            \box\@tempboxa
+            \vskip\fboxsep}%
+          #1%
+          }%\vrule\@width\fboxrule}%
+        }%\hrule\@height\fboxrule}%
+                          }%
+        }%
+}
+\def\esefcolorbox#1#{\esecolor@fbox{#1}}
+\def\esecolor@fbox#1#2#3{%
+  \color@b@x{\fboxsep\z@\color#1{#2}\fboxs}{\color#1{#3}}}
+\makeatother
+
+\definecolor{exampleborder}{rgb}{0.5, 0.5, 0.5}
+\definecolor{examplebg}{rgb}{0.89, 0.89, 0.89}
+\definecolor{statementborder}{rgb}{.9,0,0}
+\definecolor{statementbg}{rgb}{1,.9,.9}
+
+\newenvironment{eseframed}{%
+  \def\FrameCommand{\fboxrule=\the\sidebar  \fboxsep=\the\envborder%
+  \esefcolorbox{exampleborder}{examplebg}}%
+  \MakeFramed{\FrameRestore}}%
+ {\endMakeFramed}
+
+\newenvironment{nota}[1]
+{\par\medskip%\refstepcounter{esempio}%
+\hbox{%
+\fboxsep=\the\sidebar\hspace{-\envborder}\hspace{-.5\sidebar}%
+\colorbox{exampleborder}{%
+\hspace{\envborder}\footnotesize\sffamily\bfseries%
+\textcolor{white}{{{\large\textsc{
+#1}}}\hspace{\envborder}}
+}
+}
+\nointerlineskip\vspace{-\topsep}%
+\begin{eseframed}\noindent\ignorespaces%
+}
+{\end{eseframed}\vspace{-\baselineskip}\medskip}
+
+%modifica la posizione del numero di verso
+\setlength{\vrightskip}{-30pt}%regola tu
+ \verselinenumbersleft
+
+\definecolor{Black}{rgb}{0, 0, 0}
+
+%\usepackage[eulerchapternumbers,beramono,pdfspacing]{classicthesis}
+%\usepackage{arsclassica}
+
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \vskip 20\p@
+    \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    \vskip 40\p@
+  }}
+\makeatother
+
+\addto\captionsitalian{\renewcommand{\chaptername}{}}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\makeatletter
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+    \hbox{}
+    \vspace*{\fill}
+    \vspace{\fill}
+    \thispagestyle{empty}
+    \newpage
+    \if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{}
+\fancyhead[LE,RO]{\scshape\thepage}
+\fancyhead[LO]{\scshape\footnotesize\nouppercase{\rightmark}}
+\fancyhead[RE]{\scshape\footnotesize\nouppercase{\leftmark}}
+
+\usepackage{graphicx}
+
+\begin{document}
+
+	\begin{frontespizio}
+		\Istituzione{Liceo Classico Scientifico Musicale "I. Newton"}
+		\Divisione{Dante}
+		\Scuola{Liceo delle Scienze Applicate}
+		\Titoletto{Paradiso, VII-XXXIII}
+		\Piede{Anno scolastico 2020-2021}
+		\Titolo{La Divina Commedia}
+		\Sottotitolo{Dante Alighieri}
+		\NCandidato{Autore}
+		\Candidato{Davide Peccioli}
+
+		\NRelatore{Appunti basati sulle lezioni di}{Appunti basati sulle lezioni di}
+		\Relatore{Professoressa Mistero}
+	\end{frontespizio}
+
+% # Come scrivere questo file
+%
+% Bisogna utilizzare ``\paragraph{title}'' per scrivere riguardo a determinati argomenti, monografie
+%
+% Per fare commenti generali sul testo interrompere semplicemente l'ambiente 'verse' e scrivere, per poi riprenere l'uso di 'verse' con la dicitura '\setverselinenums{first verse}{first labelled verse}'. Per commenti più brevi sono sufficienti le note, con l'ambiente personalizzato \mat{NOTA}
+%
+\setcounter{secnumdepth}{-1}
+\tableofcontents
+
+\chapter{Canto VII}
+
+\paragraph{Riassunto} Giustiniano e gli altri spiriti scompaiono rapidamente cantando, mentre Beatrice, attraverso l'onniscenza divina che si riflette in lei, legge nel pensiero di Dante un nuovo dubbio: non è ingiusto il fatto che si sia punita, con la distruzione di Gerusalemme (i cui abitanti erano in qualche modo responsabili della morte di gesù) , la redenzione del peccato originale, che si attuò con l'uccisione di Cristo? Il martirio di Gesù fu giusto, spiega Beatrice, se si considera la sua natura umana, poiché così l'umanità fu redenta dal peccato originale, ma fu ingiusto se si considera la sua natura divina, in quanto gli Ebrei si macchiarono di un crimine contro la divinità. Beatrice chiarisce poi perché Dio abbia scelto questo modo per la redenzione dell'umanità con l'offerta del proprio Figlio e non con un semplice atto di misericordia o accettando una riparazione da parte dell'uomo. Inine chiarisce che è immortale ciò che l'uomo ha creato direttamente, come gli angeli e i cieli; è invece mortale ciò che ha creato indirettamente. Negli uomini sono incorruttibili l'anima, perché infusa da Dio, e il corpo, che risorgerà il giorno del giudizio, poiché la carne di Adamo ed Eva fu creata direttamente da Dio.
+
+\chapter{Canto VIII}
+
+\paragraph{Riassunto}  Dante e Beatrice sono intanto saliti al terzo cielo, quello di Venere, ove si trovano gli spiriti amanti che prima amarono le cose terrene e poi Dio. Essi gli appaiono come luci splendenti che si muovono rapidamente in circolo intonando l'\titolo{Osanna}. Una di esse si rivolge a Dante citvando la canzone di quest'ultimo \titolo{Voi che 'ntendendo il terzo ciel movete}. È Carlo Martello d'Angiò, morto giovane, che ricorda l'amicizia con Dante e le terre del suo regno sulle quali avrebbe dominato (la Provenza, l'Ungheria, la Sicilia, ormai perduta per la rivolta dei Vespri); poi condanna il malgoverno, nel regno di Napoli, del fratello Roberto, che accusa di avidità. Dante gli domanda allora come sia possibile che da un padre generoso nasca un figlio avaro. La spiegazione sta nel fatto che la Provvidenza divina, mediante l'influsso dei cieli, fa sì che i figli non siano simili ai padri. Ciò per il benessere della società, in seno alla quale devono essere svolte mansioni diverse, per cui si richiedono uomini con inclinazioni varie. Le conseguenze negative si verificano quando si spinge una persona incline alla religione a fare il soldato e così via.
+
+\chapter{Canto IX}
+
+\paragraph{Riassunto} Carlo Martello, prima di congedarsi, fa un'oscura profezia sugli inganni che colpiranno i suoi discendenti, gli autori dei quali saranno però in seguito puniti. Poi un'altra anima si mostra a Dante aumentando la propria luminosità e inizia a parlare: è Cunizza da Romano, sorella del feroce Ezzelino III, tiranno della Marca Trevigiana, che predice sconfitte per gli abitanti di Padova, per Rizzardo da Camino, signore di Treviso, e sventure per Feltre, il cui vescovo si macchierà di tradimento. Un altro spirito, invitato da Dante a parlare, brillando come un rubino, si presenta: è il celebre trovatore provenzale Folchetto di Marsiglia, che ricevette in vita gli influssi del cielo di Venere, e che quindi amò molto. Quest'ultimo presenta a Dante un'altra anima: Raab, la prostituta di Gerico, che ebbe il merito di favorire la conquista dela città da parte di Giosuè. Infine Folchetto critica la chiesa corrotta che non pensa più a liberare la Terra Santa dai Musulmani e preannuncia che presto la simonia sarà estirpata dalla Curia pontificia.
+
+\chapter{Canto X}
+
+\paragraph{Riassunto} Il canto si apre con un appello al lettore affinché alzi lo sguardo verso i cieli per ammirarne l'ordine perfetto. Dante intanto si trova inavvertitamente nel quarto cielo, quello del Sole, ove le anime risplendono luminosissime. Ne vede alcune, intente a cantare dolcemente, disporsi incorona e girare per tre volte intorno a lui e a Beatrice. Una di esse appaga la sete di conoscenza del poeta e si presenta come un agnello del santo gregge di San Domenico: si tratta di San Tommaso, il grande filosofo, che gli presenta gli altri sapienti che compongono la corona: il filosofo e teologo Alberto Magno di Colonia, il giurista Graziano, il teologo e vescovo Pietro Lombardo, re Salomone, noto per la sua sapienza, il primo vescovo ateniese Dionigi Aeropagita, lo storico Paolo Orosio, il filosofo Severino Boezio, Isidoro vescovo di Siviglia, il monaco inglese Beda il Venerabile, Riccardo priore dell'abazia parigina di San Vittore e il filosofo Sigieri di Brabante. Successivamente la corona dei beati riprenderà a danzare e a cantare con una dolcezza sovrumana.
+
+\chapter{Canto XI}
+
+\begin{verse}
+\poemlines{3}	
+O insensata cura de’ mortali,\\
+quanto son difettivi silogismi\\
+quei che ti fanno in basso batter l’ali!\\!
+Chi dietro a iura, e chi ad amforismi\\
+sen giva, e chi seguendo sacerdozio,\\
+e chi regnar per forza o per sofismi,\\!
+e chi rubare, e chi civil negozio,\\
+chi nel diletto de la carne involto\\
+s’affaticava e chi si dava a l’ozio,\\!
+quando, da tutte queste cose sciolto,\\
+con Beatrice m’era suso in cielo\\
+cotanto gloriosamente accolto.\\!
+Poi che ciascuno fu tornato ne lo\\
+punto del cerchio in che avanti s’era,\\
+fermossi, come a candellier candelo.\\!
+E io senti’ dentro a quella lumera\\
+che pria m’avea parlato, sorridendo\\
+incominciar, faccendosi più mera:\\!
+«Così com’io del suo raggio resplendo,\\
+sì, riguardando ne la luce etterna,\\
+li tuoi pensieri onde cagioni apprendo.\\!
+Tu dubbi, e hai voler che si ricerna\\
+in sì aperta e ‘n sì distesa lingua\\
+lo dicer mio, ch’al tuo sentir si sterna,\\!
+ove dinanzi dissi "U’ ben s’impingua",\\
+e là u’ dissi "Non nacque il secondo";\\
+e qui è uopo che ben si distingua.\\!
+La provedenza, che governa il mondo\\
+con quel consiglio nel quale ogne aspetto\\
+creato è vinto pria che vada al fondo,\\!
+però che andasse ver’ lo suo diletto\\
+la sposa di colui ch’ad alte grida\\
+disposò lei col sangue benedetto,\\!
+in sé sicura e anche a lui più fida,\\
+due principi ordinò in suo favore,\\
+che quinci e quindi le fosser per guida.\\!
+L’un fu tutto serafico in ardore;\\
+l’altro per sapienza in terra fue\\
+di cherubica luce uno splendore.\\!
+De l’un dirò, però che d’amendue\\
+si dice l’un pregiando, qual ch’om prende,\\
+perch’ad un fine fur l’opere sue.\\!
+Intra Tupino e l’acqua che discende\\
+del colle eletto dal beato Ubaldo,\\
+fertile costa d’alto monte pende,\\!
+onde Perugia sente freddo e caldo\\
+da Porta Sole; e di rietro le piange\\
+per grave giogo Nocera con Gualdo.\\!
+Di questa costa, là dov’ella frange\\
+più sua rattezza, nacque al mondo un sole,\\
+come fa questo tal volta di Gange.\\!
+Però chi d’esso loco fa parole,\\
+non dica Ascesi, ché direbbe corto,\\
+ma Oriente, se proprio dir vuole.\\!
+Non era ancor molto lontan da l’orto,\\
+ch’el cominciò a far sentir la terra\\
+de la sua gran virtute alcun conforto;\\!
+ché per tal donna, giovinetto, in guerra\\
+del padre corse, a cui, come a la morte,\\
+la porta del piacer nessun diserra;\\!
+e dinanzi a la sua spirital corte\\
+et coram patre le si fece unito;\\
+poscia di dì in dì l’amò più forte.\\!
+Questa, privata del primo marito,\\
+millecent’anni e più dispetta e scura\\
+fino a costui si stette sanza invito;\\!
+né valse udir che la trovò sicura\\
+con Amiclàte, al suon de la sua voce,\\
+colui ch’a tutto ‘l mondo fé paura;\\!
+né valse esser costante né feroce,\\
+sì che, dove Maria rimase giuso,\\
+ella con Cristo pianse in su la croce.\\!
+Ma perch’io non proceda troppo chiuso,\\
+Francesco e Povertà per questi amanti\\
+prendi oramai nel mio parlar diffuso.\\!
+La lor concordia e i lor lieti sembianti,\\
+amore e maraviglia e dolce sguardo\\
+facieno esser cagion di pensier santi;\\!
+tanto che ‘l venerabile Bernardo\\
+si scalzò prima, e dietro a tanta pace\\
+corse e, correndo, li parve esser tardo.\\!
+Oh ignota ricchezza! oh ben ferace!\\
+Scalzasi Egidio, scalzasi Silvestro\\
+dietro a lo sposo, sì la sposa piace.\\!
+Indi sen va quel padre e quel maestro\\
+con la sua donna e con quella famiglia\\
+che già legava l’umile capestro.\\!
+Né li gravò viltà di cuor le ciglia\\
+per esser fi’ di Pietro Bernardone,\\
+né per parer dispetto a maraviglia;\\!
+ma regalmente sua dura intenzione\\
+ad Innocenzio aperse, e da lui ebbe\\
+primo sigillo a sua religione.\\!
+Poi che la gente poverella crebbe\\
+dietro a costui, la cui mirabil vita\\
+meglio in gloria del ciel si canterebbe,\\!
+di seconda corona redimita\\
+fu per Onorio da l’Etterno Spiro\\
+la santa voglia d’esto archimandrita.\\!
+E poi che, per la sete del martiro,\\
+ne la presenza del Soldan superba\\
+predicò Cristo e li altri che ‘l seguiro,\\!
+e per trovare a conversione acerba\\
+troppo la gente e per non stare indarno,\\
+redissi al frutto de l’italica erba,\\!
+nel crudo sasso intra Tevero e Arno\\
+da Cristo prese l’ultimo sigillo,\\
+che le sue membra due anni portarno.\\!
+Quando a colui ch’a tanto ben sortillo\\
+piacque di trarlo suso a la mercede\\
+ch’el meritò nel suo farsi pusillo,\\!
+a’ frati suoi, sì com’a giuste rede,\\
+raccomandò la donna sua più cara,\\
+e comandò che l’amassero a fede;\\!
+e del suo grembo l’anima preclara\\
+mover si volle, tornando al suo regno,\\
+e al suo corpo non volle altra bara.\\!
+Pensa oramai qual fu colui che degno\\
+collega fu a mantener la barca\\
+di Pietro in alto mar per dritto segno;\\!
+e questo fu il nostro patriarca;\\
+per che qual segue lui, com’el comanda,\\
+discerner puoi che buone merce carca.\\!
+Ma ‘l suo pecuglio di nova vivanda\\
+è fatto ghiotto, sì ch’esser non puote\\
+che per diversi salti non si spanda;\\!
+e quanto le sue pecore remote\\
+e vagabunde più da esso vanno,\\
+più tornano a l’ovil di latte vòte.\\!
+Ben son di quelle che temono ‘l danno\\
+e stringonsi al pastor; ma son sì poche,\\
+che le cappe fornisce poco panno.\\!
+Or, se le mie parole non son fioche,\\
+se la tua audienza è stata attenta,\\
+se ciò ch’è detto a la mente revoche,\\!
+in parte fia la tua voglia contenta,\\
+perché vedrai la pianta onde si scheggia,\\
+e vedra’ il corrègger che argomenta\\!
+"U’ ben s’impingua, se non si vaneggia"».\\!
+\end{verse}
+
+\chapter{Canto XII}
+
+\paragraph{Riassunto} Appena Tommaso ha terminato l'elogio di San Francesco, un'altra corona di beati circonda con perfetta armonia la prima, che ha ripreso a ruotare; l'anima del francescano San Bonaventura da Bagnoregio, appartenente alla seconda corona, prende a parlare per tessere l'elogio di San Domenico, poiché la sua santa opera di difensore della fete è strettamente collegata a quella di San Francesco. Ricorda allora la nascita del ``santo atleta'' in un villaggio della Vecchia Castiglia, i sogni premonitori della sua opera apostolica da parte della madre e dellamadrina, prima ancora che nascesse, la sua grande cultura teologica, la predicazione contro gli eretici. Poi San Bonaventura ricorda la decadenza dell'Ordine francescano, anche se non generalizzata, e presenta le altre anime della sua corona: alcuni tra i primi seguaci di Francesco, i teologi e filosofi Ugo da San Vittore, Pietro Mangiatore, Pietro Ispano, il profeta Natan, il patriarca Crisostomo, il filosofo Anselmo d'Aosta, il grammatico Elio Donato, il poligrafo Rabano Mauro, l'abate calabrese Gioacchino da Fiore.
+
+\chapter{Canto XIII}
+
+\paragraph{Riassunto} Una volta che Bonaventura ha terminato l'elogio di San Domenico, le due corone di beati riprendono a danzare circolarmente in direzioni opposte, innalzando un inno di lode alla Trinità. Poi riprende la parola Tommaso, per chiarire a Dante il secondo dubbio: come possa essere Salomone il più sapiente degli uomini se la massima sapienza appartenne ad Adamo e a Cristo. Tommaso ricorda come tutte le creature, sia del mondo organico sia di quello inorganico, siano illuminate da Dio attraverso le gerarchie angeliche e gli influssi dei cieli. Ora però tali creature sono imperfette, in quanto l'influsso divino è indiretto e mediato, Adamo e Cristo invece furno creati direttamente da Dio e perciò in essi la natura umana è perfetta. Salomone fu il primo in sapienza non in quanto uomo, ma in quanto re, cioè in relazione alle sue capacità di governo. Infine Tommaso invita gli uomini a essere prudenti nei loro giudizi, in quanto il giudizio divino non è legato alle apparenze 
+
+\chapter{Canto XIV}
+
+\paragraph{Riassunto} Nel cielo del Sole Beatrice chiede agli spiriti sapienti di risolvere un dubbio che si sta spacciando alla mente di Dante riguardo alla luminosità dei beati dopo la risurrezione della carne. Risponde l'anima di Salomone, la quale afferma che non solo essi conserveranno la luce che li fascia ora, ma che i loro occhi corporei saranno resi capaci di sopportare simile splendore. Intorno alle due corone che si erano formate precedentemente appare una terza ghirlanda, così luminosa da abbagliare la vista di Dante. Allorché egli risolleverà gli occhi che aveva dovuto abbassare di fronte a quel fulgore eccessivo, si accorgerà di essere giunto con Beatrice nel quinto cielo, quello di Marte, illuminato da una luce rosseggiante. In questa sfera gli spiriti di coloro che hanno combattuto per la fede sono disposti su due liste luminose, le quali si intersecano formando una croce greca. Le anime si muovono lungo i bracci della croce, scintillando con maggiore o minore intensità a seconda del loro grado di beatitudine. Dalla croce esce un canto armonioso, ma Dante è in grado di percepire la dolcezza della melodia, non il significato completo dell'inno. Tuttavia le uniche parole che giungono al suo orecchio, “Resurgi” e “Vinci”, indicano il valore liturgico del canto innalzato dagli spiriti combattenti, che esaltano Cristo come trionfatore della morte e del peccato.
+
+\chapter{Canto XV}
+
+Siamo nel \textbf{Cielo di Marte}, che continene gli spiriti combattivi, che hanno operato per il bene della Chiesa, della religione e dell'umanità.
+
+\paragraph{Cacciaguida} Figura centrale nell’opera, svelerà a Dante la ragione del suo viaggio.
+La santità di Cacciaguida sta nel suo aver partecipato alle crociate: pertanto è indiscutibile la sua santità.
+
+Perché Cacciaguida e non il padre?
+\begin{itemize}
+\item probabilmente non aveva un buon rapporto con il padre
+\item Dante aveva bisogno di una figura esemplare, un eroe
+\item Dante ha bisogno di un personaggio da collocare cronologicamente almeno qualche ventennio prima dell’epoca di Dante: con lui andiamo sufficientemente indietro; ciò permette a Dante di riferirsi ad una Firenze ancora non corrotta: rivolgerà un’apostrofe fortissima a Firenze.
+\end{itemize}
+
+L’anima di Cacciaguida è colta da Dante come una pietra preziosa, che si trova sul braccio mediano di una croce. Immagina che una luce scenda dalla croce e vada verso di lui.
+
+Cacciaguida si colloca circa a metà della cantica, ma è centrale a livello dell’opera in quanto Dante viene a conoscenza di quale sia la sua missione: egli gli dirà che il suo viaggio deve avere una funzione utile anche nei confronti del resto dell’umanità; la sua esperienza deve essere raccontata al resto dell’umanità.
+Dante dirà a Cacciaguida che si trova in una situazione un po’ scomoda, anche perché molte persone viste nell’inferno hanno ancora parenti in vita; Cacciaguida gli dira di pubblicare tutto quello che ha. Gli dice anzi che colpire le persone più in vista ha una valenza maggiore.
+
+\vspace{1.5em}
+\salt
+
+\begin{verse}
+\poemlines{3}
+\setverselinenums{85}{87}
+Ben supplico io a te, vivo topazio\\
+che questa gioia preziosa ingemmi,\\
+perché mi facci del tuo nome sazio».\\!
+«O fronda mia in che io compiacemmi\\
+pur aspettando, io fui la tua radice»:\\
+cotal principio, rispondendo, femmi.\\!
+Poscia mi disse: «Quel da cui si dice\\
+tua cognazione e che cent’anni e piùe\\
+girato ha ‘l monte in la prima cornice,\\!
+mio figlio fu e tuo bisavol fue:\\
+ben si convien che la lunga fatica\\
+tu li raccorci con l’opere tue.\\!
+Fiorenza dentro da la cerchia antica,\\
+ond’ella toglie ancora e terza e nona,\\
+si stava in pace, sobria e pudica.\\!
+Non avea catenella, non corona,\\
+non gonne contigiate, non cintura\\
+che fosse a veder più che la persona.\\!
+Non faceva, nascendo, ancor paura\\
+la figlia al padre, che ‘l tempo e la dote\\
+non fuggien quinci e quindi la misura.\\!
+Non avea case di famiglia vòte;\\
+non v’era giunto ancor Sardanapalo\\
+a mostrar ciò che ‘n camera si puote.\\!
+Non era vinto ancora Montemalo\\
+dal vostro Uccellatoio, che, com’è vinto\\
+nel montar sù, così sarà nel calo.\\!
+Bellincion Berti vid’io andar cinto\\
+di cuoio e d’osso, e venir da lo specchio\\
+la donna sua sanza ‘l viso dipinto;\\!
+e vidi quel d’i Nerli e quel del Vecchio\\
+esser contenti a la pelle scoperta,\\
+e le sue donne al fuso e al pennecchio.\\!
+Oh fortunate! ciascuna era certa\\
+de la sua sepultura, e ancor nulla\\
+era per Francia nel letto diserta.\\!
+L’una vegghiava a studio de la culla,\\
+e, consolando, usava l’idioma\\
+che prima i padri e le madri trastulla;\\!
+l’altra, traendo a la rocca la chioma,\\
+favoleggiava con la sua famiglia\\
+d’i Troiani, di Fiesole e di Roma.\\!
+Saria tenuta allor tal maraviglia\\
+una Cianghella, un Lapo Salterello,\\
+qual or saria Cincinnato e Corniglia.\\!
+\end{verse}
+
+\salt
+
+\chapter{Canto XVI}
+
+\paragraph{Riassunto} Avendo udito da Cacciaguida il titolo di nobiltà concessogli dall’imperatore Corrado, Dante dichiara di comprendere come possa, sulla terra, un uomo vantarsi della nobiltà dei propri avi, se egli stesso ha potuto gloriarsene in Paradiso, dove ogni desiderio terreno svanisce. Aggiunge, però, che la nobiltà di sangue si vanifica, se non la si mantiene onorata dai discendenti.
+Rivolgendosi all’avo con il “voi”, mentre prima di sapere chi fosse, lo aveva apostrofato con il “tu”, Dante chiede a Cacciaguida notizie sui suoi antenati, dell’epoca della sua nascita, della popolazione fiorentina e delle famiglie più importanti di quel tempo antico.
+L’anima di Cacciaguida indica, con vivo splendore, la gioia di poter rispondere alle domande del poeta e risponde, attraverso una perifrasi astronomica, di essere nato nel 1091; prosegue poi affermando che i suoi antenati e lui stesso nacquero e abitarono in un punto centrale dell’antica Firenze, nel Sesto di Porta San Pietro e afferma che di essi basta dire questo, non serve aggiungere altro.
+Rispondendo alla terza domanda, Cacciaguida dichiara che la popolazione atta alle armi era allora un quinto di quella del tempo di Dante; rispondendo infine alla quarta domanda di Dante, Cacciaguida dichiara che ai suoi tempi non si era verificata quella mescolanza di famiglie del contato e quelle originariamente cittadine che, secondo Cacciaguida, è la vera origine di tutti i problemi e gli scontri della città. Inizia quindi a enumerare le principali famiglie del suo tempo accennando al declino o alla fine di alcune di esse.
+Cacciaguida conclude dicendo di essere vissuto a Firenze con queste famiglie, in una città tranquilla e pacifica che non aveva motivo di lamentarsi. Il popolo fiorentino a quel tempo era giusto e glorioso, tanto che la città non subì alcuna sconfitta militare, né l'insegna cittadina era ancora diventata rossa di sangue.
+
+\chapter{Canto XVII}
+
+\begin{verse}
+\poemlines{3}
+Qual venne a Climené, per accertarsi\\
+di ciò ch’avea incontro a sé udito,\\
+quei ch’ancor fa li padri ai figli scarsi;\\!
+tal era io, e tal era sentito\\
+e da Beatrice e da la santa lampa\\
+che pria per me avea mutato sito.\\!
+Per che mia donna «Manda fuor la vampa\\
+del tuo disio», mi disse, «sì ch’ella esca\\
+segnata bene de la interna stampa;\\!
+non perché nostra conoscenza cresca\\
+per tuo parlare, ma perché t’ausi\\
+a dir la sete, sì che l’uom ti mesca».\\!
+«O cara piota mia che sì t’insusi,\\
+che, come veggion le terrene menti\\
+non capere in triangol due ottusi,\\!
+così vedi le cose contingenti\\
+anzi che sieno in sé, mirando il punto\\
+a cui tutti li tempi son presenti;\\!
+mentre ch’io era a Virgilio congiunto\\
+su per lo monte che l’anime cura\\
+e discendendo nel mondo defunto,\\!
+dette mi fuor di mia vita futura\\
+parole gravi, avvegna ch’io mi senta\\
+ben tetragono ai colpi di ventura;\\!
+per che la voglia mia saria contenta\\
+d’intender qual fortuna mi s’appressa;\\
+ché saetta previsa vien più lenta».\\!
+Così diss’io a quella luce stessa\\
+che pria m’avea parlato; e come volle\\
+Beatrice, fu la mia voglia confessa.\\!
+Né per ambage, in che la gente folle\\
+già s’inviscava pria che fosse anciso\\
+l’Agnel di Dio che le peccata tolle,\\!
+ma per chiare parole e con preciso\\
+latin rispuose quello amor paterno,\\
+chiuso e parvente del suo proprio riso:\\!
+«La contingenza, che fuor del quaderno\\
+de la vostra matera non si stende,\\
+tutta è dipinta nel cospetto etterno:\\!
+necessità però quindi non prende\\
+se non come dal viso in che si specchia\\
+nave che per torrente giù discende.\\!
+Da indi, sì come viene ad orecchia\\
+dolce armonia da organo, mi viene\\
+a vista il tempo che ti s’apparecchia.\\!
+Qual si partio Ipolito d’Atene\\
+per la spietata e perfida noverca,\\
+tal di Fiorenza partir ti convene.\\!
+Questo si vuole e questo già si cerca,\\
+e tosto verrà fatto a chi ciò pensa\\
+là dove Cristo tutto dì si merca.\\!
+La colpa seguirà la parte offensa\\
+in grido, come suol; ma la vendetta\\
+fia testimonio al ver che la dispensa.\\!
+Tu lascerai ogne cosa diletta\\
+più caramente; e questo è quello strale\\
+che l’arco de lo essilio pria saetta.\\!
+Tu proverai sì come sa di sale\\
+lo pane altrui, e come è duro calle\\
+lo scendere e ‘l salir per l’altrui scale.\\!
+E quel che più ti graverà le spalle,\\
+sarà la compagnia malvagia e scempia\\
+con la qual tu cadrai in questa valle;\\!
+che tutta ingrata, tutta matta ed empia\\
+si farà contr’a te; ma, poco appresso,\\
+ella, non tu, n’avrà rossa la tempia.\\!
+Di sua bestialitate il suo processo\\
+farà la prova; sì ch’a te fia bello\\
+averti fatta parte per te stesso.\\!
+Lo primo tuo refugio e ‘l primo ostello\\
+sarà la cortesia del gran Lombardo\\
+che ‘n su la scala porta il santo uccello;\\!
+ch’in te avrà sì benigno riguardo,\\
+che del fare e del chieder, tra voi due,\\
+fia primo quel che tra li altri è più tardo.\\!
+Con lui vedrai colui che ‘mpresso fue,\\
+nascendo, sì da questa stella forte,\\
+che notabili fier l’opere sue.\\!
+Non se ne son le genti ancora accorte\\
+per la novella età, ché pur nove anni\\
+son queste rote intorno di lui torte;\\!
+ma pria che ‘l Guasco l’alto Arrigo inganni,\\
+parran faville de la sua virtute\\
+in non curar d’argento né d’affanni.\\!
+Le sue magnificenze conosciute\\
+saranno ancora, sì che ‘ suoi nemici\\
+non ne potran tener le lingue mute.\\!
+A lui t’aspetta e a’ suoi benefici;\\
+per lui fia trasmutata molta gente,\\
+cambiando condizion ricchi e mendici;\\!
+e portera’ne scritto ne la mente\\
+di lui, e nol dirai»; e disse cose\\
+incredibili a quei che fier presente.\\!
+Poi giunse: «Figlio, queste son le chiose\\
+di quel che ti fu detto; ecco le ‘nsidie\\
+che dietro a pochi giri son nascose.\\!
+Non vo’ però ch’a’ tuoi vicini invidie,\\
+poscia che s’infutura la tua vita\\
+vie più là che ‘l punir di lor perfidie».\\!
+Poi che, tacendo, si mostrò spedita\\
+l’anima santa di metter la trama\\
+in quella tela ch’io le porsi ordita,\\!
+io cominciai, come colui che brama,\\
+dubitando, consiglio da persona\\
+che vede e vuol dirittamente e ama:\\!
+«Ben veggio, padre mio, sì come sprona\\
+lo tempo verso me, per colpo darmi\\
+tal, ch’è più grave a chi più s’abbandona;\\!
+per che di provedenza è buon ch’io m’armi,\\
+sì che, se loco m’è tolto più caro,\\
+io non perdessi li altri per miei carmi.\\!
+Giù per lo mondo sanza fine amaro,\\
+e per lo monte del cui bel cacume\\
+li occhi de la mia donna mi levaro,\\!
+e poscia per lo ciel, di lume in lume,\\
+ho io appreso quel che s’io ridico,\\
+a molti fia sapor di forte agrume;\\!
+e s’io al vero son timido amico,\\
+temo di perder viver tra coloro\\
+che questo tempo chiameranno antico».\\!
+La luce in che rideva il mio tesoro\\
+ch’io trovai lì, si fé prima corusca,\\
+quale a raggio di sole specchio d’oro;\\!
+indi rispuose: «Coscienza fusca\\
+o de la propria o de l’altrui vergogna\\
+pur sentirà la tua parola brusca.\\!
+Ma nondimen, rimossa ogne menzogna,\\
+tutta tua vision fa manifesta;\\
+e lascia pur grattar dov’è la rogna.\\!
+Ché se la voce tua sarà molesta\\
+nel primo gusto, vital nodrimento\\
+lascerà poi, quando sarà digesta.\\!
+Questo tuo grido farà come vento,\\
+che le più alte cime più percuote;\\
+e ciò non fa d’onor poco argomento.\\!
+Però ti son mostrate in queste rote,\\
+nel monte e ne la valle dolorosa\\
+pur l’anime che son di fama note,\\!
+che l’animo di quel ch’ode, non posa\\
+né ferma fede per essempro ch’aia\\
+la sua radice incognita e ascosa,\\!
+né per altro argomento che non paia».\\!
+\end{verse}
+
+\chapter{Canto XVIII}
+
+\paragraph{Riassunto} A questo punto lo spirito rivela a Dante che nel cielo di Marte, dove essi si trovano, vi sono anime appartenute a uomini molto famosi e invita il pellegrino a osservare i bracci della croce, dai quali scenderanno altri beati. Giosué, Giuda Maccabeo, Carlo Magno, Orlando, Guglielmo d’Orange e Renoardo, Goffredo di Buglione, Roberto Guiscardo scorrono rapidamente e si mostrano al poeta: quindi anche Cacciaguida riprende il proprio posto. Dante si accorge di essere salito al cielo successivo, quello di Giove; e qui, gli spiriti, sfavillanti d’amore, tracciano alcune lettere dell’alfabeto. Alla fine si sono formate trentacinque lettere che costituiscono la frase "Diligite iustitiam qui iudicatis terram". I beati restano fermi sulla M di terram , quindi altri spiriti si posano sulla sommità della lettera e levandosi ancora più e meno in alto, secondo il grado della rispettiva beatitudine, formano la testa e il collo di un’aquila, mentre le anime di coloro che avevano costituito la M, con un ultimo movimento, determinano l’intera figura dell’uccello divino. A tal segno Dante comprende che la giustizia dipende - nel mondo - dagli influssi celesti di Giove e prega Dio di rivolgersi al luogo d’origine di tante corrotte passioni, disperdendo il dilagante traviamento della Chiesa.
+
+\chapter{Canto XIX}
+
+\paragraph{Riassunto} L’aquila apre le ali e comincia a parlare in prima persona, esprimendo il pensiero dei beati che la compongono. Dante prega quindi gli spiriti di sciogliere un suo vecchio dubbio, ossia se coloro che non furono in grado di conoscere la fede cristiana devono necessariamente essere esclusi dalla grazia di Dio. L’aquila risponde dicendo che l’intelligenza degli uomini non può arrivare a comprendere l’imperscrutabile giustizia divina e deve attenersi alla Sacra Scrittura: la volontà di Dio deve essere creduta buona in se stessa e tutto ciò che è voluto dall’Essere supremo necessariamente giusto. Gli spiriti spiegano quindi a Dante che in Paradiso non è mai salito chi non credette in Cristo: quando le schiere dei buoni e dei malvagi si separeranno alcuni - apparentemente cristiani - potranno essere condannati dagli stessi infedeli, che potranno vituperare l’operato dei re cristiani vedendo le loro nefandezze scritte nel libro di Dio. Concludendo le proprie parole l’aquila augura al regno di Ungheria di non lasciarsi più maltrattare dai suoi re e al regno di Navarra di difendersi dalla potenza francese.
+
+\chapter{Canto XX}
+
+\paragraph{Riassunto} Nell’occhio dell’aquila si trovano gli spiriti più eccellenti che formano la sua figura: per primo, al posto della pupilla, viene indicato Davide; quindi vengono nominati, a partire dal luogo più prossimo al becco, Traiano, Ezechia, Costantino, Guglielmo II il Buono re di Sicilia e Rifeo. Dante non comprende come le anime di due pagani, Traiano e Rifeo, si trovino in Paradiso, e l’aquila risponde spiegando che il regno di Dio cede all’amore e alla speranza degli uomini non perché la volontà divina possa essere vinta con la forza, ma solo perché essa vuole essere vinta, per sua somma bontà. Sia Traiano che Rifeo uscirono dal corpo credendo, il primo, in Cristo venuto, l’altro in Cristo venturo: Rifeo fu battezzato nella vera fede mediante le tre Virtù teologali ben mille anni prima che il sacramento del Battesimo venisse istituito. La predestinazione resterà un mistero per gli uomini, che devono essere cauti nel giudicare il destino ultraterreno delle anime perché nessuno può leggere la volontà di Dio.
+
+\chapter{Canto XXI}
+
+\paragraph{Riassunto} Beatrice spiega al poeta che essi sono ormai giunti nel cielo di Saturno dove si trovano gli spiriti contemplanti, e lo esorta a guardare una scala d’oro che si eleva così in alto da non poter essere vista completamente. Tantissimi splendori scendono e salgono lungo la scala e uno di essi comincia a parlare. Si tratta di San Pier Damiano che risponde a una domanda postagli dal poeta, affermando che in questo cielo nessuno canta per la stessa ragione per cui Beatrice, all’inizio, non ha sorriso: Dante non sopporterebbe l’ineffabilità del canto e resterebbe annichilito. Inoltre lo spirito aggiunge di essersi presentato al poeta non perché in lui sia maggiore l’ardore della carità, ma perché Dio, inspiegabilmente, ha assegnato a lui tale ufficio. Continuando a parlare del tema della predestinazione Pier Damiano afferma che nessun beato, neppure uno dei Serafini, potrebbe rispondere alla domanda del poeta intorno a questo problema, celato nell’abisso dell’intelligenza divina. Il beato dichiara a Dante la propria identità e afferma di essere vissuto nell’eremo situato sotto il monte Catria: in quel chiostro egli ebbe il nome di Pier Damiano, mentre, per l’umiltà, ebbe nome di Pietro Peccatore nel monastero di Santa Maria vicino a Ravenna. Le sue ultime parole riguardano l’infinita pazienza del Creatore che sopporta la corruzione del clero: altri spiriti, roteando lungo la scala, lo circondano ed elevano simultaneamente un grido altissimo.
+
+\chapter{Canto XXII}
+
+\paragraph{Riassunto} Beatrice spiega a Dante che se egli avesse potuto comprendere le parole appena gridate dai beati già conoscerebbe la vendetta divina, che si offrirà tuttavia al suo sguardo prima della sua morte. Il pellegrino scorge piccoli globi luminosi e si rivolge a uno di essi, che dichiara di essere lo spirito di San Benedetto. Insieme a lui si trovano altri spiriti di contemplanti accesi - in vita - da ardore di carità: fra essi si trovano San Macario e San Romualdo e quei frati dell’ordine che si mantennero fedeli alla regola. Il poeta prega San Benedetto di farsi palese nella sua vera sembianza, ma questi risponde che tale desiderio sarà esaudito solo nell’Empireo. Il Santo spiega inoltre che la scala d’oro vista da Dante, la stessa che apparve in sogno a Giacobbe, non attira oramai più nessuno: la regola benedettina è rimasta solo per sprecare la carta di cui ci si serve per trascriverla. Dopo queste parole tutti gli spiriti si levano verso l’alto; Beatrice spinge il poeta su per la scala e il loro volo è così rapido che nessun moto terreno può essergli paragonato. Dante si rivolge per l’ultima volta al lettore, augurandosi di poter tornare in Paradiso a vedere il trionfo dei beati, così come è vero che in un attimo egli si trovò congiunto alla costellazione dei Gemelli. La guida esorta il viator a volgere lo sguardo verso il basso per esaminare il cammino percorso: e Dante vede i sette cieli già attraversati e la Terra, la piccola "aiuola che ci fa tanto feroci".
+
+\chapter{Canto XXIII}
+
+\paragraph{Riassunto} Beatrice è rivolta verso il meridiano dove il sole si trova a mezzogiorno, dove il cielo si fa sempre più chiaro per l’apparire delle schiere luminosissime che accompagnano il trionfo di Cristo. Il poeta può vedere un Sole che illumina migliaia di splendori e attraverso cui traspare la figura di Cristo. Primo rapimento estatico di Dante: la sua mente, immensamente dilatata in mezzo alle meraviglie del cielo, non potrà ricordare quello che avvenne in quel momento. La guida esorta il pellegrino a riaprire gli occhi: Dante, distogliendo lo sguardo da lei, dovrà rivolgerlo al coro dei beati dove si trovano Maria e gli Apostoli. Come in terra egli già ha visto, protetto un poco dalle nubi, un prato fiorito illuminato dal sole, così può vedere le schiere dei beati irradiate dallo splendore di Cristo che tuttavia non può essere contemplato dai suoi occhi perché Egli si è innalzato nuovamente verso l’Empireo. Ora il poeta osa volgere lo sguardo verso la Vergine e - sotto forma di corona splendente - vede scendere l’Arcangelo Gabriele. Accompagnata da questo Angelo anche Maria risale all’Empireo, ma il poeta non può seguirne l’ascensione perché il Primo Mobile è ancora troppo lontano. I beati intonano l’antifona Regina coeli.
+
+\chapter{Canto XXIV}
+
+\paragraph{Riassunto} Beatrice prega i beati di far cadere nella mente di Dante qualche goccia di quell’acqua che eternamente li disseta. Fiammeggiante di luce, dalla corona più luminosa, esce lo spirito di San Pietro, che esamina Dante sui punti della Fede, poiché è bene che il pellegrino parli di questa virtù teologale proprio per glorificarla. Alla fine, approvate le sue risposte, San Pietro domanda che cosa Dante creda e per quale causa lo creda; il pellegrino risponde di credere in un solo Dio eterno che muove, immobile, tutto l’universo e che di ciò possiede non solo prove fisiche e metafisiche, ma soprattutto quelle offerte dai due Testamenti. Dante crede inoltre nelle Tre Persone della Trinità e di questo lo certificano più luoghi del Vangelo: la Fede è il principio da cui derivano tutti gli articoli della stessa Fede. San Pietro benedice il poeta.
+
+\chapter{Canto XXV}
+
+\paragraph{Riassunto} Dalla medesima corona da cui era uscito San Pietro esce ora lo spirito di Sant’Jacopo, e Beatrice lo prega affinché esamini Dante intorno alla seconda virtù teologale. Il santo domanda dunque al pellegrino che cosa sia la Speranza, in quale misura la possegga e da chi gli sia venuta. La guida stessa risponde alla seconda domanda dicendo che mai la Chiesa militante ha posseduto fedele nutrito di maggiore speranza del poeta stesso, così che Dio gli ha concesso la grazia di salire al Paradiso prima della morte. Dante risponde poi alla prima domanda affermando che la Speranza è l’attesa sicura della gloria futura prodotta dalla grazia di Dio e dalle buone opere; alla terza domanda risponde che la speranza deriva in lui da molti scrittori ispirati, ma soprattutto da Davide compositore dei Salmi e da Sant’Jacopo stesso. Che cosa promette, dunque, al poeta, la Speranza? Dante risponde che la Speranza, attraverso le parole di Isaia e di San Giovanni, promette all’uomo la beatitudine del corpo e dello spirito. I beati approvano la risposta del poeta intonando il canto Sperent in te. Un altro splendore si avvicina ai due Apostoli: si tratta di San Giovanni. Dante rimane abbagliato dalla sua luce.
+
+\chapter{Canto XXVI}
+
+\paragraph{Riassunto} Mentre Dante crede di aver perduto la vista il Santo gli chiede quali ragioni lo abbiano spinto ad amare Dio: il poeta risponde che tale amore è nato in lui per gli argomenti filosofici e per l’autorità della Sacra Scrittura. Ma quali altre ragioni spingono Dante ad amare Dio? Dante risponde che le ragioni che lo hanno indotto a corroborare il suo sentimento di carità sono soprattutto la creazione di lui medesimo, la morte redentrice di Cristo e la speranza della salvezza. I beati e Beatrice intonano un canto o di lode e la guida può togliere ogni impedimento agli occhi di Dante, che ora vede meglio di prima e può scorgere un quarto splendore. Si tratta dell’anima di Adamo, e Dante la prega di appagare il suo desiderio di conoscenza. Adamo dice quindi: di essere stato allontanato dal Paradiso terrestre per aver trasgredito il comandamento di Dio; di essere rimasto nel Limbo 4302 anni e 930 anni sulla terra; che la lingua da lui parlata "fu tutta spenta" prima che Nembrot tentasse l’impresa della torre di Babele (la lingua, come tutti i prodotti umani, è mutevole e prima che egli scendesse nel Limbo Dio era chiamato I, ma poi fu chiamato EL); e infine, che la sua dimora nel Paradiso terrestre, prima da innocente, poi da colpevole, si protrasse per sette ore.
+
+\chapter{Canto XXVII}
+
+\paragraph{Riassunto} I beati intonano l’inno Gloria al Padre, al Figlio e allo Spirito Santo e Dante ne rimane estasiato. San Pietro cambia colore per lo sdegno che lo agita e prorompe in una feroce invettiva condannando il Pontefice che usurpa sulla terra il posto di Vicario di Cristo. I papi sono corrotti, ma non sono gli unici: dal Cielo si vedono ovunque, sulla terra, lupi rapaci travestiti da pastori. La Provvidenza divina verrà però presto in soccorso della Chiesa. Dopo quest’ultima dichiarazione tutti i beati si levano verso l’Empireo e Beatrice invita Dante a volgere gli occhi in basso. Il poeta si rende conto che dal momento in cui ha guardato la terra per la prima volta sono trascorse sei ore: da una parte vede l’Oceano Atlantico, dall’altra la Fenicia e vedrebbe una parte maggiore della terra se il sole non si muovesse sotto di lui a più di trenta gradi verso occidente. La virtù che lo sguardo luminoso di Beatrice concede a Dante lo solleva in un attimo fino al Primo Mobile; solo il cielo Empireo lo circonda, così come il Primo Mobile circonda gli altri cieli. Beatrice, a questo punto, deplora la cupidigia che impedisce all’uomo di alzare gli occhi al Cielo: l’innocenza si trova solo nei fanciulli, ma anch’essi si corrompono appena giungono all’età matura e questo non deve sorprendere perché in terra non vi è più chi provveda rettamente ai poteri temporale e spirituale, ma presto l’umanità cambierà il proprio corso e al buon volere seguiranno le buone opere.
+
+\chapter{Canto XXVIII}
+
+\paragraph{Riassunto} Dante scorge negli occhi di Beatrice un punto luminoso e - rivolgendosi verso il cielo - vede lo stesso punto infuso di una luce così abbagliante che lo costringe a distogliere lo sguardo. Vicinissimo al punto, gira rapidissimo un cerchio infuocato. Questo cerchio è circondato da tutti gli altri, i quali appaiono sempre più ampi e meno veloci mano a mano che si allontanano dal centro. La guida spiega al poeta che quel punto è Dio e che il cerchio che gli si muove più vicino è anche il più veloce poiché è mosso da un amore più ardente. Il Primo Mobile che trascina nel suo moto tutto l’universo corrisponde al cerchio che ha più amore e sapienza: e se il poeta considererà la virtù - e non la grandezza delle sfere celesti e dei cerchi angelici - noterà la corrispondenza che esiste fra il cielo maggiore e la maggiore Intelligenza motrice e tra il cielo minore e la minore Intelligenza motrice; Dante è preso, però, da altri dubbi e la sua guida spiega l’ordine dei cori che sono distribuiti in tre gerarchie: i nove cori angelici sono rivolti verso il punto che è Dio ed esercitano, dai superiori verso gli inferiori, un’azione benefica.
+
+\chapter{Canto XXIX}
+
+\paragraph{Riassunto} Beatrice comincia a spiegare a Dante la creazione degli Angeli, creati da Dio nella sua eternità, ossia fuori del tempo, e nell’Empireo, ossia fuori dello spazio. Con un solo atto Dio creò la pura forma degli Angeli, la materia pura e la forma congiunta alla materia dei corpi celesti. Beatrice ricorda al poeta il pensiero di San Girolamo secondo il quale la creazione degli Angeli sarebbe avvenuta molti secoli prima della creazione del mondo: questo pensiero è erroneo e contrasta non solo con la Sacra Scrittura ma anche con la ragione umana, che non potrebbe ammettere che gli Angeli siano rimasti tanto tempo senza esercitare il loro ufficio. Beatrice continua poi dicendo che una parte degli Angeli, ribelle al Creatore, precipitò sulla terra, mentre l’altra rimase nell’Empireo. Segue un’invettiva contro i cattivi filosofi che alterano la Sacra Scrittura senza pensare quanto siano cari a Dio coloro che invece le si accostano umilmente. Beatrice dichiara poi che il numero degli Angeli è infinito: la luce di Dio è accolta in diversi modi, tanti quanti sono gli Angeli a cui si unisce, così che l’amore di ogni creatura celeste - proporzionato alla visione - è più o meno intenso.
+
+\chapter{Canto XXX}
+
+\paragraph{Riassunto} A poco a poco i nove cori angelici che si volgono intorno al punto divino scompaiono e Dante si volge a Beatrice. La guida annuncia che sono giunti nell’Empireo, cielo di pura luce intellettuale fonte di un amore che è esso stesso fonte di una beatitudine assoluta; qui il poeta vedrà gli Angeli e i Beati nel medesimo aspetto che essi assumeranno nel giorno del Giudizio. Una luce risplende intorno a Dante, che dopo un momento di cecità si accorge che la sua facoltà visiva si è accresciuta e può così vedere una fiumana di luce che scorre tra due rive dipinte di fiori, dalla quale si alzano faville che si posano sui fiori per poi ritornare nel gorgo di luce. Il fiume, le faville, i fiori sono solo immagini che adombrano la realtà, perché Dante non ha una vista così potente da poterla sostenere. Dante fissa gli occhi nella fiumana luminosa e questa, prima distesa nella sua lunghezza, gli appare in forma circolare, mentre i fiori e le faville si tramutano in Beati e Angeli, offrendo l’immagine di una rosa che si dilata man mano che si procede dal basso verso l’alto. Dante non si smarrisce più nell’intensità della luce e comprende che nella Rosa è raccolta tutta l’immensità della beatitudine celeste. Beatrice conduce il poeta al centro della Rosa e gli mostra i pochi seggi non ancora occupati, compreso quello dove siederà, prima della morte di Dante, l’Imperatore Arrigo VII.
+
+\chapter{Canto XXXI}
+
+\paragraph{Riassunto} Dopo che i beati si sono mostrati a Dante in forma di candida rosa il poeta scorge gli Angeli che, cantando la gloria di Dio, appaiono come uno sciame di api in volo: essi hanno il viso color di fiamma, le ali dorate e il resto della figura più bianco della neve. Tutto il regno felice si volge al Creatore e Dante pronuncia una invocazione alla Trinità perché possa volgersi alla terra. Come il pellegrino giunto nel tempio prescelto si fissa a contemplare le sue bellezze e spera di descrivere, al ritorno, quello che ha visto, così Dante ammira la Rosa luminosa e vede visi atteggiati a carità, ricolmi di luce. Il poeta si volge a Beatrice per interrogarla ma al suo posto vede un vecchio vestito di bianco: costui risponde che Beatrice è risalita al proprio scranno. La nuova guida invita Dante a guardare la candida rosa e dopo aver assicurato al poeta che la Vergine farà loro ogni grazia si rivela come San Bernardo. Il santo invita il pellegrino a rivolgere gli occhi a Maria ed egli può scorgere verso la sommità della Rosa una parte più splendente: lì - nel mezzo - circondata da migliaia di Angeli essi contemplano la Madre di Cristo.
+
+\chapter{Canto XXXII}
+
+\paragraph{Riassunto} A questo punto Bernardo indica a Dante - ai piedi della Vergine - Eva e, sotto questa, nel terzo ordine dei seggi, Rachele e Beatrice. Sotto di loro, di gradino in gradino, siedono Sara, Rebecca, Giuditta e Ruth. Infine, dal settimo gradino, verso il basso, altre donne ebree che - separando le foglie della rosa - dividono i beati dell’Antico Testamento da quelli del Nuovo. A sinistra si trovano coloro che credettero in Cristo venturo mentre a destra - dove ancora si vedono alcuni seggi vuoti - siedono coloro che credettero in Cristo venuto. E come da questa parte il seggio della Madonna e delle donne ebree forma una linea di separazione così, dalla parte opposta, la formano i seggi di San Giovanni Battista, di San Francesco, di San Benedetto, di Sant’Agostino e di altri. Dal mezzo della rosa verso il basso si vedono le anime dei bambini che si salvarono non per propri meriti, ma grazie ai loro genitori e con certe condizioni, poiché morirono prima di raggiungere l’uso della ragione. Bernardo invita Dante a guardare la Vergine e il poeta vede innanzi a lei, con le ali spiegate, l’Arcangelo Gabriele che canta Ave Maria, gratia plena. A sinistra di Maria è visibile Adamo, e alla destra San Pietro: accanto a lui San Giovanni Evangelista e accanto ad Adamo, Mosé. In ultimo, davanti a San Pietro si trova Sant’Anna e di fronte ad Adamo, Santa Lucia. Adesso Bernardo pregherà Maria perché interceda in favore del poeta che, dal canto suo, dovrà accompagnare la preghiera con tutto l’ardore del proprio cuore.
+
+\chapter{Canto XXXIII}
+
+\begin{verse}
+\poemlines{3}
+«Vergine Madre, figlia del tuo figlio,\\
+umile e alta più che creatura,\\
+termine fisso d’etterno consiglio,\\!
+tu se’ colei che l’umana natura\\
+nobilitasti sì, che ‘l suo fattore\\
+non disdegnò di farsi sua fattura.\\!
+Nel ventre tuo si raccese l’amore,\\
+per lo cui caldo ne l’etterna pace\\
+così è germinato questo fiore.\\!
+Qui se’ a noi meridiana face\\
+di caritate, e giuso, intra ‘ mortali,\\
+se’ di speranza fontana vivace.\\!
+Donna, se’ tanto grande e tanto vali,\\
+che qual vuol grazia e a te non ricorre\\
+sua disianza vuol volar sanz’ali.\\!
+La tua benignità non pur soccorre\\
+a chi domanda, ma molte fiate\\
+liberamente al dimandar precorre.\\!
+In te misericordia, in te pietate,\\
+in te magnificenza, in te s’aduna\\
+quantunque in creatura è di bontate.\\!
+Or questi, che da l’infima lacuna\\
+de l’universo infin qui ha vedute\\
+le vite spiritali ad una ad una,\\!
+supplica a te, per grazia, di virtute\\
+tanto, che possa con li occhi levarsi\\
+più alto verso l’ultima salute.\\!
+E io, che mai per mio veder non arsi\\
+più ch’i’ fo per lo suo, tutti miei prieghi\\
+ti porgo, e priego che non sieno scarsi,\\!
+perché tu ogne nube li disleghi\\
+di sua mortalità co’ prieghi tuoi,\\
+sì che ‘l sommo piacer li si dispieghi.\\!
+Ancor ti priego, regina, che puoi\\
+ciò che tu vuoli, che conservi sani,\\
+dopo tanto veder, li affetti suoi.\\!
+Vinca tua guardia i movimenti umani:\\
+vedi Beatrice con quanti beati\\
+per li miei prieghi ti chiudon le mani!».\\!
+Li occhi da Dio diletti e venerati,\\
+fissi ne l’orator, ne dimostraro\\
+quanto i devoti prieghi le son grati;\\!
+indi a l’etterno lume s’addrizzaro,\\
+nel qual non si dee creder che s’invii\\
+per creatura l’occhio tanto chiaro.\\!
+E io ch’al fine di tutt’i disii\\
+appropinquava, sì com’io dovea,\\
+l’ardor del desiderio in me finii.\\!
+Bernardo m’accennava, e sorridea,\\
+perch’io guardassi suso; ma io era\\
+già per me stesso tal qual ei volea:\\!
+ché la mia vista, venendo sincera,\\
+e più e più intrava per lo raggio\\
+de l’alta luce che da sé è vera.\\!
+Da quinci innanzi il mio veder fu maggio\\
+che ‘l parlar mostra, ch’a tal vista cede,\\
+e cede la memoria a tanto oltraggio.\\!
+Qual è colui che sognando vede,\\
+che dopo ‘l sogno la passione impressa\\
+rimane, e l’altro a la mente non riede,\\!
+cotal son io, ché quasi tutta cessa\\
+mia visione, e ancor mi distilla\\
+nel core il dolce che nacque da essa.\\!
+Così la neve al sol si disigilla;\\
+così al vento ne le foglie levi\\
+si perdea la sentenza di Sibilla.\\!
+O somma luce che tanto ti levi\\
+da’ concetti mortali, a la mia mente\\
+ripresta un poco di quel che parevi,\\!
+e fa la lingua mia tanto possente,\\
+ch’una favilla sol de la tua gloria\\
+possa lasciare a la futura gente;\\!
+ché, per tornare alquanto a mia memoria\\
+e per sonare un poco in questi versi,\\
+più si conceperà di tua vittoria.\\!
+Io credo, per l’acume ch’io soffersi\\
+del vivo raggio, ch’i’ sarei smarrito,\\
+se li occhi miei da lui fossero aversi.\\!
+E’ mi ricorda ch’io fui più ardito\\
+per questo a sostener, tanto ch’i’ giunsi\\
+l’aspetto mio col valore infinito.\\!
+Oh abbondante grazia ond’io presunsi\\
+ficcar lo viso per la luce etterna,\\
+tanto che la veduta vi consunsi!\\!
+Nel suo profondo vidi che s’interna\\
+legato con amore in un volume,\\
+ciò che per l’universo si squaderna:\\!
+sustanze e accidenti e lor costume,\\
+quasi conflati insieme, per tal modo\\
+che ciò ch’i’ dico è un semplice lume.\\!
+La forma universal di questo nodo\\
+credo ch’i’ vidi, perché più di largo,\\
+dicendo questo, mi sento ch’i’ godo.\\!
+Un punto solo m’è maggior letargo\\
+che venticinque secoli a la ‘mpresa,\\
+che fé Nettuno ammirar l’ombra d’Argo.\\!
+Così la mente mia, tutta sospesa,\\
+mirava fissa, immobile e attenta,\\
+e sempre di mirar faceasi accesa.\\!
+A quella luce cotal si diventa,\\
+che volgersi da lei per altro aspetto\\
+è impossibil che mai si consenta;\\!
+però che ‘l ben, ch’è del volere obietto,\\
+tutto s’accoglie in lei, e fuor di quella\\
+è defettivo ciò ch’è lì perfetto.\\!
+Omai sarà più corta mia favella,\\
+pur a quel ch’io ricordo, che d’un fante\\
+che bagni ancor la lingua a la mammella.\\!
+Non perché più ch’un semplice sembiante\\
+fosse nel vivo lume ch’io mirava,\\
+che tal è sempre qual s’era davante;\\!
+ma per la vista che s’avvalorava\\
+in me guardando, una sola parvenza,\\
+mutandom’io, a me si travagliava.\\!
+Ne la profonda e chiara sussistenza\\
+de l’alto lume parvermi tre giri\\
+di tre colori e d’una contenenza;\\!
+e l’un da l’altro come iri da iri\\
+parea reflesso, e ‘l terzo parea foco\\
+che quinci e quindi igualmente si spiri.\\!
+Oh quanto è corto il dire e come fioco\\
+al mio concetto! e questo, a quel ch’i’ vidi,\\
+è tanto, che non basta a dicer ‘poco’.\\!
+O luce etterna che sola in te sidi,\\
+sola t’intendi, e da te intelletta\\
+e intendente te ami e arridi!\\!
+Quella circulazion che sì concetta\\
+pareva in te come lume reflesso,\\
+da li occhi miei alquanto circunspetta,\\!
+dentro da sé, del suo colore stesso,\\
+mi parve pinta de la nostra effige:\\
+per che ‘l mio viso in lei tutto era messo.\\!
+Qual è ‘l geomètra che tutto s’affige\\
+per misurar lo cerchio, e non ritrova,\\
+pensando, quel principio ond’elli indige,\\!
+tal era io a quella vista nova:\\
+veder voleva come si convenne\\
+l’imago al cerchio e come vi s’indova;\\!
+ma non eran da ciò le proprie penne:\\
+se non che la mia mente fu percossa\\
+da un fulgore in che sua voglia venne.\\!
+A l’alta fantasia qui mancò possa;\\
+ma già volgeva il mio disio e ‘l velle,\\
+sì come rota ch’igualmente è mossa,\\!
+l’amor che move il sole e l’altre stelle.\\!
+\end{verse}
+
+\end{document}
