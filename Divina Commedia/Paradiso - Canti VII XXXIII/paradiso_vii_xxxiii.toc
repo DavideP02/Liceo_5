@@ -1,53 +1,59 @@
 \babel@toc {italian}{}
 \babel@toc {italian}{}
 \contentsline {chapter}{Canto VII}{5}{chapter*.2}% 
-\contentsline {paragraph}{Riassunto}{5}{section*.3}% 
+\contentsline {paragraph}{Riassunto}{5}{paragraph*.3}% 
 \contentsline {chapter}{Canto VIII}{7}{chapter*.4}% 
-\contentsline {paragraph}{Riassunto}{7}{section*.5}% 
+\contentsline {paragraph}{Riassunto}{7}{paragraph*.5}% 
 \contentsline {chapter}{Canto IX}{9}{chapter*.6}% 
-\contentsline {paragraph}{Riassunto}{9}{section*.7}% 
+\contentsline {paragraph}{Riassunto}{9}{paragraph*.7}% 
 \contentsline {chapter}{Canto X}{11}{chapter*.8}% 
-\contentsline {paragraph}{Riassunto}{11}{section*.9}% 
+\contentsline {paragraph}{Riassunto}{11}{paragraph*.9}% 
 \contentsline {chapter}{Canto XI}{13}{chapter*.10}% 
-\contentsline {chapter}{Canto XII}{17}{chapter*.11}% 
-\contentsline {paragraph}{Riassunto}{17}{section*.12}% 
-\contentsline {chapter}{Canto XIII}{19}{chapter*.13}% 
-\contentsline {paragraph}{Riassunto}{19}{section*.14}% 
-\contentsline {chapter}{Canto XIV}{21}{chapter*.15}% 
-\contentsline {paragraph}{Riassunto}{21}{section*.16}% 
-\contentsline {chapter}{Canto XV}{23}{chapter*.17}% 
-\contentsline {paragraph}{Cacciaguida}{23}{section*.18}% 
-\contentsline {chapter}{Canto XVI}{25}{chapter*.19}% 
-\contentsline {paragraph}{Riassunto}{25}{section*.20}% 
-\contentsline {chapter}{Canto XVII}{27}{chapter*.21}% 
-\contentsline {chapter}{Canto XVIII}{31}{chapter*.22}% 
-\contentsline {paragraph}{Riassunto}{31}{section*.23}% 
-\contentsline {chapter}{Canto XIX}{33}{chapter*.24}% 
-\contentsline {paragraph}{Riassunto}{33}{section*.25}% 
-\contentsline {chapter}{Canto XX}{35}{chapter*.26}% 
-\contentsline {paragraph}{Riassunto}{35}{section*.27}% 
-\contentsline {chapter}{Canto XXI}{37}{chapter*.28}% 
-\contentsline {paragraph}{Riassunto}{37}{section*.29}% 
-\contentsline {chapter}{Canto XXII}{39}{chapter*.30}% 
-\contentsline {paragraph}{Riassunto}{39}{section*.31}% 
-\contentsline {chapter}{Canto XXIII}{41}{chapter*.32}% 
-\contentsline {paragraph}{Riassunto}{41}{section*.33}% 
-\contentsline {chapter}{Canto XXIV}{43}{chapter*.34}% 
-\contentsline {paragraph}{Riassunto}{43}{section*.35}% 
-\contentsline {chapter}{Canto XXV}{45}{chapter*.36}% 
-\contentsline {paragraph}{Riassunto}{45}{section*.37}% 
-\contentsline {chapter}{Canto XXVI}{47}{chapter*.38}% 
-\contentsline {paragraph}{Riassunto}{47}{section*.39}% 
-\contentsline {chapter}{Canto XXVII}{49}{chapter*.40}% 
-\contentsline {paragraph}{Riassunto}{49}{section*.41}% 
-\contentsline {chapter}{Canto XXVIII}{51}{chapter*.42}% 
-\contentsline {paragraph}{Riassunto}{51}{section*.43}% 
-\contentsline {chapter}{Canto XXIX}{53}{chapter*.44}% 
-\contentsline {paragraph}{Riassunto}{53}{section*.45}% 
-\contentsline {chapter}{Canto XXX}{55}{chapter*.46}% 
-\contentsline {paragraph}{Riassunto}{55}{section*.47}% 
-\contentsline {chapter}{Canto XXXI}{57}{chapter*.48}% 
-\contentsline {paragraph}{Riassunto}{57}{section*.49}% 
-\contentsline {chapter}{Canto XXXII}{59}{chapter*.50}% 
-\contentsline {paragraph}{Riassunto}{59}{section*.51}% 
-\contentsline {chapter}{Canto XXXIII}{61}{chapter*.52}% 
+\contentsline {paragraph}{San Tommaso}{13}{paragraph*.11}% 
+\contentsline {paragraph}{Francescani}{13}{paragraph*.12}% 
+\contentsline {paragraph}{San Francesco}{14}{paragraph*.13}% 
+\contentsline {paragraph}{Dante e Giotto}{18}{paragraph*.14}% 
+\contentsline {chapter}{Canto XII}{19}{chapter*.15}% 
+\contentsline {paragraph}{Riassunto}{19}{paragraph*.16}% 
+\contentsline {chapter}{Canto XIII}{21}{chapter*.17}% 
+\contentsline {paragraph}{Riassunto}{21}{paragraph*.18}% 
+\contentsline {chapter}{Canto XIV}{23}{chapter*.19}% 
+\contentsline {paragraph}{Riassunto}{23}{paragraph*.20}% 
+\contentsline {chapter}{Canto XV}{25}{chapter*.21}% 
+\contentsline {paragraph}{Cacciaguida}{25}{paragraph*.22}% 
+\contentsline {chapter}{Canto XVI}{29}{chapter*.23}% 
+\contentsline {paragraph}{Riassunto}{29}{paragraph*.24}% 
+\contentsline {chapter}{Canto XVII}{31}{chapter*.25}% 
+\contentsline {paragraph}{Libero arbitrio}{32}{paragraph*.26}% 
+\contentsline {paragraph}{Vendetta}{33}{paragraph*.27}% 
+\contentsline {chapter}{Canto XVIII}{37}{chapter*.28}% 
+\contentsline {paragraph}{Riassunto}{37}{paragraph*.29}% 
+\contentsline {chapter}{Canto XIX}{39}{chapter*.30}% 
+\contentsline {paragraph}{Riassunto}{39}{paragraph*.31}% 
+\contentsline {chapter}{Canto XX}{41}{chapter*.32}% 
+\contentsline {paragraph}{Riassunto}{41}{paragraph*.33}% 
+\contentsline {chapter}{Canto XXI}{43}{chapter*.34}% 
+\contentsline {paragraph}{Riassunto}{43}{paragraph*.35}% 
+\contentsline {chapter}{Canto XXII}{45}{chapter*.36}% 
+\contentsline {paragraph}{Riassunto}{45}{paragraph*.37}% 
+\contentsline {chapter}{Canto XXIII}{47}{chapter*.38}% 
+\contentsline {paragraph}{Riassunto}{47}{paragraph*.39}% 
+\contentsline {chapter}{Canto XXIV}{49}{chapter*.40}% 
+\contentsline {paragraph}{Riassunto}{49}{paragraph*.41}% 
+\contentsline {chapter}{Canto XXV}{51}{chapter*.42}% 
+\contentsline {paragraph}{Riassunto}{51}{paragraph*.43}% 
+\contentsline {chapter}{Canto XXVI}{53}{chapter*.44}% 
+\contentsline {paragraph}{Riassunto}{53}{paragraph*.45}% 
+\contentsline {chapter}{Canto XXVII}{55}{chapter*.46}% 
+\contentsline {paragraph}{Riassunto}{55}{paragraph*.47}% 
+\contentsline {chapter}{Canto XXVIII}{57}{chapter*.48}% 
+\contentsline {paragraph}{Riassunto}{57}{paragraph*.49}% 
+\contentsline {chapter}{Canto XXIX}{59}{chapter*.50}% 
+\contentsline {paragraph}{Riassunto}{59}{paragraph*.51}% 
+\contentsline {chapter}{Canto XXX}{61}{chapter*.52}% 
+\contentsline {paragraph}{Riassunto}{61}{paragraph*.53}% 
+\contentsline {chapter}{Canto XXXI}{63}{chapter*.54}% 
+\contentsline {paragraph}{Riassunto}{63}{paragraph*.55}% 
+\contentsline {chapter}{Canto XXXII}{65}{chapter*.56}% 
+\contentsline {paragraph}{Riassunto}{65}{paragraph*.57}% 
+\contentsline {chapter}{Canto XXXIII}{67}{chapter*.58}% 

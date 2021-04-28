@@ -1,25 +1,52 @@
 \documentclass[a4paper, twoside, titlepage]{book}
-\usepackage[utf8]{inputenc}
-\usepackage[italian]{babel}
-\usepackage[T1]{fontenc}
 
+% pacchetti fondamentali
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{microtype}
-\usepackage{mparhack}
 \usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{xargs}
 \usepackage{multicol}
+
+\usepackage[nouppercase]{frontespizio} %prima pagina TITOLO
+\newcommand{\omissis}{[\textellipsis\unkern]}
 
 \usepackage{quoting}
 \quotingsetup{font=small}
 
-\usepackage{verse}
+\usepackage{ulem}
 \usepackage{framed}
+\usepackage{amsmath}
+\usepackage{graphicx}
 
-\usepackage[nouppercase]{frontespizio}
-\newcommand{\omissis}{[\textellipsis\unkern]}
+\usepackage{verse} % utilizzo dell'ambiente per la scrittura in versi
+%modifica la posizione del numero di verso
+\setlength{\vrightskip}{-30pt}%regola tu
+ \verselinenumbersleft
+%
 
-\newcommand{\straniero}[1]{\textit{#1}}
-\newcommand{\titolo}[1]{\textsc{#1}}
-\newcommand{\evid}[1]{\textbf{\textcolor{blue}{#1}}}
+%definire le dimensioni della pagina
+%\usepackage{geometry}
+%\geometry{papersize={13.97cm,21.59cm}, bottom=3cm,%
+% heightrounded}
+%
+
+%definizioni particolari
+\newcommand{\straniero}[1]{\textit{#1}} %parole straniere
+\newcommand{\titolo}[1]{\textsc{#1}} %titoli
+\newcommand{\evid}[1]{\textbf{\textcolor{blue}{#1}}} %parole evidenziate
+\newcommand{\salt}{\hspace{1em}[...]} %comando per la creazione dei puntini di sospensione tra quadre
+%
+
+%citazioni
+\newcommand{\citazione}[1]{%
+  \vspace{0.3em}\\
+  \textit{#1}
+  \vspace{0.3em}
+}
+%
 
 %creazione del comando per le note a margine
 \newcounter{mar}
@@ -28,33 +55,63 @@
 \hspace{-0.73em}\textsuperscript{\hyperref[\thechapter.\themar]{\themar}}\marginpar{\textbf{\themar}\label{\thechapter.\themar}. #2}\hspace{-0.4em}
 }
 \newcommand{\mat}[1]{\mar{gg}{#1}}
-
-\usepackage{chngcntr} %pacchetto per la numerazione delle note che partono ogni capitolo
-\counterwithin*{mar}{chapter}
 %fine comando per le note a margine
 
-%comando per la creazione dei puntini di sospensione tra quadre
-\newcommand{\salt}{\hspace{1em}[...]}
+%definire header e footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
 
-\usepackage{ulem}
-\usepackage{verse}
+  %alternativa 1
+  %\renewcommand{\headrulewidth}{0pt}
+  %\renewcommand{\footrulewidth}{0pt}
+  %\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+  %\fancypagestyle{plain}{
+  %\fancyhf{}}
+  %\fancyhf{}
 
-\usepackage[colorlinks]{hyperref}
-\definecolor{RoyalBlue}{rgb}{0.0, 0.14, 0.4}
+  %alternativa 2
+  \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+  \renewcommand{\sectionmark}[1]{\partmark\markright{\thesection\ #1}}
+  \fancyhf{}
+  \fancyhead[LE,RO]{\scshape\thepage}
+  \fancyhead[LO]{\scshape\footnotesize\nouppercase{\rightmark}}
+  \fancyhead[RE]{\scshape\footnotesize\nouppercase{\leftmark}}
+%
 
+%rimuovere header e footer dalle pagine vuote
+\makeatletter
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+    \hbox{}
+    \vspace*{\fill}
+    \vspace{\fill}
+    \thispagestyle{empty}
+    \newpage
+    \if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother
+%
+
+%rimuovere il titolo del capitolo & impaginazione titolo capitolo
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{30\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \vskip 20\p@
+    \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    \vskip 40\p@
+  }% mettere qui i contatori da annullare per ogni capitolo
+  \setcounter{mar}{0}}
+\makeatother
+\addto\captionsitalian{\renewcommand{\chaptername}{}}
+%
+
+% creazione di un ambiente "nota" con sfondo grigio
 \newlength\sidebar
 \newlength\envrule
 \newlength\envborder
 \setlength\sidebar{1.5mm}
 \setlength\envrule{0.4pt}
 \setlength\envborder{2.5mm}
-
-\hypersetup{
-     colorlinks=true,
-     linkcolor=blue,
-     filecolor=blue,
-     citecolor = black,
-     urlcolor=cyan,}
 
 \makeatletter
 \long\def\fboxs#1{%
@@ -130,48 +187,23 @@
 \begin{eseframed}\noindent\ignorespaces%
 }
 {\end{eseframed}\vspace{-\baselineskip}\medskip}
-
-%modifica la posizione del numero di verso
-\setlength{\vrightskip}{-30pt}%regola tu
- \verselinenumbersleft
-
 \definecolor{Black}{rgb}{0, 0, 0}
+%
 
-%\usepackage[eulerchapternumbers,beramono,pdfspacing]{classicthesis}
-%\usepackage{arsclassica}
+%modificare TOC: rimuove i numeri dall'indice
+\setcounter{secnumdepth}{-1}
+%
 
-\makeatletter
-\def\@makechapterhead#1{%
-  \vspace*{50\p@}%
-  {\parindent \z@ \raggedright \normalfont
-    \vskip 20\p@
-    \interlinepenalty\@M
-    \Huge \bfseries #1\par\nobreak
-    \vskip 40\p@
-  }}
-\makeatother
+%%%%%% HYPERREF VA CARICATO SEMPRE PER ULTIMO, DEMENTE!
 
-\addto\captionsitalian{\renewcommand{\chaptername}{}}
-
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\makeatletter
-\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
-    \hbox{}
-    \vspace*{\fill}
-    \vspace{\fill}
-    \thispagestyle{empty}
-    \newpage
-    \if@twocolumn\hbox{}\newpage\fi\fi\fi}
-\makeatother
-\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
-\fancyhf{}
-\fancyhead[LE,RO]{\scshape\thepage}
-\fancyhead[LO]{\scshape\footnotesize\nouppercase{\rightmark}}
-\fancyhead[RE]{\scshape\footnotesize\nouppercase{\leftmark}}
-
-\usepackage{graphicx}
+\usepackage[colorlinks]{hyperref}
+\definecolor{RoyalBlue}{rgb}{0.0, 0.14, 0.4}
+\hypersetup{
+     colorlinks=true,
+     linkcolor=blue,
+     filecolor=blue,
+     citecolor = black,
+     urlcolor=cyan,}
 
 \begin{document}
 
@@ -217,148 +249,226 @@
 
 \chapter{Canto XI}
 
+Nei canti XI e XII sono presentati l'\textbf{ordine francescano} e l'\textbf{ordine domenicano}: San Tommaso, un domenicano, elogia san Francesco, mentre San Bonaventura, francescano, elogia San Domenico. I due canti sono speculari.
+Questa struttura è scelta per via di un'usanza dell'epoca, per cui i francescani elogiavano San Domenico e viceversa: questo era volto ad appianare le divergenze tra i due ordini.
+
+\paragraph{San Tommaso} Nacque a Roccasecca, presso Aquino (attualmente in provincia di Frosinone), da famiglia nobile, nel 1226. Dopo aver studiato all'Università di Napoli entrò nell'Ordine domenicano (1244) contro il volere della famiglia e fu discepolo, a Parigi e a Colonia, di Alberto Magno. Insegnò teologia all'Università di Parigi, Napoli, Roma Orvieto, al seguito di papa Urbano IV. Mori nel 1274 nell'abbazia di Fossanova. Fu il massimo esponente della filosofia scolastica, incentrata sull'accordo della ragione con la fede in quanto derivanti entrambe da Dio. Tentò quindi di chiarire i dogmi oggetto di fede con l'ausilio della ragione (\straniero{filosofia ancilla theologiae}, cioè "la filosofia è ancella della teologia"). La filosofia, secondo il suo pensiero, poteva sussistere a fianco della teologia, in quanto entrambe le vie erano valide per giungere alla stessa verità. Cercò di conciliare il pensiero di Aristotele col cristianesimo. La sua filosofia è detta tomismo (da Thomas, forma latina di Tommaso). Scrisse numerose opere, tra cui la famosa \titolo{Summa theologiae} (Compendio di teologia), la \titolo{Summa contra gentiles} (Compendio contro i gen tili, cioè contro i musulmani), la \titolo{Questiones quodlibetales} (Questioni su argomenti vari), il \titolo{De unitate intellectus contra averroistas} (L'unità dell'intelletto contro gli averroisti).
+
+San Tommaso reimposta e concilia il pensiero cristiano con la filosofia Aristotelica. Dante lo aveva incontrato nel canto precedente, nel cielo dei sapienti, ed egli aveva pronunciato una frase che Dante non comprende: questo è proprio l'inizio del canto XI
+
+\paragraph{Francescani} Visto il rifiuto della ricchezza dei francescani, quest'ordine non era in linea con gli ideali della Chiesa del tempo, e per questo è andato vicino all'eresia. Il messaggio dei francescani era molto simile ad altri movimenti eretici, che predicavano la povertà ed un ritorno della Chiesa nelle sue condizioni primordiali: l'ordine era perl troppo esteso, e la Chiesa, piuttosto che averlo come nemico, preferì tenerlo dalla sua parte: riceverà due approvazioni papali. L'ordine francescano si dedicò alla predicazione, espressa soprattutto attraverso il racconto delle parabole evangeliche narrate al popolo.
+
+Il francescanesimo ebbe una larga diffusione, soprattutto tra i ceti popolari che trovarono in esso la risposta alle proprie esigenze di purificazione e di vita condotta secondo i princìpi del Vangelo. Il successo dell'ordine non riuscì però ad evitare la scissione dei confratelli tra ``\textbf{conventuali}'', sostenitori più blandi della \titolo{Regola}, e ``\textbf{spirituali}'', rigidi ed intransigenti seguaci della medesima.
+
+\paragraph{San Francesco} San Francesco è il più alto esponente della spiritualità religiosa del XIII secolo. Nacque ad Assisi nel 1181 o 1182 in una famiglia della borghesia mercantile. Compì buoni studi, imparando il latino e il francese. Nella sua giovinezza, agiata e brillante, mostro propensioni per il mestiere delle armi: nel 1204 cadde prigioniero nella guerra fra Assisi e Perugia. Cercava di raggiungere le truppe di Gualtieri di Brienne in Puglia, quando, ammalatosi a Spoleto, dovette tornare ad Assisi. Inizia a questo punto quel travaglio interiore che lo porta, nel 1206, a mutare radicalmente le sue abitudini di vita: si ritira in un eremo e si dedica alla cura dei lebbrosi. L'anno dopo il padre lo accusa di fronte al vescovo, per indurlo a rinunciare ai suoi propositi; Francesco si spoglia degli abiti che indossa e glieli restituisce, dichiarando di riconoscere per padre solo «Colui che è nei cieli». L'episodio ha un valore emblematico, in quanto segna un rovesciamento e un rifiuto dei valori della società borghese del tempo, a cui Francesco era appartenuto, sostituiti dalla scelta della povertà, dalla cura degli altri e dall'amore per il prossimo.
+
+Con i primi discepoli stabilisce nel 1209 una \titolo{Regola} andata perduta, che verrà approvata l'anno successivo da papa Innocenzo III. Animato dal desiderio di diffondere il Vangelo anche fra gli infedeli, nel 1219 raggiunge l'Egitto ed è trattato benevolmente dal Sultano, che gli consente di recarsi in Terrasanta. Rientrato in Italia elabora una nuova \titolo{Regola} che, poi riassunta e abbreviata, verrà definitivamente approvata dal pontefice Onorio III il 29 novembre 1223. Gli ultimi anni, trascorsi in solitudine e in preghiera presso vari conventi dell'Italia centrale, sono segnati da dolori fisici e dalle preoccupazioni per i contrasti che cominciavano a serpeggiare all'interno dell'ordine.
+
 \begin{verse}
 \poemlines{3}	
 O insensata cura de’ mortali,\\
-quanto son difettivi silogismi\\
-quei che ti fanno in basso batter l’ali!\\!
-Chi dietro a iura, e chi ad amforismi\\
+quanto son difettivi silogismi\mat{argomentazioni}\\
+quei che ti fanno in basso\mat{cose terrene} batter l’ali!\\!
+Chi dietro a iura, e chi ad amforismi\mat{medicina}\\
 sen giva, e chi seguendo sacerdozio,\\
-e chi regnar per forza o per sofismi,\\!
+e chi regnar per forza o per sofismi\mat{inganno},\\!
 e chi rubare, e chi civil negozio,\\
 chi nel diletto de la carne involto\\
 s’affaticava e chi si dava a l’ozio,\\!
 quando, da tutte queste cose sciolto,\\
 con Beatrice m’era suso in cielo\\
 cotanto gloriosamente accolto.\\!
-Poi che ciascuno fu tornato ne lo\\
-punto del cerchio in che avanti s’era,\\
+\end{verse}
+Le precedenti tre terzine sono un omaggio ad un \straniero{topos} letterario latino: l'autore elenca le passioni di alcuni uomini, per poi porsi in una posizione differente: ``ci sono quelli che vogliono\dots, \textbf{io} invece\dots"
+
+L'ultima terzina indica la propensione di Dante, in contrasto con le attitudini negative elencate prima.
+\begin{verse}
+\poemlines{3}
+\setverselinenums{13}{15}
+Poi che ciascuno\mat{spiriti sapienti} fu tornato ne lo\\
+punto del cerchio\mat{gli spiriti spesso formano una sorta di Corona} in che avanti s’era,\\
 fermossi, come a candellier candelo.\\!
-E io senti’ dentro a quella lumera\\
+E io senti’ dentro a quella lumera\mat{le anime appaiono in maniera aleatoria}\\
 che pria m’avea parlato, sorridendo\\
-incominciar, faccendosi più mera:\\!
-«Così com’io del suo raggio resplendo,\\
+incominciar, faccendosi più mera\mat{luminosa}:\\!
+«Così com’io del suo raggio\mat{luce di Dio} resplendo,\\
 sì, riguardando ne la luce etterna,\\
-li tuoi pensieri onde cagioni apprendo.\\!
+li tuoi pensieri onde cagioni apprendo\mat{questa anime conoscono tutto di Dante, anche il pensiero; Cacciaguida poi gli chiedera espressamente di parlare e di domandare}.\\!
 Tu dubbi, e hai voler che si ricerna\\
 in sì aperta e ‘n sì distesa lingua\\
-lo dicer mio, ch’al tuo sentir si sterna,\\!
-ove dinanzi dissi "U’ ben s’impingua",\\
+lo dicer mio, ch’al tuo sentir si sterna\mat{facile alla tua comprensione},\\!
+ove dinanzi dissi "U’ ben s’impingua''\mat{dove ci si nutre spiritualmente (se non si devia dalla retta via): a fine canto si riferirà al suo ordine dei domenicani; l'ultima parte è una apostrofe ai domenicani.},\\
 e là u’ dissi "Non nacque il secondo";\\
 e qui è uopo che ben si distingua.\\!
 La provedenza, che governa il mondo\\
 con quel consiglio nel quale ogne aspetto\\
 creato è vinto pria che vada al fondo,\\!
 però che andasse ver’ lo suo diletto\\
-la sposa di colui ch’ad alte grida\\
+la sposa\mat{il motivo delle nozze sarà tema di tutto il canto} di colui ch’ad alte grida\\
 disposò lei col sangue benedetto,\\!
 in sé sicura e anche a lui più fida,\\
-due principi ordinò in suo favore,\\
+due principi\mat{Francesco e Domenico} ordinò in suo favore,\\
 che quinci e quindi le fosser per guida.\\!
 L’un fu tutto serafico in ardore;\\
 l’altro per sapienza in terra fue\\
-di cherubica luce uno splendore.\\!
+di cherubica luce uno splendore.\mat{Dante dice che si equivalgono, ma che sono diversi}\\!
 De l’un dirò, però che d’amendue\\
-si dice l’un pregiando, qual ch’om prende,\\
+si dice l’un pregiando, qual ch’om\mat{impersonale} prende,\\
 perch’ad un fine fur l’opere sue.\\!
 Intra Tupino e l’acqua che discende\\
-del colle eletto dal beato Ubaldo,\\
+del colle eletto dal beato Ubaldo\\
 fertile costa d’alto monte pende,\\!
+\end{verse}
+
+Il Topino è un affluente del Chiascio, che, a sua volta, si getta nel Tevere. Per sottolineare l'importanza di Assisi, la città viene definita attraverso i fiumi e le città che la delimitano geograficamente. Il Chiascio discende dal colle di Gubbio, nelle cui vicinenze visse vita eremitica Ubaldo Bocassini.
+
+\begin{verse}
+\poemlines{3}
+\setverselinenums{46}{48}
 onde Perugia sente freddo e caldo\\
 da Porta Sole; e di rietro le piange\\
 per grave giogo Nocera con Gualdo.\\!
+\end{verse}
+
+Il massiccio montuoso del Subasio ha a occidente Perugia, verso la quale digrada, raffreddandola d'inverno con la neve sulle sue pendici e riscandandola d'estate col calore che si riflette sul suo pendio. A nort-est dello stesso gruppo montuoso si trovano le due cittadine umbre di Nocera e Gualdo Tadino, che subiscono anch'esse gli effetti negativi della montagna. Alcuni commentatori interpretano il <<grave gioco>> in senso politico, com eil governo di Perugia sulle due cittadine, avutosi tra il XIII e il XIV secolo.
+
+Il linguaggio delle due terzine precedenti è tipico delle \textbf{Agiografie} (le vite dei santi):
+\begin{itemize}
+\item parlando della nascita si raccontano dei segni di predestinazione;
+\item  ci sono indicazioni riguardo al luogo di nascita.
+\end{itemize}
+
+\begin{verse}
+\poemlines{3}
+\setverselinenums{49}{51}
 Di questa costa, là dov’ella frange\\
 più sua rattezza, nacque al mondo un sole,\\
 come fa questo tal volta di Gange.\\!
 Però chi d’esso loco fa parole,\\
-non dica Ascesi, ché direbbe corto,\\
-ma Oriente, se proprio dir vuole.\\!
-Non era ancor molto lontan da l’orto,\\
+non dica Ascesi\mat{Assisi}, ché direbbe corto\mat{insufficiente},\\
+ma Oriente\mat{Dante arriva a paragonare San Francesco al sole, in
+quanto illumina ed è predestinato ad illuminare; il
+luogo in cui è nato deve essere chiamato oriente.}, se proprio dir vuole.\\!
+Non era ancor molto lontan da l’orto\mat{sostantivo che si ricava dal verbo \straniero{orior} (latino), e che significa sorgere},\\
 ch’el cominciò a far sentir la terra\\
 de la sua gran virtute alcun conforto;\\!
 ché per tal donna, giovinetto, in guerra\\
-del padre corse, a cui, come a la morte,\\
+del padre corse\mat{Inizia la metafora della donna amata da Francesco,
+ovvero Povertà. Il padre era un ricco mercante, quindi la povertà di
+Francesco è una lotta contro il padre}, a cui, come a la morte,\\
 la porta del piacer nessun diserra;\\!
 e dinanzi a la sua spirital corte\\
-et coram patre le si fece unito;\\
+\straniero{et coram patre}\mat{latinismo, ``dinnanzi al padre''} le si fece unito\mat{Egli si spoglia pubblicamente,
+davanti al padre e al vescovo, per
+rendere manifesta la sua volontà di
+sposare la povertà};\\
 poscia di dì in dì l’amò più forte.\\!
-Questa, privata del primo marito,\\
+Questa\mat{povertà}, privata del primo marito\mat{Cristo},\\
 millecent’anni e più dispetta e scura\\
 fino a costui si stette sanza invito;\\!
 né valse udir che la trovò sicura\\
 con Amiclàte, al suon de la sua voce,\\
-colui ch’a tutto ‘l mondo fé paura;\\!
+colui ch’a tutto ‘l mondo fé paura\mat{\textbf{Cesare}: fa riferimento ad un episodio tratto
+da Lucano. Amiclate era talmente povero
+che lasciava l’uscio aperto: egli fu salvato
+proprio dalla sua povertà, in quanto Cesare
+durante le sue campagne non lo razziò,
+visto che non vi era niente da rubare};\\!
 né valse esser costante né feroce,\\
 sì che, dove Maria rimase giuso,\\
 ella con Cristo pianse in su la croce.\\!
-Ma perch’io non proceda troppo chiuso,\\
+\end{verse}
+
+Persino nel momento in cui la madre di Cristo non poté seguirlo (la di lui crocifissione), la povertà sì.\newpage
+
+\begin{verse}
+\poemlines{3}
+\setverselinenums{73}{75}
+Ma perch’io non proceda troppo chiuso,\mat{ermetico}\\
 Francesco e Povertà per questi amanti\\
 prendi oramai nel mio parlar diffuso.\\!
 La lor concordia e i lor lieti sembianti,\\
-amore e maraviglia e dolce sguardo\\
+amore e maraviglia e dolce sguardo\mat{contemplazione}\\
 facieno esser cagion di pensier santi;\\!
 tanto che ‘l venerabile Bernardo\\
 si scalzò prima, e dietro a tanta pace\\
 corse e, correndo, li parve esser tardo.\\!
 Oh ignota ricchezza! oh ben ferace!\\
-Scalzasi Egidio, scalzasi Silvestro\\
+Scalzasi Egidio, scalzasi\mat{ripetizione: è la rapidità con cui crescono i discepoli} Silvestro\\
 dietro a lo sposo, sì la sposa piace.\\!
-Indi sen va quel padre e quel maestro\\
+Indi sen va quel padre\mat{verso Roma: nel 1210 Francesco va a Roma per ricevere l'approvazione papale} e quel maestro\\
 con la sua donna e con quella famiglia\\
 che già legava l’umile capestro.\\!
-Né li gravò viltà di cuor le ciglia\\
-per esser fi’ di Pietro Bernardone,\\
+Né li gravò viltà di cuor le ciglia\mat{vergognò}\\
+per esser fi’\mat{figlio} di Pietro Bernardone,\\
 né per parer dispetto a maraviglia;\\!
-ma regalmente sua dura intenzione\\
+ma regalmente\mat{carattere fiero: San Francesco è umile ma fiero, un combattente} sua dura intenzione\\
 ad Innocenzio aperse, e da lui ebbe\\
 primo sigillo a sua religione.\\!
 Poi che la gente poverella crebbe\\
 dietro a costui, la cui mirabil vita\\
-meglio in gloria del ciel si canterebbe,\\!
+meglio in gloria del ciel si canterebbe,\mat{ci sono delle disquisizioni: l'interpretazione più probabile è che il suo eloquio sarebbe più opportuno fatto dagli angeli che in terra}\\!
 di seconda corona redimita\\
-fu per Onorio da l’Etterno Spiro\\
-la santa voglia d’esto archimandrita.\\!
+fu per Onorio\mat{succezsore di Innocenzo} da l’Etterno Spiro\\
+la santa voglia d’esto archimandrita.\mat{grecismo: ``pastore''}\\!
 E poi che, per la sete del martiro,\\
 ne la presenza del Soldan superba\\
 predicò Cristo e li altri che ‘l seguiro,\\!
-e per trovare a conversione acerba\\
+e per trovare a conversione acerba\mat{Fa riferimento a quando S. Francesco prova a
+portare la sua regola in Egitto. Dante parla come
+se Francesco fosse stato trattato male, ma
+storicamente non ne abbiamo alcuna prova.}\\
 troppo la gente e per non stare indarno,\\
 redissi al frutto de l’italica erba,\\!
-nel crudo sasso intra Tevero e Arno\\
-da Cristo prese l’ultimo sigillo,\\
+nel crudo sasso\mat{santuario del monte della Verna} intra Tevero e Arno\\
+da Cristo prese l’ultimo sigillo,\mat{mito dell'estigmate}\\
 che le sue membra due anni portarno.\\!
 Quando a colui ch’a tanto ben sortillo\\
 piacque di trarlo suso a la mercede\\
 ch’el meritò nel suo farsi pusillo,\\!
 a’ frati suoi, sì com’a giuste rede,\\
-raccomandò la donna sua più cara,\\
+raccomandò la donna sua più cara,\mat{povertà}\\
 e comandò che l’amassero a fede;\\!
-e del suo grembo l’anima preclara\\
+e del suo grembo l’anima preclara\mat{luminosa, illustre}\\
 mover si volle, tornando al suo regno,\\
 e al suo corpo non volle altra bara.\\!
 Pensa oramai qual fu colui che degno\\
-collega fu a mantener la barca\\
-di Pietro in alto mar per dritto segno;\\!
-e questo fu il nostro patriarca;\\
+collega\mat{San Domenico} fu a mantener la barca\\
+di Pietro\mat{Chiesa} in alto mar per dritto segno;\\!
+e questo fu il nostro patriarca\mat{San Domenico};\\
 per che qual segue lui, com’el comanda,\\
-discerner puoi che buone merce carca.\\!
-Ma ‘l suo pecuglio di nova vivanda\\
+discerner puoi che buone merce carca.\mat{meriti}\\!
+\end{verse}
+
+La chiusa di questo canto è dedicata ad una sorta di reprensione del proprio ordine (quello dei domenicani) da parte di San Tommaso. L'ordine viene paragonato alle pecore
+
+\begin{verse}
+\poemlines{3}
+\setverselinenums{124}{126}
+Ma ‘l suo pecuglio\mat{gregge (ordine Domenicano)} di nova vivanda\mat{beni terreni}\\
 è fatto ghiotto, sì ch’esser non puote\\
-che per diversi salti non si spanda;\\!
-e quanto le sue pecore remote\\
+che per diversi salti\mat{collinette} non si spanda;\\!
+e quanto le sue\mat{di S. Domenico} pecore remote\\
 e vagabunde più da esso vanno,\\
 più tornano a l’ovil di latte vòte.\\!
 Ben son di quelle che temono ‘l danno\\
 e stringonsi al pastor; ma son sì poche,\\
-che le cappe fornisce poco panno.\\!
+che le cappe\mat{mantelli che i domenicani portavano} fornisce poco panno.\\!
 Or, se le mie parole non son fioche,\\
 se la tua audienza è stata attenta,\\
 se ciò ch’è detto a la mente revoche,\\!
 in parte fia la tua voglia contenta,\\
 perché vedrai la pianta onde si scheggia,\\
 e vedra’ il corrègger che argomenta\\!
-"U’ ben s’impingua, se non si vaneggia"».\\!
+"U’ ben s’impingua, se non si vaneggia"\mat{frase che non era chiara a Dante nel canto precedente}».\\!
 \end{verse}
+
+\paragraph{Dante e Giotto} Dante, pur conoscendo Giotto, non vi fa riferimento durante il canto di San Francesco, anche se egli aveva dipinto l’intera vita del santo, nella basilica di Assisi.
+
+Questo perché Dante concentra la rappresentazione del santo sulla povertà e sul suo essere battagliero, Giotto nei suoi affreschi sembra quasi non tenere in conto il
+tema della povertà: solo un riquadro vi fa riferimento.
+
+Francesco, inoltre, aveva chiesto che non venissero fatte ricche decorazioni alle chiese, cosa non rispettata da Giotto.
 
 \chapter{Canto XII}
 
@@ -391,60 +501,125 @@ L’anima di Cacciaguida è colta da Dante come una pietra preziosa, che si trov
 Cacciaguida si colloca circa a metà della cantica, ma è centrale a livello dell’opera in quanto Dante viene a conoscenza di quale sia la sua missione: egli gli dirà che il suo viaggio deve avere una funzione utile anche nei confronti del resto dell’umanità; la sua esperienza deve essere raccontata al resto dell’umanità.
 Dante dirà a Cacciaguida che si trova in una situazione un po’ scomoda, anche perché molte persone viste nell’inferno hanno ancora parenti in vita; Cacciaguida gli dira di pubblicare tutto quello che ha. Gli dice anzi che colpire le persone più in vista ha una valenza maggiore.
 
-\vspace{1.5em}
+Cacciaguida ha partecipato alle crociate, ed
+è quindi una sorta di eroe. È un personaggio
+vicino a lui, ma allo stesso tempo
+abbastanza lontano per portare un contesto
+politico ed economico diverso da quello
+attuale; potrà fare un confronto con la
+Firenze dei suoi giorni. Questo personaggio
+(che è veramente esistito) ha consentito a
+Dante di scegliere una sorta di eroe,
+qualcuno che si è prodigato per la causa
+religiosa e che ha addirittura perso la vita.
+Egli si trova su una croce luminosa, tutta
+tempestata di croci luminose. Dante
+immagina che una delle pietre di questa
+croce, sul braccio orizzontale, scivoli giù
+formando la coda di una cometa, e si
+avvicini a lui. Egli necessita di una presentazione.
+
+\newpage
 \salt
 
 \begin{verse}
 \poemlines{3}
 \setverselinenums{85}{87}
-Ben supplico io a te, vivo topazio\\
+Ben supplico io a te, vivo topazio\mat{Cacciaguida è sottoforma di pietra su una croce}\\
 che questa gioia preziosa ingemmi,\\
 perché mi facci del tuo nome sazio».\\!
-«O fronda mia in che io compiacemmi\\
+«O fronda\mat{riferimento all'albero genealogico} mia in che io compiacemmi\mat{citazione evangelica: Cacciaguida è orgoglioso che suo nipote sia giunto lì: è l'atteggiamento del nonno che aspetta il nipotino}\\
 pur aspettando, io fui la tua radice»:\\
 cotal principio, rispondendo, femmi.\\!
 Poscia mi disse: «Quel da cui si dice\\
-tua cognazione e che cent’anni e piùe\\
+tua cognazione e che cent’anni\mat{è una imprecisione, significherebbe che questo bisnonno dovrebbe essere morto prima del 1200} e piùe\\
 girato ha ‘l monte in la prima cornice,\\!
 mio figlio fu e tuo bisavol fue:\\
 ben si convien che la lunga fatica\\
-tu li raccorci con l’opere tue.\\!
+tu li raccorci con l’opere tue.\mat{motivo tipico del purgatorio; le preghiere dei vivi}\\!
 Fiorenza dentro da la cerchia antica,\\
-ond’ella toglie ancora e terza e nona,\\
+ond’ella toglie ancora e terza e nona\mat{ora terza e ora nona},\\
 si stava in pace, sobria e pudica.\\!
 Non avea catenella, non corona,\\
 non gonne contigiate, non cintura\\
 che fosse a veder più che la persona.\\!
 Non faceva, nascendo, ancor paura\\
-la figlia al padre, che ‘l tempo e la dote\\
+la figlia al padre, che ‘l tempo e la dote\mat{Avere una figlia femmina significava preparare per loro
+delle doti per quando si dovevano sposare. All’epoca di
+Cacciaguida invece no.}\\
 non fuggien quinci e quindi la misura.\\!
-Non avea case di famiglia vòte;\\
-non v’era giunto ancor Sardanapalo\\
+Non avea case di famiglia vòte\mat{il lusso sfrenato ha portato a case di famiglia enormi};\\
+non v’era giunto ancor Sardanapalo\mat{re degli ASsiri, simbolo di lussuria, lusso e corruzione}\\
 a mostrar ciò che ‘n camera si puote.\\!
-Non era vinto ancora Montemalo\\
-dal vostro Uccellatoio, che, com’è vinto\\
+Non era vinto ancora Montemalo\mat{colle di Roma}\\
+dal vostro Uccellatoio\mat{simbolo di Firenze, che sta superando il monte romano}, che, com’è vinto\\
 nel montar sù, così sarà nel calo.\\!
 Bellincion Berti vid’io andar cinto\\
 di cuoio e d’osso, e venir da lo specchio\\
 la donna sua sanza ‘l viso dipinto;\\!
-e vidi quel d’i Nerli e quel del Vecchio\\
-esser contenti a la pelle scoperta,\\
+\end{verse}
+
+Bellincion Berti era un nobile fiorentino al tempo di Cacciaguida: anticamente, anche i nobili vivevano semplicemente, con cinture con la fibia in osso, le donne struccate
+
+\begin{verse}
+\poemlines{3}
+\setverselinenums{115}{117}
+e vidi quel d’i Nerli e quel del Vecchio\mat{illustri famiglie di parte guelfa}\\
+esser contenti a la pelle scoperta\mat{senza fodera di pelliccia},\\
 e le sue donne al fuso e al pennecchio.\\!
-Oh fortunate! ciascuna era certa\\
+Oh fortunate\mat{stata seppellita, ovvero dove sarebbe morta. Fa riferimento ai
+frequenti esili ai tempi di Dante, che hanno tolto la certezza del luogo
+di sepoltura.}! ciascuna era certa\\
 de la sua sepultura, e ancor nulla\\
-era per Francia nel letto diserta.\\!
+era per Francia nel letto diserta.\mat{nessuna era abbandonata per andare a commerciare in Francia}\\!
 L’una vegghiava a studio de la culla,\\
-e, consolando, usava l’idioma\\
+e, consolando, usava l’idioma\mat{linguaggio per bambini}\\
 che prima i padri e le madri trastulla;\\!
-l’altra, traendo a la rocca la chioma,\\
+l’altra, traendo a la rocca la chioma,\mat{non più adatta a fare figli}\\
 favoleggiava con la sua famiglia\\
 d’i Troiani, di Fiesole e di Roma.\\!
 Saria tenuta allor tal maraviglia\\
-una Cianghella, un Lapo Salterello,\\
-qual or saria Cincinnato e Corniglia.\\!
+una Cianghella\mat{donna dell'epoca di Dante, emblema dei tempi corrotti}, un Lapo Salterello\mat{giurista e politico corrotto},\\
+qual or saria Cincinnato e Corniglia.\mat{due personaggi della storia romana, simbolo di persone umili}\\!
+A così riposato, a così bello\\
+viver di cittadini, a così fida\\
+cittadinanza, a così dolce ostello,\\!
+Maria mi diè, chiamata in alte grida\mat{la madre di Cacciaguida invoca la Madonna durante il parto};\\
+e ne l’antico vostro Batisteo\mat{battistero}\\
+insieme fui cristiano e Cacciaguida.\\!
 \end{verse}
 
-\salt
+Le due terzine precedenti affermano che Cacciaguida sia nato a Firenze
+
+\begin{verse}
+\poemlines{3}
+\setverselinenums{136}{138}
+Moronto fu mio frate ed Eliseo;\\ 
+mia donna venne a me di val di Pado\mat{la famiglia viene da Ferrara},\\ 
+e quindi il sopranome tuo si feo.\mat{il nome ``Alighieri'' arriva dal nome della moglie di Cacciaguida}\\!
+Poi seguitai lo ‘mperador Currado;\\ 
+ed el mi cinse de la sua milizia\mat{mi fece cavaliere},\\ 
+tanto per bene ovrar li venni in grado.\\!
+\end{verse}
+
+Una delle ragioni per la scelta di questo avo è proprio il fatto che egli abbia partecipato alla \textbf{seconda crociata}, il cui organizzatore è \textbf{Corrado III}, nel 1147.
+
+La discussione nasce dal fatto che Corrado non sia mai passato dall'Italia prima dell'inizio della sua crociata: o Dante si è sbagliato, o Dante fa riferimento a Corrado II: questo è impossibile, perché le date non corrispondono con quelle di Cacciaguida.
+
+In verità, però, non è necessario che Corrado II passasse in Italia: Cacciaguida potrebbe averlo raggiunto fuori dall'Italia.
+
+\begin{verse}
+\poemlines{3}
+\setverselinenums{142}{144}
+Dietro li andai\mat{mi accodai a lui} incontro a la nequizia\\
+di quella legge\mat{religione musulmana} il cui popolo usurpa,\\
+per colpa d’i pastor\mat{Dante pensa che i papi (i pastori) non si diano sufficientemente pena per riconquistare la terra Santa}, vostra giustizia.\\!
+Quivi fu’ io da quella gente turpa\mat{musulmani}\\
+disviluppato dal mondo fallace,\\
+lo cui amor molt’anime deturpa;\\!
+e venni dal martiro a questa pace\mat{pace del Paradiso}».
+\end{verse}
+
 
 \chapter{Canto XVI}
 
@@ -456,142 +631,194 @@ Cacciaguida conclude dicendo di essere vissuto a Firenze con queste famiglie, in
 
 \chapter{Canto XVII}
 
+Questo è un canto centrale in tutta l'opera: Cacciaguida spiega la funzione dell'opera. L’opera deve avere una funzione per tutta l’umanità. Dante fa delle domande molto specifiche a Cacciaguida: gli chiede, ad esempio, come comportarsi con tutte quelle persone importanti che ha incontrato nell’ aldilà e che hanno ancora parenti in vita: Dante ha paura. Cacciaguida gli dice che è giusto che lui racconti le storie e gli esempi di persone conosciute, e che anzi, raccontasse le storie di persone sconosciute non farebbero impressione.
+Il suo racconto andrà a vantaggio di tutta l’umanità.
+Dante riceve una sorta di investitura da Cacciaguida
+
+Cacciaguida da a Dante ulteriori spiegazioni in merito al suo esilio. In questo canto si parlerà anche di Cangrande Della Scala: a lui è dedicato il paradiso.
+Gli Scaligeri erano una famiglia che avevano accolto Dante dopo il suo esilio.
+
 \begin{verse}
 \poemlines{3}
 Qual venne a Climené, per accertarsi\\
 di ciò ch’avea incontro a sé udito,\\
 quei ch’ancor fa li padri ai figli scarsi;\\!
 tal era io, e tal era sentito\\
-e da Beatrice e da la santa lampa\\
+e da Beatrice e da la santa lampa\mat{Cacciaguida}\\
 che pria per me avea mutato sito.\\!
+\end{verse}
+
+Dante fa riferimento al mito di \textbf{Fetonte}: secondo il mito, Fetonte si recò dalla madre Climene per sapere se era veramente figlio del Sole, paternità che era stata messa in dubbio da Epafo, uno dei giovinetti suoi compagni. Il padre, per rassicurarlo e dimostrargli che era realmente suo figlio, cedette alla richiesta del ragazzo di fargli guidare per un giorno, nel cielo, il suo carro trascinato da veloci cavalli, col quale ogni giorno recava la luce agli uomini. Fetonte però si dimostrò un auriga inesperto, ora alzandosi troppo, ora precipitando troppo in basso, così da provocare numerosi danni sulla Terra alle colture, disseccate, o ai fiumi, prosciugati: Giove, incollerito, lo inceneri allora con un fulmine (Ovidio, \titolo{Metamorfosi}, II, vv. 1 ss.); lo stesso mito è ricordato anche nel canto XVII dell'Inferno, vv. 106-108. Per comprendere il motivo per cui Dante si senta nello stato d'animo di Fetonte bisogna far riferimento alle numerose profezie udite contro di sé nel corso del suo viaggio.
+
+Dante paragona il suo stato d'animo a quello di Fetonte quando va a chiedere alla madre riguardo Apollo, in quanto Dante stesso sta per chiedere notizie riguardo all'esilio. C'è una differenza: Fetonte pagherà a caro prezzo il suo errore, mentre Dante, che ha sbagliato (si è ritrovato nella selva oscura), ha la possibilità di espiare le sue colpe: proprio da qui arriva il titolo \titolo{Divina Commedia}; ha un inizio tragico ma un finale lieto.
+\begin{verse}
+\poemlines{3}
+\setverselinenums{7}{9}
 Per che mia donna «Manda fuor la vampa\\
 del tuo disio», mi disse, «sì ch’ella esca\\
-segnata bene de la interna stampa;\\!
+segnata bene de la interna stampa\mat{Dante è trattato un po' come un bambino: Cacciaguida vuole sentire la sua voce};\\!
 non perché nostra conoscenza cresca\\
 per tuo parlare, ma perché t’ausi\\
-a dir la sete, sì che l’uom ti mesca».\\!
-«O cara piota mia che sì t’insusi,\\
+a dir la sete, sì che l’uom ti mesca\mat{questo verso è incentrato sulla metafora della sete (equiparata al desiderio) e del bere (equiparato alla soddisfazione del desiderio). L'espressione <<sì che l'uom ti mesca>> ha valore impersonale (``così come ti sia dato da bere'': <<mesca>> congiuntivo presente da ``mescere'' e l'<<uom>> equivalente al francese \straniero{om})}».\\!
+\end{verse}
+
+Qui Dante tira fuori la sua voglia di sapere al riguardo di alcune predizioni che gli sono state fatte, da Ciacco, da Farinata, etc\dots
+
+\begin{verse}
+\poemlines{3}
+\setverselinenums{13}{15}
+«O cara piota\mat{radice: riferimento alla metafora iniziale di Cacciaguida} mia che sì t’insusi\mat{vai in su, neologismo dantesco},\\
 che, come veggion le terrene menti\\
-non capere in triangol due ottusi,\\!
+non capere in triangol due ottusi\mat{cosa ovvia per le menti terrene (un triangolo non può avere due angoli ottusi)},\\!
 così vedi le cose contingenti\\
 anzi che sieno in sé, mirando il punto\\
-a cui tutti li tempi son presenti;\\!
+a cui tutti li tempi son presenti\mat{Dio};\\!
 mentre ch’io era a Virgilio congiunto\\
 su per lo monte che l’anime cura\\
 e discendendo nel mondo defunto,\\!
 dette mi fuor di mia vita futura\\
 parole gravi, avvegna ch’io mi senta\\
-ben tetragono ai colpi di ventura;\\!
+ben tetragono\mat{simbolo di stabilità} ai colpi di ventura\mat{Dante si sente ben pronto a sentire notizie anche dolorose sul suo futuro};\\!
 per che la voglia mia saria contenta\\
 d’intender qual fortuna mi s’appressa;\\
-ché saetta previsa vien più lenta».\\!
+ché saetta previsa vien più lenta\mat{se un uomo conosce il suo destino ha modo di prepararsi}».\\!
 Così diss’io a quella luce stessa\\
 che pria m’avea parlato; e come volle\\
 Beatrice, fu la mia voglia confessa.\\!
-Né per ambage, in che la gente folle\\
-già s’inviscava pria che fosse anciso\\
+Né per ambage\mat{Il responso di Cacciaguida non è come quello dell'antichitò, nebuloso e confuso, ma chiaro}, in che la gente folle\\
+già s’inviscava\mat{in auge nel medioveo, la sostanza cusata nella caccia} pria che fosse anciso\\
 l’Agnel di Dio che le peccata tolle,\\!
 ma per chiare parole e con preciso\\
-latin rispuose quello amor paterno,\\
+latin\mat{linguaggio preciso} rispuose quello amor paterno,\mat{metonimia: astratto per concreto}\\
 chiuso e parvente del suo proprio riso:\\!
-«La contingenza, che fuor del quaderno\\
-de la vostra matera non si stende,\\
+«La contingenza\mat{fatti reali}, che fuor del quaderno\\
+de la vostra\mat{uomini} matera non si stende,\\
 tutta è dipinta nel cospetto etterno:\\!
 necessità però quindi non prende\\
 se non come dal viso in che si specchia\\
 nave che per torrente giù discende.\\!
+\end{verse}
+
+\paragraph{Libero arbitrio} Questo è un punto cruciare: Dio ha già scritto tutto, quindi l'uomo non ha libero arbitrio? No, l'uomo può scegliere tra il o il male. Dio è come l'occhio che non fa nulla, e non fa cosa accadrà: guarda, ma sa già cosa accadrà.
+
+\begin{verse}
+\poemlines{3}
+\setverselinenums{43}{45}
 Da indi, sì come viene ad orecchia\\
 dolce armonia da organo, mi viene\\
 a vista il tempo che ti s’apparecchia.\\!
-Qual si partio Ipolito d’Atene\\
+Qual si partio Ipolito d’Atene\mat{Ippolito fu costretto dal padre Teseo a lasciare Atene e ad andare in esilio perché ingiustamente accusato dalla matrigna Fedra di averla insidiata: ella volle così vendicarsi del fatto che Ippolito non aveva voluto soddisfarne i desideri}\\
 per la spietata e perfida noverca,\\
 tal di Fiorenza partir ti convene.\\!
-Questo si vuole e questo già si cerca,\\
+Questo si vuole e questo già si cerca\mat{predispone},\\
 e tosto verrà fatto a chi ciò pensa\\
-là dove Cristo tutto dì si merca.\\!
-La colpa seguirà la parte offensa\\
-in grido, come suol; ma la vendetta\\
+là dove Cristo tutto dì si merca.\mat{viene mercanteggiato}\\!
+\end{verse}
+
+Le ultime due terzine sono una similitudine, tra l'esilio di Dante e quello di Ippolito.
+
+L'ultima terzina è una critica alla Chiesa e un riferimento a Bonifacio VIII: l'esilio di Dante, provocato da Bonifacio VIII, è inevitabile: quest'ultimo si occupa di questioni che non gli competono: ha mandto a Firenze Carlo di Valois, fratello del Re di Francia, per garantirsi la vittoria dei Guelfi neri
+
+\begin{verse}
+\poemlines{3}
+\setverselinenums{52}{54}
+La colpa seguirà la parte offensa\mat{la colpa è attribuita alla parte offesa (Dante)}\\
+in grido, come suol; ma la vendetta\mat{ci sono varie ipotesi: Bonifacio VIII, Corso Donati, calamità naturali}\\
 fia testimonio al ver che la dispensa.\\!
+\end{verse}
+
+\paragraph{Vendetta} (v. 53) chiarissimo il senso generale: la punizione di Dio costituirà la prova definitiva della falsità della calunnia, di cui Dante e la sua parte sono stati oggetto, ma il significato letterale non è altrettanto chiaro. Sono state proposte varie interpretazioni, di cui la più semplice sembra la più accettabile: la punizione verrà e sarà testimonianza certa di verità, perché viene da Dio, e sarà quindi come se la dispensasse la verità stessa. ``Vendetta'' ha, come quasi sempre in Dante, il senso di giusta punizione. Ci si è spesso chiesti a quale punizione potesse il poeta alludere, e si è pensato alla triste fine di Bonifacio VIII o alla terribile morte di Corso Donati, nel 1308, o ad alcune calamità accadute a Firenze nel 1303 (il crollo del ponte alla Carraia, un gravissimo incendio ecc.).
+
+\begin{verse}
+\poemlines{3}
+\setverselinenums{55}{57}
 Tu lascerai ogne cosa diletta\\
 più caramente; e questo è quello strale\\
 che l’arco de lo essilio pria saetta.\\!
 Tu proverai sì come sa di sale\\
 lo pane altrui, e come è duro calle\\
-lo scendere e ‘l salir per l’altrui scale.\\!
+lo scendere e ‘l salir per l’altrui scale.\mat{vivere dipendendo da altri}\\!
 E quel che più ti graverà le spalle,\\
-sarà la compagnia malvagia e scempia\\
+sarà la compagnia\mat{la compagnia è ingrata} malvagia e scempia\mat{fa riferimento a quello che è successo a Dante dopo l'esilio, quando cerca di rientrare in Firenze con gli esiliati fiorentini}\\
 con la qual tu cadrai in questa valle;\\!
 che tutta ingrata, tutta matta ed empia\\
 si farà contr’a te; ma, poco appresso,\\
-ella, non tu, n’avrà rossa la tempia.\\!
-Di sua bestialitate il suo processo\\
+ella, non tu, n’avrà rossa la tempia.\mat{Battaglia della lastra}\\!
+\end{verse}
+
+Nelle ultime due terzine si allude ai fuoriusciti Bianchi e ai Ghibellini, con i quali Dante entrerà in rotta soprattutto a causa dei loro dissennati tentativi di rientrare in patria; questo atteggiamento del poeta sarebbe stato scambiato per una sorta di tradimento: da qui l'ostilità dei vecchi compagni di partito. Per quanto riguarda il verso 66, sembra che Dante si riferisca la battaglia della Lastra (presso Firenze), quando nel 1304 i fuoriusciti tentarono per la mente di rientrare in patria, e ad altri analoghi insuccessi.
+
+\begin{verse}
+\poemlines{3}
+\setverselinenums{67}{69}
+Di sua bestialitate\mat{condotta dissennata} il suo processo\mat{conseguenze}\\
 farà la prova; sì ch’a te fia bello\\
 averti fatta parte per te stesso.\\!
-Lo primo tuo refugio e ‘l primo ostello\\
+Lo primo tuo refugio\mat{sotto Bartolomeo della Scala} e ‘l primo ostello\\
 sarà la cortesia del gran Lombardo\\
-che ‘n su la scala porta il santo uccello;\\!
+che ‘n su la scala porta il santo uccello;\mat{Cacciaguida sta descrivendo a Dante le sue condizioni da Esiliato; mentre Dante scrive, si trova a Verona, per la seconda volta (la prima era stata subito dopo l'esilio), sotto Cangrande della Scala}\\!
 ch’in te avrà sì benigno riguardo,\\
 che del fare e del chieder, tra voi due,\\
-fia primo quel che tra li altri è più tardo.\\!
-Con lui vedrai colui che ‘mpresso fue,\\
-nascendo, sì da questa stella forte,\\
+fia primo quel che tra li altri è più tardo.\mat{gran gentilezza di Bartolomeo: Dante non dovrà mai chiedere}\\!
+Con lui vedrai colui\mat{Cangrande; inizio al suo elogio, doversolo} che ‘mpresso fue,\\
+nascendo, sì da questa stella forte,\mat{stella del V cielo, ``spiriti militanti'': probabilmente non c'è nessun riscontro storico oggettivo}\\
 che notabili fier l’opere sue.\\!
 Non se ne son le genti ancora accorte\\
-per la novella età, ché pur nove anni\\
+per la novella età, ché pur nove anni\mat{egli è nato solo da 9 anni quando è ambientato il paradiso}\\
 son queste rote intorno di lui torte;\\!
-ma pria che ‘l Guasco l’alto Arrigo inganni,\\
+ma pria che ‘l Guasco l’alto Arrigo inganni,\mat{riferimento alla discesa dell'imperatore in Italia (1312)}\\
 parran faville de la sua virtute\\
-in non curar d’argento né d’affanni.\\!
+in non curar d’argento né d’affanni.\mat{assomiglia al Veltro}\\!
 Le sue magnificenze conosciute\\
 saranno ancora, sì che ‘ suoi nemici\\
-non ne potran tener le lingue mute.\\!
+non ne potran tener le lingue mute.\mat{altro avvenimento senza particolare riferimento storico}\\!
 A lui t’aspetta e a’ suoi benefici;\\
 per lui fia trasmutata molta gente,\\
-cambiando condizion ricchi e mendici;\\!
+cambiando condizion ricchi e mendici;\mat{è un elogio molto vago: Dante avverte l'impossibilità di esprimere tutta la grandezza di Cangrande e allora dopo tutte le espressioni auliche ricorre alla reticenza}\\!
 e portera’ne scritto ne la mente\\
 di lui, e nol dirai»; e disse cose\\
 incredibili a quei che fier presente.\\!
 Poi giunse: «Figlio, queste son le chiose\\
-di quel che ti fu detto; ecco le ‘nsidie\\
+di quel che ti fu detto\mat{tutte le varie predizioni precedenti}; ecco le ‘nsidie\\
 che dietro a pochi giri son nascose.\\!
 Non vo’ però ch’a’ tuoi vicini invidie,\\
-poscia che s’infutura la tua vita\\
+poscia che s’infutura\mat{bellissimo neologismo} la tua vita\\
 vie più là che ‘l punir di lor perfidie».\\!
 Poi che, tacendo, si mostrò spedita\\
-l’anima santa di metter la trama\\
+l’anima santa di metter la trama\mat{inizia la metafora della tessitura}\\
 in quella tela ch’io le porsi ordita,\\!
 io cominciai, come colui che brama,\\
 dubitando, consiglio da persona\\
-che vede e vuol dirittamente e ama:\\!
+che vede e vuol dirittamente e ama:\mat{momento clue dell'opera: viene mostrata la funzione}\\!
 «Ben veggio, padre mio, sì come sprona\\
 lo tempo verso me, per colpo darmi\\
 tal, ch’è più grave a chi più s’abbandona;\\!
-per che di provedenza è buon ch’io m’armi,\\
+per che di provedenza\mat{prudenza} è buon ch’io m’armi,\\
 sì che, se loco m’è tolto più caro,\\
-io non perdessi li altri per miei carmi.\\!
-Giù per lo mondo sanza fine amaro,\\
-e per lo monte del cui bel cacume\\
+io non perdessi li altri per miei carmi.\mat{gli altri luoghi che potranno accogliermi per la mia poesia}\\!
+Giù per lo mondo sanza fine amaro,\mat{inferno}\\
+e per lo monte\mat{purgatorio} del cui bel cacume\mat{cima}\\
 li occhi de la mia donna mi levaro,\\!
 e poscia per lo ciel, di lume in lume,\\
 ho io appreso quel che s’io ridico,\\
-a molti fia sapor di forte agrume;\\!
-e s’io al vero son timido amico,\\
+a molti fia sapor di forte agrume;\mat{daranno fastidio: Dante si chiede cosa fare di quello che ha visto}\\!
+e s’io al vero son timido amico,\mat{poco sincero}\\
 temo di perder viver tra coloro\\
-che questo tempo chiameranno antico».\\!
+che questo tempo chiameranno antico\mat{perderò l'eternità}».\\!
 La luce in che rideva il mio tesoro\\
 ch’io trovai lì, si fé prima corusca,\\
 quale a raggio di sole specchio d’oro;\\!
 indi rispuose: «Coscienza fusca\\
 o de la propria o de l’altrui vergogna\\
-pur sentirà la tua parola brusca.\\!
+pur sentirà la tua parola brusca.\mat{investitura poetica da parte di Cacciaguida: qui la tematica è il valore provetico della Commedia, con il suo messaggio che dante vuole portare all'umanità}\\!
 Ma nondimen, rimossa ogne menzogna,\\
 tutta tua vision fa manifesta;\\
-e lascia pur grattar dov’è la rogna.\\!
+e lascia pur grattar dov’è la rogna.\mat{esempio di plurilinguismo Dantesco}\\!
 Ché se la voce tua sarà molesta\\
 nel primo gusto, vital nodrimento\\
-lascerà poi, quando sarà digesta.\\!
+lascerà poi, quando sarà digesta.\mat{sembra la prima immagine del convivio}\\!
 Questo tuo grido farà come vento,\\
-che le più alte cime più percuote;\\
+che le più alte cime più percuote;\mat{sottolinea il fatto che sta parlando di persone note e importanti}\\
 e ciò non fa d’onor poco argomento.\\!
 Però ti son mostrate in queste rote,\\
 nel monte e ne la valle dolorosa\\
