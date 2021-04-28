@@ -57,3 +57,4 @@
 \contentsline {chapter}{Canto XXXII}{65}{chapter*.56}% 
 \contentsline {paragraph}{Riassunto}{65}{paragraph*.57}% 
 \contentsline {chapter}{Canto XXXIII}{67}{chapter*.58}% 
+\contentsline {paragraph}{Riassunto}{67}{paragraph*.59}% 
