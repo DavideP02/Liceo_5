@@ -1,4 +1,5 @@
 # 30 apr 2021 - Le avanguardie e il futurismo
+
 **Avanguardia** è un termine che ha accezioni varie, ed è usato in diversi ambiti: nell’esercito sono quei soldati che vanno avanti, che osano di più e rischiano di più.
 È qualcosa che guarda avanti, che è proiettata nel futuro; è presente anche il tema del coraggio. L’idea del coraggio è estremamente presente nel **futurismo**.
 
@@ -6,6 +7,7 @@ Nell’ambito artistico e letterario indica quei movimenti che si sviluppano agl
 In ambito storico si parla di avanguardie facendo differimento a quei gruppi che si pongono a capo di movimenti rivoluzionari.
 
 Le caratteristiche di questi movimenti sono:
+
 1. rottura con il passato e con la tradizione: questo elemento caratterizza tutti i movimenti di avanguardia
 2. gli appartenenti a questi gruppi tendevano ad agire in gruppo; anche nelle manifestazioni letterarie e artistiche agivano in gruppo, gruppi di amici
 3. i manifesti: più volte nel passato i movimenti sono individuati da critici posteriori, mentre i movimenti di questo periodo sono caratterizzati da un manifesto, necessario per interpretare e leggere le opere di questi artisti
@@ -19,7 +21,9 @@ Tra questi si distinguono autori come Palazzeschi, che inizia la sua attività a
 Alla vigilia del primo conflitto mondiale, Palazzeschi (pacifista) si dissocia programmaticamente dai futuristi, e inizia una sua produzione letteraria indipendente. Scrive *Le sorelle Materassi*.
 
 ## Futurismo
+
 I programmi del futurismo sono:
+
 - distruzione del passato
 - proiezione del futuro
 - inno alla velocità: 
