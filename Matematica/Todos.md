@@ -1,7 +1,4 @@
 - 2021 02 19: Copiare in latex
-- 2021 03 01: appunti lucrezia  
-- 2021 03 01: registrazione classroom
-- 2021 03 03
 - 2021 03 05
 - 2021 03 08
 - 2021 03 15
