@@ -14,7 +14,7 @@ Oreste è figlio di Agamennone, ed è piccolo quando avviene l’omicidio del pa
 
 Il signor Paleari spiega la differenza tra Oreste e Amleto. Oreste è un eroe tragico, senza ripensamento, mentre Amleto è un eroe moderno, con molti ripensamenti.
 
-==**MANCA STRAPPO DEL CIELO DI CARTA + lanterninosofia**==
+MANCA ==**STRAPPO DEL CIELO DI CARTA + lanterninosofia**==
 
 - **righe 1-19**:  L’identità è falsa, ma è il parametro che ci consente di sapere cosa dobbiamo fare e cosa dobbiamo essere. Se si crea lo strappo nel cielo di carta (che è un po’ come il treno del treno ha fischiato) si rompe la forma, e l’individuo non sa più come fare.
 Nel mondo moderno alcune teorie hanno messo in crisi l’uomo moderno, distruggendo le sue certezze

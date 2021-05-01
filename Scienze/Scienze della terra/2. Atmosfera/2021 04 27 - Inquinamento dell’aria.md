@@ -15,7 +15,7 @@ Questo porta ad una maggiore evaporazione d’acqua, che forma ad una maggiore p
 
 Inoltre una copertura nuvolosa così spessa ed elevata causa dei fenomeni atmosferici molto più disastrosi da un punto di vista ambientale. 
 
-==MANCA cicloni==
+MANCA ==cicloni==
 
 ## Piogge acide
 Le anidridi come gas di scarico, unendosi all’acqua, formano degli acidi.

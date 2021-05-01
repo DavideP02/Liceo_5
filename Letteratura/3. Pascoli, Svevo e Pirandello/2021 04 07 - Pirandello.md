@@ -32,7 +32,7 @@ La moglie sarà ricoverata dopo questo episodio, e non uscirà mai più dall'osp
 Nel 1910 Pirandello si era avvicinato al mondo del teatro.
 Qualche anno dopo, nel 1914, dopo il delitto Matteotti, si iscrive al partito fascista.
 
-==**MANCA qualcosa**==
+MANCA qualcosa
 
 Il rapporto con Mussolini è molto ambiguo. Nel 1915 Pirandello diventa il direttore del teatro d'arte di Roma: lo stato investa 250 mila lire per far partire questo progetto, ma 50 mila lire furono sborsati direttamente da Mussolini; è probabile che l'adesione al fascismo di Pirandello sia molto opportunistica, perché Mussolini finanziava il suo progetto teatrale, a cui teneva molto.
 

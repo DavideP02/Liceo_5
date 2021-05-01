@@ -4,7 +4,7 @@
 Her literary technique was based on the so called **moments of being**: they are the equivalent of Joyce’s epiphany, they are moments of intensity, perception or vision which illuminate our lives
 
 Her task as a writer is taking an ordinary mind on an ordinary day and examine the myriad of impression that the mind receives form the outer world.
-> ==MANCA citazione slide 5==  
+> MANCA citazione slide 5
 
 ## Mrs Dalloway
 The actions of Mrs Dalloway is limited to the events of a single day in central London. The protagonist is Clarissa Dalloway: a middle aged woman, the wife of a politician, and she belongs to the upper-class.
@@ -29,16 +29,16 @@ Even if their lives were completely different, they were absolutely linked. Sept
 ### T: *Clarissa and Septimus*
 - ==p. 268==: TODO estratto su GoodNotes
 
-==TODO Aggiungere divisione slide 9==
+TODO Aggiungere divisione slide 9
 
 One of the most interesting aspect in reading Woolf’s novel is how she treats time. The **treatment of time** is a fundamental concept that characterised her style.
 
 This extract is from the beginning of the novel: as she walks around London, her physical trajectory towards the flower shop is constantly interrupted by the interior tunnels that open up in her mind. Woolf is brilliantly able to portray the interior time and the contrast between the interior time (subjective) and the exterior time (objective)
-==MANCA un pezzo (slide 10 + altri appunti)==
+MANCA un pezzo (slide 10 + altri appunti)
 
-The chimes of Big Ben represents chronological time, which contrasts her interior time. ==MANCA==
+The chimes of Big Ben represents chronological time, which contrasts her interior time. MANCA
 
-==MANCA PARTE INIZIALE SU SEPTIMUS SMITH==
+MANCA PARTE INIZIALE SU SEPTIMUS SMITH
 As he hears the explosion of this tyre, he experiences a series of feelings, such as **alienation**, and since the rumor reminded him of the war, he totally **panics**: he was paralysed in the middle of the street.
 He also feels **guilty** because he thinks that he is the one responsible for the traffic congestion.
 As his wife tries to bring him back to reality, he became very **angry** to her, and then he feels **madness**, since he says that he will kill himself.
@@ -53,6 +53,6 @@ The extract is rich in dashes, semicolons, questions marks, exclamations, very s
 
 This is taken from the very end of the novel: all the guests have finally arrived to the party, but the festive atmosphere is ruined by the news of Septimus’ suicide.
 
-Semptimus’ death is described through a series of expressions (==TODO aggiungere expressions da slide 14==) that emphasise the **brutality of the act**.
+Semptimus’ death is described through a series of expressions ( TODO ==aggiungere expressions da slide 14==) that emphasise the **brutality of the act**.
 
-==TODO aggiungere slide 15== + She understands that he payed to much attention to appearance and to social life
+TODO ==aggiungere slide 15== + She understands that he payed to much attention to appearance and to social life

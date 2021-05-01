@@ -23,7 +23,7 @@ Arrivano in una cittadina, e qui il loro comportamento inizia a destare la curio
 Per comunicare le due sono costrette ad usare un secchio per scambiarsi bigliettini e oggetti.
 La moglie non parla mai.
 Ad un certo punto in una casa del paese giungono una volta la suocera e una volta il marito, e ognuno offre una spiegazione. 
-==TODO aggiungere le due differenti versioni e completare trama==
+== TODO aggiungere le due differenti versioni e completare trama==
 Si crea un’attesa incredibile per sapere qual è la verità. Nell’ultima scena compare la moglie, che si presenta davanti alla folla curiosissima, e dice che lei è “chi volete che io sia”.
 Questo è l’emblema della pluralità prospettica.
 

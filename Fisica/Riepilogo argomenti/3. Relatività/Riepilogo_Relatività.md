@@ -205,7 +205,7 @@ Questo viene chiamato paradosso, ovvero qualcosa che contrasti il senso comune.
 
 Il paradosso consiste anche nel fatto che come uno viaggia rispetto all’altro con velocità di $0,98c$, anche l’altro fa lo stesso. Questo problema è risolto prendendo in considerazione il fatto che il gemello subisce una doppia accelerazione, una per decollare ed una per atterrare, ed essi non sono quindi in moto relativo costantemente alla stessa velocità.
 
-==**TODO completare tutto**==
+TODO ==**completare tutto**==
 
 ## Contrazione delle lunghezze
 
