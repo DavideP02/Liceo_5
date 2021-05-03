@@ -1,27 +1,8 @@
  TODO Caricare questi file su youtube
-(fino a letteratura del 26 marzo
+(fino a letteratura del 26 marzo)
 
 - /Divina Commedia/2021 03 01.mp4 **OKAY**
-- /Divina Commedia/2021 03 19 - Canto XXXIII.m4a
-- /Filosofia/8. Kierkegaard/Audio Licia/Audio 1.ogg
-- /Filosofia/8. Kierkegaard/Audio Licia/Audio 2.ogg
-- /Filosofia/8. Kierkegaard/Audio Licia/Audio 3.ogg
-- /Filosofia/8. Kierkegaard/Audio Licia/Audio 4.ogg
-- /Filosofia/8. Kierkegaard/Audio Licia/Audio 5.ogg
-- /Filosofia/8. Kierkegaard/Audio Licia/Audio 6.ogg
-- /Filosofia/9. Feuerbach/2021 03 25 - Feuerbach.registrazione.m4a
-- /Inglese/7.ThomasHardy/2021 01 14 - Thomas Hardy.registrazione.m4a
 - /Inglese/9.Modernism/2021 02 12 - The Nigro Movement.m4a
-- /Inglese/10.Aestheticism/2021 02 23 - Aestheticism.registrazione.1.m4a
-- /Inglese/10.Aestheticism/2021 02 23 - Aestheticism.registrazione.2.mp3
-- /Inglese/10.Aestheticism/2021 02 25 - Decadence.registrazione.m4a
-- /Inglese/11.OscarWilde/2021 02 25 - Oscar Wilde.registrazione.m4a
-- /Inglese/11.OscarWilde/2021 03 11 - Oscar Wilde.registrazione.m4a
-- /Inglese/12.WilliamButlerYeats/2021 03 16 - William Butler Yeats.registrazione.m4a
-- /Inglese/12.WilliamButlerYeats/2021 03 25 - William Butler Yeats.registrazione.m4a
-- /Letteratura/2. Italia postunitaria/2020 12 04 - Carducci.m4a
-- /Letteratura/2. Italia postunitaria/2020 12 11 - Verga.m4a
-- /Letteratura/2. Italia postunitaria/2020 12 14.1 - Verga.m4a
 - /Letteratura/2. Italia postunitaria/2020 12 14.2 - Verga.mp4 **OKAY**
 - /Letteratura/2. Italia postunitaria/2020 12 16 - Verga.mp4 **OKAY**
 - /Letteratura/2. Italia postunitaria/2020 12 18 - Verga.mp4 **OKAY**
