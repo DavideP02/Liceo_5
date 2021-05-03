@@ -43,12 +43,12 @@ The term **Decadence** is often associated with aestheticism.
 
 This word was initially to descrive some French writers of the mid 19th century; in particular decadence is associated to the poetry of
 - Verlaine
-- Mallarmé
+- MallarmÃ©
 - Rimbaud
 - Baudelaire
 - Huysmans
 
-The term decadence is also associated to the novel "À Rebours" by Huysmans. The protagonist is Des Esseintes, and he is a decadent aristocrat; he has an obsession with sensual experiments and the novel is based on his taste for luxury and excess.
+The term decadence is also associated to the novel "Ã€ Rebours" by Huysmans. The protagonist is Des Esseintes, and he is a decadent aristocrat; he has an obsession with sensual experiments and the novel is based on his taste for luxury and excess.
 
 Aestheticism and decadence share a set of interlinked qualities such as
 - the notion of intense refinement
