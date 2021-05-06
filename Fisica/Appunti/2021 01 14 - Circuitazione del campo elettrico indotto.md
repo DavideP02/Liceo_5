@@ -8,7 +8,7 @@ TODO Fisica: completare appunti dal libro
 ## Libro
 
 - Not Found: Circuitazione del campo elettrico indotto
-- p. 45-49: Mutua induzione e autoinduzione
+- p. 45-49: Mutua induzione e autoinduzione: no flusso concatenato p. 47
 
 ## Circuitazione del campo elettrico indotto
 
@@ -16,7 +16,7 @@ TODO Fisica: completare appunti dal libro
 
 Consideriamo un profilo di metallo, a forma di U, con tre lati rigidi ed un lato libero di muoversi con velocità $\vec{v}$
 
-== TODO Fisica: creare immagine==
+TODO ==Fisica: creare immagine==
 
 Si genera un campo magnetico all'interno di questo profilo. Il campo magnetico attraversa la regione di spazio centrale.
 
@@ -54,9 +54,9 @@ Questo implica che il campo elettrico indotto ha caratteristiche molto diverse d
 
 Si abbia un circuito come indicato, con tra i due solenoidi un nucleo di ferro dolce.
 
-== TODO Fisica: aggiungere immagine figura 10 p.45==
+TODO ==Fisica: aggiungere immagine figura 10 p.45==
 
-== TODO Fisica: aggiungere mutua induttanza sul libro==
+TODO ==Fisica: aggiungere mutua induttanza sul libro==
 
 $$B_1=\frac{\mu_0\mu_rN1i_1}{l}$$
 
