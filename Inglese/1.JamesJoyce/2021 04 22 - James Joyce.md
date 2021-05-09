@@ -15,14 +15,14 @@ This girl embodies these concepts.
 
 When Stephen looks at the girl, he experiences an **epiphany**; he feels very excited and in this moment he expresses his wish to break free from all the constriction imposed by the Catholic Church and by the town of Dublin.
 
-There are some negative expression related to his boyhood ( TODO ==segnare da slide 4==).
+There are some negative expression related to his boyhood (TODO ==segnare da slide 4==).
 
 These images convey the squalor of Stephen’s life.
 
 ### Style
 There is a third person narrator, while the POV is Stephen’s.
 
-The language is Stephen’s language, and in order to reproduce Stephen’s thoughts Joyce uses different expression, and **free direct speech** ( TODO aggiungere esempi ==slide 5==)
+The language is Stephen’s language, and in order to reproduce Stephen’s thoughts Joyce uses different expression, and **free direct speech** (TODO aggiungere esempi ==slide 5==)
 
 - **line 43-44**: this sentence reflects Stephen’s artistic creed
 
