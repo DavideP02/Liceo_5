@@ -237,15 +237,18 @@ heightrounded}
 \usepackage{calc}% so we can do inline math within \setlength
 % Set the head width to be the full page width
 \newlength{\oddmarginwidth}
-\setlength{\oddmarginwidth}{22mm+\hoffset+\oddsidemargin}
+\setlength{\oddmarginwidth}{15mm+\hoffset+\oddsidemargin}
 \newlength{\evenmarginwidth}
-\setlength{\evenmarginwidth}{\evensidemargin+22mm}
+\setlength{\evenmarginwidth}{\evensidemargin+15mm}
 \fancyhfoffset[LO,RE]{\oddmarginwidth}
 \fancyhfoffset[LE,RO]{\evenmarginwidth}
 
-    \renewcommand{\headrulewidth}{0.75pt}
-    \renewcommand{\footrulewidth}{0.75pt}
-    \fancyhead{}
+    \renewcommand{\headrulewidth}{0.5pt}
+    \renewcommand{\footrulewidth}{0.5pt}
+    \fancyhead[L]{\hspace{2em}\includegraphics[width=4cm]{1}\vspace{1.4cm}}
+    \fancyhead[R]{\includegraphics[width=1.5cm]{2}\hspace{2em}\vspace{1.4cm}}
+    \fancyhead[C]{{\Large Liceo Classico Scientifico Musicale "\textbf{Isaac Newton}"}\\ \vspace{0.3em}%
+   {\large via Paleologi 22, Chivasso (TO)}\vspace{1em}}
 	\fancyfoot[C]{\thepage}
 	\fancyfoot[R]{\textbf{Elaborati Esame di Stato 20-21}}
 	\geometry{top=5.5cm, left=125pt, right=125pt, headsep=11.47mm, headheight=32.82mm, footskip=23.73mm,%
@@ -288,13 +291,26 @@ heightrounded}
 
 \begin{document}
 
-\maketitle\thispagestyle{fancy}
+\begin{titlepage} % pagina del titolo
+\thispagestyle{fancy}
+\begin{center}
+    \null
+    \vfill
+    {\huge Analisi numerica e applicazioni}\\
+    \vspace{3em}
+    {\large Davide Peccioli}\\
+    \vspace{1em}
+    {\large \textbf{Classe 5\textsuperscript{a}\,H}}
+    \fancyfoot[C]{}
+    \vfill
+\end{center}
+\end{titlepage}
+
+\fancyfoot[C]{\thepage}
 
 \chapter{Lorem Ipsum}\thispagestyle{fancy}
 
 \setcounter{page}{1}
 \lipsum
-\newpage
-\layout
 
 \end{document}
