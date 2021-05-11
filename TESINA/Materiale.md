@@ -1,0 +1,1 @@
+- [Materiale 1](http://www.dmf.unicatt.it/~degiova/lincei/equazioni_di_terzo_e_quarto_grado.pdf)
