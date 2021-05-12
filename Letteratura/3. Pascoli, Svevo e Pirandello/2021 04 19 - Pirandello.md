@@ -1,7 +1,5 @@
 # 19 apr 2021 - Pirandello
 
-TODO sistemare appunti da _altri_
-
 ## T: _Lo strappo nel cielo di carta_
 - ==p. 926==
 - lette le righe segnate + il resto da soli
@@ -14,11 +12,13 @@ Oreste è figlio di Agamennone, ed è piccolo quando avviene l’omicidio del pa
 
 Il signor Paleari spiega la differenza tra Oreste e Amleto. Oreste è un eroe tragico, senza ripensamento, mentre Amleto è un eroe moderno, con molti ripensamenti.
 
-MANCA ==**STRAPPO DEL CIELO DI CARTA + lanterninosofia**==
+Il signor Paleari descrive come sarà il teatrino delle marionette e dice "se ci fosse uno strappo in questo cielo di carta le marionette non saprebbero più cosa fare". Il teatrino è un mondo fittizio,  ma le marionette non lo sanno, per le marionette è vero.
+Questa immagine serve al Paleari per spiegare la sua teoria della **lanterninosofia**; la lanterna costituisce i grandi ideali come religione, patria, legge... se questi ideali vanno in crisi, quindi se lanterna si spegne, l'individuo non ha più punti di riferimento e non sa più cosa fare.
+Secondo Pirandello il primo momento in cui ogni ideale va in crisi nella storia dell'uomo è la scoperta copernicana, gli uomini non hanno più punti di riferimento certi e quindi vanno in crisi.
 
 - **righe 1-19**:  L’identità è falsa, ma è il parametro che ci consente di sapere cosa dobbiamo fare e cosa dobbiamo essere. Se si crea lo strappo nel cielo di carta (che è un po’ come il treno del treno ha fischiato) si rompe la forma, e l’individuo non sa più come fare.
 Nel mondo moderno alcune teorie hanno messo in crisi l’uomo moderno, distruggendo le sue certezze
-- **righe 44-58**:Il lanternino è un ideale in miniatura, quello della persona, individuali.
+- **righe 44-58**: Il lanternino è un ideale in miniatura, quello della persona, individuali.
 Pirandello ci parla di un’ombra nera che fa paura, che potrebbe essere la morte o lo stato che c’è prima di nascere.
 Se si spegne il lanternino, noi abbiamo paura di questo nero, ma non dovrebbe essere così, perché noi il nero lo vediamo solo perché abbiamo acceso il lanternino.
 - **righe 82-83**

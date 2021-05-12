@@ -46,9 +46,9 @@ L'opera risente moltissimo di questo contesto, e tutta l'opera di Pirandello è 
 Il tema della pazzia in questo romanzo non è rappresentato direttamente, ma è rappresentata come qualcosa che aliena e che estranea, e che forse anche preserva.
 Mattia Pascal è un ==forestiere della vita==
 
-==**TRAMA**==
+MANCA ==**TRAMA**==
 
-Quando la forma si rompe, ne sgorga la vita. Mattia Pascal decide di godersi la vita: inizia a viaggiare MANCA ==**qualcosa**==
+Quando la forma si rompe, ne sgorga la vita. Mattia Pascal decide di godersi la vita: inizia a viaggiare.
 Mattia Pascal incorre in un errore: non è ancora filosofo, come il protagonista di _Uno, Nessuno e Centomila_; liberatosi della forma, ad un certo punto ne sente la necessità. Si crea una **forma fittizia**.
 Inizia con una serie di modifiche che partono dall'aspetto esteriore: si taglia la barba, etc etc.
 Poi si costruisce una nuova identità: si chiamerà Adriano Meis e si costruisce un passato fittizio.
