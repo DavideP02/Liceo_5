@@ -1,1 +1,2 @@
 - [Materiale 1](http://www.dmf.unicatt.it/~degiova/lincei/equazioni_di_terzo_e_quarto_grado.pdf)
+- [Materiale 2](https://fac.ksu.edu.sa/sites/default/files/numerical_analysis_9th.pdf)
