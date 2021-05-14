@@ -26,7 +26,19 @@ Quando era innocente per la società era colpevole, mentre quando è davvero col
 ## I vecchi e i giovani
 - ==p. 910==
 
-==**TRAMA**==
+È un romanzo sociale di ambientazione siciliana. È la Sicilia dei sanguinosi moti dei Fasci siciliani del 1893, sconvolta dalle lotte di classe, con i clericali da un lato, tesi ad impedire il consolidamento del nuovo regime liberale, e la classe dirigente dall'altro, che disperde nel disordine morale i sacrifici e i meriti acquisiti.
+
+Più che casi individuali, i personaggi del romanzo interpretano i diversi aspetti della complessa situazione storica che stanno vivendo.
+
+Così il principe don Ippolito di Colimbetra, fedele suddito borbonico; don Flaminio Salvo, esponente della nuova borghesia capitalista; Roberto Auriti, glorioso garibaldino che si spegne in un'esistenza amorfa; il giovane principe Gerlando di Colimbetra, sostenitore delle nuove idee e per questo costretto all'esilio.
+
+I personaggi rappresentano un contrasto di concezioni e di ideali che si risolve nel contrasto tra due generazioni: quella che ha fatto l'Unità e che vede perduta l'eredità del Risorgimento, e quella più giovane, che nel gretto conservatorismo dei padri scorge solo la difesa di interessi reazionari.
+
+Ne I vecchi e i giovani l'autore esprime un giudizio storico molto severo sul processo di riunificazione dell'Italia e dello stato nato da essa. Non a caso Carlo Salinari, analizzando questo romanzo, parla di tre “fallimenti collettivi” riferendosi al Risorgimento, come mancato moto generale di rinnovamento dell'Italia; all'unità, come fallito strumento di liberazione e di sviluppo delle zone più arretrate e in particolare della Sicilia e dell'Italia meridionale; e al socialismo, che avrebbe potuto essere la ripresa del movimento risorgimentale. Questi fallimenti si sovrappongono poi a quelli “individuali” «dei vecchi che non hanno saputo passare dagli ideali alla realtà e si trovano a essere responsabili degli scandali, della corruzione e del malgoverno dei giovani».
+
+Nell'ultimo capitolo della seconda parte del romanzo, don Cosmo, il fratello intellettuale di Ippolito, fornisce la chiave di lettura degli avvenimenti e il punto di vista di Pirandello, nel corso della conversazione con Gerlando:
+
+> «Una cosa è triste, cari miei: aver capito il gioco! Dico il gioco di questo demoniaccio beffardo che ciascuno di noi ha dentro e che si spassa a rappresentarci di fuori, come realtà, ciò che poco dopo egli stesso ci scopre come una nostra illusione, deridendoci degli affanni che per essa ci siamo dati, e deridendoci anche, come avviene a me, del non averci saputo illudere, poiché fuori di queste illusioni non c'è più altra realtà...»
 
 Questo romanzo riprende i temi giovanili, ed è un romanzo storico.
 
@@ -46,7 +58,7 @@ L'opera risente moltissimo di questo contesto, e tutta l'opera di Pirandello è 
 Il tema della pazzia in questo romanzo non è rappresentato direttamente, ma è rappresentata come qualcosa che aliena e che estranea, e che forse anche preserva.
 Mattia Pascal è un ==forestiere della vita==
 
-MANCA ==**TRAMA**==
+È la storia paradossale di un piccolo borghese, imprigionato come sempre nella trappola di una famiglia insopportabile e di una misera condizione sociale, che, per un caso fortuito, si trova improvvisamente libero e padrone di sé: diviene economicamente autosufficiente grazie ad una cospicua vincita al casino di Montecarlo e apprende di essere ufficialmente morto, in quanto la moglie e la suocera lo hanno riconosciuto nel cadavere di un annegato. Però, invece di approfittare della liberazione dalla forma sociale per vivere immerso nel fluire della vita, senza più assumere maschere, Mattia Pascal si sforza di costruirsi un'identità nuova. In lui resta insuperabile l'attaccamento alla vita sociale, alla trappola, quindi egli soffre perché la sua identita falsa lo costringe all'esclusione dalla vita degli altri. Decide pertanto di rientrare nella sua vecchia identità, tornando in famiglia, ma scopre che la moglie si è risposata ed ha avuto una figlia da un altro. Non gli resta dunque che adattarsi alla sua condizione sospesa di "forestiere della vita", che contempla gli altri dall'esterno, consapevole di non essere più "nessuno".
 
 Quando la forma si rompe, ne sgorga la vita. Mattia Pascal decide di godersi la vita: inizia a viaggiare.
 Mattia Pascal incorre in un errore: non è ancora filosofo, come il protagonista di _Uno, Nessuno e Centomila_; liberatosi della forma, ad un certo punto ne sente la necessità. Si crea una **forma fittizia**.
