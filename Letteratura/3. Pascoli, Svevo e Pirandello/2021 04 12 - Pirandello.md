@@ -31,11 +31,11 @@ La sua descrizione è quasi commovente. Lui sembra non capire l'ingiustizia e il
 
 La luna simboleggia le fasi di morte e rinascita, che è un po' quello che è successo a Ciaula.
 
----
+## Pirandello all'università
 
-![WhatsApp Image 2021-04-12 at 10.00.48](/assets/WhatsApp%20Image%202021-04-12%20at%2010.00.48.jpeg)
+Gabriele d'Annunzio frequenta poco le aule universitarie, ma negli aristocratici saloti romani in cui, ammirato dalle nobil-donne, recita il suo ruolo di istrione, magnifica le doti di un professore di cui dice di non perdere una lezione. Il suo nome è Onorato Occioni, titolare della cattedra di Letteratura latina dell'Università "La Sapienza", nonché rettore dell'ateneo. In effetti, tra gli studiosi di Filolofia latina, Occioni ha fama di oratore d'eccezione: un affabulatore capace di ammaliare, ma che in realtà - si dice - conosce poco la lingua di Cicerone e di Virgilio.
 
----
+Qualche anno dopo, il professore ha tra i suoi allievi un altro futuro protagonista della letteratura italiana, Luigi Pirandello. Un giorno - siamo nel 1889 - nel tradurre in aula un brano di una commedia di Plauto, il *Miles gloriosus*, Occioni commette un errore grossolano, e un giovane sacerdote che siede accanto a Pirandello ride e dà di gomito al compagno. Il latinista se ne accorge, e va su tutte le furie. Il sacerdote si scusa, ma Pirandello rincara la dose, mettendo alla berlina l'irascibile professore. Mal gliene incoglie: Occioni, forte della sua autorità, riunisce d'urgenza il Consiglio di facoltà, che suggerisce all'incauto studente di lasciare l'ateneo. Meglio, a questo punto, evitare ritorsioni: poche settimane dopo, Pirandello è a Bonn.
 
 ## Saggio: L'umorismo
 - ==p. 878==
@@ -76,10 +76,6 @@ La letteratura non può fissare con i canoni classici di perfezione di bellezza:
 #### Righe 95-108
 
 ==Leggere da soli==
-
-## Maschera
-
-==TODO aggiungere tutta la parte delle maschere==
 
 ## T: _Il treno ha fischiato_
 - ==p. 901==
