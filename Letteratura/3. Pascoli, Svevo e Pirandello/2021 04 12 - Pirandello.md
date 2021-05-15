@@ -11,7 +11,7 @@ Questo in realtà è soltanto apparente. Sicuramente l'ambiente, l'uso dei sopra
 - **riga 222**: In questa miniera, anni prima, era scoppiata una mina, e zi' Scarda aveva person un occhio e un figlio; egli, nonostante fosse vecchio, è tenuto in miniera come cortesia, in quanto deve gestire e mantenere l'intera famiglia.
 C'è l'immagine della lacrima (**riga 225**), che diventa simbolo di questo dolore calato in questa realtà.
 
-TODO importare appunti sul testo (Goodnotes)
+@import "Pirandello - Ciàula scopre la luna.pdf"
 
 Ciaula ha il compito di portare sulle spalle il carico, fino alla superficie. Ha il vantaggio di vedere la luce del sole.
 Il protagonista è un alienato mentale: ci introduce in questa novella ai personaggi tipici di Pirandello, e al tema della **pazzia**.

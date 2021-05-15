@@ -24,7 +24,12 @@ Questo è possibile o in una situazione come quella di Mattia Pascal, o molto pi
 
 La **pazzia** è un sistema per vivere al di fuori della maschera e al di fuori della forma. Molti pazzi di Pirandello vivono in una sorta di simbiosi con la natura (come succede in _Uno, nessuno e Centomila_)
 
-TODO aggiungere da [registrazione](https://www.youtube.com/watch?v=tYCfnqVm0Fg)
+Ci sono dei momenti, come ne *Il treno ha fischiato*, di perdita della lucidità, dei momenti di pazzia in cui il protagonista si rifugia per poter tollerare la forma di tutti i giorni.
+
+In questo contesto dove la realtà non è oggettiva, la letteratura non è in grado di descriverla: ecco perché parliamo di **relativismo conoscitivo**, di pliralità prospettica.
+Questo è esattamente ciò che fa Pirandello nei suoi primi drammi: le sue prime opere furono un fiasco incredibile: la gente che andava a teatro usciva arrabbiata, perché Pirandello gettava tutti in una confuzione incredibile; non c'era più il cattivo che era stato punti, il bravo che usciva vittorioso, e questo era destabilizzante; questa era l'unica realtà descrivibile, una realtà di caos.
+
+Caos era fra l'altro il nome della borgata in cui è nato Pirandello: è un nome in qualche modo illuminante per quello che poi sarebbe stato il suo pensiero.
 
 ## Il fu Mattia Pascal
 
@@ -39,8 +44,10 @@ Lui appena letta la notizia si arrabbia: ad un certo punto è illuminato da una 
 Pirandello ci dice che l'uomo ha bisogno della Forma, e quindi questo è proprio quello che succederà a Mattia Pascal.
 
 ## T: _Ciàula scopre la luna_
-- ==p. 894==
+- ==p. 894== - fino a riga 231
 
-TODO aggiungere da [registrazione](https://www.youtube.com/watch?v=tYCfnqVm0Fg)
+Questo testo in qualche modo ha fatto pensare a molti critici che Pirandello stesse ripercorrendo la strada di Verga: in questa novella troviamo un protagonista poveraccio.
+La parte iniziale della novella descrive il lavoro nella miniera, e ha subito fatto pensare a Rosso Malpelo.
 
-fino a riga 231
+Il protagonista è un ragazzo di trent'anni che lavora nella miniera. I due personaggi (il protagonista e Rosso Malpelo) un po' si assomigliano: sono dei vinti, dei personaggi maltrattati dalla società, che fanno una vita estremamente grama lavorando giorno e notte.
+C'è però una differenza tra Ciaula e Rosso malpelo: Rosso Malpelo ad un certo punto esprime a sua filosofia, egli aveva un suo stile di vita, lucidissimo; Ciaula invece è un ragazzo ritardato, che non si rende conto: anche il narratore ci dice che non si rende conto: in questa sua forma di alienazione, egli riesce a godere di qualche attimo di felicià quando scopre la luna.
