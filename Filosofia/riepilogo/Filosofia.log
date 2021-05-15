@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.21)  15 MAY 2021 20:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.21)  16 MAY 2021 00:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -522,7 +522,7 @@ LaTeX Info: Redefining \nameref on input line 79.
 \@outlinefile=\write3
 \openout3 = `Filosofia.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 82.
+LaTeX Font Info:    Try loading font information for U+msa on input line 91.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -530,7 +530,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 82.
+LaTeX Font Info:    Try loading font information for U+msb on input line 91.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -553,13 +553,13 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 
 ] [10]
 Capitolo 1.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 145.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 158.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 145.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 158.
  [11
 
 ] [12]
@@ -572,10 +572,10 @@ Capitolo 2.
 ]
 Capitolo 3.
 [23] [24]
-<1.jpeg, id=685, 2101.8525pt x 624.3325pt>
+<1.jpeg, id=737, 2101.8525pt x 624.3325pt>
 File: 1.jpeg Graphic file (type jpg)
 <use 1.jpeg>
-Package pdftex.def Info: 1.jpeg  used on input line 507.
+Package pdftex.def Info: 1.jpeg  used on input line 520.
 (pdftex.def)             Requested size: 341.43306pt x 101.40996pt.
  [25 <./1.jpeg>] [26] [27] [28
 
@@ -587,10 +587,10 @@ Capitolo 4.
 
 ]
 Capitolo 5.
-<2.png, id=721, 727.71875pt x 365.365pt>
+<2.png, id=773, 727.71875pt x 365.365pt>
 File: 2.png Graphic file (type png)
 <use 2.png>
-Package pdftex.def Info: 2.png  used on input line 595.
+Package pdftex.def Info: 2.png  used on input line 608.
 (pdftex.def)             Requested size: 341.43306pt x 171.42609pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -607,19 +607,19 @@ Capitolo 7.
 [39
 
 ]
-<3.png, id=759, 2111.89pt x 780.9175pt>
+<3.png, id=811, 2111.89pt x 780.9175pt>
 File: 3.png Graphic file (type png)
 <use 3.png>
-Package pdftex.def Info: 3.png  used on input line 674.
+Package pdftex.def Info: 3.png  used on input line 687.
 (pdftex.def)             Requested size: 341.43306pt x 126.24817pt.
  [40 <./3.png>] [41] [42
 
 ]
 Capitolo 8.
-<4.png, id=774, 689.57625pt x 659.46375pt>
+<4.png, id=825, 689.57625pt x 659.46375pt>
 File: 4.png Graphic file (type png)
 <use 4.png>
-Package pdftex.def Info: 4.png  used on input line 735.
+Package pdftex.def Info: 4.png  used on input line 748.
 (pdftex.def)             Requested size: 341.43306pt x 326.52109pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -627,10 +627,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [43]
 [44 <./4.png>]
 Capitolo 9.
-<5.png, id=791, 686.565pt x 346.29375pt>
+<5.png, id=842, 686.565pt x 346.29375pt>
 File: 5.png Graphic file (type png)
 <use 5.png>
-Package pdftex.def Info: 5.png  used on input line 760.
+Package pdftex.def Info: 5.png  used on input line 773.
 (pdftex.def)             Requested size: 341.43306pt x 172.21117pt.
 
 Underfull \vbox (badness 7595) has occurred while \output is active []
@@ -763,138 +763,49 @@ Capitolo 33.
 ]
 Capitolo 34.
 [137] [138] [139]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2176.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2189.
  [140]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2176.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2189.
  (./Filosofia.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2176.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2176.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2189.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2189.
 
-
-
-Package rerunfilecheck Warning: File `Filosofia.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Filosofia.out':
-(rerunfilecheck)             Before: B793669D1DB69EEB22762F4F75F1433D;7613
-(rerunfilecheck)             After:  80DA4563D1AD58A0FFC1A84C200DD420;7734.
+Package rerunfilecheck Info: File `Filosofia.out' has not changed.
+(rerunfilecheck)             Checksum: 80DA4563D1AD58A0FFC1A84C200DD420;7734.
  ) 
 Here is how much of TeX's memory you used:
- 10650 strings out of 492616
- 153626 string characters out of 6129481
+ 10679 strings out of 492616
+ 153996 string characters out of 6129481
  307051 words of memory out of 5000000
- 13865 multiletter control sequences out of 15000+600000
- 32252 words of font info for 144 fonts, out of 8000000 for 9000
+ 13917 multiletter control sequences out of 15000+600000
+ 33043 words of font info for 147 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,12n,43p,1067b,513s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{subsection.3.2.1} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.1.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.1.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.8.2} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.8.1} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.6.3.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.6.3.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.6.3.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.6.3} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.6.2.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.6.2.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.6.2.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.6.2} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.6.1} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.3.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.3.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.3.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.5.3} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.2.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.2.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.2.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.5.2} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.5.1} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.4.3} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.4.2} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.4.1} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.3.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.2.3} has been referenced but does not exist
-, replaced by a fixed one
-
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</
-usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
-r/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
-/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/l
-ocal/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb></usr/loc
-al/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbi1440.pfb></usr/local
-/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbi2488.pfb></usr/local/t
-exlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/tex
-live/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texli
-ve/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive
-/2019/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2
-019/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/201
-9/texmf-dist/fonts/type1/public/cm-super/sfcc0800.pfb></usr/local/texlive/2019/
-texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/texlive/2019/te
-xmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2019/texm
-f-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2019/texmf-
-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2019/texmf-di
-st/fonts/type1/public/cm-super/sfti0800.pfb></usr/local/texlive/2019/texmf-dist
-/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on Filosofia.pdf (140 pages, 1441697 bytes).
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
+usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
+sr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr
+/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb></usr/l
+ocal/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbi1440.pfb></usr/loc
+al/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbi2488.pfb></usr/local
+/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/t
+exlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/tex
+live/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texli
+ve/2019/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive
+/2019/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2
+019/texmf-dist/fonts/type1/public/cm-super/sfcc0800.pfb></usr/local/texlive/201
+9/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/texlive/2019/
+texmf-dist/fonts/type1/public/cm-super/sfcc2074.pfb></usr/local/texlive/2019/te
+xmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2019/texm
+f-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2019/texmf-
+dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2019/texmf-di
+st/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2019/texmf-dist
+/fonts/type1/public/cm-super/sfti0800.pfb></usr/local/texlive/2019/texmf-dist/f
+onts/type1/public/cm-super/sfti1000.pfb>
+Output written on Filosofia.pdf (140 pages, 1455298 bytes).
 PDF statistics:
- 1437 PDF objects out of 1440 (max. 8388607)
- 1255 compressed objects within 13 object streams
- 350 named destinations out of 1000 (max. 500000)
- 28602 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 1411 PDF objects out of 1440 (max. 8388607)
+ 1227 compressed objects within 13 object streams
+ 322 named destinations out of 1000 (max. 500000)
+ 30650 words of extra memory for PDF output out of 35830 (max. 10000000)
 
