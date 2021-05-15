@@ -14,7 +14,7 @@ Il poeta usa la ==musicalità==, prodotta dalla natura, per esprimere la fusione
 
 @import "D_Annunzio - La pioggia nel Pineto.pdf"
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ## T15: I pastori
 * ==p. 507==

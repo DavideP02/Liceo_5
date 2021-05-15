@@ -112,7 +112,7 @@ The greatest amphibious force in history arrived on the beaches of Normandy on 6
 
 The Soviet Red Army was slowly advancing, liberating Poland, Hungary, Romania, Czechoslovakia, Austria and the eastern fringes of Germany. On 30th April 1945 Hitler committed suicide, and Berlin fell on 2nd May. At the Yalta Conference in Crimea in February 1945, US President Franklin D. Roosevelt, British Prime Minister Sir Winston Churchill and Soviet Premier Joseph Stalin made important decisions concerning the future progress of the war and the post-war world. The war ended in Europe on 8th May 1945 but it took another three months to defeat Japan in the Far East. Victory came only with the explosion of two atomic bombs on the Japanese towns of Hiroshima and Nagasaki on 6th and 9th August. The atomic bombing ended World War II and began a new age.
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ## USA
 ### Progressivism
@@ -142,4 +142,4 @@ American factories received a new impulse from the Second World War. At first th
 
 After the WWII the USA emerged as one of the superpowers together with Russia.
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->

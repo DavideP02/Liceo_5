@@ -42,7 +42,7 @@ This developed from a very early age, he felt a deep connection to Ireland, with
 Yeats was almost obsessed with age.
 His preoccupation with old age is based on the contrast between the failing body and the willing heart.
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ### Death
 
@@ -100,7 +100,7 @@ Stylistically Yeats is at the same time a traditionalist and an innovator: he wo
 
 Also stylistically Yeats tries to convey a tension between opposite concepts, by making a large use of antithesis, oximoron and paradoxes.
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ## T: _Easter 1916_
 
@@ -175,7 +175,7 @@ Yeats was a symbolist, and in this poem he proves his ability as a symbolist, by
 - the **sleeping child**: this image is used to refer to the death rebels; sleep is a common metaphor for death in poetry, and the image of child implies an idea of innocence; just like children can sometimes unintentionally produce some harm, so the rebel are not guilty, because they didn't intend to cause any harm for fighting for their independence
 - the **mother**: it can be read as a symbol for Ireland itself; according to this interpretation, the rebels can be imagined as Ireland's children
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ## T: _The Second Coming_
 - ==p. 200==

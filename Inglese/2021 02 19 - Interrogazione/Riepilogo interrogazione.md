@@ -54,7 +54,7 @@ export_on_save:
     - [Modern Novel](#modern-novel)
 
 <!-- /code_chunk_output -->
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 # Victorian Age
 
@@ -169,7 +169,7 @@ However, the roots of the English Aesthetic Movement can be traced back to the R
 
 Walter Pater's _Studies in the History of the Renaissance_ (1873) and his masterpiece _Marius the Epicurean_ (1885) were immediately successful, especially with the young, because of their subversive and potentially demoralising message. He rejected religious faith and said that art was the only means to halt the passage of time, the only certainty. He thought life should be lived in the spirit of art, namely as a work of art, filling each passing moment with intense experience, feeling all kinds of sensations. The task of the artist was to feel sensations, to be attentive to the attractive, the courteous and the cheerful. So the artist was seen as the transcriber 'not of the world, not of mere fact, but of his sense of it! The main implication of this new aesthetic position was that art had no reference to life, and therefore it had nothing to do with morality and did not need to be didactic.
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 #### Walter Pater's influence {ignore=true}
 
@@ -188,7 +188,7 @@ A number of features can be distinguished in the works of Aesthetic artists:
 
 Decadence must be seen as a European movement. In the late 1880s a group of French writers contributed to the journal _Le Décadent_; they were the Symbolists Rimbaud, Verlaine, Mallarmé, Laforgue, who were much influenced by Charles Baudelaire's _Les Fleurs du mal_ (1857). Joris-Karl Huysmans (1848-1907) wrote _A rebours_ (1884), a novel whose hero, Des Esseintes, tries to create an entirely artificial life in his search for unusual sensations. This character became the model for Wilde's dandy. The main representatives of Decadence in Italy were Gabriele D'Annunzio (1863-1938), with his novel _Il piacere_ (1889), and the poets Giovanni Pascoli (1855-1912) and Guido Gozzano (1883-1916). The poetry of Rainer Maria Rilke (1875-1926) was one of the most remarkable expressions of the Decadent sensibility in the German language.
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 # Thomas Hardy
 
@@ -394,7 +394,7 @@ The ==fog== is the symbol of Alec behavior: Alec is not behaving in a clear deco
 > She was sleeping soundly, and upon her eyelashes there lingered tears.
 * She was sleeping and there were tears on her face; we get to know that she had cried because she knew what was going to happen, and the tears were still on her eyelashes.
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 #### Third part: 106-125
 
@@ -646,7 +646,7 @@ Sentences underlined in blue contain an ironical description of ==God's love== f
 
 After this novel Hardy's editor asked him not to write anymore novels since they were too pessimistic. He tried his hand to write poems, but they were as pessimistic and as dramatic as his novels
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 # Modern Age
 
@@ -762,7 +762,7 @@ The greatest amphibious force in history arrived on the beaches of Normandy on 6
 
 The Soviet Red Army was slowly advancing, liberating Poland, Hungary, Romania, Czechoslovakia, Austria and the eastern fringes of Germany. On 30th April 1945 Hitler committed suicide, and Berlin fell on 2nd May. At the Yalta Conference in Crimea in February 1945, US President Franklin D. Roosevelt, British Prime Minister Sir Winston Churchill and Soviet Premier Joseph Stalin made important decisions concerning the future progress of the war and the post-war world. The war ended in Europe on 8th May 1945 but it took another three months to defeat Japan in the Far East. Victory came only with the explosion of two atomic bombs on the Japanese towns of Hiroshima and Nagasaki on 6th and 9th August. The atomic bombing ended World War II and began a new age.
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ## USA
 ### Progressivism
@@ -792,7 +792,7 @@ American factories received a new impulse from the Second World War. At first th
 
 After the WWII the USA emerged as one of the superpowers together with Russia.
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 # Age of Anxiety & Modernism
 
@@ -848,7 +848,7 @@ According to Freud, the id, ego and superego are in constant conflict so that ad
 
 Freud believed that a common source of psychic conflict derived from sexual fantasies in childhood and this theory seemed obscene to the respectable public at that time. The most famous example of conflict is the Oedipus complex, which is probably the most controversial of all his theories of relationships. In 1909 Freud wrote a paper, _Analysis of a Phobia in a Five-Year-Old Boy_, in which he outlined the fear of horses of a boy known as 'Little Hans'. Freud believed that the boy's terror was due to feelings of anger related to his parents he had internalised. According to Freud, all small boys choose their mother as their primary object of desire. They subconsciously wish to usurp their father and become their mother's lover. These desires appear between the ages of 3 and 5. when a boy is in what Freud defined as the phallic stage of development. This stage represents an important point in the formation of sexual identity. The analogous experience for girls is known as the Electra complex, in which girls feel desire for their father and jealousy of their mother. The child, however, suspects that acting on these feelings would lead to danger, thus he/she represses his/her desires. This leads to anxiety. In order to resolve the conflict. the boy then identifies with his father and the girl with her mother. It is at this point that the superego is formed; it becomes an internalisation of the parental figure that strives to suppress the id's impulses and make the ego act upon these idealistic standards.
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ##### Adler and Jung
 
@@ -902,7 +902,7 @@ It is a transversal movemente, since it covers a wide variety of attitude:
 * the epicentre is considered to be Paris
 * modernism drew inspiration from everywhere: past, foreign literatures or artistic expressions.
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ### Features
 

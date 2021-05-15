@@ -30,7 +30,7 @@
 
 <!-- /code_chunk_output -->
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 # William Butler Yeats
 
@@ -76,7 +76,7 @@ This developed from a very early age, he felt a deep connection to Ireland, with
 Yeats was almost obsessed with age.
 His preoccupation with old age is based on the contrast between the failing body and the willing heart.
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ### Death
 
@@ -134,7 +134,7 @@ Stylistically Yeats is at the same time a traditionalist and an innovator: he wo
 
 Also stylistically Yeats tries to convey a tension between opposite concepts, by making a large use of antithesis, oximoron and paradoxes.
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ## T: _Easter 1916_
 
@@ -209,7 +209,7 @@ Yeats was a symbolist, and in this poem he proves his ability as a symbolist, by
 - the **sleeping child**: this image is used to refer to the death rebels; sleep is a common metaphor for death in poetry, and the image of child implies an idea of innocence; just like children can sometimes unintentionally produce some harm, so the rebel are not guilty, because they didn't intend to cause any harm for fighting for their independence
 - the **mother**: it can be read as a symbol for Ireland itself; according to this interpretation, the rebels can be imagined as Ireland's children
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ## T: _The Second Coming_
 - ==p. 200==
@@ -276,7 +276,7 @@ This poem is an apocalyptic vision of the future of mankind.
 
 The poem is meter irregular, and it doesn't have a fixed rhyme scheme. Describing a world of chaos, anarchy and confusion, it make sense that the poem doesn't follow a standard scheme or fixed rhyme pattern, which would convey an idea of order, balance and linearity
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 # Thomas Stearns Eliot
 
@@ -410,7 +410,7 @@ His style is evocative
 
 Eliot Rejected an idea of poetry based on the poet's own personality, and he uses the objective correlative of symbolic meaningful imagery, which forces the reader to contribute to the poem, by bringing its own connotation to the gaps and by bringing its own meaning to the unstated.
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ### T: _The Burial of Dead_
 - ==p. 206==
@@ -461,7 +461,7 @@ All these quotation make the text very complex, since there can be different lev
 
 Eliot makes use of free verse: lines are not of the same length, there is neither a regular scheme nor a traditional meter, and there isn't
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ### T: _The Fire Sermon_
 - ==p. 208==

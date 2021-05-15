@@ -42,9 +42,9 @@ export_on_save:
 
 <!-- /code_chunk_output -->
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 # Hegel
 
@@ -121,7 +121,7 @@ Apparentemente gli eroi sembra che seguano i proprio obiettivi personali, ma in 
 
 Se il fine ultimo della storia del mondo è la _realizzazione dello spirito_, questa si realizza nello **Stato**. Quindi la storia del mondo è la realizzazione di forme statali che costituiscono momenti di un divenire assoluto.
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 # Schopenhauer
 
@@ -317,7 +317,7 @@ La vita di chi riesce ad elevarsi completamente al di sopra dell'esistenza è l'
 > Quel che rimane dopo la soppressione completa della volontà è certamente il nulla per tutti coloro che sono ancora pieni della volontà. Ma per gli altri, in cui la volontà si è distolta da se stessa e rinnegata, questo nostro universo tanto reale, con tutti i suoi soli e le sue vie lattee è, esso, il nulla.
 
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 # Kierkegaard
 
@@ -419,7 +419,7 @@ Kierkegaard distingue tra _angoscia_ e _disperazione_. Fermo restando il discors
 
 L'unica possibilità per distogliersi dalla disperazione, è la fede, che è l'unico antidoto contro la disperazione.
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 # Destra e Sinistra Hegeliana
 
@@ -453,7 +453,7 @@ La sinistra dice che verità speculativa e filosofica sono **inconciliabili con 
 Interpretano il pensiero di Hegel in maniera rivoluzionaria e dinamica, affermando che il mondo è​ un processo in cui​ l’esistente si auto-supera continuamente.​
 Il tema della dialettica rimane, molti temi rimangono, ma quello che non rimane è l'identità di filosofia e religione.
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 # Feuerbach
 

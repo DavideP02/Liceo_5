@@ -32,7 +32,7 @@ export_on_save:
 
 <!-- /code_chunk_output -->
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 # Aestheticism
 
@@ -95,7 +95,7 @@ Aestheticism and decadence share a set of interlinked qualities such as
 Decadence was an European movement which did not only developed in France.
 In Italy, for instance, the main representatives of the Decadent movement were D'Annunzio (with his novel _Il Piacere_), Pascoli and Gozzano
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 # Oscard Wilde
 - ==p. 124-125==
@@ -249,7 +249,7 @@ In this case the painter doesn't agree with him, since he doesn't want to show t
 Basil doesn't want to disclose the identity of the man who is portrayed, because he is afraid that this portrait might reveal his secret artistic idolatry for Dorian Gray.
 This idolatry doesn't seem to be purely professional. It also has personal implications (homosexual connotation)
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ### T: Dorian Death
 * ==p. 131==

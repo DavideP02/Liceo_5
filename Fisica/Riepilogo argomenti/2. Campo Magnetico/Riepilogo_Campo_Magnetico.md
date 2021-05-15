@@ -41,7 +41,7 @@ export_on_save:
   - [Applicazioni](#applicazioni)
 
 <!-- /code_chunk_output -->
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 # Campo magnetico
 
@@ -62,7 +62,7 @@ Non esiste il monopolo magnetico; infatti, posso dividere infinitamente una cala
 La sonda per il campo magnetico è un ago di natura magnetica, e se l’ago ruota sarà soggetto a campo magnetico: ciò è dovuto ad una coppia di forze che fa ruotare l’ago magnetico.
 
 I poli opposti si attraggono.
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ## Campo elettrico in analogia al campo elettrico
 
@@ -120,7 +120,7 @@ $$\vec{F}=q\vec{v}\wedge\vec{B}=qvB\sin\alpha$$
 
 Prendiamo in considerazione un terzo modo per definire il campo magnetico, ovvero per mezzo del moto di particelle cariche all'interno di un filo elettrico percorso da corrente (con quello che si chiama **circuito esploratore**).
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 Abbiamo un filo di lunghezza L percorso da corrente appeso ad un dinamometro, sottoposto ad un campo magnetico.
 
@@ -168,7 +168,7 @@ $$qB=\frac{mv}{r}=\frac{m}{r}\frac{2\pi r}{T}=\frac{2\pi m}{T}$$
 
 $$T=\frac{2\pi m}{qB}$$
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ### Moto qualunque
 
@@ -290,7 +290,7 @@ Data $A=d\cdot l$ ($l$ spessore della lamina):
 
 $$n=\frac{iB}{leEd}=\frac{iB}{leV_h}$$
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ## Esperimento di Millikan
 
@@ -385,7 +385,7 @@ Ora possiamo dare la definizione di Ampere
 
 L'ampere è l'intensità di corrente che, attraversando due conduttori rettilinei paralleli posti nel vuoto, che distano $1\,\text{m}$ l'uno dall'altro, generano tra essi una forza magnetica di $2\cdot10^{-7}\,\text{N}$ per ogni metro di filo
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ### Azione di un campo magnetico su una spira percorsa da corrente
 
@@ -485,7 +485,7 @@ Sia $i_c$ la somma algebrica delle correnti concatenate ad un dato cammino chius
 
 $$C(\vec{B})=\mu_{\tiny 0} i_c$$
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ## Le proprietà magnetiche della materia
 
@@ -587,7 +587,7 @@ In generale, l'**isteresi** è un fenomeno fisico per cui una grandezza che è f
 
 Il fatto che $B$ dipenda non linearmente da $B_0$ indica che la permeabilità magnetica relativa $\mu_r$ non è una costante.
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ### Applicazioni
 

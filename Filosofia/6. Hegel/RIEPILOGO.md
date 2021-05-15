@@ -287,7 +287,7 @@ L'osservazione si approfondisce con la ricerca della legge e con l'esperimento, 
 
 In questa ricerca esasperata di se stessa, la ragione sperimenta la propria crisi, riconoscendosi come qualcosa di distinto dal mondo.
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 #### Ragione attiva
 

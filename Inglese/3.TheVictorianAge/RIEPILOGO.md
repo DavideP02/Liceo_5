@@ -94,7 +94,7 @@ Clothes were very formal because appearance was very important.
 Victorian people were busy with making money and social climbing, so they had little time for art, and this indifference led to bad taste in buildings and furnishings.
 These needed to be a status symbols, and so houses became pretentious, but _not beautiful_.  The interiors were overcrowded with _ornaments_, _decorations_ and _furniture_.
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ## Challenges from the scientific field
 ==p. 13 - V==
@@ -305,7 +305,7 @@ However, the roots of the English Aesthetic Movement can be traced back to the R
 
 Walter Pater's _Studies in the History of the Renaissance_ (1873) and his masterpiece _Marius the Epicurean_ (1885) were immediately successful, especially with the young, because of their subversive and potentially demoralising message. He rejected religious faith and said that art was the only means to halt the passage of time, the only certainty. He thought life should be lived in the spirit of art, namely as a work of art, filling each passing moment with intense experience, feeling all kinds of sensations. The task of the artist was to feel sensations, to be attentive to the attractive, the courteous and the cheerful. So the artist was seen as the transcriber 'not of the world, not of mere fact, but of his sense of it! The main implication of this new aesthetic position was that art had no reference to life, and therefore it had nothing to do with morality and did not need to be didactic.
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 #### Walter Pater's influence {ignore=true}
 

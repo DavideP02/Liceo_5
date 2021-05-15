@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.21)  14 MAY 2021 19:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.21)  15 MAY 2021 20:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1246,16 +1246,37 @@ Package: eso-pic 2018/04/12 v2.0h eso-pic (RN)
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/atbegshi.sty
 Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 ))
-\sidebar=\skip63
-\envrule=\skip64
-\envborder=\skip65
-\c@tartaglia=\count361
-\c@newton=\count362
-\c@i=\count363
-\c@j=\count364
-\c@n=\count365
-\c@I=\count366
-\c@J=\count367
+(/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2019/02/28 v2.7b Micro-typographical refinements (RS)
+\MT@toks=\toks62
+\MT@count=\count361
+LaTeX Info: Redefining \textls on input line 790.
+\MT@outer@kern=\dimen330
+LaTeX Info: Redefining \textmicrotypecontext on input line 1336.
+\MT@listname@count=\count362
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+File: microtype-pdftex.def 2019/02/28 v2.7b Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 914.
+LaTeX Info: Redefining \lslig on input line 914.
+\MT@outer@space=\skip63
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2019/02/28 v2.7b microtype main configuration file (RS)
+))
+\sidebar=\skip64
+\envrule=\skip65
+\envborder=\skip66
+\c@tartaglia=\count363
+\c@newton=\count364
+\c@i=\count365
+\c@j=\count366
+\c@n=\count367
+\c@I=\count368
+\c@J=\count369
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2018/04/16 v5.8 Page Geometry
@@ -1267,41 +1288,41 @@ Package ifvtex Info: VTeX not detected.
 (/usr/local/texlive/2019/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count368
-\Gm@cntv=\count369
-\c@Gm@tempcnt=\count370
-\Gm@bindingoffset=\dimen330
-\Gm@wd@mp=\dimen331
-\Gm@odd@mp=\dimen332
-\Gm@even@mp=\dimen333
-\Gm@layoutwidth=\dimen334
-\Gm@layoutheight=\dimen335
-\Gm@layouthoffset=\dimen336
-\Gm@layoutvoffset=\dimen337
-\Gm@dimlist=\toks62
+\Gm@cnth=\count370
+\Gm@cntv=\count371
+\c@Gm@tempcnt=\count372
+\Gm@bindingoffset=\dimen331
+\Gm@wd@mp=\dimen332
+\Gm@odd@mp=\dimen333
+\Gm@even@mp=\dimen334
+\Gm@layoutwidth=\dimen335
+\Gm@layoutheight=\dimen336
+\Gm@layouthoffset=\dimen337
+\Gm@layoutvoffset=\dimen338
+\Gm@dimlist=\toks63
 )
 (/usr/local/texlive/2019/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
 s
-\f@nch@headwidth=\skip66
-\f@nch@O@elh=\skip67
-\f@nch@O@erh=\skip68
-\f@nch@O@olh=\skip69
-\f@nch@O@orh=\skip70
-\f@nch@O@elf=\skip71
-\f@nch@O@erf=\skip72
-\f@nch@O@olf=\skip73
-\f@nch@O@orf=\skip74
+\f@nch@headwidth=\skip67
+\f@nch@O@elh=\skip68
+\f@nch@O@erh=\skip69
+\f@nch@O@olh=\skip70
+\f@nch@O@orh=\skip71
+\f@nch@O@elf=\skip72
+\f@nch@O@erf=\skip73
+\f@nch@O@olf=\skip74
+\f@nch@O@orf=\skip75
 )
-\oddmarginwidth=\skip75
-\evenmarginwidth=\skip76
+\oddmarginwidth=\skip76
+\evenmarginwidth=\skip77
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/frontespizio/frontespizio.sty
 Package: frontespizio 2011/09/21 1.4a (Enrico Gregorio)
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/tools/afterpage.sty
 Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
-\AP@output=\toks63
+\AP@output=\toks64
 \AP@partial=\box126
 \AP@footins=\box127
 )
@@ -1350,16 +1371,16 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen338
-\Hy@linkcounter=\count371
-\Hy@pagecounter=\count372
+\@linkdim=\dimen339
+\Hy@linkcounter=\count373
+\Hy@pagecounter=\count374
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count373
+\Hy@SavedSpaceFactor=\count375
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -1371,17 +1392,17 @@ Package hyperref Info: Plain pages OFF on input line 4534.
 Package hyperref Info: Backreferencing OFF on input line 4539.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4772.
-\c@Hy@tempcnt=\count374
+\c@Hy@tempcnt=\count376
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5125.
-\XeTeXLinkMargin=\dimen339
-\Fld@menulength=\count375
-\Field@Width=\dimen340
-\Fld@charsize=\dimen341
+\XeTeXLinkMargin=\dimen340
+\Fld@menulength=\count377
+\Field@Width=\dimen341
+\Fld@charsize=\dimen342
 Package hyperref Info: Hyper figures OFF on input line 6380.
 Package hyperref Info: Link nesting OFF on input line 6385.
 Package hyperref Info: Hyper index ON on input line 6388.
@@ -1391,79 +1412,79 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6405.
 Package hyperref Info: PDF/A mode OFF on input line 6410.
 LaTeX Info: Redefining \ref on input line 6450.
 LaTeX Info: Redefining \pageref on input line 6454.
-\Hy@abspage=\count376
-\c@Item=\count377
-\c@Hfootnote=\count378
+\Hy@abspage=\count378
+\c@Item=\count379
+\c@Hfootnote=\count380
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2018/11/30 v6.88e Hyperref driver for pdfTeX
-\Fld@listcount=\count379
-\c@bookmark@seq@number=\count380
+\Fld@listcount=\count381
+\c@bookmark@seq@number=\count382
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip77
+\Hy@SectionHShift=\skip78
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 286.
+Package hyperref Info: Option `colorlinks' set `true' on input line 287.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/tools/layout.sty
 Package: layout 2014/10/28 v1.2c Show layout parameters
-\oneinch=\count381
-\cnt@paperwidth=\count382
-\cnt@paperheight=\count383
-\cnt@hoffset=\count384
-\cnt@voffset=\count385
-\cnt@textheight=\count386
-\cnt@textwidth=\count387
-\cnt@topmargin=\count388
-\cnt@oddsidemargin=\count389
-\cnt@evensidemargin=\count390
-\cnt@headheight=\count391
-\cnt@headsep=\count392
-\cnt@marginparsep=\count393
-\cnt@marginparwidth=\count394
-\cnt@marginparpush=\count395
-\cnt@footskip=\count396
-\fheight=\count397
-\ref@top=\count398
-\ref@hoffset=\count399
-\ref@voffset=\count400
-\ref@head=\count401
-\ref@body=\count402
-\ref@foot=\count403
-\ref@margin=\count404
-\ref@marginwidth=\count405
-\ref@marginpar=\count406
-\Interval=\count407
-\ExtraYPos=\count408
-\PositionX=\count409
-\PositionY=\count410
-\ArrowLength=\count411
+\oneinch=\count383
+\cnt@paperwidth=\count384
+\cnt@paperheight=\count385
+\cnt@hoffset=\count386
+\cnt@voffset=\count387
+\cnt@textheight=\count388
+\cnt@textwidth=\count389
+\cnt@topmargin=\count390
+\cnt@oddsidemargin=\count391
+\cnt@evensidemargin=\count392
+\cnt@headheight=\count393
+\cnt@headsep=\count394
+\cnt@marginparsep=\count395
+\cnt@marginparwidth=\count396
+\cnt@marginparpush=\count397
+\cnt@footskip=\count398
+\fheight=\count399
+\ref@top=\count400
+\ref@hoffset=\count401
+\ref@voffset=\count402
+\ref@head=\count403
+\ref@body=\count404
+\ref@foot=\count405
+\ref@margin=\count406
+\ref@marginwidth=\count407
+\ref@marginpar=\count408
+\Interval=\count409
+\ExtraYPos=\count410
+\PositionX=\count411
+\PositionY=\count412
+\ArrowLength=\count413
 )
 (./elaborato.aux)
 \openout1 = `elaborato.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 296.
-LaTeX Font Info:    ... okay on input line 296.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 296.
-LaTeX Font Info:    ... okay on input line 296.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 296.
-LaTeX Font Info:    ... okay on input line 296.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 296.
-LaTeX Font Info:    ... okay on input line 296.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 296.
-LaTeX Font Info:    ... okay on input line 296.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 296.
-LaTeX Font Info:    ... okay on input line 296.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 296.
-LaTeX Font Info:    ... okay on input line 296.
-LaTeX Info: Redefining \it@ocap on input line 296.
-LaTeX Info: Redefining \it@ccap on input line 296.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 297.
+LaTeX Font Info:    ... okay on input line 297.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 297.
+LaTeX Font Info:    ... okay on input line 297.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 297.
+LaTeX Font Info:    ... okay on input line 297.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 297.
+LaTeX Font Info:    ... okay on input line 297.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 297.
+LaTeX Font Info:    ... okay on input line 297.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 297.
+LaTeX Font Info:    ... okay on input line 297.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 297.
+LaTeX Font Info:    ... okay on input line 297.
+LaTeX Info: Redefining \it@ocap on input line 297.
+LaTeX Info: Redefining \it@ccap on input line 297.
 
 
 File italian.ldf warning: 
@@ -1471,21 +1492,21 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 296.
+italian.ldf    on input line 297.
 
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count412
-\scratchdimen=\dimen342
+\scratchcounter=\count414
+\scratchdimen=\dimen343
 \scratchbox=\box128
-\nofMPsegments=\count413
-\nofMParguments=\count414
-\everyMPshowfont=\toks64
-\MPscratchCnt=\count415
-\MPscratchDim=\dimen343
-\MPnumerator=\count416
-\makeMPintoPDFobject=\count417
-\everyMPtoPDFconversion=\toks65
+\nofMPsegments=\count415
+\nofMParguments=\count416
+\everyMPshowfont=\toks65
+\MPscratchCnt=\count417
+\MPscratchDim=\dimen344
+\MPnumerator=\count418
+\makeMPintoPDFobject=\count419
+\everyMPtoPDFconversion=\toks66
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1512,8 +1533,22 @@ ABD: EveryShipout initializing macros
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.16}).
 
-\c@lstlisting=\count418
+\c@lstlisting=\count420
 \AtBeginShipoutBox=\box129
+LaTeX Info: Redefining \microtypecontext on input line 297.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `basictext'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+(/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1548,34 +1583,40 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.16}).
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 296.
+Package hyperref Info: Link coloring ON on input line 297.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count419
+\c@section@level=\count421
 )
-LaTeX Info: Redefining \ref on input line 296.
-LaTeX Info: Redefining \pageref on input line 296.
-LaTeX Info: Redefining \nameref on input line 296.
+LaTeX Info: Redefining \ref on input line 297.
+LaTeX Info: Redefining \pageref on input line 297.
+LaTeX Info: Redefining \nameref on input line 297.
 
 (./elaborato.out) (./elaborato.out)
 \@outlinefile=\write8
 \openout8 = `elaborato.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 307.
+LaTeX Font Info:    Try loading font information for U+msa on input line 308.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 307.
+(/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 308.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OMX+yhex on input line 307
+(/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Try loading font information for OMX+yhex on input line 308
 .
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/yhmath/OMXyhex.fd
@@ -1585,12 +1626,12 @@ File: OMXyhex.fd 2013/07/03 v1.1 YH's humble contribution to TeX maths (NP)
 <1.png, id=47, 344.0052pt x 142.131pt>
 File: 1.png Graphic file (type png)
 <use 1.png>
-Package pdftex.def Info: 1.png  used on input line 311.
+Package pdftex.def Info: 1.png  used on input line 312.
 (pdftex.def)             Requested size: 113.81102pt x 47.02264pt.
 <2.png, id=49, 36.135pt x 38.0622pt>
 File: 2.png Graphic file (type png)
 <use 2.png>
-Package pdftex.def Info: 2.png  used on input line 311.
+Package pdftex.def Info: 2.png  used on input line 312.
 (pdftex.def)             Requested size: 42.67912pt x 44.9577pt.
  [1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
@@ -1604,46 +1645,57 @@ Underfull \vbox (badness 1558) has occurred while \output is active []
 
 File: 1.png Graphic file (type png)
 <use 1.png>
-Package pdftex.def Info: 1.png  used on input line 319.
-(pdftex.def)             Requested size: 113.81102pt x 47.02264pt.
-File: 2.png Graphic file (type png)
-<use 2.png>
-Package pdftex.def Info: 2.png  used on input line 319.
-(pdftex.def)             Requested size: 42.67912pt x 44.9577pt.
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.319 
-       [1]
-File: 1.png Graphic file (type png)
-<use 1.png>
 Package pdftex.def Info: 1.png  used on input line 320.
 (pdftex.def)             Requested size: 113.81102pt x 47.02264pt.
 File: 2.png Graphic file (type png)
 <use 2.png>
 Package pdftex.def Info: 2.png  used on input line 320.
 (pdftex.def)             Requested size: 42.67912pt x 44.9577pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.320 
+       [1]
+Two-sided document style, even page.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.320 \end{document}
-                     [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 320.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 320.
+l.322 
+       [2]
+File: 1.png Graphic file (type png)
+<use 1.png>
+Package pdftex.def Info: 1.png  used on input line 322.
+(pdftex.def)             Requested size: 113.81102pt x 47.02264pt.
+File: 2.png Graphic file (type png)
+<use 2.png>
+Package pdftex.def Info: 2.png  used on input line 322.
+(pdftex.def)             Requested size: 42.67912pt x 44.9577pt.
+ [3]
+Two-sided document style, even page.
+[4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 323.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 323.
  (./elaborato.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 320.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 320.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 323.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 323.
 Package rerunfilecheck Info: File `elaborato.out' has not changed.
 (rerunfilecheck)             Checksum: 30B3D680DA4076409CF86FCCC7DCD076;46.
  ) 
 Here is how much of TeX's memory you used:
- 54792 strings out of 492616
- 1315957 string characters out of 6129481
- 1778359 words of memory out of 5000000
- 58000 multiletter control sequences out of 15000+600000
- 540722 words of font info for 54 fonts, out of 8000000 for 9000
+ 56397 strings out of 492616
+ 1344189 string characters out of 6129481
+ 1851330 words of memory out of 5000000
+ 59523 multiletter control sequences out of 15000+600000
+ 543252 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  78i,16n,136p,1606b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -1651,11 +1703,16 @@ Here is how much of TeX's memory you used:
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
 usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
 r/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
-local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on elaborato.pdf (4 pages, 122123 bytes).
+local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/lo
+cal/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local
+/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/te
+xlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texl
+ive/2019/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb></usr/loc
+al/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb>
+Output written on elaborato.pdf (6 pages, 157210 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
- 4 named destinations out of 1000 (max. 500000)
- 175 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 124 PDF objects out of 1000 (max. 8388607)
+ 76 compressed objects within 1 object stream
+ 6 named destinations out of 1000 (max. 500000)
+ 11951 words of extra memory for PDF output out of 12000 (max. 10000000)
 

@@ -52,7 +52,7 @@ According to Freud, the id, ego and superego are in constant conflict so that ad
 
 Freud believed that a common source of psychic conflict derived from sexual fantasies in childhood and this theory seemed obscene to the respectable public at that time. The most famous example of conflict is the Oedipus complex, which is probably the most controversial of all his theories of relationships. In 1909 Freud wrote a paper, _Analysis of a Phobia in a Five-Year-Old Boy_, in which he outlined the fear of horses of a boy known as 'Little Hans'. Freud believed that the boy's terror was due to feelings of anger related to his parents he had internalised. According to Freud, all small boys choose their mother as their primary object of desire. They subconsciously wish to usurp their father and become their mother's lover. These desires appear between the ages of 3 and 5. when a boy is in what Freud defined as the phallic stage of development. This stage represents an important point in the formation of sexual identity. The analogous experience for girls is known as the Electra complex, in which girls feel desire for their father and jealousy of their mother. The child, however, suspects that acting on these feelings would lead to danger, thus he/she represses his/her desires. This leads to anxiety. In order to resolve the conflict. the boy then identifies with his father and the girl with her mother. It is at this point that the superego is formed; it becomes an internalisation of the parental figure that strives to suppress the id's impulses and make the ego act upon these idealistic standards.
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ##### Adler and Jung
 
@@ -106,7 +106,7 @@ It is a transversal movemente, since it covers a wide variety of attitude:
 * the epicentre is considered to be Paris
 * modernism drew inspiration from everywhere: past, foreign literatures or artistic expressions.
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ### Features
 

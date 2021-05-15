@@ -130,7 +130,7 @@ His style is evocative
 
 Eliot Rejected an idea of poetry based on the poet's own personality, and he uses the objective correlative of symbolic meaningful imagery, which forces the reader to contribute to the poem, by bringing its own connotation to the gaps and by bringing its own meaning to the unstated.
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ### T: _The Burial of Dead_
 - ==p. 206==
@@ -181,7 +181,7 @@ All these quotation make the text very complex, since there can be different lev
 
 Eliot makes use of free verse: lines are not of the same length, there is neither a regular scheme nor a traditional meter, and there isn't
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ### T: _The Fire Sermon_
 - ==p. 208==

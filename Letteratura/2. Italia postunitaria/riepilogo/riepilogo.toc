@@ -132,20 +132,20 @@
 \contentsline {paragraph}{I procedimenti narrativi}{118}{section*.131}% 
 \contentsline {paragraph}{La critica all'estetismo}{118}{section*.132}% 
 \contentsline {section}{T: \textsc {Il parricidio di Aligi}}{119}{section*.133}% 
-\contentsline {paragraph}{Una societ\IeC {\`a} patriarcale}{123}{section*.134}% 
-\contentsline {paragraph}{I "diversi"}{123}{section*.135}% 
-\contentsline {section}{Le Laudi}{124}{section*.136}% 
-\contentsline {subsection}{T: \textsc {La sera Fiesolana}}{125}{section*.137}% 
-\contentsline {subsubsection}{Prima parte}{125}{section*.138}% 
-\contentsline {subsubsection}{Seconda parte}{126}{section*.139}% 
-\contentsline {subsubsection}{Terza parte}{126}{section*.140}% 
-\contentsline {paragraph}{La prima strofa: l'apparizione della luna}{127}{section*.141}% 
-\contentsline {paragraph}{La personificazione della sera}{128}{section*.142}% 
-\contentsline {paragraph}{La seconda strofa: partitura musicale e linguaggio analogico }{128}{section*.143}% 
-\contentsline {paragraph}{La terza strofa: una sensualit\IeC {\`a} panica}{129}{section*.144}% 
-\contentsline {subsection}{T: \textsc {La pioggia nel pineto}}{129}{section*.145}% 
-\contentsline {paragraph}{La struttura musicale}{133}{section*.146}% 
-\contentsline {paragraph}{Il tema panico}{133}{section*.147}% 
-\contentsline {paragraph}{Gli strumenti formali}{134}{section*.148}% 
-\contentsline {section}{Il periodo notturno}{135}{section*.149}% 
-\contentsline {subsection}{T: \textsc {La prosa ``notturna''}}{135}{section*.150}% 
+\contentsline {paragraph}{Una societ\IeC {\`a} patriarcale}{119}{section*.134}% 
+\contentsline {paragraph}{I "diversi"}{119}{section*.135}% 
+\contentsline {section}{Le Laudi}{120}{section*.136}% 
+\contentsline {subsection}{T: \textsc {La sera Fiesolana}}{121}{section*.137}% 
+\contentsline {subsubsection}{Prima parte}{121}{section*.138}% 
+\contentsline {subsubsection}{Seconda parte}{122}{section*.139}% 
+\contentsline {subsubsection}{Terza parte}{123}{section*.140}% 
+\contentsline {paragraph}{La prima strofa: l'apparizione della luna}{124}{section*.141}% 
+\contentsline {paragraph}{La personificazione della sera}{124}{section*.142}% 
+\contentsline {paragraph}{La seconda strofa: partitura musicale e linguaggio analogico }{125}{section*.143}% 
+\contentsline {paragraph}{La terza strofa: una sensualit\IeC {\`a} panica}{125}{section*.144}% 
+\contentsline {subsection}{T: \textsc {La pioggia nel pineto}}{126}{section*.145}% 
+\contentsline {paragraph}{La struttura musicale}{129}{section*.146}% 
+\contentsline {paragraph}{Il tema panico}{130}{section*.147}% 
+\contentsline {paragraph}{Gli strumenti formali}{130}{section*.148}% 
+\contentsline {section}{Il periodo notturno}{131}{section*.149}% 
+\contentsline {subsection}{T: \textsc {La prosa ``notturna''}}{131}{section*.150}% 

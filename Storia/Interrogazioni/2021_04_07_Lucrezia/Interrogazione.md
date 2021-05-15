@@ -30,7 +30,7 @@
 
 <!-- /code_chunk_output -->
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ## Volume III {ignore=true}
 - Ripasso __Capitolo 3__:
@@ -49,19 +49,19 @@
 - Trascrizione 31 marzo
 
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ## Ripasso Capitolo 3
 
 #### Davide
 @import "Vol III - Cap 3.pdf"
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 #### Lucrezia
 @import "Vol III - Cap 3L.pdf"
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 # Capitolo 4
 
@@ -170,7 +170,7 @@ Nel quindicennio che precedette la guerra le spese militari aumentarono del 50% 
 
 
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ## 2. I fronti di guerra
 
@@ -211,7 +211,7 @@ La Prima guerra mondiale si combatté, a livello europeo, su quattro fronti prin
 
 
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ## 3. L'Italia in guerra
 
@@ -221,7 +221,7 @@ La Prima guerra mondiale si combatté, a livello europeo, su quattro fronti prin
 
 
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ## 5. Il 1917: guerra e rivoluzione
 
@@ -313,14 +313,14 @@ La sua politica si basava su:
 
 
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ## 6. La fine del conflitto
 
 ![Senzfa titolo](/assets/Senzfa%20titolo.png)
 ![La guerra in cifre](/assets/La%20guerra%20in%20cifre.png)
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 # Capitolo 5
 
@@ -332,7 +332,7 @@ Dopo la conversione delle fabbriche per sostenere le richieste belliche, molte p
 In Italia è molto forte il fenomeno dell’emigrazione, principalmente verso l’Europa del Nord, e verso l’America. Questo era iniziato già prima della prima guerra mondiale, dopo il 18 aumenterà però di dimensioni.
 In questa situazione econimica devastante, si insinua il problema della vittoria mutilata, all’Italia infatti, dopo essere entrata a fianco dell’intesa, vennero promesse terre, comprese le terre irredente, il simbolo di questo scontento è Fiume.
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 #### Una difficile situazione economica
 
@@ -343,7 +343,7 @@ In questa situazione econimica devastante, si insinua il problema della vittoria
 
 ![Vittoria mutilata titolo](/assets/Vittoria%20mutilata%20titolo.png)
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 ## 4. La crisi dello stato liberale in Italia
 
@@ -357,7 +357,7 @@ Era un nazionalista, antiboscevico, istanze nazionaliste e reazionarie. Mussolin
 
 ![Biennio rosso](/assets/Biennio%20rosso.png)
 
-<p style="page-break-after: always;">&nbsp;</p>
+<!-- pagebreak -->
 
 #### L'ultimo Giolitti: il compromesso impossibile
 
