@@ -2,7 +2,7 @@
 
 # Pascoli
 
-## T: Il gelsomino notturno
+## T: *Il gelsomino notturno*
 - ==p. 605==
 
 Fa parte della raccolta dei canti di Castelvecchio.

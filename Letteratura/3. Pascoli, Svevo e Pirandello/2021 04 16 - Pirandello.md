@@ -18,12 +18,12 @@ Al capezzale della suocera, il marito di Marta le chiede di tornare insieme, pro
 
 Quando era innocente per la società era colpevole, mentre quando è davvero colpevole viene perdonata.
 
-## Il turno
+## *Il turno*
 - ==p. 909==
 
 <!-- pagebreak -->
 
-## I vecchi e i giovani
+## *I vecchi e i giovani*
 - ==p. 910==
 
 È un romanzo sociale di ambientazione siciliana. È la Sicilia dei sanguinosi moti dei Fasci siciliani del 1893, sconvolta dalle lotte di classe, con i clericali da un lato, tesi ad impedire il consolidamento del nuovo regime liberale, e la classe dirigente dall'altro, che disperde nel disordine morale i sacrifici e i meriti acquisiti.
@@ -46,7 +46,7 @@ Mostra due generazioni a confronto, e riprende le idee del periodo giovanile di 
 
 In questo romanzo mette a confronto due generazioni: i vecchi sono quelli che hanno fatto il risorgimento italiano, e i giovani sono quelli che vanno a deludere le aspettative del risorgimento; rappresentano la disillusione che segue a questo processo di unità
 
-## Il fu Mattia Pascal
+## *Il fu Mattia Pascal*
 - ==p. 909-910==
 - ==p. 914-917==
 

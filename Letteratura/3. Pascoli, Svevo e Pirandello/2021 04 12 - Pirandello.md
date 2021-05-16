@@ -37,9 +37,8 @@ Gabriele d'Annunzio frequenta poco le aule universitarie, ma negli aristocratici
 
 Qualche anno dopo, il professore ha tra i suoi allievi un altro futuro protagonista della letteratura italiana, Luigi Pirandello. Un giorno - siamo nel 1889 - nel tradurre in aula un brano di una commedia di Plauto, il *Miles gloriosus*, Occioni commette un errore grossolano, e un giovane sacerdote che siede accanto a Pirandello ride e dà di gomito al compagno. Il latinista se ne accorge, e va su tutte le furie. Il sacerdote si scusa, ma Pirandello rincara la dose, mettendo alla berlina l'irascibile professore. Mal gliene incoglie: Occioni, forte della sua autorità, riunisce d'urgenza il Consiglio di facoltà, che suggerisce all'incauto studente di lasciare l'ateneo. Meglio, a questo punto, evitare ritorsioni: poche settimane dopo, Pirandello è a Bonn.
 
-## Saggio: L'umorismo
+## Saggio: *L'umorismo*
 - ==p. 878==
-
 
 Scritto intorno al 1908, anche se pubblicato nel 1920.
 

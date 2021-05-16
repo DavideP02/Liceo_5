@@ -41,7 +41,7 @@ Non sembra voler tornare indietro.
 
 I personaggi si muovono senza una conseguenza logica, come nel suo teatro
 
-### T: “Nessun nome”
+### T: *“Nessun nome”*
 - ==p. 949==
 
 È l’ultima pagina del romanzo

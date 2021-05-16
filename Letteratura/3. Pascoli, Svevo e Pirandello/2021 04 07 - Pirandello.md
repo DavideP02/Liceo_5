@@ -52,6 +52,18 @@ A differenza di Svevo, che si è interessato subito all'opera di Freud, Pirandel
 
 Questa teoria affascinava molto Pirandello.
 
-![Pirandello Binet](/assets/Pirandello%20Binet.jpeg)
+#### Pirandello e la malattia mentale
+
+A differenza di Italo Svevo, che lesse alcune opere di Freud, Pirandello ha sempre dichiarato di non conoscere direttamente le teorie freudiane. Egli ebbe però, ancora più direttamente dello scrittore triestino, un contatto doloroso con il mondo della malattia mentale, a seguito della lunga e penosa vicenda dei disturbi psichici di cui soffrì la mogli. Precoce risulta il suo interesse per questo settore di studi, testimoniato in particolare dalla lettura del saggio *Les altérations de la personnalité* (*Le alterazioni della personalità*, 1892) dello psicologo francese **Alfred Binet**. Pirandello elogia espressamente "quella rassegna di meravigliosi esperimenti psico-fisiologici, dai quali, com'è noto, si argomenta che la presunta **unità del nostro io** non è altro in fondo che un **aggregamento temporaneo scindibile e modificabile di vari strati di coscienza** più o meno chiari" (dal saggio *Arte e scienza*, 1908)
+
+#### L'io come "confederazione di anime"
+
+Ciò che suggestiona e poi inciderà profodnamente sul pensiero pirandelliano è la possibilità di penetrare nei territori bui della coscienza individuale, di svelare la natura dissociata della personalità umana. Quest'ultima viene rappresentata negli studi di Binet come una sorta di "confederazione di anime" dominate da un io egemone, che tiene sotto controllo una vita psichica caotica e brulicante di fantasmi, normalmente celata sotto la soglia della coscienza. Pirandello trova così conferma alle sue intuizioni sullo **sdoppiamento della personalità**, che ricorrono in una lettera del 1884 indirizzata alla futura consorte Antonietta:
+
+> In me son quasi due persone. Tu già ne conosci una; l'altra neppure la conosco bene io stesso. Voglio dire che **consto di un _gran me_ e d'un _piccolo me_**: questi due signori sono sempre **in guerra tra di loro**; l'uno è spesso allaltro sommamente antipatico. Il primo è taciturno e assorto continuamente in pensieri, il secondo parla facilmente, scherza e non è alieno dal ridere e dal far ridere. Quando questi ne dice qualcuna un po' scema, quegli va allo specchio e se lo bacia. Io sono **perpetuamente diviso tra queste due persone**: ora impera l'una, ora l'altra. Io tengo naturalmente molto più alla prima, voglio dire al mio gran me; mi adatto e compatisco la seconda, che è in fondo un essere come tutti gli altri, coi suoi pregi comuni e coi comuni difetti
+
+Si coglie già qui la propensione a temi quali la **scomposizione dell'io**, il **doppio** e la **maschera**, che avranno un ruolo fondamentale nella definizione dei personaggi pirandelliani sia nella narrativa sia nel teatro, e che troveranno nel saggio sull'*Umorismo* del 1908 una loro chiara teorizzazione:
+
+> Ciasuno si racconcia la maschera come può - la maschera esteriore. Perché dentro poi c'è l'altra, che spesso non s'accorda con quella di fuori. E niente è vero! Vero il mare, sì, vera la montagna; vero il sasso; vero un filo d'erba; ma l'uomo? Sempre mascherato, senza volerlo, senza saperlo.
 
 Le anime, come spiritelli, stanno dentro di noi, in quella sfera che è l'inconscio. L'individuo non sa di averle. Prevale un io egemone, e le altre stanno sotto al livello della coscienza, e possono uscire in qualsiasi momento.
