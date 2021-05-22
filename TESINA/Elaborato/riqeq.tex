@@ -1,0 +1,23 @@
+% Comandi per la creazione del riquadro attorno alle equazioni
+% \equazione{arg1} crea una equazione con riquadro colorato
+
+\usepackage[leqno,fleqn,intlimits]{empheq}
+\usepackage[most]{tcolorbox}
+\usepackage{ifthen}
+
+	\newif\ifmarg
+	\margtrue
+	\ifmarg
+	\makeatletter
+	\let\mytagform@=\tagform@
+	\def\tagform@#1{\maketag@@@{\mbox{~}\hbox{\rlap{\hspace{0.5in}(\ignorespaces#1\unskip\@@italiccorr)}}}\kern1sp}
+	\renewcommand{\eqref}[1]{{\mytagform@{\ref{#1}}}}
+	\makeatother
+	\fi
+	
+	\newcommand*\mygraybox[0]{%
+		\tcbhighmath}
+		
+	\newcommand{\equazione}[1]{	\begin{empheq}[box=\mygraybox]{equation*}
+			#1
+		\end{empheq}}

@@ -1,0 +1,13 @@
+%rimuovere il titolo del capitolo & impaginazione titolo capitolo
+\usepackage{ifthen}
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{30\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \vskip 20\p@
+    \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    \vskip 40\p@
+  }\thispagestyle{fancy}}
+\makeatother
+\addto\captionsitalian{\renewcommand{\chaptername}{}}

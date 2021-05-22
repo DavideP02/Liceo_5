@@ -1,0 +1,22 @@
+\usepackage{geometry}
+\geometry{top=5.5cm, left=125pt, right=125pt,%
+heightrounded}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{calc}
+\newlength{\oddmarginwidth}
+\setlength{\oddmarginwidth}{15mm+\hoffset+\oddsidemargin}
+\newlength{\evenmarginwidth}
+\setlength{\evenmarginwidth}{\evensidemargin+15mm}
+\fancyhfoffset[LO,RE]{\oddmarginwidth}
+\fancyhfoffset[LE,RO]{\evenmarginwidth}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+\fancyhead[L]{\hspace{2em}\includegraphics[width=4cm]{1}\vspace{1.4cm}}
+\fancyhead[R]{\includegraphics[width=1.5cm]{2}\hspace{2em}\vspace{1.4cm}}
+\fancyhead[C]{{\Large Liceo Classico Scientifico Musicale ``\textbf{Isaac Newton}''}\\ \vspace{0.3em}%
+{\large via Paleologi 22, Chivasso (TO)}\vspace{1em}}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{\textbf{Elaborati Esame di Stato 20-21}}
+\geometry{top=5.5cm, left=125pt, right=125pt, headsep=11.47mm, headheight=32.82mm, footskip=23.73mm,%
+heightrounded}
