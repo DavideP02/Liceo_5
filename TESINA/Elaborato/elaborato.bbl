@@ -19,6 +19,18 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{trec:an}{online}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{labeltitlesource}{title}
+      \field{title}{ANALISI NUMERICA}
+      \verb{urlraw}
+      \verb https://www.treccani.it/enciclopedia/analisi-numerica_%28Enciclopedia-Italiana%29/
+      \endverb
+      \verb{url}
+      \verb https://www.treccani.it/enciclopedia/analisi-numerica_%28Enciclopedia-Italiana%29/
+      \endverb
+    \endentry
     \entry{blu:1}{mvbook}{}
       \name{author}{2}{}{%
         {{hash=eef0390b04ede473382684ca975046c0}{%
@@ -84,6 +96,33 @@
       \verb{url}
       \verb http://www.dmf.unicatt.it/~degiova/lincei/equazioni_di_terzo_e_quarto_grado.pdf
       \endverb
+    \endentry
+    \entry{num:an}{book}{}
+      \name{author}{2}{}{%
+        {{hash=d92dd0a67eb8f474a9f4706e2d8d99ef}{%
+           family={L.\bibnamedelimi Burden},
+           familyi={L\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+        {{hash=30b5b9c80979e25c683e821104b62b1c}{%
+           family={Douglas\bibnamedelima Faires},
+           familyi={D\bibinitperiod\bibinitdelim F\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{fb27574a77dd284bc766f746956c0ddb}
+      \strng{fullhash}{fb27574a77dd284bc766f746956c0ddb}
+      \strng{bibnamehash}{fb27574a77dd284bc766f746956c0ddb}
+      \strng{authorbibnamehash}{fb27574a77dd284bc766f746956c0ddb}
+      \strng{authornamehash}{fb27574a77dd284bc766f746956c0ddb}
+      \strng{authorfullhash}{fb27574a77dd284bc766f746956c0ddb}
+      \field{sortinit}{L}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Numerical analysis}
+      \field{year}{2012}
+      \field{dateera}{ce}
     \endentry
   \enddatalist
 \endrefsection

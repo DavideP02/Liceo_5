@@ -1,12 +1,22 @@
 \documentclass[a4paper, oneside, titlepage, reqno]{book}
 
+
 \input{fond}
+
+\definecolor{blue}{rgb}{0, 0, 0.55}
+\definecolor{cyan}{rgb}{0.0, 1.0, 1.0}
+
+% pallette colori
+% bordi: blue
+% sfondo: blue!3!
+% secondo colore: blue!50!cyan
+
 \input{math}
 \input{chap}
 \input{emptyhf}
 \input{nota}
 \input{riqeq}
-
+\input{img}
 \input{newton}
 
 \bibliography{biblio}
@@ -27,7 +37,7 @@
 
 \renewcommand{\thefootnote}{\alph{footnote}}
 
-\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
 
 %----------
 
@@ -41,7 +51,7 @@
 	pdfauthor={Davide Peccioli},
 	pdftitle={Analisi numerica e applicazioni},
 	pdfsubject={Matematica e fisica},
-	allcolors=blue, 
+	allcolors=blue,
 	colorlinks=true}
 	
 %------------
@@ -161,7 +171,7 @@ Le soluzioni di questo sistema sono
 \]
 \equazione{k=-\frac{5}{2\sqrt[5]{8}}}
 La funzione da studiare diventa quindi
-\begin{equation}
+\begin{equation}\label{eq:2}
 y=f(x)=x^5-\frac{5}{2\sqrt[5]{8}}\cdot x+1
 \end{equation}
 
@@ -194,12 +204,12 @@ La prima equazione:
 \equazione{x=\sqrt[5]{\frac{1}{4}}}
 La seconda è una equazione di terzo grado\supercite{eq:ter}:
 \begin{gather*}
-\textcolor{red}{27\times\,\Bigg(}x^3+2\alpha x^2+3\alpha^2x+4\alpha^3=0\textcolor{red}{\Bigg)}\\
+\textcolor{blue}{27\times\,\Bigg(}x^3+2\alpha x^2+3\alpha^2x+4\alpha^3=0\textcolor{blue}{\Bigg)}\\
 27x^3+54\alpha x^2+81\alpha^2 x + 108 \alpha^3=0
 \end{gather*}
-Sia \red{$t=3x+2\alpha$}, da cui $x=(t-2\alpha)/3$
+Sia \blue{$t=3x+2\alpha$}, da cui $x=(t-2\alpha)/3$
 \begin{gather*}
-27\Big(\red{\frac{t-2\alpha}{3}}\Big)^3+54\alpha \Big(\red{\frac{t-2\alpha}{3}}\Big)^2+81\alpha^2 \Big(\red{\frac{t-2\alpha}{3}}\Big) + 108 \alpha^3=0\\
+27\Big(\blue{\frac{t-2\alpha}{3}}\Big)^3+54\alpha \Big(\blue{\frac{t-2\alpha}{3}}\Big)^2+81\alpha^2 \Big(\blue{\frac{t-2\alpha}{3}}\Big) + 108 \alpha^3=0\\
 \dots\\
 t^3+(27\alpha^2-12\alpha^2)t+108\alpha^3-54\alpha^3+16\alpha^3=0\\
 t^3+15\alpha^2t+70\alpha^3=0
@@ -277,20 +287,22 @@ Considerato che $(x-\alpha)^2>0\,\forall x\in \R-\{\alpha\}$, la funzione $p(x)$
 \lim_{x\to+\infty}f(x)=+\infty\,\implies\,\lim_{x\to-\infty}p(x)>0\implies p(x)>0\,\forall x\in(\beta; \,+\infty)
 \]
 
-È possibile ora studiare il segno della funzione $y=f(x)$:
+È possibile ora {studiare il segno} della funzione $y=f(x)$, come mostrato alla figura \ref{sgn:f}
+\begin{figure}
+\immagine{Studio del segno della funzione (\hyperref[eq:2]{\textcolor{white}{2}})\label{sgn:f}}{
 \begin{center}
 \begin{tikzpicture}
 %\draw [help lines] (0,0) grid (9,3);
 \draw [thick, ->] (0,2.5) -- (9,2.5);
-\draw [teal, ultra thick] (0,1.9) -- (9,1.9);
-\draw [cyan, ultra thick] (3.5,1.4) -- (9,1.4);
-\draw [cyan, ultra thick, dashed] (0,1.4) -- (3.5,1.4);
+\draw [blue, ultra thick] (0,1.9) -- (9,1.9);
+\draw [blue!50!cyan, ultra thick] (3.5,1.4) -- (9,1.4);
+\draw [blue!50!cyan, ultra thick, dashed] (0,1.4) -- (3.5,1.4);
 \draw (3.5,2.4) -- (3.5,2.6);
 \draw (5.5,2.4) -- (5.5,2.6);
 \node at (3.5, 2.8) {$\beta$};
 \node at (5.5, 2.8) {$\alpha$};
-\node at (-0.7,1.9) {$\textcolor{teal}{(x-\alpha)^2}$};
-\node at (9.7,1.4) {$\textcolor{cyan}{p(x)}$};
+\node at (-0.7,1.9) {$\textcolor{blue}{(x-\alpha)^2}$};
+\node at (9.7,1.4) {$\textcolor{blue!50!cyan}{p(x)}$};
 \draw [dashed] (3.5, 0.5) -- (3.5, 2.5);
 \draw [dashed] (5.5, 0.5) -- (5.5, 2.5);
 \node [draw, circle, inner sep=2pt, fill=white] at (3.5,1.4) {};
@@ -304,7 +316,8 @@ Considerato che $(x-\alpha)^2>0\,\forall x\in \R-\{\alpha\}$, la funzione $p(x)$
 \draw [ultra thick] (7.5,0.35) -- (7.5,0.65);
 \node at (0.5,0.5) {$f(x)$};
 \end{tikzpicture}
-\end{center}
+\end{center}}
+\end{figure}
 
 \equazione{f(x)>0\quad\forall x\in (\beta;\,\alpha)\,\cup\,(\alpha;\,+\infty)}
 
@@ -331,8 +344,10 @@ x^2>\sqrt{\frac{1}{2\sqrt[5]{8}}}\,\implies\,x>\frac{1}{\sqrt[5]{4}}\,\lor\,x<-\
 
 Pertanto
 \[
-y'>0\quad\forall x\in \Bigg(-\infty;\,-\frac{1}{2\sqrt[5]{8}}\Bigg)\,\cup\,\Bigg(\frac{1}{2\sqrt[5]{8}};\,+\infty\Bigg)
+y'>0\quad\forall x\in \Bigg(-\infty;\,-\frac{1}{\sqrt[5]{4}}\Bigg)\,\cup\,\Bigg(\frac{1}{\sqrt[5]{4}};\,+\infty\Bigg)
 \]
+\begin{figure}
+\immagine{Studio del segno della derivata prima della funzione (\hyperref[eq:2]{\textcolor{white}{2}})\label{sgn:df}}{
 \begin{center}
 \begin{tikzpicture}
 %\draw [help lines] (0,0) grid (9,3);
@@ -342,27 +357,28 @@ y'>0\quad\forall x\in \Bigg(-\infty;\,-\frac{1}{2\sqrt[5]{8}}\Bigg)\,\cup\,\Bigg
 \draw [thick, dashed] (1,1.9) -- (3, 1.9);
 \draw (1,2.4) -- (1,2.6);
 \draw (3,2.4) -- (3,2.6);
-\node at (1, 3) {$-1/(2\sqrt[5]{8})$};
-\node at (3, 3) {$1/(2\sqrt[5]{8})$};
+\node at (1, 3) {$-1/(\sqrt[5]{4})$};
+\node at (3, 3) {$1/(\sqrt[5]{4})$};
 \node at (-1.5,1.9) {$y'$};
 \draw [dashed] (1, 0) -- (1, 2.5);
 \draw [dashed] (3, 0) -- (3, 2.5);
 \node [draw, circle, inner sep=2pt, fill=white] at (1,1.9) {};
 \node [draw, circle, inner sep=2pt, fill=white] at (3,1.9) {};
 \node at (-1.5,0.7) {$f(x)$};
-\draw [cyan, ->, ultra thick] (-0.8, 0.3) -- (0.8, 1.5);
-\draw [cyan, ->, ultra thick] (3.2, 0.3) -- (4.8, 1.5);
-\draw [cyan, ->, ultra thick] (1.2, 1.5) -- (2.8, 0.3);
+\draw [blue!50!cyan, ->, ultra thick] (-0.8, 0.3) -- (0.8, 1.5);
+\draw [blue!50!cyan, ->, ultra thick] (3.2, 0.3) -- (4.8, 1.5);
+\draw [blue!50!cyan, ->, ultra thick] (1.2, 1.5) -- (2.8, 0.3);
 \node at (1,-0.25) {\textbf{max\vphantom{i}}};
 \node at (3,-0.25) {\textbf{min}};
 \end{tikzpicture}
-\end{center}
+\end{center}}
+\end{figure}
 
-Come si può vedere dal grafico sopra riportato, il punto
-\[M_1\Bigg(-\frac{1}{2\sqrt[5]{8}};\, 2\Bigg)\]
+Come si può vedere dal grafico riportato alla figura \ref{sgn:df}, il punto
+\[M_1\Bigg(-\frac{1}{\sqrt[5]{4}};\, 2\Bigg)\]
 è punto di \textbf{massimo}, mentre il punto
 \[
-M_2\Bigg(\frac{1}{2\sqrt[5]{8}};\,0\Bigg)
+M_2\Bigg(\frac{1}{\sqrt[5]{4}};\,0\Bigg)
 \]
 è punto di \textbf{minimo}, nonché zero della funzione.
 
@@ -379,13 +395,132 @@ y''>0\quad\forall x\in (0;\,+\infty)\\
 y''<0\quad\forall x\in (0;\,+\infty)
 \end{gather*}
 
-Ora è possibile disegnare la funzione su un piano cartesiano.
+Ora è possibile disegnare la funzione su un piano cartesiano, come mostrato nella figura \ref{grf:f}
 
+\begin{figure}
+\immagine{Grafico della funzione (\hyperref[eq:2]{\textcolor{white}{2}}) \label{grf:f}}{
+\begin{center}
 \begin{tikzpicture}
-\begin{axis} [xmin=-5,xmax=5, ymin=-5, ymax=5, axis equal, xlabel=$x$, ylabel=$y$, title={Grafico di funzione}, width=\textwidth, axis lines=middle]
+\begin{axis} [xmin=-5,xmax=5, ymin=-5, ymax=5, axis equal, xlabel=$x$, ylabel=$y$, width=\textwidth, height=\textwidth,axis lines=middle, enlargelimits]
+\addplot [ultra thick, blue] file {function.csv};
+\node [draw, circle, inner sep=2pt, fill=blue] at (-0.757858283, 2) {};
+\node [draw, circle, inner sep=2pt, fill=blue] at (0.757858283, 0) {};
+\node at (-0.757858283, 2.5) {\blue{$M_1$}};
+\node at (0.757858283, -0.5) {\blue{$M_2$}};
+\end{axis}
+\end{tikzpicture}\end{center}}
+\end{figure}
 
+\chapter{Algoritmo analisi numerica}
+
+Dal mumento che la funzione è stata scelta appositamente (variando $k$) per avere uno zero doppio, è stato possibile ricavare entrambi gli zeri analiticamente, con precisione assoluta. 
+
+Ciò nonostante non è sempre possibile ricavare analiticamente (per radicali) gli zeri di una funzione di quinto grado.
+La teoria di Evariste Galois, dimostrata poi in seguito, era proprio che non potesse esistere una formula risolutiva per radicali per equazioni generali dal quinto grado in su\supercite{eq:ter}.
+
+Ci sono diversi algoritmi che permettono di trovare ``empiricamente'' gli zeri delle funzioni: il risultato non sarà mai perfetto, ma solo una approssimazione, arbitrariamente buona, dello zero reale.
+Proprio questo è l'ambito di studio dell'\textbf{analisi numerica}: 
+\begin{quotation}
+\noindent l'analisi numerica è una branca della matematica che si occupa di individuare, analizzare e implementare algoritmi per la risoluzione approssimata di problemi matematici in genere, che possono scaturire da pure speculazioni, da reali esigenze di ricerca, o da simulazioni in campo tecnologico finalizzate alla progettazione di dispositivi complessi\supercite{trec:an}.
+\end{quotation}
+
+\chapter{Applicazioni analisi numerica}
+
+\chapter{Problema di fisica}
+
+La situazione descritta dal problema è quella rappresentata nella figura \ref{fis}, con
+\[F(x)=10e^{x/2}\,\text{N}\]
+
+\begin{figure}
+\immagine{Una forza $\vec{F}$ che agisce nella direzione dell'asse delle $x$\label{fis}}{%
+\begin{center}
+\begin{tikzpicture}
+\draw [->, thick] (0,0) -- (6,0);
+\node at (6, -0.5) {$x$};
+\node [draw, circle, fill=white, inner sep=6pt] at (3,0) {};
+\node at (3, -0.6) {$m$};
+\draw [ultra thick, ->, blue] (0.7, 0) -- (2.7, 0);
+\node at (1.7, 0.4) {\textcolor{blue}{$\vec{F}$}};
+\draw [->, thick] (2.5, 0.65) -- (3.5 , 0.65);
+\node at (3, 0.9) {moto};
+\end{tikzpicture}
+\end{center}}
+\end{figure}
+
+Sia $L$ il lavoro della forza $\vec{F}$ per uno spostamento che vada da $x_i=0$ a $x_f=2\,\text{m}$; questo lavoro, in un grafico $F-x$ è l'area sottesa alla curva $F=F(x)$ nell'intervallo $(0;\,2)$;
+\begin{itemize}
+\item[(a)] \phantomsection\label{L:a} è possibile approssimare quest'area con un trapezio rettangolo $ABCD$ (come in figura \ref{trap}):
+\begin{multline*}
+L=\frac{(B+b)\cdot h}{2}=\\=\frac{1}{2}\cdot [F(0)+F(2)](2\,\text{m}-0\,\text{m})=\\=[10+10e^{-1}]\,\text{N}\cdot\text{m}\approx 13,68\,\text{N}\cdot\text{m}
+\end{multline*}
+\item [(b)] \phantomsection\label{L:b} utilizzando la definizione di \textbf{integrale definito}:
+\[
+L=\int_{0}^{2\,\text{m}}F(x)\dif x=\Bigg[\int F(x) \dif x\Bigg]^{2\,\text{m}}_{0}
+\]
+
+\begin{minipage}{\textwidth}
+\begin{tcolorbox}[colframe=blue!0!, colback=blue!3!, top=0mm, bottom=0mm]
+\begin{multicols}{2}
+\begin{gather*}
+\int F(x) \dif x=\int 10e^{-x/2}\dif x=\\
+=-20\int e^{\textcolor{blue}{t}}\dif \textcolor{blue}{t}=-20e^t+k=\\
+=-20e^{-x/2}+k
+\end{gather*}
+\columnbreak
+
+\begin{align*}
+\text{sia}\quad t&=-\frac{x}{2}\\
+x&=-2y\\
+\dif x &= -2\dif t
+\end{align*}
+\end{multicols}
+\end{tcolorbox}
+\end{minipage}
+\begin{multline*}
+L=\Bigg[\int F(x) \dif x\Bigg]^{2\,\text{m}}_{0}=\\
+=\Bigg[-20e^{-x/2}\Bigg]^{2\,\text{m}}_{0}=\Big[-20e^{-1}+20\Big]\,\text{N}\cdot\text{m}=\\
+=20\cdot\Big(1-\frac{1}{e}\Big)\,\text{N}\cdot\text{m}\approx 12,64\,\text{N}\cdot\text{m}
+\end{multline*}
+\end{itemize}
+
+Il lavoro compiuto dalla forza quindi è:
+\equazione{L=20\cdot\Big(1-\frac{1}{e}\Big)\,\text{N}\cdot\text{m}\approx 12,64\,\text{N}\cdot\text{m}}
+
+L'errore percentuale del metodo \hyperref[L:a]{(a)} rispetto al metodo \hyperref[L:b]{(b)} è di
+\[
+\varepsilon_{\%}=\frac{|L_{(a)}-L_{(b)}|}{L_{(b)}}\cdot100=7,58\,\%
+\]
+
+\begin{figure}
+\immagine{Lavoro della forza interpretato come trapezio \hyperref[L:a]{\textcolor{white}{(a)}}\label{trap}}{%
+\begin{center}
+\begin{tikzpicture}
+\begin{axis} [xmin=-3,xmax=12, ymin=-3, ymax=12, axis equal, xlabel=$x$, ylabel=$y$, width=\textwidth, height=\textwidth,axis lines=middle, enlargelimits]
+\node [fill=white] at (-0.6, 10) {\textbf{D}};
+\addplot [samples=1000, thick, black, domain=-1:9] {10*2.71828182846^(-x/2)};
+\draw [ultra thick, blue] (0,0) -- (2,0) -- (2, 3.67879441171) -- (0,10) -- cycle;
+\pattern [pattern=north east lines] (0,0) -- (2,0) -- (2, 3.67879441171) -- (0,10);
+\node [fill=white] at (1,3) {$L$};
+\node at (-0.6,-0.6) {\textbf{A}};
+\node [fill=white] at (2,-0.6) {\textbf{B}};
+\node at (2.5,4) {\textbf{C}};
 \end{axis}
 \end{tikzpicture}
+\end{center}}
+\end{figure}
+\begin{figure}
+\immagine{Lavoro della forza interpretato come integrale \hyperref[L:b]{\textcolor{white}{(b)}}\label{int}}{%
+\begin{center}
+\begin{tikzpicture}
+\begin{axis} [xmin=-3,xmax=12, ymin=-3, ymax=12, axis equal, xlabel=$x$, ylabel=$y$, width=\textwidth, height=\textwidth,axis lines=middle, enlargelimits]
+\addplot [pattern=north east lines, draw=none] file {fill.csv};
+\addplot [samples=1000, ultra thick, blue, domain=-1:9] {10*2.71828182846^(-x/2)};
+\addplot [dashed, thick, black] coordinates {(2, 0) (2, 3.67879441171)};
+\node [fill=white] at (1,3) {$L$};
+\end{axis}
+\end{tikzpicture}
+\end{center}}
+\end{figure}
 
 \cleardoublepage
 \printbibliography\addcontentsline{toc}{chapter}{\bibname}\thispagestyle{fancy}

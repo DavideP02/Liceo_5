@@ -1,15 +1,15 @@
 [0] Config.pm:304> INFO - This is Biber 2.12
 [0] Config.pm:307> INFO - Logfile is 'elaborato.blg'
-[38] biber-darwin:315> INFO - === Sat May 22, 2021, 18:02:52
-[56] Biber.pm:371> INFO - Reading 'elaborato.bcf'
-[133] Biber.pm:889> INFO - Found 3 citekeys in bib section 0
-[143] Biber.pm:4093> INFO - Processing section 0
-[150] Biber.pm:4254> INFO - Looking for bibtex format file 'biblio.bib' for section 0
-[151] bibtex.pm:1523> INFO - LaTeX decoding ...
-[155] bibtex.pm:1340> INFO - Found BibTeX data source 'biblio.bib'
+[28] biber-darwin:315> INFO - === Sun May 23, 2021, 13:34:06
+[44] Biber.pm:371> INFO - Reading 'elaborato.bcf'
+[124] Biber.pm:889> INFO - Found 5 citekeys in bib section 0
+[135] Biber.pm:4093> INFO - Processing section 0
+[144] Biber.pm:4254> INFO - Looking for bibtex format file 'biblio.bib' for section 0
+[145] bibtex.pm:1523> INFO - LaTeX decoding ...
+[150] bibtex.pm:1340> INFO - Found BibTeX data source 'biblio.bib'
 [173] UCollate.pm:68> INFO - Overriding locale 'it-IT' defaults 'variable = shifted' with 'variable = non-ignorable'
 [173] UCollate.pm:68> INFO - Overriding locale 'it-IT' defaults 'normalization = NFD' with 'normalization = prenormalized'
 [173] Biber.pm:3921> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'it-IT'
 [173] Biber.pm:3927> INFO - No sort tailoring available for locale 'it-IT'
-[179] bbl.pm:636> INFO - Writing 'elaborato.bbl' with encoding 'UTF-8'
-[179] bbl.pm:739> INFO - Output to elaborato.bbl
+[180] bbl.pm:636> INFO - Writing 'elaborato.bbl' with encoding 'UTF-8'
+[181] bbl.pm:739> INFO - Output to elaborato.bbl

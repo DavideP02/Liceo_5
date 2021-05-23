@@ -10,4 +10,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.2}Studio di funzione}{4}{section.2.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografia}{10}{chapter*.8}% 
+\contentsline {chapter}{\numberline {3}Algoritmo analisi numerica}{10}{chapter.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Applicazioni analisi numerica}{11}{chapter.4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Problema di fisica}{12}{chapter.5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografia}{16}{chapter*.10}% 
