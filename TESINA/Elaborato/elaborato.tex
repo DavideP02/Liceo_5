@@ -5,6 +5,7 @@
 
 \definecolor{blue}{rgb}{0, 0, 0.55}
 \definecolor{cyan}{rgb}{0.0, 1.0, 1.0}
+\definecolor{green}{rgb}{0.13, 0.55, 0.13}
 
 % pallette colori
 % bordi: blue
@@ -35,9 +36,11 @@
 
 \renewcommand{\theequation}{\arabic{equation}}
 
-\renewcommand{\thefootnote}{\alph{footnote}}
+\renewcommand{\thefootnote}{\roman{footnote}}
 
 \newcommand{\blue}[1]{\textcolor{blue}{#1}}
+
+\newcommand{\citazione}[2]{\footnote{\cite{#1} \fullcite[#2]{#1}}} %citazione come nota a piè pagina
 
 %----------
 
@@ -52,6 +55,7 @@
 	pdftitle={Analisi numerica e applicazioni},
 	pdfsubject={Matematica e fisica},
 	allcolors=blue,
+	citecolor=green,
 	colorlinks=true}
 	
 %------------
@@ -113,7 +117,7 @@ y=f(x)=x^5+kx+1
 
 Prima di studiare la funzione in questione è necessario assegnare al parametro $k$ un valore reale ($k<2$), tale per cui  la funzione presenti uno zero doppio. Questa scelta è dettata dalle considerazioni che si possono fare proprio in merito a tale punto.
 
-Utilizzando il \textbf{teorema fondamentale dell'algebra}\supercite{courant:mate}, posso scrivere il polinomio $f(x)$ come:
+Utilizzando il \textbf{teorema fondamentale dell'algebra} \parencite[2]{courant:mate}, posso scrivere il polinomio $f(x)$ come: %TODO manca numero di pagina
 \[
 f(x)=(x-\alpha)\cdot(x-\beta)\cdot(x-\gamma)\cdot(x-\delta)\cdot(x-\varepsilon)
 \]
@@ -130,7 +134,7 @@ da cui
 p(x)=\frac{f(x)}{(x-\alpha)^2}
 \]
 
-Per il \textbf{teorema di Ruffini}\supercite{blu:1} posso quindi affermare che la divisione $\frac{f(x)}{(x-\alpha)^2}$ non deve avere resto\footnote{Il teorema di Ruffini afferma che
+Per il \textbf{teorema di Ruffini} \parencite[vol. 1, p. ??]{blu:1} posso quindi affermare che la divisione $\frac{f(x)}{(x-\alpha)^2}$ non deve avere resto\footnote{Il teorema di Ruffini afferma che% TODO AGGIUNGERE PAGINA
 \begin{quotation}
 Un polinomio $P(X)$ è divisibile per $(x-a)$ \textit{se e solo se} $P(a)=0$.
 \end{quotation}
@@ -195,7 +199,7 @@ x\in\R
 \lim_{x\to-\infty}\Big(x^5-\frac{5}{2\sqrt[5]{8}}\cdot x+1\Big)=-\infty
 \end{gather*}
 
-Essendo una funzione polinomiale, sicuramente non presenta asintoti obliqui.
+Essendo una funzione polinomiale di quinto grado, sicuramente non presenta asintoti obliqui.
 
 \subsubsection*{Zeri}
 
@@ -206,11 +210,9 @@ f(x)=0\,\iff\, (x-\alpha)=0\,\lor\,(x^3+2\alpha x^2+3\alpha^2x+4\alpha^3)=0
 La prima equazione:
 \[x-\alpha=0\,\implies\, x=\alpha\]
 \equazione{x=\sqrt[5]{\frac{1}{4}}}
-La seconda è una equazione di terzo grado\supercite{eq:ter}:
-\begin{gather*}
-\textcolor{blue}{27\times\,\Bigg(}x^3+2\alpha x^2+3\alpha^2x+4\alpha^3=0\textcolor{blue}{\Bigg)}\\
-27x^3+54\alpha x^2+81\alpha^2 x + 108 \alpha^3=0
-\end{gather*}
+La seconda è una equazione di terzo grado, la cui risoluzione è ben illustrata in \textcite[1-4]{eq:ter}:
+\[x^3+2\alpha x^2+3\alpha^2x+4\alpha^3=0\]  % TODO un pezzo manca, aggiungere il moltiplicare per ventisette
+\[27x^3+54\alpha x^2+81\alpha^2 x + 108 \alpha^3=0\]
 Sia \blue{$t=3x+2\alpha$}, da cui $x=(t-2\alpha)/3$
 \begin{gather*}
 27\Big(\blue{\frac{t-2\alpha}{3}}\Big)^3+54\alpha \Big(\blue{\frac{t-2\alpha}{3}}\Big)^2+81\alpha^2 \Big(\blue{\frac{t-2\alpha}{3}}\Big) + 108 \alpha^3=0\\
@@ -396,7 +398,7 @@ Lo studio del segno della derivata seconda fornisce informazioni sulla concavit�
 \begin{gather*}
 y''=0 \,\iff\, x=0\\
 y''>0\quad\forall x\in (0;\,+\infty)\\
-y''<0\quad\forall x\in (0;\,+\infty)
+y''<0\quad\forall x\in (-\infty;\,0)
 \end{gather*}
 
 Ora è possibile disegnare la funzione su un piano cartesiano, come mostrato nella figura \ref{grf:f}
@@ -420,13 +422,73 @@ Ora è possibile disegnare la funzione su un piano cartesiano, come mostrato nel
 Dal mumento che la funzione è stata scelta appositamente (variando $k$) per avere uno zero doppio, è stato possibile ricavare entrambi gli zeri analiticamente, con precisione assoluta. 
 
 Ciò nonostante non è sempre possibile ricavare analiticamente (per radicali) gli zeri di una funzione di quinto grado.
-La teoria di Evariste Galois, dimostrata poi in seguito, era proprio che non potesse esistere una formula risolutiva per radicali per equazioni generali dal quinto grado in su\supercite{eq:ter}.
+La teoria di Evariste Galois, dimostrata poi in seguito, era proprio che non potesse esistere una formula risolutiva per radicali per equazioni generali dal quinto grado in su \parencite[12]{eq:ter}.
 
 Ci sono diversi algoritmi che permettono di trovare ``empiricamente'' gli zeri delle funzioni: il risultato non sarà mai perfetto, ma solo una approssimazione, arbitrariamente buona, dello zero reale.
 Proprio questo è l'ambito di studio dell'\textbf{analisi numerica}: 
 \begin{quotation}
-\noindent l'analisi numerica è una branca della matematica che si occupa di individuare, analizzare e implementare algoritmi per la risoluzione approssimata di problemi matematici in genere, che possono scaturire da pure speculazioni, da reali esigenze di ricerca, o da simulazioni in campo tecnologico finalizzate alla progettazione di dispositivi complessi\supercite{trec:an}.
+\noindent l'analisi numerica è una branca della matematica che si occupa di individuare, analizzare e implementare algoritmi per la risoluzione approssimata di problemi matematici in genere, che possono scaturire da pure speculazioni, da reali esigenze di ricerca, o da simulazioni in campo tecnologico finalizzate alla progettazione di dispositivi complessi\citazione{trec:an}{}.
 \end{quotation}
+
+Iniziando con delle osservazioni di carattere generale (precedentemente dimostrate) sulla funzione si noti che $y=f(x)$ è una funzione continua e derivabile lungo tutto il suo dominio, e che la derivata seconda della funzione è negativa nell'intervallo $(-\infty;\,0)$ mentre è positiva nell'intervallo $(0;\,+\infty)$.
+
+Si analizzino ora distintamente gli zeri della funzione $f(x)$. L'obiettivo è di ricavare analiticamente i valori di $\alpha$ e di $\beta$, ovvero i valori tali per cui la funzione si annulli.
+
+\section{Algoritmo di bisezione}
+
+Per ricavare il valore di $\beta$ è possibile utilizzare il metodo di bisezione, che si basa interamente sul teorema di Bolzano: l'intervallo su cui è possibile applicare l'algoritmo deve rispettare le stesse ipotesi proprio di questo teorema:
+\begin{itemize}
+\item la funzione deve essere continua nell'intervallo;
+\item i due estremi dell'intervallo devono avere immagini di segno discorde.
+\end{itemize}
+
+Proprio in virtù del sovracitato \textbf{teorema di Bolzano} \parencite[vol. 5, p. ]{blu:1} % TODO aggiungere pagina
+è assicurato che nell'intervallo prescelto vi sia almeno uno zero. Per semplicità si richiede che nell'intervallo considerato ve ne sia al più uno. Ne consegue che nell'intervallo vi sia una ed una sola radice $p$ della funzione.
+
+Questo algoritmo iterativo suddivide l'intervallo in due, e ad ogni passaggio individua quale metà contiene lo zero. Si veda \parencite[48-53]{num:an} per un'analisi più approfondita.
+
+Si inizi ponendo $a_1=a$ e $b_1=b$, e sia $p_1$ il punto medio di $[a;\,b]$
+\[
+p_1=\frac{a_1+b_1}{2}
+\]
+\begin{itemize}
+\item Se $f(p_1)=0$ allora $p=p_1$;
+\item se $f(p_1)\neq0$ allora avrà necessariamente lo stesso segno di uno tra $f(a_1)$ e $f(b_1)$
+\begin{itemize}
+\item  se $f(p_1)$ e $f(a_1)$ hanno lo stesso segno allora $p\in [p_1;\,b_1]$; siano $a_2=p_1$ e $b_2=b_1$;
+\item  se $f(p_1)$ e $f(b_1)$ hanno lo stesso segno allora $p\in [a_1;\,p_1]$; siano $a_2=a_1$ e $b_2=p_1$;
+\end{itemize}
+\end{itemize}
+Si riapplichi lo stesso processo per l'intervallo $[a_2; b_2]$, ed in generale ad ogni generico intervallo $[a_n;\,b_n]$ ottenuto dall'iterazione dell'algoritmo, fino a giungere ad una condizione che soddisfi il criterio di arresto prescelto. %TODO aggiungere criterio di arresto
+
+Calando questo algoritmo nel caso specifico, si noti ad esempio che 
+\begin{align*}
+f(-2)&\approx-27,701\\
+f(0)&=1
+\end{align*}
+L'intervallo $[-2; 0]$ permette di applicare l'algoritmo di bisezione per trovare il valore di $\beta$. Nella tabella \ref{tab:bis} sono mostrate dieci iterazioni dell'algoritmo.
+
+\begin{table}
+\immagine{Algoritmo di bisezione applicato a $f(x)$\label{tab:bis}}{
+\begin{center}
+\begin{tabular}{SSSSSS}
+\toprule
+{$a_n$} & {$b_n$} & {$p_n$} & {$f(a_n)$} & {$f(p_n)$} &{$f(b_n)$}\\
+\midrule
+-2 & 0 & -1 & -27,701 & 1,649 & 1\\
+-2 & -1 & -1,5 & -27,701 & -4,119 & 1,649\\
+-1,5 & -1 & -1,25 & -4,119 & 0,009 & 1,649\\
+-1,5 & -1,25 & -1,375 & -4,119 & -1,646 & 0,009\\
+-1,375 & -1,25 & -1,312 & -1,646 & -0,730 & 0,009\\
+-1,312 & -1,25 & -1,281 & -0,730 & -0,339 & 0,009\\
+-1,281 & -1,25 & -1,265 & -0,339 & -0,159 & 0,009\\
+-1,265 & -1,25 & -1,257 & -0,159 & -0,073 & 0,009\\
+-1,257 & -1,25 & -1,253 & -0,073 & -0,031 & 0,009\\
+\bottomrule
+\end{tabular}
+\end{center}
+}
+\end{table}
 
 \chapter{Applicazioni analisi numerica}
 

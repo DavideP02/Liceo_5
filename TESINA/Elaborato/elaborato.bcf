@@ -1999,7 +1999,11 @@
     <bcf:citekey order="2">blu:1</bcf:citekey>
     <bcf:citekey order="3">eq:ter</bcf:citekey>
     <bcf:citekey order="4">eq:ter</bcf:citekey>
-    <bcf:citekey order="5">trec:an</bcf:citekey>
+    <bcf:citekey order="5">eq:ter</bcf:citekey>
+    <bcf:citekey order="6">trec:an</bcf:citekey>
+    <bcf:citekey order="7">trec:an</bcf:citekey>
+    <bcf:citekey order="8">blu:1</bcf:citekey>
+    <bcf:citekey order="9">num:an</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

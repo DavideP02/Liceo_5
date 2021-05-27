@@ -1,19 +1,12 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {italian}{}
 \babel@toc {italian}{}
-\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Analisi numerica e applicazioni}{1}{chapter.1}% 
-\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}Studio di funzione}{2}{chapter.2}% 
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.1}Scelta del parametro}{2}{section.2.1}% 
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.2}Studio di funzione}{3}{section.2.2}% 
-\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Algoritmo analisi numerica}{9}{chapter.3}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Applicazioni analisi numerica}{10}{chapter.4}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Problema di fisica}{11}{chapter.5}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografia}{15}{chapter*.10}% 
+\contentsline {section}{\numberline {3.1}Algoritmo di bisezione}{9}{section.3.1}% 
+\contentsline {chapter}{\numberline {4}Applicazioni analisi numerica}{12}{chapter.4}% 
+\contentsline {chapter}{\numberline {5}Problema di fisica}{13}{chapter.5}% 
+\contentsline {chapter}{Bibliografia}{17}{chapter*.10}% 
