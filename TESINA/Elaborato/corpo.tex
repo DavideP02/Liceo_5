@@ -1,0 +1,878 @@
+\frontmatter
+
+\begin{titlepage} % pagina del titolo
+\thispagestyle{fancy}
+\begin{center}
+    \null
+    \vfill
+    {\huge Analisi numerica e applicazioni}\\
+    \vspace{3em}
+    {\large Davide Peccioli}\\
+    \vspace{1em}
+    {\large \textbf{Classe 5\textsuperscript{a}\,H}}
+    \fancyfoot[C]{}
+    \vfill
+\end{center}
+\end{titlepage}
+
+\fancyfoot[C]{\thepage}
+
+\tableofcontents\thispagestyle{fancy}
+
+\chapter{Analisi numerica e applicazioni}
+
+\begin{nota}{Consegna}
+L’analisi numerica si occupa della ricerca delle procedure di calcolo per la determinazione di soluzioni approssimate di problemi ambientati in un insieme numerico continuo.
+
+Il candidato esponga le principali metodologie utilizzate in un ambito scelto (ricerca soluzioni di equazioni, integrazione, etc.) e, in particolare, è richiesto di:
+
+\begin{enumerate}
+\item studiare una funzione del tipo $y=x^5+kx+1$, avendo scelto un parametro $k$ ($k<2$), commentando in modo puntuale gli aspetti teorici utilizzati;
+\item fornire indicazioni per lo sviluppo di un algoritmo che permetta di individuare gli zeri della funzione scelta;
+\item esporre un’applicazioni matematica o fisica (es. calcolo aree, interpolazioni…).
+\item Una forza $\vec{F}$ nella direzione dell’asse $x$ agisce su un oggetto in moto lungo l’asse $x$. Se l’intensità della forza è data da $F=10e^{-x/2,0}\,\text{N}$ trovare il lavoro svolto da $\vec{F}$ mentre l’oggetto si sposta da $x=0$ a 
+$x= 2,0\,\text{m}$ 
+\begin{enumerate}
+\item tracciando la curva F(x) e valutando per via grafica l’area sottesa dalla curva e
+\item per via analitica, calcolando l’integrale.
+\end{enumerate}
+\end{enumerate}
+\end{nota}
+
+\mainmatter
+
+\chapter{Studio di funzione}
+
+Si studi la funzione 
+
+\begin{equation}
+y=f(x)=x^5+kx+1
+\end{equation}
+
+\section{Scelta del parametro}
+
+Prima di studiare la funzione in questione è necessario assegnare al parametro $k$ un valore reale ($k<2$), tale per cui  la funzione presenti uno zero doppio. Questa scelta è dettata dalle considerazioni che si possono fare proprio in merito a tale punto.
+
+Utilizzando il \textbf{teorema fondamentale dell'algebra} \parencite[148-150]{courant:mate}, posso scrivere il polinomio $f(x)$ come:
+\[
+f(x)=(x-\alpha)\cdot(x-\beta)\cdot(x-\gamma)\cdot(x-\delta)\cdot(x-\varepsilon)
+\]
+dove $\alpha$, $\beta$, $\gamma$, $\delta$, $\varepsilon$ sono le radici, reali o complesse, del polinomio.
+
+Dal momento che si ricerca un polinomio con uno zero doppio, possiamo scrivere:
+\begin{multline*}
+f(x)=\\
+=(x-\alpha)^2\cdot(x-\beta)\cdot(x-\gamma)\cdot(x-\delta))=\\
+=(x-\alpha)^2\cdot p(x)
+\end{multline*}
+da cui
+\[
+p(x)=\frac{f(x)}{(x-\alpha)^2}
+\]
+
+Per il \textbf{teorema di Ruffini} \parencite[vol. 1, p. 415]{blu:1} posso quindi affermare che la divisione $\frac{f(x)}{(x-\alpha)^2}$ non deve avere resto\footnote{Il teorema di Ruffini afferma che
+\begin{quotation}
+Un polinomio $P(X)$ è divisibile per $(x-a)$ \textit{se e solo se} $P(a)=0$.
+\end{quotation}
+Dal momento che per ipotesi $\alpha$ è radice doppia del polinomio, $f(x)$ è divisibile doppiamente per $(x-\alpha)$}. Questa sarà proprio la condizione che permetterà di trovare un valore di $k$ adeguato.
+Espandendo $(x-\alpha)^2$ come $x^2-2\alpha x+\alpha^2$ si svolge la divisione polinomiale:
+\[
+\begin{array}{cccccc|c}
+x^5 & +0x^4 & +0x^3 & +0x^2 & +kx & +1  & x^2-2\alpha x+\alpha^2\\ \cline{7-7}
+x^5 & -2\alpha x^4 & +\alpha^2x^3 & & & & x^3+2\alpha x^2+3\alpha^2x+4\alpha^3\\\cline{1-3}
+& 2\alpha x^4 & -\alpha^2x^3 & & & & \\
+& 2\alpha x^4 & -4\alpha^2x^3 & +2\alpha^3x^2 & & & \\
+\cline{2-4}
+& & 3\alpha^2x^3 & -2\alpha^3x^2 &+ kx & & \\
+& & 3\alpha^2x^3 & +6\alpha^3x^2 & +3\alpha^4x & & \\
+\cline{3-5}
+& & & 4\alpha^3x^2 & (k-3\alpha^4)x & + 1& \\
+& & & 4\alpha^3x^2 & -8\alpha^4x & +4\alpha^5 & \\
+\cline{4-6}
+& & & & (k+5\alpha^4)x & -4\alpha^5 + 1& 
+\end{array}
+\]
+Il cui resto $r(x)$ è
+\[
+r(x)=(k+5\alpha^4)x -4\alpha^5 + 1
+\]
+
+Per le condizioni esposte precedentemente
+\[
+r(x)=0\quad \forall x\in \R
+\]
+da cui
+\[
+\begin{cases}
+k+5\alpha^4=0\\
+-4\alpha^5+1=0
+\end{cases}
+\]
+
+Le soluzioni di questo sistema sono
+\[
+\alpha=\sqrt[5]{\frac{1}{4}}
+\]
+\equazione{k=-\frac{5}{2\sqrt[5]{8}}}
+La funzione da studiare diventa quindi
+\begin{equation}\label{eq:2}
+y=f(x)=x^5-\frac{5}{2\sqrt[5]{8}}\cdot x+1
+\end{equation}
+
+\section{Studio di funzione}
+
+\equazione{y=f(x)=x^5-\frac{5}{2\sqrt[5]{8}}\cdot x+1}
+
+\subsubsection*{Campo di esistenza}
+
+Come per tutte le funzioni polinomiali, il campo di esistenza della funzione è 
+\[
+x\in\R
+\]
+
+\subsubsection*{Limiti}
+
+\begin{gather*}
+\lim_{x\to+\infty}\Big(x^5-\frac{5}{2\sqrt[5]{8}}\cdot x+1\Big)=+\infty\\
+\lim_{x\to-\infty}\Big(x^5-\frac{5}{2\sqrt[5]{8}}\cdot x+1\Big)=-\infty
+\end{gather*}
+
+Essendo una funzione polinomiale di quinto grado, sicuramente non presenta asintoti obliqui.
+
+\subsubsection*{Zeri}
+
+Abbiamo definito in precedenza $f(x)=(x-\alpha)^2\cdot (x^3+2\alpha x^2+3\alpha^2x+4\alpha^3)$, con $\alpha=\sqrt[5]{\frac{1}{4}}$. Pertanto
+\[
+f(x)=0\,\iff\, (x-\alpha)=0\,\lor\,(x^3+2\alpha x^2+3\alpha^2x+4\alpha^3)=0
+\]
+La prima equazione:
+\[x-\alpha=0\,\implies\, x=\alpha\]
+\equazione{x=\sqrt[5]{\frac{1}{4}}}
+La seconda è una equazione di terzo grado, la cui risoluzione è ben illustrata in \textcite[1-4]{eq:ter}:
+\[x^3+2\alpha x^2+3\alpha^2x+4\alpha^3=0\] 
+Applicando il secondo principio di equivalenza per le equazioni, si moltiplichi per $27$ entrambi i membri:
+\[27x^3+54\alpha x^2+81\alpha^2 x + 108 \alpha^3=0\]
+Sia \blue{$t=3x+2\alpha$}, da cui $x=(t-2\alpha)/3$
+\begin{gather*}
+27\Big(\blue{\frac{t-2\alpha}{3}}\Big)^3+54\alpha \Big(\blue{\frac{t-2\alpha}{3}}\Big)^2+81\alpha^2 \Big(\blue{\frac{t-2\alpha}{3}}\Big) + 108 \alpha^3=0\\
+\dots\\
+t^3+(27\alpha^2-12\alpha^2)t+108\alpha^3-54\alpha^3+16\alpha^3=0\\
+t^3+15\alpha^2t+70\alpha^3=0
+\end{gather*}
+Si cerca $t$ nella forma $t=u+v$
+\[
+(u+v)^3+15\alpha^2(u+v)+70\alpha^3=0
+\]
+\begin{multline*}
+u^3+v^3-3u^2v+3uv^2+15\alpha^2(u+v)+70\alpha^3=\\
+=u^3+v^3+3uv(u+v)+15\alpha^2(u+v)+70\alpha^3=\\
+=u^3+v^3+(3uv+15\alpha^2)(u+v)+70\alpha^3=0
+\end{multline*}
+
+Siccome esistono tanti modi per scrivere $t$ come $t=u+v$ è possibile imporre un'ulteriore condizione. Per semplicità di calcolo, sia
+\[
+3uv+15\alpha^2=0
+\]
+da cui
+\[
+\begin{cases}
+u^3+v^3=-70\alpha^3\\
+3uv=-15\alpha^2
+\end{cases}
+\implies\begin{cases}
+u^3+v^3=-70\alpha^3\\
+27u^3v^3=-3375\alpha^6
+\end{cases}
+\]
+Siano $s_1=u^3$ e $s_2=v^3$
+\[
+\begin{cases}
+s_1+s_2=-70\alpha^3\\
+s_1\cdot s_2=-125\alpha^6
+\end{cases}
+\]
+Risolvere questo sistema significa risolvere l'equazione di secondo grado
+\begin{gather*}
+s^2+(70\alpha^3)\,s-125\alpha^5=0\\
+s_{1,2}=-\frac{70\alpha^3}{2}\pm\sqrt{\frac{4900\alpha^6}{4}+125\alpha^6}\\
+s_{1,2}=-35\alpha^3\pm\sqrt{1350\alpha^6}\\
+\begin{cases}
+s_1=(-35+15\sqrt{6})\alpha^3\\
+s_2=-(35+15\sqrt{6})\alpha^3
+\end{cases}
+\end{gather*}
+
+Riprendendo le equazioni precedenti
+\begin{multline*}
+t=u+v=\\
+=\sqrt[3]{s_1}+\sqrt[3]{s_2}=\alpha\sqrt[3]{-35+15\sqrt{6}}-\alpha\sqrt[3]{35+15\sqrt{6}}=\\
+\alpha\Bigg[\sqrt[3]{-35+15\sqrt{6}}-\sqrt[3]{35+15\sqrt{6}}\Bigg]
+\end{multline*}
+da cui, dato che $x=t/3-2a/3$:
+\begin{multline*}
+x=\frac{\alpha}{3}\cdot\Bigg[\sqrt[3]{-35+15\sqrt{6}}-\sqrt[3]{35+15\sqrt{6}}-2\Bigg]=\\
+=\frac{\sqrt[3]{-35+15\sqrt{6}}-\sqrt[3]{35+15\sqrt{6}}-2}{3\sqrt[5]{4}}\approx\\
+\approx -1,2509430053151
+\end{multline*}
+\equazione{x\approx -1,2509430053151}
+Sia questo numero $\beta$.
+
+\subsubsection*{Segno}
+\[
+y=(x-\alpha)^2\cdot p(x)
+\]
+
+$p(x)$ è un polinomio di terzo grado, con un'unica intersezione con l'asse delle $x$ (in $x=\beta$, vedasi dimostrazione precedente). Essendo una funzione continua e derivabile $\forall x\in\R$, è possibile affermare che tutte le immagini dei punti nell'intervallo $(-\infty; \,\beta)$ avranno segno concorde; allo stesso modo per le immagini dei punti nell'intervallo $(\beta; \,+\infty)$\footnote{Ragionando per assurdo, si ammetta che nell'intervallo $(-\infty; \,\beta)$ esistano due punti la cui immagine abbia segno discorde. Siano questi punti $a$ e $b$. Si consideri l'intervallo $[a;\,b]$: è possibile applicare il \textbf{teorema dell'esistenza degli zeri}, che afferma che nell'intervallo considerato esiste almeno uno zero. Questo va contro l'ipotesi iniziale che $\beta$ sia l'unico zero della funzione. Si ragioni allo stesso modo per l'intervallo $(\beta; \,+\infty)$.}.
+
+Considerato che $(x-\alpha)^2>0\,\forall x\in \R-\{\alpha\}$, la funzione $p(x)$ sarà avrà segno concorde a $f(x)\,\forall x\in \R-\{\alpha\}$. Per $x=\alpha$, essendo $\alpha\neq\beta$ e $\alpha>\beta$, $p(\alpha)$ avrà lo stesso segno di tutti gli altri punti nell'intervallo $(\beta; \,+\infty)$. Pertanto:
+\[
+\lim_{x\to-\infty}f(x)=-\infty\,\implies\,\lim_{x\to-\infty}p(x)<0\implies p(x)<0\,\forall x\in (-\infty;\,\beta)
+\]
+\[
+\lim_{x\to+\infty}f(x)=+\infty\,\implies\,\lim_{x\to-\infty}p(x)>0\implies p(x)>0\,\forall x\in(\beta; \,+\infty)
+\]
+
+È possibile ora {studiare il segno} della funzione $y=f(x)$, come mostrato alla figura \ref{sgn:f}
+\begin{figure}
+\immagine{Studio del segno della funzione \hyperref[eq:2]{\textcolor{white}{(2)}}\label{sgn:f}}{
+\begin{center}
+\begin{tikzpicture}
+%\draw [help lines] (0,0) grid (9,3);
+\draw [thick, ->] (0,2.5) -- (9,2.5);
+\draw [blue, ultra thick] (0,1.9) -- (9,1.9);
+\draw [blue!50!cyan, ultra thick] (3.5,1.4) -- (9,1.4);
+\draw [blue!50!cyan, ultra thick, dashed] (0,1.4) -- (3.5,1.4);
+\draw (3.5,2.4) -- (3.5,2.6);
+\draw (5.5,2.4) -- (5.5,2.6);
+\node at (3.5, 2.8) {$\beta$};
+\node at (5.5, 2.8) {$\alpha$};
+\node at (-0.7,1.9) {$\textcolor{blue}{(x-\alpha)^2}$};
+\node at (9.7,1.4) {$\textcolor{blue!50!cyan}{p(x)}$};
+\draw [dashed] (3.5, 0.5) -- (3.5, 2.5);
+\draw [dashed] (5.5, 0.5) -- (5.5, 2.5);
+\node [draw, circle, inner sep=2pt, fill=white] at (3.5,1.4) {};
+\node [draw, circle, inner sep=2pt, fill=white] at (3.5,0.5) {};
+\node [draw, circle, inner sep=2pt, fill=white] at (5.5,1.9) {};
+\node [draw, circle, inner sep=2pt, fill=white] at (5.5,0.5) {};
+\draw [ultra thick] (1.7,0.5) -- (2,0.5);
+\draw [ultra thick] (4.35,0.5) -- (4.65,0.5);
+\draw [ultra thick] (7.35,0.5) -- (7.65,0.5);
+\draw [ultra thick] (4.5,0.35) -- (4.5,0.65);
+\draw [ultra thick] (7.5,0.35) -- (7.5,0.65);
+\node at (0.5,0.5) {$f(x)$};
+\end{tikzpicture}
+\end{center}}
+\end{figure}
+
+\equazione{f(x)>0\quad\forall x\in (\beta;\,\alpha)\,\cup\,(\alpha;\,+\infty)}
+
+\subsubsection*{Derivata prima}
+\[
+y'=5x^4-\frac{5}{2\sqrt[5]{8}}
+\]
+Il segno della derivata prima rappresenta se la funzione stia crescendo o decrescendo; quando la derivata prima si annulla la funzione avrà un \textbf{punto stazionario}.
+
+\[
+y'=0\,\implies\,x^4=\frac{1}{2\sqrt[5]{8}}\,\implies\,x=\pm\sqrt[4]{\frac{1}{2\sqrt[5]{8}}}=\pm\frac{1}{\sqrt[5]{4}}
+\]
+Questi sono i punti stazionari della funzione. Studiando il segno della derivata sarà possibile stabilire se siano anche massimi o minimi.
+
+\[
+y'>0\,\implies\,5x^4-\frac{5}{2\sqrt[5]{8}}>0\,\implies\,\big(x^2\big)^2>\frac{1}{2\sqrt[5]{8}}
+\]
+\begin{gather*}
+x^2>\sqrt{\frac{1}{2\sqrt[5]{8}}}\\\lor\\x^2<-\sqrt{\frac{1}{2\sqrt[5]{8}}}\quad\text{\textbf{mai}}
+\end{gather*}
+\[
+x^2>\sqrt{\frac{1}{2\sqrt[5]{8}}}\,\implies\,x>\frac{1}{\sqrt[5]{4}}\,\lor\,x<-\frac{1}{\sqrt[5]{4}}
+\]
+
+Pertanto
+\[
+y'>0\quad\forall x\in \Bigg(-\infty;\,-\frac{1}{\sqrt[5]{4}}\Bigg)\,\cup\,\Bigg(\frac{1}{\sqrt[5]{4}};\,+\infty\Bigg)
+\]
+\begin{figure}
+\immagine{Studio del segno della derivata prima della funzione \hyperref[eq:2]{\textcolor{white}{(2)}}\label{sgn:df}}{
+\begin{center}
+\begin{tikzpicture}
+%\draw [help lines] (0,0) grid (9,3);
+\draw [->] (-1,2.5) -- (5,2.5);
+\draw [thick] (-1,1.9) -- (1,1.9);
+\draw [thick] (3,1.9) -- (5,1.9);
+\draw [thick, dashed] (1,1.9) -- (3, 1.9);
+\draw (1,2.4) -- (1,2.6);
+\draw (3,2.4) -- (3,2.6);
+\node at (1, 3) {$-1/(\sqrt[5]{4})$};
+\node at (3, 3) {$1/(\sqrt[5]{4})$};
+\node at (-1.5,1.9) {$y'$};
+\draw [dashed] (1, 0) -- (1, 2.5);
+\draw [dashed] (3, 0) -- (3, 2.5);
+\node [draw, circle, inner sep=2pt, fill=white] at (1,1.9) {};
+\node [draw, circle, inner sep=2pt, fill=white] at (3,1.9) {};
+\node at (-1.5,0.7) {$f(x)$};
+\draw [blue!50!cyan, ->, ultra thick] (-0.8, 0.3) -- (0.8, 1.5);
+\draw [blue!50!cyan, ->, ultra thick] (3.2, 0.3) -- (4.8, 1.5);
+\draw [blue!50!cyan, ->, ultra thick] (1.2, 1.5) -- (2.8, 0.3);
+\node at (1,-0.25) {\textbf{max\vphantom{i}}};
+\node at (3,-0.25) {\textbf{min}};
+\end{tikzpicture}
+\end{center}}
+\end{figure}
+
+Come si può vedere dal grafico riportato alla figura \ref{sgn:df}, il punto
+\[M_1\Bigg(-\frac{1}{\sqrt[5]{4}};\, 2\Bigg)\]
+è punto di \textbf{massimo}, mentre il punto
+\[
+M_2\Bigg(\frac{1}{\sqrt[5]{4}};\,0\Bigg)
+\]
+è punto di \textbf{minimo}, nonché zero della funzione.
+
+\subsubsection*{Derivata seconda}
+\[
+y''=20x^3
+\]
+
+Lo studio del segno della derivata seconda fornisce informazioni sulla concavità di una funzione: quando la derivata seconda è positiva, la concavità della funzione è rivolta verso l'alto, quando la derivata seconda è negativa la concavità della funzione è rivolta verso il basso, e quando la derivata seconda si annulla la funzione ha un \textbf{flesso obliquo}, punto in cui la funzione cambia concavità.
+
+\begin{gather*}
+y''=0 \,\iff\, x=0\\
+y''>0\quad\forall x\in (0;\,+\infty)\\
+y''<0\quad\forall x\in (-\infty;\,0)
+\end{gather*}
+
+Ora è possibile disegnare la funzione su un piano cartesiano, come mostrato nella figura \ref{grf:f}
+
+\begin{figure}
+\immagine{Grafico della funzione \hyperref[eq:2]{\textcolor{white}{(2)}}\label{grf:f}}{
+\begin{center}
+\begin{tikzpicture}
+\begin{axis} [xmin=-5,xmax=5, ymin=-5, ymax=5, axis equal, xlabel=$x$, ylabel=$y$, width=\textwidth, height=\textwidth,axis lines=middle, enlargelimits]
+\addplot [ultra thick, blue] file {function.csv};
+\node [draw, circle, inner sep=2pt, fill=blue] at (-0.757858283, 2) {};
+\node [draw, circle, inner sep=2pt, fill=blue] at (0.757858283, 0) {};
+\node at (-0.757858283, 2.5) {\blue{$M_1$}};
+\node at (0.757858283, -0.5) {\blue{$M_2$}};
+\end{axis}
+\end{tikzpicture}\end{center}}
+\end{figure}
+
+\chapter{Algoritmo analisi numerica}
+
+Dal mumento che la funzione è stata scelta appositamente (variando $k$) per avere uno zero doppio, è stato possibile ricavare entrambi gli zeri analiticamente, con precisione assoluta. 
+
+Ciò nonostante non è sempre possibile ricavare analiticamente (per radicali) gli zeri di una funzione di quinto grado.
+La teoria di Evariste Galois, dimostrata poi in seguito, era proprio che non potesse esistere una formula risolutiva per radicali per equazioni generali dal quinto grado in su \parencite[12]{eq:ter}.
+
+Ci sono diversi algoritmi che permettono di trovare ``empiricamente'' gli zeri delle funzioni: il risultato non sarà mai perfetto, ma solo una approssimazione, arbitrariamente buona, dello zero reale.
+Proprio questo è l'ambito di studio dell'\textbf{analisi numerica}: 
+\begin{quotation}
+\noindent l'analisi numerica è una branca della matematica che si occupa di individuare, analizzare e implementare algoritmi per la risoluzione approssimata di problemi matematici in genere, che possono scaturire da pure speculazioni, da reali esigenze di ricerca, o da simulazioni in campo tecnologico finalizzate alla progettazione di dispositivi complessi\citazione{trec:an}{}.
+\end{quotation}
+
+Iniziando con delle osservazioni di carattere generale (precedentemente dimostrate) sulla funzione si noti che $y=f(x)$ è una funzione continua e derivabile lungo tutto il suo dominio.
+
+Si analizzino ora distintamente gli zeri della funzione $f(x)$. L'obiettivo è di ricavare analiticamente i valori di $\alpha$ e di $\beta$, ovvero i valori tali per cui la funzione si annulli.
+
+\section{Metodo di bisezione}
+
+Per ricavare il valore di $\beta$ è possibile utilizzare il metodo di bisezione, che si basa interamente sul teorema di Bolzano: l'intervallo su cui è possibile applicare l'algoritmo deve rispettare le stesse ipotesi proprio di questo teorema:
+\begin{itemize}
+\item la funzione deve essere continua nell'intervallo;
+\item i due estremi dell'intervallo devono avere immagini di segno discorde.
+\end{itemize}
+
+Proprio in virtù del sovracitato \textbf{teorema di Bolzano} \parencite[vol. 4B, p. 1436]{blu:1}
+è assicurato che nell'intervallo prescelto vi sia almeno uno zero. Per semplicità si richiede che nell'intervallo considerato ve ne sia al più uno. Ne consegue che nell'intervallo vi sia una ed una sola radice della funzione, $\beta$.
+
+Questo algoritmo iterativo suddivide l'intervallo in due, e ad ogni passaggio individua quale metà contiene lo zero. Si veda \parencite[48-53]{num:an} per un'analisi più approfondita.
+
+Si inizi ponendo $a_1=a$ e $b_1=b$, e sia $\beta_1$ il punto medio di $[a;\,b]$
+\[
+\beta_1=\frac{a_1+b_1}{2}
+\]
+\begin{itemize}
+\item Se $f(\beta_1)=0$ allora $\beta=m_1$;
+\item se $f(\beta_1)\neq0$ allora avrà necessariamente lo stesso segno di uno tra $f(a_1)$ e $f(b_1)$
+\begin{itemize}
+\item  se $f(\beta_1)$ e $f(a_1)$ hanno lo stesso segno allora $\beta\in [\beta_1;\,b_1]$; siano $a_2=\beta_1$ e $b_2=b_1$;
+\item  se $f(\beta_1)$ e $f(b_1)$ hanno lo stesso segno allora $\beta\in [a_1;\,\beta_1]$; siano $a_2=a_1$ e $b_2=\beta_1$;
+\end{itemize}
+\end{itemize}
+Si riapplichi lo stesso processo per l'intervallo $[a_2; b_2]$, ed in generale ad ogni generico intervallo $[a_n;\,b_n]$ ottenuto dall'iterazione dell'algoritmo, fino a giungere ad una condizione che soddisfi il criterio di arresto prescelto. In particolar modo, nel programma scritto per eseguire questo algoritmo, si utilizza come criterio d'arresto il raggiungimento di una precisione di soglia; l'algoritmo di fermerà quando
+\[
+\big|f(\beta_n)\big|<1\cdot 10^{-15}
+\]
+
+Calando questo algoritmo nel caso specifico, si noti ad esempio che 
+\begin{align*}
+f(-2)&\approx-27,701\\
+f(0)&=1
+\end{align*}
+L'intervallo $[-2; 0]$ permette di applicare l'algoritmo di bisezione per trovare il valore di $\beta$. Nella tabella \ref{tab:bis} sono mostrate dieci iterazioni dell'algoritmo.
+
+L'\hyperref[all:1]{allegato I} mostra il codice necessario, commentato, scritto in \textbf{Octave}, per eseguire l'algoritmo nell'intervallo prescelto. Il valore di $\beta$ trovato empiricamente è quindi
+\equazione{\beta=-1.250943005315172}
+
+Si noti come questo valore sia corretto almeno fino alla quattordicesima cifra significativa, in quanto il valore di $\beta$ calcolato per via analitica è
+\[
+\beta=-1,2509430053151\dots
+\]
+
+\begin{table}
+\immagine{Algoritmo di bisezione applicato a $f(x)$\label{tab:bis}}{
+\begin{center}
+\begin{tabular}{SSSSSS}
+\toprule
+{$a_n$} & {$b_n$} & {$\beta_n$} & {$f(a_n)$} & {$f(\beta_n)$} &{$f(b_n)$}\\
+\midrule
+-2 & 0 & -1 & -27,701 & 1,649 & 1\\
+-2 & -1 & -1,5 & -27,701 & -4,119 & 1,649\\
+-1,5 & -1 & -1,25 & -4,119 & 0,009 & 1,649\\
+-1,5 & -1,25 & -1,375 & -4,119 & -1,646 & 0,009\\
+-1,375 & -1,25 & -1,312 & -1,646 & -0,730 & 0,009\\
+-1,312 & -1,25 & -1,281 & -0,730 & -0,339 & 0,009\\
+-1,281 & -1,25 & -1,265 & -0,339 & -0,159 & 0,009\\
+-1,265 & -1,25 & -1,257 & -0,159 & -0,073 & 0,009\\
+-1,257 & -1,25 & -1,253 & -0,073 & -0,031 & 0,009\\
+\bottomrule
+\end{tabular}
+\end{center}
+}
+\end{table}
+
+\section{Metodo di Newton}
+
+Si noti come il metodo di bisezione non sia applicabile alla funzione per individuare lo zero in $x=\alpha$, in quanto $f(x)\ge 0\,\forall x\in (\beta;\,+\infty)$, con $\alpha>\beta$: non è possibile individuare un intervallo con un solo zero tale per cui gli estremi presentino immagini di segno discorde.\footnote{Ogni punto con immagine negativa è minore di $\beta$, mentre ogni punto con immagine positiva è maggiore di $\beta$: necessariamente un generico intervallo $I$ che rispetti le ipotesi del teorema di Bolzano e tale per cui $\alpha\in I$, deve contenere il punto $x=\beta$, contraddicendo l'ipotesi che vi sia un unico zero della funzione in $I$}.
+
+È necessario quindi un altro algoritmo che permetta di calcolare lo zero doppio della funzione. Si presta a tale scopo l'algoritmo di \textbf{Newton}, o delle tangenti. Si rimanda a \parencite[67-71]{num:an} per un ulteriore approfondimento.
+
+Sia $\alpha_0$ una iniziale approssimazione dello zero $\alpha$ di $f(x)$, e si calcolino i primi due termini della serie di Taylor\footnote{Per approfondimenti si rimanda a \cite[128-130]{ele:mat}} per $f(x)$ in un intorno di $\alpha_0$:
+\[
+f(x)=f(\alpha_0)+(x-\alpha_0)\cdot f'(\alpha_0)
+\]
+In particolare
+\[
+f(\alpha)=f(\alpha_0)+(\alpha-\alpha_0)\cdot f'(\alpha_0)
+\]
+Noto che $f(\alpha)=0$
+\begin{gather*}
+f(\alpha_0)+(\alpha-\alpha_0)\cdot f'(\alpha_0)=0\\
+\alpha=\alpha_0-\frac{f(\alpha_0)}{f'(\alpha_0)}
+\end{gather*}
+
+Questo pone le basi per l'algoritmo di Newton: essendo il polinomio di Taylor una approssimazione della funzione, il valore di $\alpha$ valutato con questo metodo non sarà preciso. Si definisce quindi una successione che permette di calcolare un'approssimazione sempre più precisa del valore di $\alpha$:
+\begin{equation}
+\alpha_n=\alpha_{n-1}-\frac{f(\alpha_{n-1})}{f'(\alpha_{n-1})}\label{eq:new}
+\end{equation}
+
+Sostituendo con l'espressione analitica di $f(x)$ e $f'(x)$:
+\[
+\alpha_n=\alpha_{n-1}-\frac{(\alpha_{n-1})^5-5/(2\sqrt[5]{8})\cdot (\alpha_{n-1})+1}{5\cdot(\alpha_{n-1})^4-5/(2\sqrt[5]{8})}
+\]
+
+È chiaro dall'equazione \eqref{eq:new} che il metodo di Newton non possa essere continuato se per un certo $\alpha_{n-1}$ vale $f'(\alpha_{n-1})=0$. Si noti come la derivata prima della funzione si annulli proprio nello zero, per $x=\alpha$: dal momento che l'algoritmo di Newton ricava un'approssimazione dello zero, non si raggiungerà mai il caso in cui non si possa calcolare il valore successivo $\alpha_n$.
+
+Vedendo le cose da un altro punto di vista, iniziando con l'approssimazione $\alpha_0$, l'approssimazione $\alpha_1$ è l'intercetta con l'asse delle $x$ della retta tangente alla funzione $f(x)$ nel punto $(\alpha_0;\,f(\alpha_0))$. L'approssimazione $\alpha_2$ è l'intercetta con l'asse delle $x$ della retta tangente alla funzione $f(x)$ nel punto $(\alpha_1;\,f(\alpha_1))$, e così via, come mostrato dalla figura \ref{newt:graf}.
+
+La tabella \ref{tab:new} mostra il calcolo dei successivi valori di $\alpha_n$ partendo da una approssimazione $\alpha_0=1$. L'\hyperref[all:2]{allegato II} mostra il codice, scritto in Octave, che fa svolgere al computer le iterazioni necessarie a calcolare il valore di $\alpha$.Il valore di $\alpha$ trovato empiricamente è quindi
+\equazione{\alpha=0.757858292385600}
+
+Si noti come questo valore sia corretto almeno fino alla settima cifra significativa, in quanto il valore di $\alpha$ calcolato per via analitica è
+\[
+\alpha=0.757858283255199\dots
+\]
+
+\begin{figure}
+\immagine{Interpretazione grafica del metodo di Newton\label{newt:graf}}{
+\begin{center}
+\begin{tikzpicture}
+\begin{axis} [xmin=0.65,xmax=1.15, ymin=-0.1, ymax=0.4, axis equal, xlabel=$x$, ylabel=$y$, width=\textwidth,axis lines=middle, xtick={0}, ytick={0}, xticklabels={}, yticklabels={}]
+\addplot [ultra thick, blue] file {curve.csv};
+\addplot [black] {-3+3.350615111533882*x};
+\addplot [black] {-1.36196+1.6311151115338829*x};
+\addplot [black] {-0.5756162571999999+0.7235311615338818*x};
+\addplot [black, dashed] coordinates {(1,0) (1,0.350615)};
+\addplot [black, dashed] coordinates {(0.8953579865598548,0) (0.8953579865598548,0.098628221)};
+\addplot [black, dashed] coordinates {(0.8349870529488433,0) (0.8349870529488433,0.02866595952)};
+\node at (1, -0.02) {$\alpha_0$};
+\node at (0.907, -0.02) {$\alpha_1$};
+\node at (0.84, -0.02) {$\alpha_2$};
+\node at (0.7955652607687232, -0.02) {$\alpha_3$};
+\node [draw, circle, inner sep=1.5pt, fill=blue] at (1,0.350615) {};
+\node [draw, circle, inner sep=1.5pt, fill=blue] at (0.8953579865598548,0.098628221) {};
+\node [draw, circle, inner sep=1.5pt, fill=blue] at (0.8349870529488433,0.02866595952) {};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+}
+\end{figure}
+
+\begin{table}
+\immagine{Algoritmo di Newton applicato a $f(x)$\label{tab:new}}{
+\begin{center}
+\begin{tabular}{cSSS}
+\toprule
+& {$\alpha_n$} & {$f(\alpha_n)$} & {$f'(\alpha_n)$}\\
+\midrule
+$\alpha_0$ & 1 & 0,350615 & 3,350615\\
+$\alpha_1$ & 0,895358 & 0,098628 & 1,563956\\
+$\alpha_2$ & 0,832295 & 0,026605 & 0,749882\\
+$\alpha_3$ & 0,796816 & 0,006954 & 0,366202\\
+$\alpha_4$ & 0,777825 & 0,001782 & 0,180809\\
+$\alpha_5$ & 0,767971 & 0,000451 & 0,089817\\
+$\alpha_6$ & 0,762948 & 0,000114 & 0,044760\\
+$\alpha_7$ & 0,760412 & 0,000028 & 0,022342\\
+$\alpha_8$ & 0,759137 & 0,000007 & 0,011162\\
+\bottomrule
+\end{tabular}
+\end{center}
+}
+\end{table}
+
+\section{Considerazioni finali}
+
+L'algoritmo di bisezione ha trovato il valore dello zero con 52 iterazioni, mentre quello di Newton con 25, a parità di condizioni di arresto. Ciò nonostante, l'algoritmo di bisezione ha calcolato il risultato con una precisione ben maggiore rispetto a quello di Newton (14 cifre significative rispetto alle 7).
+
+Per l'algoritmo delle tangenti 25 iterazioni sono molte: questo è legato al fatto che $f'(\alpha)=0$: questo rallenta parecchio l'avvicinarsi di $\alpha_n$ al valore reale $\alpha$. Inoltre, data questa caratteristica della funzione, non è possibile dimostrare la convergenza della serie; pertanto, prima di applicare effettivamente il metodo di Newton non si poteva avere la certezza di ottenere un risultato.
+
+\chapter{Applicazioni analisi numerica}
+
+Una interessante applicazione matematica dell'analisi numerica, oltre al mero calcolo degli zeri di una funzione, è l'interpolazione di una funzione:
+\begin{quotation}
+\noindent \textbf{Interpolazione}: in matematica, procedimento più o meno rigoroso mediante il quale, partendo da alcuni valori noti di una grandezza o funzione in un certo intervallo, si stimano altri valori dello stesso intervallo\citazione{trec:inter}{seconda definizione}.
+\end{quotation}
+
+Il problema di determinare un polinomio che passi attraverso gli $n+1$ punti distinti è appunto detta \textbf{interpolazione}.
+
+\section{Interpolazione di Lagrange}
+
+La principale fonte per la trattazione di questo argomento è \parencite[106-114]{num:an}. Consideriamo la costruzione di un polinomio di grado al più $n$ che passi attraverso gli $n+1$ punti
+\[
+\big(x_0;\,y_0\big);\:\big(x_1;\,y_1\big);\:\dots;\big(x_n;\,y_n\big);
+\]
+
+Si costruisca, per ogni $\lambda=0;1;\dots; n$, una funzione $L_{n,\lambda}(x)$ con le seguenti proprietà:
+\[
+\begin{cases}
+L_{n,\lambda}(x_i)=0\quad \text{quando }i\neq\lambda\\
+L_{n,\lambda}(x_\lambda)=1
+\end{cases}
+\]
+Per soddisfare che $L_{n,\lambda}(x_i)=0$ quando $i\neq\lambda$, è necessario che il numeratore di $L_{n,\lambda}(x)$ contenga il termine
+\[
+(x-x_0)(x-x_1)\cdots(x-x_{\lambda-1})(x-x_{\lambda+1})\cdots(x-x_n)
+\]
+Per soddisfare che $L_{n,\lambda}(x_\lambda)=1$, il denominatore di $L_{n,\lambda}(x)$ deve essere questo stesso termine ma calcolato quando $x=x_\lambda$. Quindi
+\begin{equation}
+L_{n,\lambda}(x)=\frac{(x-x_0)(x-x_1)\cdots(x-x_{\lambda-1})(x-x_{\lambda+1})\cdots(x-x_n)}{(x_\lambda-x_0)(x_\lambda-x_1)\cdots(x_\lambda-x_{\lambda-1})(x_\lambda-x_{\lambda+1})\cdots(x_\lambda-x_n)}
+\end{equation}
+
+Il polinomio interpolante di \textbf{Lagrange} è dato da:
+\begin{equation}
+P(x)=\sum_{\lambda=0}^n y_\lambda\cdot L_{n,\lambda}(x)
+\end{equation}
+Quando il valore $x$ assumerà una qualunque valore $x_j$ tra $x_0, x_1,\dots,x_n$, l'unico polinomio $L_{n,\lambda}$ che varrà $1$ sarà quello per $\lambda=j$, mentre tutti gli altri $L_{n, \lambda}$ con $\lambda\neq j$ varranno $0$. Ne consegue che $P(x_j)=1\cdot y_j=y_j$
+
+La figura \ref{lagr:par} mostra il polinomio $P(x)$ di Lagrange passante per tre punti
+\begin{align*}
+P_1&\:(0;1)\\
+P_2&\:(1/2; \sqrt{e})\\
+P_3&\:(1;e)
+\end{align*}
+appartenenti ad una stessa curva $y=e^x$ (presente anch'essa sul grafico).
+\begin{align*}
+L_{3; 1}&=\frac{(x-1/2)(x-1)}{(0-1/2)(0-1)}=(2x-1)(x-1)\\
+L_{3; 2}&=\frac{(x-0)(x-1)}{(1/2-0)(1/2-1)}=-4x(x-1)\\
+L_{3; 3}&=\frac{(x-0)(x-1/2)}{(1-0)(1-1/2)}=x(2x-1)
+\end{align*}
+
+Da qui è possibile calcolare $P(x)$:
+\begin{multline*}
+P(x)=\\
+=(2x-1)(x-1)-4x(x-1)\cdot \sqrt{e}+x(2x-1)\cdot e\\
+=2x^2-x-2x+1-4x^2\cdot\sqrt{e} +4x\cdot\sqrt{e}+2x^2\cdot e-xe=\\
+=2x^2\cdot(1-2\sqrt{e}+e)-x\cdot(e-4\sqrt{e}+3)+1
+\end{multline*}
+
+Come si può notare da ambo i grafici (\ref{lagr:par} e \ref{lagr:parzoom}), nell'intervallo compreso tra $P_1$ e $P_3$ l'interpolazione da una buona approssimazione della curva effettiva, sebbene non sia lo scopo esatto di questo strumento matematico.
+
+Il principale problema del metodo di interpolazione di Lagrange, oltre alla generazione di polinomi di grado molto elevato, è la non scalabilità: se, dato un polinomio di Lagrange generato a partire da $n$ punti, si vuole ottenere il polinomio di Lagrange che includa, oltre a quegli stessi $n$ punti, un punto ulteriore, sarà necessario ricalcolare completamente il polinomio. Questo problema è risolto dal \textbf{polinomio di interpolazione di Newton}.
+
+\begin{figure}
+\immagine{Interpolazione di Lagrange per una $y=e^x$\label{lagr:par}}{
+\begin{center}
+\begin{tikzpicture}
+\begin{axis} [xmin=-2.5,xmax=2.5, ymin=-0.5, ymax=5, axis equal, xlabel=$x$, ylabel=$y$, width=\textwidth,axis lines=middle]
+\addplot [samples=500, black] {e^x};
+\node [draw, circle, inner sep=2pt, fill=blue] at (0,1) {};
+\node [draw, circle, inner sep=2pt, fill=blue] at (1,2.718281828) {};
+\node [draw, circle, inner sep=2pt, fill=blue] at (0.5,1.648721271) {};
+\node at (0.2,0.7) {$P_1$};
+\node at (0.7,1.4) {$P_2$};
+\node at (1.2,2.5) {$P_3$};
+\addplot [ultra thick, blue, samples=700] {2*(x)^(2)*(1-2*sqrt(2.718281828459045)+2.718281828459045)-(x)*(2.718281828459045-4*sqrt(2.718281828459045)+3)+1};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+}
+\end{figure}
+\begin{figure}
+\immagine{Interpolazione di Lagrange per una $y=e^x$, ingrandimento\label{lagr:parzoom}}{
+\begin{center}
+\begin{tikzpicture}
+\begin{axis} [xmin=-0.1,xmax=1.1, ymin=0.8, ymax=3, axis equal, xlabel=$x$, ylabel=$y$, width=\textwidth,axis lines=middle]
+\addplot [samples=500, black] {e^x};
+\node [draw, circle, inner sep=2pt, fill=blue] at (0,1) {};
+\node [draw, circle, inner sep=2pt, fill=blue] at (1,2.718281828) {};
+\node [draw, circle, inner sep=2pt, fill=blue] at (0.5,1.648721271) {};
+\node at (0.1,0.9) {$P_1$};
+\node at (0.6,1.5) {$P_2$};
+\node at (1.1,2.6) {$P_3$};
+\addplot [ultra thick, blue, samples=700] {2*(x)^(2)*(1-2*sqrt(2.718281828459045)+2.718281828459045)-(x)*(2.718281828459045-4*sqrt(2.718281828459045)+3)+1};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+}
+\end{figure}
+
+\section{Interpolazione di Newton}
+
+Per tutte le informazioni sull'interpolazione di Newton si faccia riferimento a \parencite[85]{info}. Dato un insieme di punti
+\[
+\big(x_0;\,y_0\big);\:\big(x_1;\,y_1\big);\:\dots;\big(x_n;\,y_n\big);
+\]
+si definisce polinomio di Newton:
+\begin{equation}
+N(x)=\sum_{\lambda=0}^n a(\lambda)\cdot \omega_{\lambda-1}(x)
+\end{equation}
+i cui coefficenti $a(\lambda)$, chiamati \textbf{differenze divise} sono definite come:
+\[
+a(\lambda)=\begin{cases}
+y_0\quad&\text{se }\lambda=0\vspace{1em}\\
+\displaystyle\sum_{j=0}^{\lambda}\frac{y_j}{\prod_{i=0; i\neq j}^{\lambda}(x_j-x_i)}\quad&\text{se }\lambda\neq 0
+\end{cases}
+\]
+mentre $\omega_{\lambda-1}(x)$, chiamato \textbf{polinomio nodale}, è definito come
+\[
+\omega_{\lambda-1}(x)=\begin{cases}
+1\quad&\text{se }\lambda=0\vspace{1em}\\
+\displaystyle\prod_{i=0}^{\lambda-1}(x-x_i)&\text{se }\lambda\neq0
+\end{cases}
+\]
+
+Procediamo ora a calcolare il polinomio di Newton passante per due punti: $(x_0;\,y_0)$ e $(x_1;\,y_1)$. È necessario calcolare $a(0)$, $\omega_{0-1}$, $a(1)$ e $\omega_{1-1}$.
+\begin{gather*}
+a(0)=y_0\\
+\omega_{0-1}=1
+\end{gather*}
+\begin{multline*}
+a(1)=\displaystyle\sum_{j=0}^{1}\frac{y_j}{\prod_{i=0; i\neq j}^{1}(x_j-x_i)}=\\
+=\frac{y_0}{\prod_{i=0; i\neq 0}^{1}(x_0-x_i)}+\frac{y_1}{\prod_{i=0; i\neq 1}^{1}(x_1-x_i)}=\\
+\frac{y_0}{(x_0-x_1)}+\frac{y_1}{(x_1-x_0)}
+\end{multline*}
+\[
+\omega_{1-1}=\displaystyle\prod_{i=0}^{0}(x-x_i)=(x-x_0)
+\]
+
+Il polinomio di Newton passante per questi due punti sarà quindi:
+\[
+N(x)=\Bigg[y_0\cdot1+\Bigg(\frac{y_0}{(x_0-x_1)}+\frac{y_1}{(x_1-x_0)}\Bigg)\cdot(x-x_0)\Bigg]
+\]
+Sostituendo i valori, si può notare come effettivamente questo polinomio passi per ambo i punti:
+\[
+N(x_0)=\Bigg[y_0\cdot1+\Bigg(\frac{y_0}{(x_0-x_1)}+\frac{y_1}{(x_1-x_0)}\Bigg)\cdot(x_0-x_0)\Bigg]=y_0\cdot1=y_0
+\]
+\begin{multline*}
+N(x_1)=\Bigg[y_0\cdot1+\Bigg(\frac{y_0}{(x_0-x_1)}+\frac{y_1}{(x_1-x_0)}\Bigg)\cdot(x_1-x_0)\Bigg]=\\
+=y_0-\frac{y_0}{\cancel{(x_1-x_0)}}\cdot\cancel{(x_1-x_0)}+\frac{y_1}{\cancel{(x_1-x_0})}\cdot\cancel{(x_1-x_0)}=\\
+=y_0-y_0+y_1=y_1
+\end{multline*}
+
+Può essere fatta un'ulteriore riflessione in merito a $N(x)$: infatti, si noti come non sia altro che la formula per la retta passante per due punti, scritta in maniera ``insolita'':
+\begin{gather*}
+y=\Bigg[y_0\cdot1+\Bigg(\frac{y_0}{(x_0-x_1)}+\frac{y_1}{(x_1-x_0)}\Bigg)\cdot(x-x_0)\Bigg]\\
+y-y_0=\Bigg(-\frac{y_0}{(x_1-x_0)}+\frac{y_1}{(x_1-x_0)}\Bigg)\cdot(x-x_0)\\
+\frac{y-y_0}{x-x_0}=\frac{y_1-y_0}{x_1-x_0}
+\end{gather*}
+
+Come per l'interpolazione di Lagrange, il grado del polinomio generato con l'interpolazione di Newton sarà proporzionale linearmente con il numero $n$ di punti presi in considerazione. In particolar modo
+\[
+\deg \big(N(x)\big)=n-1
+\] 
+
+\chapter{Problema di fisica}
+
+La situazione descritta dal problema è quella rappresentata nella figura \ref{fis}, con
+\[F(x)=10e^{x/2}\,\text{N}\]
+
+\begin{figure}
+\immagine{Una forza $\vec{F}$ che agisce nella direzione dell'asse delle $x$\label{fis}}{%
+\begin{center}
+\begin{tikzpicture}
+\draw [->, thick] (0,0) -- (6,0);
+\node at (6, -0.5) {$x$};
+\node [draw, circle, fill=white, inner sep=6pt] at (3,0) {};
+\node at (3, -0.6) {$m$};
+\draw [ultra thick, ->, blue] (0.7, 0) -- (2.7, 0);
+\node at (1.7, 0.4) {\textcolor{blue}{$\vec{F}$}};
+\draw [->, thick] (2.5, 0.65) -- (3.5 , 0.65);
+\node at (3, 0.9) {moto};
+\end{tikzpicture}
+\end{center}}
+\end{figure}
+
+Sia $L$ il lavoro della forza $\vec{F}$ per uno spostamento che vada da $x_i=0$ a $x_f=2\,\text{m}$; questo lavoro, in un grafico $F-x$ è l'area sottesa alla curva $F=F(x)$ nell'intervallo $(0;\,2)$;
+\begin{itemize}
+\item[(a)] \phantomsection\label{L:a} è possibile approssimare quest'area con un trapezio rettangolo $ABCD$ (come in figura \ref{trap}):
+\begin{multline*}
+L=\frac{(B+b)\cdot h}{2}=\\=\frac{1}{2}\cdot [F(0)+F(2)](2\,\text{m}-0\,\text{m})=\\=[10+10e^{-1}]\,\text{N}\cdot\text{m}\approx 13,68\,\text{N}\cdot\text{m}
+\end{multline*}
+\item [(b)] \phantomsection\label{L:b} utilizzando la definizione di \textbf{integrale definito} (vedasi figura \ref{int}):
+\[
+L=\int_{0}^{2\,\text{m}}F(x)\dif x=\Bigg[\int F(x) \dif x\Bigg]^{2\,\text{m}}_{0}
+\]
+
+\begin{minipage}{\textwidth}
+\begin{tcolorbox}[colframe=blue!0!, colback=blue!3!, top=0mm, bottom=0mm]
+\begin{multicols}{2}
+\begin{gather*}
+\int F(x) \dif x=\int 10e^{-x/2}\dif x=\\
+=-20\int e^{\textcolor{blue}{t}}\dif \textcolor{blue}{t}=-20e^t+k=\\
+=-20e^{-x/2}+k
+\end{gather*}
+\columnbreak
+
+\begin{align*}
+\text{sia}\quad t&=-\frac{x}{2}\\
+x&=-2y\\
+\dif x &= -2\dif t
+\end{align*}
+\end{multicols}
+\end{tcolorbox}
+\end{minipage}
+\begin{multline*}
+L=\Bigg[\int F(x) \dif x\Bigg]^{2\,\text{m}}_{0}=\\
+=\Bigg[-20e^{-x/2}\Bigg]^{2\,\text{m}}_{0}=\Big[-20e^{-1}+20\Big]\,\text{N}\cdot\text{m}=\\
+=20\cdot\Big(1-\frac{1}{e}\Big)\,\text{N}\cdot\text{m}\approx 12,64\,\text{N}\cdot\text{m}
+\end{multline*}
+\end{itemize}
+
+Il lavoro compiuto dalla forza quindi è:
+\equazione{L=20\cdot\Big(1-\frac{1}{e}\Big)\,\text{N}\cdot\text{m}\approx 12,64\,\text{N}\cdot\text{m}}
+
+L'errore percentuale del metodo \hyperref[L:a]{(a)} rispetto al metodo \hyperref[L:b]{(b)} è di
+\[
+\varepsilon_{\%}=\frac{|L_{(a)}-L_{(b)}|}{L_{(b)}}\cdot100=7,58\,\%
+\]
+
+\begin{figure}
+\immagine{Lavoro della forza interpretato come trapezio \hyperref[L:a]{\textcolor{white}{(a)}}\label{trap}}{%
+\begin{center}
+\begin{tikzpicture}
+\begin{axis} [xmin=-3,xmax=12, ymin=-3, ymax=12, axis equal, xlabel=$x$, ylabel=$y$, width=\textwidth, height=\textwidth,axis lines=middle, enlargelimits]
+\node [fill=white] at (-0.6, 10) {\textbf{D}};
+\addplot [samples=1000, thick, black, domain=-1:9] {10*2.71828182846^(-x/2)};
+\draw [ultra thick, blue] (0,0) -- (2,0) -- (2, 3.67879441171) -- (0,10) -- cycle;
+\pattern [pattern=north east lines] (0,0) -- (2,0) -- (2, 3.67879441171) -- (0,10);
+\node [fill=white] at (1,3) {$L$};
+\node at (-0.6,-0.6) {\textbf{A}};
+\node [fill=white] at (2,-0.6) {\textbf{B}};
+\node at (2.5,4) {\textbf{C}};
+\end{axis}
+\end{tikzpicture}
+\end{center}}
+\end{figure}
+\begin{figure}
+\immagine{Lavoro della forza interpretato come integrale \hyperref[L:b]{\textcolor{white}{(b)}}\label{int}}{%
+\begin{center}
+\begin{tikzpicture}
+\begin{axis} [xmin=-3,xmax=12, ymin=-3, ymax=12, axis equal, xlabel=$x$, ylabel=$y$, width=\textwidth, height=\textwidth,axis lines=middle, enlargelimits]
+\addplot [pattern=north east lines, draw=none] file {fill.csv};
+\addplot [samples=1000, ultra thick, blue, domain=-1:9] {10*2.71828182846^(-x/2)};
+\addplot [dashed, thick, black] coordinates {(2, 0) (2, 3.67879441171)};
+\node [fill=white] at (1,3) {$L$};
+\end{axis}
+\end{tikzpicture}
+\end{center}}
+\end{figure}
+
+\backmatter
+
+\chapter{Allegato I}\label{all:1}
+
+\subsection*{Codice}
+\begin{lstlisting}
+f = @(x) x^5 - 5*x/(2*8^(1/5)) + 1; % la funzione f(x)
+
+a = -2; % estremo sinistro
+b = 0; % estremo destro 
+
+i = 0; % numero di iterazioni eseguite
+
+while abs(f((a+b)/2)) > 1E-15 % il ciclo continua fino al raggiungimento della condizione di arresto 
+  p = (a+b)/2; % si calcola il punto medio
+  if f(a)*f(p) < 0
+    b = p;
+  elseif f(b)*f(p) < 0
+    a = p;
+  end
+  i = i + 1; % si incrementa il numero di iterazioni
+end
+
+disp ("Il programma ha compiuto:") % stampa il numero di iterazioni
+disp(i)
+disp("iterazioni")
+disp("")
+disp("Lo zero trovato:") % stampa lo zero
+format long
+disp(p)
+\end{lstlisting}
+
+\subsection*{Output}
+\begin{lstlisting}
+Il programma ha compiuto:
+52
+iterazioni
+
+Lo zero trovato:
+-1.250943005315172
+\end{lstlisting}
+\vfill
+
+\chapter{Allegato II}\label{all:2}
+
+\subsection*{Codice}
+\begin{lstlisting}
+f = @(x) x^5 - 5*x/(2*8^(1/5)) + 1; % la funzione f(x)
+df = @(x) 5*x^4 - 5/(2*8^(1/5)); % definizione della derivata prima
+
+alpha = 1; % punto di partenza per l'algoritmo
+i = 0; % numero di iterazioni eseguite
+
+while abs(f(alpha)) > 1E-15
+  alpha = alpha - f(alpha)/df(alpha);
+  i = i+1;
+end
+
+disp ("Il programma ha compiuto:") % stampa il numero di iterazioni
+disp(i)
+disp("iterazioni")
+disp("")
+disp("Lo zero trovato:") % stampa lo zero
+format long
+disp(alpha)
+\end{lstlisting}
+
+\subsection*{Output}
+\begin{lstlisting}
+Il programma ha compiuto:
+25
+iterazioni
+
+Lo zero trovato:
+0.757858292385600
+\end{lstlisting}
+\vfill
+
+\cleardoublepage
+\printbibliography\addcontentsline{toc}{chapter}{\bibname}\thispagestyle{fancy}

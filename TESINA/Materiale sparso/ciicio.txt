@@ -1,0 +1,28 @@
+\documentclass[10pt]{article}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{wwwwww}{rgb}{0.4,0.4,0.4}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\begin{axis}[
+x=1cm,y=1cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-2.7743937988084526,
+xmax=3.051070823315799,
+ymin=-0.5024838870661902,
+ymax=5.769599689420919,
+xtick={-2.5,-2,...,3},
+ytick={-0.5,0,...,5.5},]
+\clip(-2.7743937988084526,-0.5024838870661902) rectangle (3.051070823315799,5.769599689420919);
+\draw[line width=2pt,color=wwwwww,smooth,samples=100,domain=-2.7743937988084526:3.051070823315799] plot(\x,{2*(\x)^(2)*(1-2*sqrt(2.718281828459045)+2.718281828459045)-(\x)*(2.718281828459045-4*sqrt(2.718281828459045)+3)+1});
+\begin{scriptsize}
+\draw[color=wwwwww] (-2.71613915258721,4.983161965434145) node {$q$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\end{document}

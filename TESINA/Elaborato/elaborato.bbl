@@ -85,6 +85,38 @@
       \field{year}{2000}
       \field{dateera}{ce}
     \endentry
+    \entry{ele:mat}{book}{}
+      \name{author}{3}{}{%
+        {{hash=b64affcb689a7fcc10d15cf968858e96}{%
+           family={Dodero},
+           familyi={D\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=1f483b95b65e140c6ab5b3ace007a6f8}{%
+           family={Baroncini},
+           familyi={B\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=c528651f23f110d539006d918d05f9ac}{%
+           family={Manfredi},
+           familyi={M\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{2790aa243b74b73cf7587fb2c912feed}
+      \strng{fullhash}{2790aa243b74b73cf7587fb2c912feed}
+      \strng{bibnamehash}{2790aa243b74b73cf7587fb2c912feed}
+      \strng{authorbibnamehash}{2790aa243b74b73cf7587fb2c912feed}
+      \strng{authornamehash}{2790aa243b74b73cf7587fb2c912feed}
+      \strng{authorfullhash}{2790aa243b74b73cf7587fb2c912feed}
+      \field{sortinit}{D}
+      \field{sortinithash}{2ef1bd9a78cc71eb74d7231c635177b8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Elementi di matematica 5}
+      \field{year}{1992}
+      \field{dateera}{ce}
+    \endentry
     \entry{eq:ter}{online}{}
       \field{sortinit}{E}
       \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
@@ -95,6 +127,45 @@
       \endverb
       \verb{url}
       \verb http://www.dmf.unicatt.it/~degiova/lincei/equazioni_di_terzo_e_quarto_grado.pdf
+      \endverb
+    \endentry
+    \entry{info}{book}{}
+      \name{author}{2}{}{%
+        {{hash=73beb27dd794ae2221b2066be6185036}{%
+           family={Gallo},
+           familyi={G\bibinitperiod},
+           given={Piero},
+           giveni={P\bibinitperiod}}}%
+        {{hash=7e8de19b1e9e1462f1580ec4a829aa97}{%
+           family={Sirsi},
+           familyi={S\bibinitperiod},
+           given={Pasquale},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{722922752ffb02c0c0bf99007e6982f3}
+      \strng{fullhash}{722922752ffb02c0c0bf99007e6982f3}
+      \strng{bibnamehash}{722922752ffb02c0c0bf99007e6982f3}
+      \strng{authorbibnamehash}{722922752ffb02c0c0bf99007e6982f3}
+      \strng{authornamehash}{722922752ffb02c0c0bf99007e6982f3}
+      \strng{authorfullhash}{722922752ffb02c0c0bf99007e6982f3}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Informatica APP}
+      \field{year}{2018}
+      \field{dateera}{ce}
+    \endentry
+    \entry{trec:inter}{online}{}
+      \field{sortinit}{i}
+      \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
+      \field{labeltitlesource}{title}
+      \field{title}{interpolazióne}
+      \verb{urlraw}
+      \verb https://www.treccani.it/vocabolario/interpolazione/
+      \endverb
+      \verb{url}
+      \verb https://www.treccani.it/vocabolario/interpolazione/
       \endverb
     \endentry
     \entry{num:an}{book}{}

@@ -2004,6 +2004,12 @@
     <bcf:citekey order="7">trec:an</bcf:citekey>
     <bcf:citekey order="8">blu:1</bcf:citekey>
     <bcf:citekey order="9">num:an</bcf:citekey>
+    <bcf:citekey order="10">num:an</bcf:citekey>
+    <bcf:citekey order="11">ele:mat</bcf:citekey>
+    <bcf:citekey order="12">trec:inter</bcf:citekey>
+    <bcf:citekey order="13">trec:inter</bcf:citekey>
+    <bcf:citekey order="14">num:an</bcf:citekey>
+    <bcf:citekey order="15">info</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

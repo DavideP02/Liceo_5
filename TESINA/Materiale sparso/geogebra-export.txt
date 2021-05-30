@@ -1,0 +1,58 @@
+\documentclass[10pt]{article}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+ 
+%<<<<<<<WARNING>>>>>>>
+% PGF/Tikz doesn't support the following mathematical functions:
+% cosh, acosh, sinh, asinh, tanh, atanh,
+% x^r with r not integer
+
+% Plotting will be done using GNUPLOT
+% GNUPLOT must be installed and you must allow Latex to call external
+% programs by adding the following option to your compiler
+% shell-escape    OR    enable-write18 
+% Example: pdflatex --shell-escape file.tex 
+
+\begin{document}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\begin{axis}[
+x=1cm,y=1cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=0.6683192913738237,
+xmax=1.1906445322524783,
+ymin=-0.08763812710895415,
+ymax=0.3998656479881745,
+xtick={0.7000000000000001,0.7500000000000001,...,1.1500000000000001},
+ytick={-0.05,0,...,0.35000000000000003},]
+\clip(0.6683192913738237,-0.08763812710895415) rectangle (1.1906445322524783,0.3998656479881745);
+\draw[line width=3.6pt,color=qqwuqq,smooth,samples=100,domain=0.6683192913738237:1.1906445322524783] plot(\x,{(\x)^(5)-5/(2*8^(1/5))*(\x)+1});
+\draw [line width=2pt,domain=0.6683192913738237:1.1906445322524783] plot(\x,{(-3--3.350615111533882*\x)/1});
+\draw [line width=2pt,domain=0.6683192913738237:1.1906445322524783] plot(\x,{(-1.36196--1.6311151115338829*\x)/1});
+\draw [line width=2pt,domain=0.6683192913738237:1.1906445322524783] plot(\x,{(-0.5756162571999999--0.7235311615338818*\x)/1});
+\draw [line width=2pt,dash pattern=on 1pt off 1pt] (1,-0.08763812710895415) -- (1,0.3998656479881745);
+\draw [line width=2pt,dash pattern=on 1pt off 1pt] (0.8953579865598548,-0.08763812710895415) -- (0.8953579865598548,0.3998656479881745);
+\draw [line width=2pt,dash pattern=on 1pt off 1pt] (0.8349870529488433,-0.08763812710895415) -- (0.8349870529488433,0.3998656479881745);
+\draw [line width=2pt,dash pattern=on 1pt off 1pt] (0.7955652607687232,-0.08763812710895415) -- (0.7955652607687232,0.3998656479881745);
+\begin{scriptsize}
+\draw[color=qqwuqq] (0.673496523937599,0.02832639317988812) node {$f$};
+\draw[color=black] (1.0105918886456293,0.39760169856821875) node {$eq1$};
+\draw[color=black] (1.0738691755362153,0.39760169856821875) node {$eq2$};
+\draw[color=black] (0.6947807022553415,-0.07933697923578323) node {$eq3$};
+\draw [fill=uuuuuu] (0.8953579865598548,0) circle (2pt);
+\draw [fill=uuuuuu] (0.8349870529488433,0) circle (2pt);
+\draw[color=black] (0.9973611832048704,0.39760169856821875) node {$eq4$};
+\draw [fill=uuuuuu] (0.7955652607687232,0) circle (2pt);
+\draw[color=black] (0.9018700048063499,0.39760169856821875) node {$g$};
+\draw[color=black] (0.8414689582289725,0.39760169856821875) node {$h$};
+\draw[color=black] (0.8023520899693376,0.39760169856821875) node {$i$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,91 @@
+\documentclass[a4paper, oneside, titlepage, reqno]{book}
+
+% pacchetti fondamentali per qualsiasi documento
+\usepackage{fontspec}
+
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont{Verdana}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage[babel, italian=guillemets]{csquotes}
+\usepackage[style=numeric]{biblatex}
+\usepackage{microtype}
+
+\usepackage{graphicx} % inserire immagini
+\usepackage{multicol} % due colonne
+\usepackage{ulem} % sottolineare
+\usepackage{lipsum} % lorem ipsum
+\usepackage{xcolor} % colori in latex
+
+\usepackage[hang]{footmisc} %per le note a pié pagina
+\footnotemargin=0.8em
+
+%definizioni particolari
+\newcommand{\straniero}[1]{\textit{#1}} %parole straniere
+\newcommand{\titolo}[1]{\textsc{#1}} %titoli
+
+\definecolor{blue}{rgb}{0, 0, 0.55}
+\definecolor{cyan}{rgb}{0.0, 1.0, 1.0}
+\definecolor{green}{rgb}{0.13, 0.55, 0.13}
+
+% pallette colori
+% bordi: blue
+% sfondo: blue!3!
+% secondo colore: blue!50!cyan
+
+\input{math}
+\input{chap}
+\input{emptyhf}
+\input{nota}
+\input{riqeq}
+\input{img}
+\input{newton}
+
+\bibliography{biblio}
+
+\addtolength{\skip\footins}{2em} % aumentare spazio prima di footnotes
+
+%-----------
+
+
+% comandi particolari per questo documento
+
+\newcommand{\kappaa}{k}
+\newcommand{\aaaa}{a}
+
+\renewcommand\arraystretch{1.3}  %altezza righe tabella
+
+\renewcommand{\theequation}{\thechapter.\arabic{equation}}
+
+\renewcommand{\thefootnote}{\roman{footnote}}
+
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+
+\newcommand{\citazione}[2]{\footnote{\cite{#1} \fullcite[#2]{#1}}} %citazione come nota a piè pagina
+
+%----------
+
+\usepackage{layout}
+
+\usepackage[framed,numbered,autolinebreaks,useliterate]{mcode} % inserire matlab
+
+% Hyperref
+
+\usepackage{hyperref}
+            
+\hypersetup{%
+	pdfauthor={Davide Peccioli},
+	pdftitle={Analisi numerica e applicazioni},
+	pdfsubject={Matematica e fisica},
+	allcolors=blue,
+	citecolor=green,
+	colorlinks=true, 
+	bookmarksopen=true}
+	
+%------------
+
+\begin{document}
+
+\input{corpo}
+
+\end{document}
