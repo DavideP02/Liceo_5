@@ -2011,7 +2011,6 @@
     <bcf:citekey order="14">num:an</bcf:citekey>
     <bcf:citekey order="15">info</bcf:citekey>
     <bcf:citekey order="16">int:unimi</bcf:citekey>
-    <bcf:citekey order="17">int:unimi</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

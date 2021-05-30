@@ -224,7 +224,7 @@ y=(x-\alpha)^2\cdot p(x)
 
 $p(x)$ è un polinomio di terzo grado, con un'unica intersezione con l'asse delle $x$ (in $x=\beta$, vedasi dimostrazione precedente). Essendo una funzione continua e derivabile $\forall x\in\R$, è possibile affermare che tutte le immagini dei punti nell'intervallo $(-\infty; \,\beta)$ avranno segno concorde; allo stesso modo per le immagini dei punti nell'intervallo $(\beta; \,+\infty)$\footnote{Ragionando per assurdo, si ammetta che nell'intervallo $(-\infty; \,\beta)$ esistano due punti la cui immagine abbia segno discorde. Siano questi punti $a$ e $b$. Si consideri l'intervallo $[a;\,b]$: è possibile applicare il \textbf{teorema dell'esistenza degli zeri}, che afferma che nell'intervallo considerato esiste almeno uno zero. Questo va contro l'ipotesi iniziale che $\beta$ sia l'unico zero della funzione. Si ragioni allo stesso modo per l'intervallo $(\beta; \,+\infty)$.}.
 
-Considerato che $(x-\alpha)^2>0\,\forall x\in \R-\{\alpha\}$, la funzione $p(x)$ sarà avrà segno concorde a $f(x)\,\forall x\in \R-\{\alpha\}$. Per $x=\alpha$, essendo $\alpha\neq\beta$ e $\alpha>\beta$, $p(\alpha)$ avrà lo stesso segno di tutti gli altri punti nell'intervallo $(\beta; \,+\infty)$. Pertanto:
+Considerato che $(x-\alpha)^2>0\:\forall x\in \R-\{\alpha\}$, la funzione $p(x)$ sarà avrà segno concorde a $f(x)\:\forall x\in \R-\{\alpha\}$. Per $x=\alpha$, essendo $\alpha\neq\beta$ e $\alpha>\beta$, $p(\alpha)$ avrà lo stesso segno di tutti gli altri punti nell'intervallo $(\beta; \,+\infty)$. Pertanto:
 \[
 \lim_{x\to-\infty}f(x)=-\infty\,\implies\,\lim_{x\to-\infty}p(x)<0\implies p(x)<0\,\forall x\in (-\infty;\,\beta)
 \]
@@ -366,7 +366,7 @@ La teoria di Evariste Galois, dimostrata poi in seguito, era proprio che non pot
 Ci sono diversi algoritmi che permettono di trovare ``empiricamente'' gli zeri delle funzioni: il risultato non sarà mai perfetto, ma solo una approssimazione, arbitrariamente buona, dello zero reale.
 Proprio questo è l'ambito di studio dell'\textbf{analisi numerica}: 
 \begin{quotation}
-\noindent l'analisi numerica è una branca della matematica che si occupa di individuare, analizzare e implementare algoritmi per la risoluzione approssimata di problemi matematici in genere, che possono scaturire da pure speculazioni, da reali esigenze di ricerca, o da simulazioni in campo tecnologico finalizzate alla progettazione di dispositivi complessi\citazione{trec:an}{}.
+\noindent l'analisi numerica è una branca della matematica che si occupa di individuare, analizzare e implementare algoritmi per la risoluzione approssimata di problemi matematici in genere, che possono scaturire da pure speculazioni, da reali esigenze di ricerca, o da simulazioni in campo tecnologico finalizzate alla progettazione di dispositivi complessi.\citazione{trec:an}{}
 \end{quotation}
 
 Iniziando con delle osservazioni di carattere generale (precedentemente dimostrate) sulla funzione si noti che $y=f(x)$ è una funzione continua e derivabile lungo tutto il suo dominio.
@@ -395,10 +395,10 @@ Si inizi ponendo $a_1=a$ e $b_1=b$, e sia $\beta_1$ il punto medio di $[a;\,b]$
 \item se $f(\beta_1)\neq0$ allora avrà necessariamente lo stesso segno di uno tra $f(a_1)$ e $f(b_1)$
 \begin{itemize}
 \item  se $f(\beta_1)$ e $f(a_1)$ hanno lo stesso segno allora $\beta\in [\beta_1;\,b_1]$; siano $a_2=\beta_1$ e $b_2=b_1$;
-\item  se $f(\beta_1)$ e $f(b_1)$ hanno lo stesso segno allora $\beta\in [a_1;\,\beta_1]$; siano $a_2=a_1$ e $b_2=\beta_1$;
+\item  se $f(\beta_1)$ e $f(b_1)$ hanno lo stesso segno allora $\beta\in [a_1;\,\beta_1]$; siano $a_2=a_1$ e $b_2=\beta_1$.
 \end{itemize}
 \end{itemize}
-Si riapplichi lo stesso processo per l'intervallo $[a_2; b_2]$, ed in generale ad ogni generico intervallo $[a_n;\,b_n]$ ottenuto dall'iterazione dell'algoritmo, fino a giungere ad una condizione che soddisfi il criterio di arresto prescelto. In particolar modo, nel programma scritto per eseguire questo algoritmo, si utilizza come criterio d'arresto il raggiungimento di una precisione di soglia; l'algoritmo di fermerà quando
+Si riapplichi lo stesso processo per l'intervallo $[a_2; b_2]$, ed in generale ad ogni generico intervallo $[a_n;\,b_n]$ ottenuto dall'iterazione dell'algoritmo, fino a giungere ad una condizione che soddisfi il criterio di arresto prescelto. In particolar modo, nel programma scritto per eseguire questo algoritmo, si utilizza come criterio d'arresto il raggiungimento di una precisione di soglia; l'algoritmo si fermerà quando
 \[
 \big|f(\beta_n)\big|<1\cdot 10^{-15}
 \]
@@ -442,7 +442,7 @@ Si noti come questo valore sia corretto almeno fino alla quattordicesima cifra s
 
 \section{Metodo di Newton}
 
-Si noti come il metodo di bisezione non sia applicabile alla funzione per individuare lo zero in $x=\alpha$, in quanto $f(x)\ge 0\,\forall x\in (\beta;\,+\infty)$, con $\alpha>\beta$: non è possibile individuare un intervallo con un solo zero tale per cui gli estremi presentino immagini di segno discorde.\footnote{Ogni punto con immagine negativa è minore di $\beta$, mentre ogni punto con immagine positiva è maggiore di $\beta$: necessariamente un generico intervallo $I$ che rispetti le ipotesi del teorema di Bolzano e tale per cui $\alpha\in I$, deve contenere il punto $x=\beta$, contraddicendo l'ipotesi che vi sia un unico zero della funzione in $I$}.
+Si noti come il metodo di bisezione non sia applicabile alla funzione per individuare lo zero in $x=\alpha$, in quanto $f(x)\ge 0\,\forall x\in (\beta;\,+\infty)$, con $\alpha>\beta$: non è possibile individuare un intervallo con un solo zero tale per cui gli estremi presentino immagini di segno discorde.\footnote{Ogni punto con immagine negativa è minore di $\beta$, mentre ogni punto con immagine positiva è maggiore di $\beta$: necessariamente un generico intervallo $I$ che rispetti le ipotesi del teorema di Bolzano e tale per cui $\alpha\in I$, deve contenere il punto $x=\beta$, contraddicendo l'ipotesi che vi sia un unico zero della funzione in $I$}
 
 È necessario quindi un altro algoritmo che permetta di calcolare lo zero doppio della funzione. Si presta a tale scopo l'algoritmo di \textbf{Newton}, o delle tangenti. Si rimanda a \parencite[67-71]{num:an} per un ulteriore approfondimento.
 
@@ -474,7 +474,11 @@ Sostituendo con l'espressione analitica di $f(x)$ e $f'(x)$:
 
 Vedendo le cose da un altro punto di vista, iniziando con l'approssimazione $\alpha_0$, l'approssimazione $\alpha_1$ è l'intercetta con l'asse delle $x$ della retta tangente alla funzione $f(x)$ nel punto $(\alpha_0;\,f(\alpha_0))$. L'approssimazione $\alpha_2$ è l'intercetta con l'asse delle $x$ della retta tangente alla funzione $f(x)$ nel punto $(\alpha_1;\,f(\alpha_1))$, e così via, come mostrato dalla figura \ref{newt:graf}.
 
-La tabella \ref{tab:new} mostra il calcolo dei successivi valori di $\alpha_n$ partendo da una approssimazione $\alpha_0=1$. L'\hyperref[all:2]{allegato II} mostra il codice, scritto in Octave, che fa svolgere al computer le iterazioni necessarie a calcolare il valore di $\alpha$.Il valore di $\alpha$ trovato empiricamente è quindi
+La tabella \ref{tab:new} mostra il calcolo dei successivi valori di $\alpha_n$ partendo da una approssimazione $\alpha_0=1$. L'\hyperref[all:2]{allegato II} mostra il codice, scritto in Octave, che fa svolgere al computer le iterazioni necessarie a calcolare il valore di $\alpha$. Si utilizza come criterio d'arresto il raggiungimento di una precisione di soglia; l'algoritmo si fermerà quando
+\[
+\big|f(\beta_n)\big|<1\cdot 10^{-15}
+\]
+Il valore di $\alpha$ trovato empiricamente è quindi
 \equazione{\alpha=0.757858292385600}
 
 Si noti come questo valore sia corretto almeno fino alla settima cifra significativa, in quanto il valore di $\alpha$ calcolato per via analitica è
@@ -537,9 +541,9 @@ Per l'algoritmo delle tangenti 25 iterazioni sono molte: questo è legato al fat
 
 \chapter{Applicazioni analisi numerica}
 
-Una interessante applicazione matematica dell'analisi numerica, oltre al mero calcolo degli zeri di una funzione, è l'interpolazione di una funzione:
+Una interessante applicazione matematica dell'analisi numerica, oltre al calcolo degli zeri di una funzione, è l'interpolazione di una funzione.
 \begin{quotation}
-\noindent \textbf{Interpolazione}: in matematica, procedimento più o meno rigoroso mediante il quale, partendo da alcuni valori noti di una grandezza o funzione in un certo intervallo, si stimano altri valori dello stesso intervallo\citazione{trec:inter}{seconda definizione}.
+\noindent \textbf{Interpolazione}: in matematica, procedimento più o meno rigoroso mediante il quale, partendo da alcuni valori noti di una grandezza o funzione in un certo intervallo, si stimano altri valori dello stesso intervallo.\citazione{trec:inter}{seconda definizione}
 \end{quotation}
 
 Il problema di determinare un polinomio che passi attraverso gli $n+1$ punti distinti è appunto detta \textbf{interpolazione}.
@@ -548,7 +552,7 @@ Il problema di determinare un polinomio che passi attraverso gli $n+1$ punti dis
 
 La principale fonte per la trattazione di questo argomento è \parencite[106-114]{num:an}. Consideriamo la costruzione di un polinomio di grado al più $n$ che passi attraverso gli $n+1$ punti
 \[
-\big(x_0;\,y_0\big);\:\big(x_1;\,y_1\big);\:\dots;\big(x_n;\,y_n\big);
+\big(x_0;\,y_0\big);\:\big(x_1;\,y_1\big);\:\dots;\big(x_n;\,y_n\big)
 \]
 
 Si costruisca, per ogni $\lambda=0;1;\dots; n$, una funzione $L_{n,\lambda}(x)$ con le seguenti proprietà:
@@ -594,7 +598,7 @@ P(x)=\\
 =2x^2\cdot(1-2\sqrt{e}+e)-x\cdot(e-4\sqrt{e}+3)+1
 \end{multline*}
 
-Come si può notare da ambo i grafici (\ref{lagr:par} e \ref{lagr:parzoom}), nell'intervallo compreso tra $P_1$ e $P_3$ l'interpolazione da una buona approssimazione della curva effettiva, sebbene non sia lo scopo esatto di questo strumento matematico.
+Come si può notare da ambo i grafici (\ref{lagr:par} e \ref{lagr:parzoom}), nell'intervallo compreso tra $P_1$ e $P_3$ l'interpolazione dà una buona approssimazione della curva effettiva, sebbene non sia lo scopo esatto di questo strumento matematico.
 
 Il principale problema del metodo di interpolazione di Lagrange, oltre alla generazione di polinomi di grado molto elevato, è la non scalabilità: se, dato un polinomio di Lagrange generato a partire da $n$ punti, si vuole ottenere il polinomio di Lagrange che includa, oltre a quegli stessi $n$ punti, un punto ulteriore, sarà necessario ricalcolare completamente il polinomio. Questo problema è risolto dal \textbf{polinomio di interpolazione di Newton}.
 
@@ -639,7 +643,7 @@ Il principale problema del metodo di interpolazione di Lagrange, oltre alla gene
 
 Per tutte le informazioni sull'interpolazione di Newton si faccia riferimento a \parencite[85]{info}. Dato un insieme di punti
 \[
-\big(x_0;\,y_0\big);\:\big(x_1;\,y_1\big);\:\dots;\big(x_n;\,y_n\big);
+\big(x_0;\,y_0\big);\:\big(x_1;\,y_1\big);\:\dots;\big(x_n;\,y_n\big)
 \]
 si definisce polinomio di Newton:
 \begin{equation}
@@ -696,14 +700,14 @@ y-y_0=\Bigg(-\frac{y_0}{(x_1-x_0)}+\frac{y_1}{(x_1-x_0)}\Bigg)\cdot(x-x_0)\end{g
 \frac{y-y_0}{x-x_0}=\frac{y_1-y_0}{x_1-x_0}\label{retta:2}
 \end{equation}
 
-Come per l'interpolazione di Lagrange, il grado del polinomio generato con l'interpolazione di Newton sarà proporzionale linearmente con il numero $n$ di punti presi in considerazione. In particolar modo:
+Come per l'interpolazione di Lagrange, il grado del polinomio generato con l'interpolazione di Newton sarà tanto più grande quanto più lo è il numero $n$ di punti presi in considerazione. In particolar modo:
 \[
 \deg \big(N(x)\big)\le n-1
 \] 
 
 \section{Considerazioni finali}
 
-Nonostante questi due metodi siano sostanzialmente diversi nella forma, il loro risultato sarà necessariamente la stessa. Si dimostra\citazione{int:unimi}{Esistenza e unicità del polinomio interpolante}, infatti, l'unicità del polinomio interpolante
+Nonostante questi due metodi siano sostanzialmente diversi nella forma, il loro risultato sarà necessariamente li stesso. \parencite[Esistenza e unicità del polinomio interpolante]{int:unimi} dimostra l'unicità del polinomio interpolante.
 
 \paragraph{Teorema} Esiste al più un polinomio $i(x)$ di grado al più $n$ passante per qualsiasi insieme di $n+1$ punti distinti.
 
@@ -756,7 +760,7 @@ La situazione descritta dal problema è quella rappresentata nella figura \ref{f
 \end{center}}
 \end{figure}
 
-Sia $L$ il lavoro della forza $\vec{F}$ per uno spostamento che vada da $x_i=0$ a $x_f=2\,\text{m}$; questo lavoro, in un grafico $F-x$ è l'area sottesa alla curva $F=F(x)$ nell'intervallo $(0;\,2)$;
+Sia $L$ il lavoro della forza $\vec{F}$ per uno spostamento che vada da $x_i=0$ a $x_f=2\,\text{m}$; questo lavoro, in un grafico $F$ - $x$ è l'area sottesa alla curva $F=F(x)$ nell'intervallo $(0;\,2)$;
 \begin{itemize}
 \item[(a)] \phantomsection\label{L:a} è possibile approssimare quest'area con un trapezio rettangolo $ABCD$ (come in figura \ref{trap}):
 \begin{multline*}
