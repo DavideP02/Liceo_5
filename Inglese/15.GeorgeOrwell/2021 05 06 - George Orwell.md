@@ -18,7 +18,7 @@ The WWII broke out, and during it he wrote *Animal Farm* (1945), in which he cri
 
 He published his masterpiece **_Nineteen Eighty-Four_** in 1949.
 
-## Animal Farm
+## *Animal Farm*
 This is a political and allegorical fable.
 
 There is a farm with some animals, but the animals, tired of being exploited by their human master, Mr Jones, decided to get rid of him, and they decided to set up a new community, ran by animals, based on egalitarian principle.
@@ -29,7 +29,7 @@ At the end of the fable pigs stand on their hind legs, which is remarkable since
 
 With this fable Orwell was able to show the process of corruption of the ideal of Russian Revolution, and he also demonstrated the tendency of create class stratification and class tyranny.
 
-## Nineteen Eighty-Four
+## *Nineteen Eighty-Four*
 This is Orwell masterpiece. Written in 1948, and then he published it in 1949.
 The story is settled in the future (1984), and in this future the world is divided into three main blocks: Oceania, Eurasia and Eustasia, superstates that control the whole word.
 

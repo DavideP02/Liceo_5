@@ -64,12 +64,11 @@ Press freedom is a pillar of any functioning democracy. It is an indicator of a 
 
 This concept can be included into **freedom of expression**, that is afundamental human right, recognized in the *Universal declaration of Human Rights* (1948)
 
-> MANCA ==Article 19 (slide 18)==
+> Everyone has the right to freedom of opinion and expression, and to seek, receive and impart information through any media and regardless of frontiers.
 
 This article extabilish the importance of freedom of expression.
 
 Freedom of the press is not a principle that is nationally included in the Constitutions of all democratic countries: Italy has an article in its constitution that mention the right of press freedom, while the UK have no contitutional garantee to press freedom.
 Governments are very aware of the power of mass media, and they tend always to exert a form of control on mass media. Moreover non democratic countries have no right of free press.
 
-United Nation instituted, on May the 3rd, the **World Press Freedom Day**, MANCA ==**un pezzo**==
-Free press is not an optional right, but it is something that is important to protect.
+United Nation instituted, on May the 3rd, the **World Press Freedom Day**, free press is not an optional right, but it is something that is important to protect.

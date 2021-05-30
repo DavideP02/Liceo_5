@@ -22,11 +22,10 @@ All the members of the book were anti-Victorian and unconventional, both in thei
 With her husband she founded The Hogarth Press, a publishing house that published most of her novels.
 
 In 1915 she published her first novel, which is *The Voyage Out*, and then she tried to kill herself. This novel was still traditional, but then this novel was followed by a series of modernist masterpieces
-- TODO ==aggiugere date da slide 3== 
-- *Mrs Dalloway*
-- *To the Lighthouse*: is probably Woolf’s most celebrated novel; its most interesting aspect is its treatment of time: the novel is cantered on a single event, a planned excursion to the lighthouse, which happens to be postponed
-- *Orlando*: this novel recounts the adventures of Orlando, who is a man who lives over three hundred years; one morning he wakes up and he find out to be a woman; in this novel Virginia Woolf explores the themes of androgyny: the idea she develops is that human personality is too complex to be classified as male or female, and it’s always a combination of female and male aspects
-- *The Waves*: its her last novel, and here she draws a link between her creative and artistic process and her mental illness
+- *Mrs Dalloway* (1925)
+- *To the Lighthouse* (1927): is probably Woolf’s most celebrated novel; its most interesting aspect is its treatment of time: the novel is cantered on a single event, a planned excursion to the lighthouse, which happens to be postponed
+- *Orlando* (1928): this novel recounts the adventures of Orlando, who is a man who lives over three hundred years; one morning he wakes up and he find out to be a woman; in this novel Virginia Woolf explores the themes of androgyny: the idea she develops is that human personality is too complex to be classified as male or female, and it’s always a combination of female and male aspects
+- *The Waves* (1931): its her last novel, and here she draws a link between her creative and artistic process and her mental illness
 
 She was also a great literary critic, and her most important essays are collected in *The Common Reader* (1925)
 
@@ -36,6 +35,7 @@ She became more and more subjected to periods of depression, and in 1941 she dro
 > Death is the only experience I shall never transcribe  
 
 ## Features of her novels
+
 1. **Inconsistent plots**: she rejected traditional eventful plot, because she was not interested in external elements, but she was concerned with her characters’ inner life
 2. **The shift of the viewpoint inside the characters’ minds**: she was interested in reproducing her characters’ flow of thoughts, memories and reflections
 3. **The abandonment of the chronological order of events**, because our mind jumps from past to present and future continously

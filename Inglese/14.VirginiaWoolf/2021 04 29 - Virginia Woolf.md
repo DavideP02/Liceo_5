@@ -4,7 +4,7 @@
 Her literary technique was based on the so called **moments of being**: they are the equivalent of Joyce’s epiphany, they are moments of intensity, perception or vision which illuminate our lives
 
 Her task as a writer is taking an ordinary mind on an ordinary day and examine the myriad of impression that the mind receives form the outer world.
-> MANCA citazione slide 5
+> Examine for a moment an ordinary mind on an ordinary day. The mind receives a myriad of impressions. From all sides they come, an incessant shower of innumerable atoms
 
 ## Mrs Dalloway
 The actions of Mrs Dalloway is limited to the events of a single day in central London. The protagonist is Clarissa Dalloway: a middle aged woman, the wife of a politician, and she belongs to the upper-class.
@@ -27,19 +27,26 @@ She was almost happy that he committed suicide, since she understood the importa
 Even if their lives were completely different, they were absolutely linked. Septimus’ death is like the halo that illuminates Clarissa’s life, but these two characters are very different: she shows to be always aware of the contrast between her thoughts and exterior reality, on the contrary Septimus is unable to distinguish between these two different reality, and he is unable to give order to his past experiences and to his thoughts.
 
 ### T: *Clarissa and Septimus*
-- ==p. 268==: TODO estratto su GoodNotes
+- ==p. 268==
 
-TODO Aggiungere divisione slide 9
+Clarissa Dalloway decides to buy flowers herself for the party she is going to give in the evening. She goes into Mulberry's florist shop and is greeted by Miss Pym. Clarissa enjoys the various perfumes and colours of the many flowers. She suddenly hears a noise similar to a pistol shot in the street. Miss Pym looks apologetic, as if the loud motor cars were her fault.
+Clarissa and seeral other people turn to observe the mysterious person passing in a luxury car. They wonder whether it is the Queen or the Prime Minister behind the blinds.
+Septimus Warren Smith, a veteran of WWI, also hears the car backfire. He suffers from shell shock, a mental illness caused by the horrors of war, and believes he is responsible for the traffic congestion the passin car causes. His young Italian wife, Lucrezia, is embarassed by his odd manner and also frightened, since Septimus has recently threatened to kill himself.
+
+This extract is divided into five part:
+
+- **line 1-23**: Mrs Dalloway’s visit at the florist’s is interrupted by the explosion of a tyre in the street
+- **line 24-37**: various people’s reactions to the explosion and their speculations about who might be in the car
+- **line 38-41**: Introduction of Septimus Warren Smith
+- **line 42-53**: The busy traffic in the street and Septimus’s thoughts
+- **line 54-73**: Description of Lucrezia’s appearance and thoughts. She is worried because Septimus wants to kill himself.
 
 One of the most interesting aspect in reading Woolf’s novel is how she treats time. The **treatment of time** is a fundamental concept that characterised her style.
 
 This extract is from the beginning of the novel: as she walks around London, her physical trajectory towards the flower shop is constantly interrupted by the interior tunnels that open up in her mind. Woolf is brilliantly able to portray the interior time and the contrast between the interior time (subjective) and the exterior time (objective)
-MANCA un pezzo (slide 10 + altri appunti)
+As Clarissa walks around London, her physical trajectory towards the flower shop is constantly interrupted by the interior tunnels that open up in her mind. She is thrown into the depths of the past and the uncertain terrain of the future. The dilated quality of her interior time is interrupted by the chimes of Big Ben. The chimes of Big Ben represents chronological time, which contrasts her interior time.
 
-The chimes of Big Ben represents chronological time, which contrasts her interior time. MANCA
-
-MANCA PARTE INIZIALE SU SEPTIMUS SMITH
-As he hears the explosion of this tyre, he experiences a series of feelings, such as **alienation**, and since the rumor reminded him of the war, he totally **panics**: he was paralysed in the middle of the street.
+We are informed by Septimus’ illness as he hears the explosion of the tyre, as he hears the explosion of this tyre, he experiences a series of feelings, such as **alienation**, and since the rumor reminded him of the war, he totally **panics**: he was paralysed in the middle of the street.
 He also feels **guilty** because he thinks that he is the one responsible for the traffic congestion.
 As his wife tries to bring him back to reality, he became very **angry** to her, and then he feels **madness**, since he says that he will kill himself.
 
@@ -53,6 +60,14 @@ The extract is rich in dashes, semicolons, questions marks, exclamations, very s
 
 This is taken from the very end of the novel: all the guests have finally arrived to the party, but the festive atmosphere is ruined by the news of Septimus’ suicide.
 
-Semptimus’ death is described through a series of expressions ( TODO ==aggiungere expressions da slide 14==) that emphasise the **brutality of the act**.
+Semptimus’ death is described through a series of expressions that emphasise the **brutality of the act**.
 
-TODO ==aggiungere slide 15== + She understands that he payed to much attention to appearance and to social life
+- **line 5**: His body was wounded by ‘the rusty spikes’ and smashed onto the ground
+- **line 5**: *Up had flashed the ground*: inversion
+- **line 5**: *blundering, bruising*: alliteration
+- **line 6**: *a thud, thud, thud*: onomatopoeia and repetition
+- **line 6**: *a suffocation of blackness*: metaphor
+
+
+Mrs Dalloway mentally comments on the event: she is worried about the fact that death is now present in the middle of her party which was supposed to be a happy moment. Then she identifies with the young man and wonders why he has killed himself. Later on, she looks out of the window and sees an old woman staring at her from the window in the opposite room; the old woman is alone and she is going to bed. Then Clarissa hears her guests *laughing and shouting*; the clock *striking the hour* (**lines 51-4**). Mrs Dalloway is convinced that nevertheless the people at the party would go on living.  She understands that he payed to much attention to appearance and to social life.
+Finally she resolves to come back to her guests.

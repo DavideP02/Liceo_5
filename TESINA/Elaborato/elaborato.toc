@@ -18,4 +18,5 @@
 \contentsline {chapter}{\numberline {4}Problema di fisica}{19}{chapter.4}% 
 \contentsline {chapter}{Allegato I}{23}{chapter*.13}% 
 \contentsline {chapter}{Allegato II}{24}{chapter*.16}% 
-\contentsline {chapter}{Bibliografia}{25}{chapter*.19}% 
+\contentsline {chapter}{Figure e tabelle}{25}{chapter*.19}% 
+\contentsline {chapter}{Bibliografia}{26}{chapter*.20}% 

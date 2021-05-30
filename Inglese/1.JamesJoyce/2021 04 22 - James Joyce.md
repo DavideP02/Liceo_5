@@ -15,14 +15,20 @@ This girl embodies these concepts.
 
 When Stephen looks at the girl, he experiences an **epiphany**; he feels very excited and in this moment he expresses his wish to break free from all the constriction imposed by the Catholic Church and by the town of Dublin.
 
-There are some negative expression related to his boyhood (TODO ==segnare da slide 4==).
+There are some negative expression related to his boyhood:
+
+- **line 1**: *the grave of boyhood* linked to *grave clothes*
+- **line 18**: _house of squalor_
 
 These images convey the squalor of Stephen’s life.
 
 ### Style
 There is a third person narrator, while the POV is Stephen’s.
 
-The language is Stephen’s language, and in order to reproduce Stephen’s thoughts Joyce uses different expression, and **free direct speech** (TODO aggiungere esempi ==slide 5==)
+The language is Stephen’s language, and in order to reproduce Stephen’s thoughts Joyce uses different expression, and **free direct speech**:
 
-- **line 43-44**: this sentence reflects Stephen’s artistic creed
-
+- **line 1**: *Yes! Yes! Yes!*
+- **line 6**: *On! On!*
+- **lines 17-19**: *Where was... was he?*
+- **line 43-44**: *To live... out of life*: this sentence reflects Stephen’s artistic creed
+- **line 46**: *On and... and on!*

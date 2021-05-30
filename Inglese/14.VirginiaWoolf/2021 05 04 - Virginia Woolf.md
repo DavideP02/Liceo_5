@@ -1,10 +1,12 @@
 # 4 mag 2021 - Virginia Woolf
 - ==primo pacchetto di slide==
 ## T: *Clarissa and Septimus*
-- ::p. 268::: TODO estratto su GoodNotes
+- ==p. 268==
 
 At the very end of the novel, the difference between these two characters became very evidente.
-MANCA una parte
+We can connect Clarissa to an ideal of superficiality, whilee Septimus to inability to conform. An other opposition is sanity mental and illness. He is not able to overcome his pain and to find any meaning in his dramatic war experience and in fact he commit suicide.
+She is the wife of a politician while Septimus rejects society: he is totally alineated for rejection of existence and final self acceptance.
+She is ready to go on, after the moment of being she is a new person
 
 - - - -
 ## Feminism
@@ -14,18 +16,28 @@ Feminism is the belief in the social, economic, and political equality of sexes.
 Historically women have been considered second class individue, and have been denied opportunity of furthering their studies, they were told that their home was the place where they belong to, and in different situation women have been subjected to men.
 
 This movement developed in different waves:
-- MANCA ==elenco puntato slide 2==
+- 1st wave of Feminism: late 19th century/early 20th century
+- 2nd wave of Feminism: 1960s – 1980s
+- 3rd wave of Feminism: mid 1990s
+- 4th wave of Feminism: 2010s
 
 ### 1st wave of feminism
 
-MANCA ==un pezzo==
+The first wave of feminism is focused on women struggle for the right to vote. Emmeline Parkhurst help women to organize themselves to get the right to vote. They started to protest in more violent ways, which challenged the ideal of domesticity.
 
 The outbreak of WWI actually helped women in their process of emancipation . A lot of men were mobilised to go in role, and women replaced those men at work, and they proved as efficient as men. They were able to take new roles.
 Also on the front line they proved fundamental as nurses.
 
 Thanks to their role in the WWI they were able to break down all the remaining opposition to their cause.
 
-MANCA ==date slide 4==
+In UK
+
+- 1918: women over 30 gained the right to vote.
+- 1928: suffrage to women over 21.
+
+In USA
+
+- 1919: The 19th amendment was added to the American constitution in 1919 and ratified in 1920.
 
 ### 2nd wave of feminism
 

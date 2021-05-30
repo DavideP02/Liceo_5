@@ -47,6 +47,10 @@
 
 \usepackage[framed,numbered,autolinebreaks,useliterate]{mcode} % inserire matlab
 
+\addto\captionsitalian{\renewcommand{\listfigurename}{Figure e tabelle}} % modificare nome ``Elenco delle figure''
+\def\table{\def\figurename{Table}\figure} % unire lista delle figure e delle tabelle
+\let\endtable\endfigure 
+
 % Hyperref
 
 \usepackage{hyperref}
