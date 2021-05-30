@@ -156,6 +156,18 @@
       \field{year}{2018}
       \field{dateera}{ce}
     \endentry
+    \entry{int:unimi}{online}{}
+      \field{sortinit}{I}
+      \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
+      \field{labeltitlesource}{title}
+      \field{title}{Interpolazione}
+      \verb{urlraw}
+      \verb http://www.mat.unimi.it/users/alzati/Geometria_Computazionale_98-99/apps/interpolanti/teoria.html
+      \endverb
+      \verb{url}
+      \verb http://www.mat.unimi.it/users/alzati/Geometria_Computazionale_98-99/apps/interpolanti/teoria.html
+      \endverb
+    \endentry
     \entry{trec:inter}{online}{}
       \field{sortinit}{i}
       \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}

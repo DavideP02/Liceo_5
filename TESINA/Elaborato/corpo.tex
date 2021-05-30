@@ -599,7 +599,7 @@ Come si può notare da ambo i grafici (\ref{lagr:par} e \ref{lagr:parzoom}), nel
 Il principale problema del metodo di interpolazione di Lagrange, oltre alla generazione di polinomi di grado molto elevato, è la non scalabilità: se, dato un polinomio di Lagrange generato a partire da $n$ punti, si vuole ottenere il polinomio di Lagrange che includa, oltre a quegli stessi $n$ punti, un punto ulteriore, sarà necessario ricalcolare completamente il polinomio. Questo problema è risolto dal \textbf{polinomio di interpolazione di Newton}.
 
 \begin{figure}
-\immagine{Interpolazione di Lagrange per una $y=e^x$\label{lagr:par}}{
+\immagine{Interpolazione di Lagrange per $y=e^x$\label{lagr:par}}{
 \begin{center}
 \begin{tikzpicture}
 \begin{axis} [xmin=-2.5,xmax=2.5, ymin=-0.5, ymax=5, axis equal, xlabel=$x$, ylabel=$y$, width=\textwidth,axis lines=middle]
@@ -617,7 +617,7 @@ Il principale problema del metodo di interpolazione di Lagrange, oltre alla gene
 }
 \end{figure}
 \begin{figure}
-\immagine{Interpolazione di Lagrange per una $y=e^x$, ingrandimento\label{lagr:parzoom}}{
+\immagine{Interpolazione di Lagrange per $y=e^x$, ingrandimento\label{lagr:parzoom}}{
 \begin{center}
 \begin{tikzpicture}
 \begin{axis} [xmin=-0.1,xmax=1.1, ymin=0.8, ymax=3, axis equal, xlabel=$x$, ylabel=$y$, width=\textwidth,axis lines=middle]
@@ -691,14 +691,49 @@ N(x_1)=\Bigg[y_0\cdot1+\Bigg(\frac{y_0}{(x_0-x_1)}+\frac{y_1}{(x_1-x_0)}\Bigg)\c
 Può essere fatta un'ulteriore riflessione in merito a $N(x)$: infatti, si noti come non sia altro che la formula per la retta passante per due punti, scritta in maniera ``insolita'':
 \begin{gather*}
 y=\Bigg[y_0\cdot1+\Bigg(\frac{y_0}{(x_0-x_1)}+\frac{y_1}{(x_1-x_0)}\Bigg)\cdot(x-x_0)\Bigg]\\
-y-y_0=\Bigg(-\frac{y_0}{(x_1-x_0)}+\frac{y_1}{(x_1-x_0)}\Bigg)\cdot(x-x_0)\\
-\frac{y-y_0}{x-x_0}=\frac{y_1-y_0}{x_1-x_0}
-\end{gather*}
+y-y_0=\Bigg(-\frac{y_0}{(x_1-x_0)}+\frac{y_1}{(x_1-x_0)}\Bigg)\cdot(x-x_0)\end{gather*}
+\begin{equation}
+\frac{y-y_0}{x-x_0}=\frac{y_1-y_0}{x_1-x_0}\label{retta:2}
+\end{equation}
 
-Come per l'interpolazione di Lagrange, il grado del polinomio generato con l'interpolazione di Newton sarà proporzionale linearmente con il numero $n$ di punti presi in considerazione. In particolar modo
+Come per l'interpolazione di Lagrange, il grado del polinomio generato con l'interpolazione di Newton sarà proporzionale linearmente con il numero $n$ di punti presi in considerazione. In particolar modo:
 \[
-\deg \big(N(x)\big)=n-1
+\deg \big(N(x)\big)\le n-1
 \] 
+
+\section{Considerazioni finali}
+
+Nonostante questi due metodi siano sostanzialmente diversi nella forma, il loro risultato sarà necessariamente la stessa. Si dimostra\citazione{int:unimi}{Esistenza e unicità del polinomio interpolante}, infatti, l'unicità del polinomio interpolante
+
+\paragraph{Teorema} Esiste al più un polinomio $i(x)$ di grado al più $n$ passante per qualsiasi insieme di $n+1$ punti distinti.
+
+\paragraph{Dimostrazione} Si supponga esista un altro polinomio $q(x)$ di grado al più $n$ che passi per tutti gli $n+1$ punti. Si consideri il polinomio $r(x)$ tale che
+\[
+r(x)=i(x)-q(x)
+\]
+È noto che:
+\begin{itemize}
+\item $r(x)$ è anch'esso un polinomio;
+\item $r(x)$ ha grado al più $n$, poiché $i(x)$ e $q(x)$ hanno grado al più $n$;
+\item in coincidenza degli $n+1$ punti da interpolare,
+\[r(x_\lambda)=i(x_\lambda)-q(x_\lambda)=y_\lambda-y_\lambda=0\]
+Ne consegue che $r(x)$ ha $n+1$ radici.
+\end{itemize}
+Per il \textbf{teorema fondamentale dell'algebra}, un qualsiasi polinomio diverso da 0 deve poter essere scritto come 
+\[
+r(x)=(x-x_0)\cdots(x-x_n)
+\]
+Gli $n+1$ termini si moltiplicano, ottenendo $x^{n+1}$, ovvero ottenendo un grado in più rispetto a quello richiesto. L'unico modo in cui $r(x)$ può esistere è che esso sia $r(x)=0$.
+Quindi
+\begin{gather*}
+r(x)=i(x)-q(x)\\
+0=i(x)-q(x)\\
+i(x)=q(x)
+\end{gather*}
+Qualsiasi altro polinomio interpolante $q(x)$, quindi, deve essere uguale a $i(x)$.\qed
+
+Una conseguenza diretta di questo teorema è che l'interpolazione di un insieme di $n+1$ punti derivanti da un certo polinomio di $n$-esimo grado sia il polinomio stesso.
+Ecco spiegato il perché dell'equazione \eqref{retta:2}.
 
 \chapter{Problema di fisica}
 
