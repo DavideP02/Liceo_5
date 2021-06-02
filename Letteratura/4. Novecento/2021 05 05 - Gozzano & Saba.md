@@ -16,7 +16,7 @@ Questi oggetti hanno la funzione di ispirare il poeta.
 
 Nel solaio c’è quell’atmosfera crepuscolare, un po’ buia
 
-MANCA ==**un bel pezzo**==
+Si parla della Dama, chi è? È l’antica proprietaria della villa, c’è un ritratto della donna che è stato posto nel solaio, in quanto porta disgrazia. Abbiamo i due giovani che hanno fatto una passeggiata per la casa e si trovano nel solaio, la Marchesa nel ritratto ha una moda tipica della sua epoca, ci viene spiegato come la donna sia ritratta, è in un ambiente idilliaco, in una grotta artificiale, con un piede in mano.
 
 - **riga 151**: *rideva illusa*: si riferisce alla marchesa, illusa di rimanere sempre giovane
 - **riga 153**: *stirpe*: utilizza il termine che fa riferimento ai discendenti di una casata importante, che nella realtà della soffitta diventano gli oggetti (ciarpame) che sta intorno al quadro
