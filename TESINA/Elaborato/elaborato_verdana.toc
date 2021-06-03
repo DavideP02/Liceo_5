@@ -11,11 +11,12 @@
 \contentsline {section}{\numberline {2.3}Considerazioni finali}{14}{section.2.3}% 
 \contentsline {chapter}{\numberline {3}Applicazioni analisi numerica}{15}{chapter.3}% 
 \contentsline {section}{\numberline {3.1}Interpolazione di Lagrange}{15}{section.3.1}% 
-\contentsline {section}{\numberline {3.2}Interpolazione di Newton}{17}{section.3.2}% 
+\contentsline {section}{\numberline {3.2}Interpolazione di Newton}{16}{section.3.2}% 
 \contentsline {section}{\numberline {3.3}Considerazioni finali}{20}{section.3.3}% 
 \contentsline {paragraph}{Teorema}{20}{section*.9}% 
 \contentsline {paragraph}{Dimostrazione}{20}{section*.10}% 
-\contentsline {chapter}{\numberline {4}Problema di fisica}{22}{chapter.4}% 
-\contentsline {chapter}{Allegato I}{26}{chapter*.13}% 
-\contentsline {chapter}{Allegato II}{27}{chapter*.16}% 
-\contentsline {chapter}{Bibliografia}{28}{chapter*.19}% 
+\contentsline {chapter}{\numberline {4}Problema di fisica}{21}{chapter.4}% 
+\contentsline {chapter}{Allegato I}{25}{chapter*.13}% 
+\contentsline {chapter}{Allegato II}{26}{chapter*.16}% 
+\contentsline {chapter}{Figure e tabelle}{27}{chapter*.19}% 
+\contentsline {chapter}{Bibliografia}{28}{chapter*.20}% 

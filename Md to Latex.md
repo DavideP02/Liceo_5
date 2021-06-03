@@ -92,7 +92,7 @@ _(.+)_
 \elenco{\item $1}
 
 }
-\elenco{
+\\elenco{
 
 
 
